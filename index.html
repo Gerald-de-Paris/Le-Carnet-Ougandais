@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Carnet Ougandais — Français &amp; Culture</title>
+<meta name="description" content="Ressources pour apprendre le français et découvrir la culture ougandaise.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span class="brand-name">Le Carnet Ougandais</span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="#ressources" data-i18n="nav_resources">Ressources</a>
+      <a href="#culture" data-i18n="nav_culture">Culture</a>
+      <a href="#apropos" data-i18n="nav_about">À propos</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">
+      <span class="lang-opt is-active" data-lang-btn="fr">FR</span>
+      <span class="lang-sep">/</span>
+      <span class="lang-opt" data-lang-btn="en">EN</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow" data-i18n="hero_eyebrow">Cours de français depuis Kampala</p>
+      <h1 class="hero-title">
+        <span data-i18n="hero_title_1">Bienvenue dans mon</span>
+        <em data-i18n="hero_title_2">carnet</em>
+        <span data-i18n="hero_title_3">de classe</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero_sub">Des ressources pour apprendre le français, et un carnet de voyage sur la culture ougandaise — photos, histoires et bientôt vidéos.</p>
+      <div class="hero-actions">
+        <a href="#ressources" class="btn btn-primary" data-i18n="hero_cta_resources">Voir les ressources</a>
+        <a href="#culture" class="btn btn-ghost" data-i18n="hero_cta_culture">Découvrir la culture</a>
+      </div>
+    </div>
+    <div class="hero-divider" aria-hidden="true">
+      <svg viewBox="0 0 800 24" preserveAspectRatio="none"><path d="M0,12 Q20,2 40,12 T80,12 T120,12 T160,12 T200,12 T240,12 T280,12 T320,12 T360,12 T400,12 T440,12 T480,12 T520,12 T560,12 T600,12 T640,12 T680,12 T720,12 T760,12 T800,12" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section id="ressources" class="section">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="res_eyebrow">Matériel pédagogique</p>
+      <h2 class="section-title" data-i18n="res_title">Ressources de français</h2>
+      <p class="section-lede" data-i18n="res_lede">Classées par niveau (CECR). Ajoutez vos propres fiches, PDF ou liens au fur et à mesure — chaque carte est prête à recevoir un document.</p>
+
+      <div class="card-grid">
+
+        <article class="lesson-card">
+          <div class="lesson-level" data-level="A1">A1</div>
+          <h3 data-i18n="res_card1_title">Les bases : se présenter</h3>
+          <p data-i18n="res_card1_desc">Vocabulaire, salutations et premières phrases pour débuter.</p>
+          <a href="#" class="lesson-link" data-i18n="res_card_link">Ouvrir la fiche →</a>
+        </article>
+
+        <article class="lesson-card">
+          <div class="lesson-level" data-level="A2">A2</div>
+          <h3 data-i18n="res_card2_title">La vie quotidienne</h3>
+          <p data-i18n="res_card2_desc">Le temps, les habitudes, parler de sa journée.</p>
+          <a href="#" class="lesson-link" data-i18n="res_card_link">Ouvrir la fiche →</a>
+        </article>
+
+        <article class="lesson-card">
+          <div class="lesson-level" data-level="B1">B1</div>
+          <h3 data-i18n="res_card3_title">Donner son opinion</h3>
+          <p data-i18n="res_card3_desc">Débattre, argumenter, nuancer un point de vue.</p>
+          <a href="#" class="lesson-link" data-i18n="res_card_link">Ouvrir la fiche →</a>
+        </article>
+
+        <article class="lesson-card">
+          <div class="lesson-level" data-level="B2">B2</div>
+          <h3 data-i18n="res_card4_title">Culture et actualité</h3>
+          <p data-i18n="res_card4_desc">Articles de presse simplifiés et discussion.</p>
+          <a href="#" class="lesson-link" data-i18n="res_card_link">Ouvrir la fiche →</a>
+        </article>
+
+        <article class="lesson-card lesson-card--add">
+          <div class="add-icon" aria-hidden="true">+</div>
+          <p data-i18n="res_card_add">Ajoutez votre prochaine leçon ici</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TAPIF CALLOUT -->
+  <section class="tapif-band">
+    <div class="wrap tapif-inner">
+      <span class="stamp-badge" aria-hidden="true">✈</span>
+      <div>
+        <p class="tapif-eyebrow" data-i18n="tapif_eyebrow">Un projet en cours</p>
+        <p class="tapif-text" data-i18n="tapif_text">Je prépare ma candidature au programme TAPIF, pour enseigner l'anglais en France. Cette section racontera cette aventure, dès qu'elle commencera.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CULTURE GALLERY -->
+  <section id="culture" class="section section--culture">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="culture_eyebrow">Cartes postales</p>
+      <h2 class="section-title" data-i18n="culture_title">Culture ougandaise</h2>
+      <p class="section-lede" data-i18n="culture_lede">Un aperçu de la vie et de la culture en Ouganda, comme des cartes postales envoyées à mes élèves. Remplacez les cadres ci-dessous par vos propres photos ou vidéos.</p>
+
+      <div class="postcard-grid">
+
+        <figure class="postcard">
+          <div class="postcard-photo placeholder-photo">
+            <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
+          </div>
+          <span class="postcard-stamp" aria-hidden="true"></span>
+          <figcaption>
+            <span class="postcard-caption" data-i18n="culture_cap1">Un marché local</span>
+          </figcaption>
+        </figure>
+
+        <figure class="postcard">
+          <div class="postcard-photo placeholder-photo">
+            <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
+          </div>
+          <span class="postcard-stamp" aria-hidden="true"></span>
+          <figcaption>
+            <span class="postcard-caption" data-i18n="culture_cap2">Danse traditionnelle</span>
+          </figcaption>
+        </figure>
+
+        <figure class="postcard postcard--video">
+          <div class="postcard-photo placeholder-photo placeholder-video">
+            <span data-i18n="culture_ph_video">Ajoutez une vidéo ici</span>
+          </div>
+          <span class="postcard-stamp" aria-hidden="true"></span>
+          <figcaption>
+            <span class="postcard-caption" data-i18n="culture_cap3">Un festival près de Kampala</span>
+          </figcaption>
+        </figure>
+
+        <figure class="postcard">
+          <div class="postcard-photo placeholder-photo">
+            <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
+          </div>
+          <span class="postcard-stamp" aria-hidden="true"></span>
+          <figcaption>
+            <span class="postcard-caption" data-i18n="culture_cap4">Paysage du Nil</span>
+          </figcaption>
+        </figure>
+
+        <figure class="postcard">
+          <div class="postcard-photo placeholder-photo">
+            <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
+          </div>
+          <span class="postcard-stamp" aria-hidden="true"></span>
+          <figcaption>
+            <span class="postcard-caption" data-i18n="culture_cap5">Un plat traditionnel</span>
+          </figcaption>
+        </figure>
+
+        <figure class="postcard">
+          <div class="postcard-photo placeholder-photo">
+            <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
+          </div>
+          <span class="postcard-stamp" aria-hidden="true"></span>
+          <figcaption>
+            <span class="postcard-caption" data-i18n="culture_cap6">Artisanat local</span>
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <p class="culture-note" data-i18n="culture_note">Astuce : ouvrez le fichier <code>index.html</code> et remplacez un cadre par &lt;img src="images/votrephoto.jpg"&gt; pour une photo, ou &lt;video src="videos/votrevideo.mp4" controls&gt; pour une vidéo.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="apropos" class="section section--about">
+    <div class="wrap about-inner">
+      <div class="about-photo placeholder-photo">
+        <span data-i18n="about_ph_photo">Votre photo ici</span>
+      </div>
+      <div class="about-content">
+        <p class="eyebrow" data-i18n="about_eyebrow">Qui suis-je</p>
+        <h2 class="section-title" data-i18n="about_title">À propos</h2>
+        <p data-i18n="about_text">Enseignante de français basée à Kampala, en Ouganda. Ce site rassemble mes ressources de cours et mes envies de partager la culture ougandaise avec mes élèves et le monde francophone.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact" class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="brand-name small" data-i18n="footer_title">Le Carnet Ougandais</p>
+      <p class="footer-tagline" data-i18n="footer_tagline">Français &amp; culture, depuis Kampala.</p>
+    </div>
+    <div class="footer-contact">
+      <a href="mailto:votre.email@example.com">votre.email@example.com</a>
+    </div>
+  </div>
+  <p class="footer-fine" data-i18n="footer_fine">Site conçu et déployé avec GitHub &amp; Vercel.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
