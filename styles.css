@@ -12,6 +12,12 @@
   --leaf: #4C6B3E;
   --gold: #D9A441;
 
+  /* Official Uganda flag colors — used sparingly as accents/badges */
+  --flag-black: #000000;
+  --flag-yellow: #FCDC04;
+  --flag-red: #D90000;
+  --flag-grey: #9CA69C;
+
   --display: "Fraunces", "Iowan Old Style", serif;
   --body: "Work Sans", -apple-system, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -414,8 +420,8 @@ a{ color: inherit; }
   padding: 3px 9px;
   border-radius: 20px;
   margin-bottom: 14px;
-  background: var(--leaf);
-  color: var(--cream);
+  background: var(--flag-black);
+  color: var(--flag-yellow);
 }
 .track-card h3{ font-family: var(--display); font-size: 1.15rem; font-weight: 600; margin: 0 0 8px; }
 .track-card p{ color: var(--ink-soft); font-size: 0.94rem; margin: 0 0 16px; }
@@ -474,7 +480,7 @@ a{ color: inherit; }
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--cream);
-  background: var(--laterite);
+  background: var(--flag-red);
   border-radius: 20px;
   padding: 4px 12px;
   flex: none;
