@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +14,20 @@
 <header class="lesson-page-header">
   <div class="wrap">
     <a href="index.html" class="lesson-page-brand">Le Carnet Ougandais</a>
-    <a href="index.html#ressources" class="back-link">← Retour aux ressources</a>
+    <a href="index.html#ressources" class="back-link" data-i18n="lbl_back">← Retour aux ressources</a>
+    <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">
+      <span class="lang-opt is-active" data-lang-btn="fr">FR</span>
+      <span class="lang-sep">/</span>
+      <span class="lang-opt" data-lang-btn="en">EN</span>
+    </button>
   </div>
 </header>
 
 <section class="track-hero">
   <div class="wrap">
-    <p class="eyebrow">Track 1 · 5 leçons</p>
-    <h1>Sound &amp; Survival</h1>
-    <p>Les bases pour bien prononcer, saluer, donner un ordre, dire non et poser une question — tout ce qu'il faut pour survivre dans une vraie conversation dès le premier jour.</p>
+    <p class="eyebrow" data-i18n="t1_hero_eyebrow">Track 1 · 5 leçons</p>
+    <h1 data-i18n="t1_hero_title">Sound &amp; Survival</h1>
+    <p data-i18n="t1_hero_desc">Les bases pour bien prononcer, saluer, donner un ordre, dire non et poser une question — tout ce qu'il faut pour survivre dans une vraie conversation dès le premier jour.</p>
     <ul class="lesson-toc">
       <li><a href="#lecon-1-1">1.1 Prononciation</a></li>
       <li><a href="#lecon-1-2">1.2 Salutations</a></li>
@@ -40,12 +45,12 @@
     <span class="lesson-num">1.1</span>
     <h2>Le français ne se lit pas, il se chante</h2>
   </div>
-  <p class="lesson-objective"><strong>Objectif :</strong> comprendre pourquoi le français « sonne » différemment de l'anglais, et où placer l'accent dans un mot.</p>
-  <p class="lesson-hook">Le français et l'anglais partagent des centaines de mots presque identiques à l'écrit — mais à l'oral, c'est une autre histoire. Bonne nouvelle : une seule règle change tout.</p>
+  <p class="lesson-objective"><strong data-i18n="lbl_objective">Objectif :</strong> <span data-i18n="t1_1_obj">comprendre pourquoi le français « sonne » différemment de l'anglais, et où placer l'accent dans un mot.</span></p>
+  <p class="lesson-hook" data-i18n="t1_1_hook">Le français et l'anglais partagent des centaines de mots presque identiques à l'écrit — mais à l'oral, c'est une autre histoire. Bonne nouvelle : une seule règle change tout.</p>
   <div class="lesson-body">
-    <h3>Explication</h3>
-    <p>En anglais, l'accent tonique (la syllabe qu'on prononce plus fort) change d'un mot à l'autre et il faut souvent le deviner. En français, c'est simple : l'accent tombe <strong>toujours sur la dernière syllabe</strong> du mot ou du groupe de mots — et on l'allonge légèrement, on ne la crie pas plus fort. C'est ce qui donne au français sa mélodie régulière, presque « posée ».</p>
-    <h3>Exemples</h3>
+    <h3 data-i18n="lbl_explanation">Explication</h3>
+    <p data-i18n="t1_1_expl">En anglais, l'accent tonique (la syllabe qu'on prononce plus fort) change d'un mot à l'autre et il faut souvent le deviner. En français, c'est simple : l'accent tombe toujours sur la dernière syllabe du mot ou du groupe de mots — et on l'allonge légèrement, on ne la crie pas plus fort. C'est ce qui donne au français sa mélodie régulière, presque « posée ».</p>
+    <h3 data-i18n="lbl_examples">Exemples</h3>
     <ul class="lesson-examples">
       <li>ta-BLE (pas TA-ble)</li>
       <li>dic-tion-NAIRE</li>
@@ -54,10 +59,10 @@
       <li>Il ha-bite à Kam-pa-LA</li>
       <li>C'est vrai-MENT bon</li>
     </ul>
-    <h3>Exercice</h3>
-    <p class="lesson-exercise">Lisez ces mots à voix haute en allongeant bien la dernière syllabe : <em>téléphone, restaurant, université, ordinateur, appartement.</em></p>
-    <h3>À vous</h3>
-    <p class="lesson-tryit">Prenez une phrase que vous connaissez déjà en français et dites-la trois fois de suite, en exagérant l'allongement de la toute dernière syllabe. Sentez la différence avec l'anglais.</p>
+    <h3 data-i18n="lbl_exercise">Exercice</h3>
+    <p class="lesson-exercise" data-i18n="t1_1_exercise">Lisez ces mots à voix haute en allongeant bien la dernière syllabe : téléphone, restaurant, université, ordinateur, appartement.</p>
+    <h3 data-i18n="lbl_tryit">À vous</h3>
+    <p class="lesson-tryit" data-i18n="t1_1_tryit">Prenez une phrase que vous connaissez déjà en français et dites-la trois fois de suite, en exagérant l'allongement de la toute dernière syllabe. Sentez la différence avec l'anglais.</p>
   </div>
 </article>
 
@@ -68,12 +73,12 @@
     <span class="lesson-num">1.2</span>
     <h2>Bonjour tout le monde : les salutations</h2>
   </div>
-  <p class="lesson-objective"><strong>Objectif :</strong> saluer, se présenter et être poli dans une conversation simple.</p>
-  <p class="lesson-hook">Impossible de commencer une conversation en français sans passer par la case politesse — c'est presque une religion nationale.</p>
+  <p class="lesson-objective"><strong data-i18n="lbl_objective">Objectif :</strong> <span data-i18n="t1_2_obj">saluer, se présenter et être poli dans une conversation simple.</span></p>
+  <p class="lesson-hook" data-i18n="t1_2_hook">Impossible de commencer une conversation en français sans passer par la case politesse — c'est presque une religion nationale.</p>
   <div class="lesson-body">
-    <h3>Explication</h3>
-    <p>Le français distingue le registre formel (vouvoiement, avec <em>vous</em>) du registre familier (tutoiement, avec <em>tu</em>). Avec un inconnu, un professeur ou un supérieur : <em>vous</em>. Avec un ami, un enfant, un membre de la famille : <em>tu</em>. Dans le doute, commencez toujours par <em>vous</em>.</p>
-    <h3>Exemples</h3>
+    <h3 data-i18n="lbl_explanation">Explication</h3>
+    <p data-i18n="t1_2_expl">Le français distingue le registre formel (vouvoiement, avec vous) du registre familier (tutoiement, avec tu). Avec un inconnu, un professeur ou un supérieur : vous. Avec un ami, un enfant, un membre de la famille : tu. Dans le doute, commencez toujours par vous.</p>
+    <h3 data-i18n="lbl_examples">Exemples</h3>
     <ul class="lesson-examples">
       <li>Bonjour ! Comment allez-vous ? <em>(formel)</em></li>
       <li>Salut ! Ça va ? <em>(familier)</em></li>
@@ -82,10 +87,10 @@
       <li>Bonne journée ! / Bonne soirée !</li>
       <li>À bientôt ! / À demain !</li>
     </ul>
-    <h3>Exercice</h3>
-    <p class="lesson-exercise">Écrivez un mini-dialogue de 4 lignes entre deux inconnus qui se rencontrent à un arrêt de bus. Utilisez <em>vous</em>.</p>
-    <h3>À vous</h3>
-    <p class="lesson-tryit">Présentez-vous en trois phrases : votre nom, d'où vous venez, ce que vous aimez faire. Dites-le à voix haute avant de l'écrire.</p>
+    <h3 data-i18n="lbl_exercise">Exercice</h3>
+    <p class="lesson-exercise" data-i18n="t1_2_exercise">Écrivez un mini-dialogue de 4 lignes entre deux inconnus qui se rencontrent à un arrêt de bus. Utilisez vous.</p>
+    <h3 data-i18n="lbl_tryit">À vous</h3>
+    <p class="lesson-tryit" data-i18n="t1_2_tryit">Présentez-vous en trois phrases : votre nom, d'où vous venez, ce que vous aimez faire. Dites-le à voix haute avant de l'écrire.</p>
   </div>
 </article>
 
@@ -96,12 +101,12 @@
     <span class="lesson-num">1.3</span>
     <h2>Donnez un ordre ! L'impératif</h2>
   </div>
-  <p class="lesson-objective"><strong>Objectif :</strong> donner une instruction, un conseil ou une invitation sans dire « tu dois » à chaque fois.</p>
-  <p class="lesson-hook">Envie de dire « Écoute-moi », « Viens ici » ou « Amusons-nous » sans passer par une phrase compliquée ? C'est le rôle de l'impératif — le mode le plus direct du français.</p>
+  <p class="lesson-objective"><strong data-i18n="lbl_objective">Objectif :</strong> <span data-i18n="t1_3_obj">donner une instruction, un conseil ou une invitation sans dire « tu dois » à chaque fois.</span></p>
+  <p class="lesson-hook" data-i18n="t1_3_hook">Envie de dire « Écoute-moi », « Viens ici » ou « Amusons-nous » sans passer par une phrase compliquée ? C'est le rôle de l'impératif — le mode le plus direct du français.</p>
   <div class="lesson-body">
-    <h3>Explication</h3>
-    <p>L'impératif a trois formes, selon à qui vous parlez : familier (une personne proche), poli/pluriel (une personne qu'on vouvoie, ou plusieurs personnes), et inclusif (vous vous incluez vous-même, comme « let's... » en anglais). Pour les verbes en <em>-er</em>, la forme familière perd le <em>-s</em> final qu'on aurait normalement à la deuxième personne.</p>
-    <h3>Exemples</h3>
+    <h3 data-i18n="lbl_explanation">Explication</h3>
+    <p data-i18n="t1_3_expl">L'impératif a trois formes, selon à qui vous parlez : familier (une personne proche), poli/pluriel (une personne qu'on vouvoie, ou plusieurs personnes), et inclusif (vous vous incluez vous-même, comme « let's... » en anglais). Pour les verbes en -er, la forme familière perd le -s final qu'on aurait normalement à la deuxième personne.</p>
+    <h3 data-i18n="lbl_examples">Exemples</h3>
     <ul class="lesson-examples">
       <li>Écoute ! <em>(familier)</em> / Écoutez ! <em>(poli/pluriel)</em> / Écoutons ! <em>(inclusif — « let's listen »)</em></li>
       <li>Viens avec moi ! / Venez avec moi ! / Venons ensemble !</li>
@@ -110,10 +115,10 @@
       <li>Amusez-vous bien ce week-end !</li>
       <li>Essayons encore une fois.</li>
     </ul>
-    <h3>Exercice</h3>
-    <p class="lesson-exercise">Transformez ces phrases en ordres à la forme familière : (1) Tu regardes le tableau. (2) Tu manges tes légumes. (3) Tu arrêtes de parler.</p>
-    <h3>À vous</h3>
-    <p class="lesson-tryit">Donnez trois instructions que vous donneriez à un élève le premier jour de cours.</p>
+    <h3 data-i18n="lbl_exercise">Exercice</h3>
+    <p class="lesson-exercise" data-i18n="t1_3_exercise">Transformez ces phrases en ordres à la forme familière : (1) Tu regardes le tableau. (2) Tu manges tes légumes. (3) Tu arrêtes de parler.</p>
+    <h3 data-i18n="lbl_tryit">À vous</h3>
+    <p class="lesson-tryit" data-i18n="t1_3_tryit">Donnez trois instructions que vous donneriez à un élève le premier jour de cours.</p>
   </div>
 </article>
 
@@ -124,12 +129,12 @@
     <span class="lesson-num">1.4</span>
     <h2>Oui, non, et tout ce qu'il y a entre les deux</h2>
   </div>
-  <p class="lesson-objective"><strong>Objectif :</strong> répondre à une question, et savoir dire non correctement — y compris à une question négative.</p>
-  <p class="lesson-hook">En français, répondre « oui » à une question négative peut créer un malentendu... sauf si vous connaissez le petit mot magique : <em>si</em>.</p>
+  <p class="lesson-objective"><strong data-i18n="lbl_objective">Objectif :</strong> <span data-i18n="t1_4_obj">répondre à une question, et savoir dire non correctement — y compris à une question négative.</span></p>
+  <p class="lesson-hook" data-i18n="t1_4_hook">En français, répondre « oui » à une question négative peut créer un malentendu... sauf si vous connaissez le petit mot magique : si.</p>
   <div class="lesson-body">
-    <h3>Explication</h3>
-    <p>La négation de base se construit avec deux mots qui encadrent le verbe : <em>ne</em> avant, <em>pas</em> après. Mais le vrai piège pour les débutants, c'est de répondre à une question posée à la négative : dans ce cas, on n'utilise pas <em>oui</em> mais <strong>si</strong>, pour bien marquer qu'on contredit la négation.</p>
-    <h3>Exemples</h3>
+    <h3 data-i18n="lbl_explanation">Explication</h3>
+    <p data-i18n="t1_4_expl">La négation de base se construit avec deux mots qui encadrent le verbe : ne avant, pas après. Mais le vrai piège pour les débutants, c'est de répondre à une question posée à la négative : dans ce cas, on n'utilise pas oui mais si, pour bien marquer qu'on contredit la négation.</p>
+    <h3 data-i18n="lbl_examples">Exemples</h3>
     <ul class="lesson-examples">
       <li>Tu aimes le café ? — Oui, j'aime le café. / Non, je n'aime pas le café.</li>
       <li>Tu ne parles pas anglais ? — Si, je parle anglais ! <em>(pas « oui »)</em></li>
@@ -138,10 +143,10 @@
       <li>Ce n'est pas grave.</li>
       <li>Il n'y a pas de problème.</li>
     </ul>
-    <h3>Exercice</h3>
-    <p class="lesson-exercise">Répondez par <em>si</em> ou <em>non</em> : (1) Tu n'as pas faim ? (2) Tu ne veux pas venir ? (3) Il ne pleut pas aujourd'hui ? — imaginez une réponse logique pour chaque.</p>
-    <h3>À vous</h3>
-    <p class="lesson-tryit">Écrivez trois questions négatives que vous pourriez poser à un(e) élève curieux, et donnez la réponse avec <em>si</em> ou <em>non</em>.</p>
+    <h3 data-i18n="lbl_exercise">Exercice</h3>
+    <p class="lesson-exercise" data-i18n="t1_4_exercise">Répondez par si ou non : (1) Tu n'as pas faim ? (2) Tu ne veux pas venir ? (3) Il ne pleut pas aujourd'hui ? — imaginez une réponse logique pour chaque.</p>
+    <h3 data-i18n="lbl_tryit">À vous</h3>
+    <p class="lesson-tryit" data-i18n="t1_4_tryit">Écrivez trois questions négatives que vous pourriez poser à un(e) élève curieux, et donnez la réponse avec si ou non.</p>
   </div>
 </article>
 
@@ -152,12 +157,12 @@
     <span class="lesson-num">1.5</span>
     <h2>Posez une question, changez le monde</h2>
   </div>
-  <p class="lesson-objective"><strong>Objectif :</strong> poser une question simple de trois façons différentes, du plus familier au plus soutenu.</p>
-  <p class="lesson-hook">En français, on peut poser exactement la même question de trois manières — et choisir la bonne dépend uniquement du contexte, pas de la grammaire.</p>
+  <p class="lesson-objective"><strong data-i18n="lbl_objective">Objectif :</strong> <span data-i18n="t1_5_obj">poser une question simple de trois façons différentes, du plus familier au plus soutenu.</span></p>
+  <p class="lesson-hook" data-i18n="t1_5_hook">En français, on peut poser exactement la même question de trois manières — et choisir la bonne dépend uniquement du contexte, pas de la grammaire.</p>
   <div class="lesson-body">
-    <h3>Explication</h3>
-    <p>La façon la plus simple est de garder l'ordre normal de la phrase et de lever la voix à la fin (l'intonation montante). Un cran plus formel : ajouter <em>est-ce que</em> devant la phrase affirmative. La forme la plus soutenue inverse le verbe et le sujet. Les trois sont correctes ; à l'oral, la première est de loin la plus utilisée.</p>
-    <h3>Exemples</h3>
+    <h3 data-i18n="lbl_explanation">Explication</h3>
+    <p data-i18n="t1_5_expl">La façon la plus simple est de garder l'ordre normal de la phrase et de lever la voix à la fin (l'intonation montante). Un cran plus formel : ajouter est-ce que devant la phrase affirmative. La forme la plus soutenue inverse le verbe et le sujet. Les trois sont correctes ; à l'oral, la première est de loin la plus utilisée.</p>
+    <h3 data-i18n="lbl_examples">Exemples</h3>
     <ul class="lesson-examples">
       <li>Tu viens ce soir ? <em>(intonation)</em></li>
       <li>Est-ce que tu viens ce soir ? <em>(est-ce que)</em></li>
@@ -166,14 +171,15 @@
       <li>Pourquoi tu ris ?</li>
       <li>Qu'est-ce que tu fais ce week-end ?</li>
     </ul>
-    <h3>Exercice</h3>
-    <p class="lesson-exercise">Transformez ces affirmations en questions avec <em>est-ce que</em> : (1) Tu aimes voyager. (2) Elle travaille à Kampala. (3) Ils parlent français.</p>
-    <h3>À vous</h3>
-    <p class="lesson-tryit">Imaginez que vous rencontrez quelqu'un pour la première fois. Écrivez cinq questions que vous lui poseriez, en variant <em>qui, quoi, où, quand, pourquoi</em>.</p>
+    <h3 data-i18n="lbl_exercise">Exercice</h3>
+    <p class="lesson-exercise" data-i18n="t1_5_exercise">Transformez ces affirmations en questions avec est-ce que : (1) Tu aimes voyager. (2) Elle travaille à Kampala. (3) Ils parlent français.</p>
+    <h3 data-i18n="lbl_tryit">À vous</h3>
+    <p class="lesson-tryit" data-i18n="t1_5_tryit">Imaginez que vous rencontrez quelqu'un pour la première fois. Écrivez cinq questions que vous lui poseriez, en variant qui, quoi, où, quand, pourquoi.</p>
   </div>
 </article>
 
-<p class="track-next">→ Suite : <a href="track-2.html">Track 2 — Core Grammar</a></p>
+<p class="track-next"><span data-i18n="t1_next_label">→ Suite :</span> <a href="track-2.html" data-i18n="t1_next_link">Track 2 — Core Grammar</a></p>
 
+<script src="script.js"></script>
 </body>
 </html>
