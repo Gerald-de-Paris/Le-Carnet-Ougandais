@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +7,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="lesson-page-header">
   <div class="wrap">
-    <a href="../index.html" class="lesson-page-brand">Le Carnet Ougandais</a>
-    <a href="../index.html#ressources" class="back-link">← Retour aux ressources</a>
+    <a href="index.html" class="lesson-page-brand">Le Carnet Ougandais</a>
+    <a href="index.html#ressources" class="back-link" data-i18n="lbl_back">← Retour aux ressources</a>
+    <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">
+      <span class="lang-opt is-active" data-lang-btn="fr">FR</span>
+      <span class="lang-sep">/</span>
+      <span class="lang-opt" data-lang-btn="en">EN</span>
+    </button>
   </div>
 </header>
 
 <section class="track-hero">
   <div class="wrap">
-    <p class="eyebrow">Track 2 · 2 leçons disponibles sur 8</p>
-    <h1>Core Grammar</h1>
-    <p>La colonne vertébrale grammaticale du cours : articles et noms, groupes de verbes, négation approfondie, nombres, heure et prépositions. Cette page grandit au fil des leçons ajoutées.</p>
+    <p class="eyebrow" data-i18n="t2_hero_eyebrow">Track 2 · 2 leçons disponibles sur 8</p>
+    <h1 data-i18n="t2_hero_title">Core Grammar</h1>
+    <p data-i18n="t2_hero_desc">La colonne vertébrale grammaticale du cours : articles et noms, groupes de verbes, négation approfondie, nombres, heure et prépositions. Cette page grandit au fil des leçons ajoutées.</p>
     <ul class="lesson-toc">
       <li><a href="#lecon-2-1">2.1 Genre des noms</a></li>
       <li><a href="#lecon-2-2">2.2 Le pluriel</a></li>
@@ -37,12 +42,12 @@
     <span class="lesson-num">2.1</span>
     <h2>Le/La/Un/Une : le genre des noms</h2>
   </div>
-  <p class="lesson-objective"><strong>Objectif :</strong> comprendre pourquoi chaque nom français a un genre, et choisir le bon article.</p>
-  <p class="lesson-hook">En français, même une table a un genre. Ça peut sembler étrange au début, mais une fois le réflexe pris, ça devient automatique.</p>
+  <p class="lesson-objective"><strong data-i18n="lbl_objective">Objectif :</strong> <span data-i18n="t2_1_obj">comprendre pourquoi chaque nom français a un genre, et choisir le bon article.</span></p>
+  <p class="lesson-hook" data-i18n="t2_1_hook">En français, même une table a un genre. Ça peut sembler étrange au début, mais une fois le réflexe pris, ça devient automatique.</p>
   <div class="lesson-body">
-    <h3>Explication</h3>
-    <p>Tous les noms français sont soit masculins soit féminins — objets inclus, pas seulement les personnes. L'article qui accompagne le nom (<em>le/la</em> pour « the », <em>un/une</em> pour « a/an ») indique ce genre. Il n'existe pas de règle universelle pour deviner le genre d'un mot, donc la meilleure stratégie est d'apprendre <strong>le nom et son article ensemble</strong>, comme un seul bloc, dès le premier jour.</p>
-    <h3>Exemples</h3>
+    <h3 data-i18n="lbl_explanation">Explication</h3>
+    <p data-i18n="t2_1_expl">Tous les noms français sont soit masculins soit féminins — objets inclus, pas seulement les personnes. L'article qui accompagne le nom (le/la pour « the », un/une pour « a/an ») indique ce genre. Il n'existe pas de règle universelle pour deviner le genre d'un mot, donc la meilleure stratégie est d'apprendre le nom et son article ensemble, comme un seul bloc, dès le premier jour.</p>
+    <h3 data-i18n="lbl_examples">Exemples</h3>
     <ul class="lesson-examples">
       <li>le livre / un livre <em>(masculin)</em></li>
       <li>la table / une table <em>(féminin)</em></li>
@@ -51,10 +56,10 @@
       <li>l'ami / l'amie <em>(devant une voyelle, le/la deviennent l')</em></li>
       <li>les livres / les tables <em>(pluriel : un seul article, « les », pour les deux genres)</em></li>
     </ul>
-    <h3>Exercice</h3>
-    <p class="lesson-exercise">Classez ces mots en deux colonnes, masculin ou féminin (aidez-vous d'un dictionnaire si besoin) : <em>voiture, téléphone, ville, jardin, musique, pays.</em></p>
-    <h3>À vous</h3>
-    <p class="lesson-tryit">Choisissez cinq objets autour de vous en ce moment et notez-les avec leur article : <em>le stylo, la fenêtre...</em></p>
+    <h3 data-i18n="lbl_exercise">Exercice</h3>
+    <p class="lesson-exercise" data-i18n="t2_1_exercise">Classez ces mots en deux colonnes, masculin ou féminin (aidez-vous d'un dictionnaire si besoin) : voiture, téléphone, ville, jardin, musique, pays.</p>
+    <h3 data-i18n="lbl_tryit">À vous</h3>
+    <p class="lesson-tryit" data-i18n="t2_1_tryit">Choisissez cinq objets autour de vous en ce moment et notez-les avec leur article : le stylo, la fenêtre...</p>
   </div>
 </article>
 
@@ -65,12 +70,12 @@
     <span class="lesson-num">2.2</span>
     <h2>Un, deux, plusieurs : le pluriel</h2>
   </div>
-  <p class="lesson-objective"><strong>Objectif :</strong> mettre un nom et son article au pluriel correctement.</p>
-  <p class="lesson-hook">Bonne nouvelle pour une fois : le pluriel français est presque toujours d'une simplicité déconcertante.</p>
+  <p class="lesson-objective"><strong data-i18n="lbl_objective">Objectif :</strong> <span data-i18n="t2_2_obj">mettre un nom et son article au pluriel correctement.</span></p>
+  <p class="lesson-hook" data-i18n="t2_2_hook">Bonne nouvelle pour une fois : le pluriel français est presque toujours d'une simplicité déconcertante.</p>
   <div class="lesson-body">
-    <h3>Explication</h3>
-    <p>Dans la grande majorité des cas, on forme le pluriel en ajoutant un <strong>-s</strong> final — mais attention, ce -s ne se prononce presque jamais à l'oral, c'est l'article devant le nom qui indique le pluriel. Quelques familles de mots ont des règles particulières : les noms en <em>-eau</em> et <em>-eu</em> prennent un <strong>-x</strong>, et les noms déjà terminés en <em>-s, -x, -z</em> ne changent pas du tout.</p>
-    <h3>Exemples</h3>
+    <h3 data-i18n="lbl_explanation">Explication</h3>
+    <p data-i18n="t2_2_expl">Dans la grande majorité des cas, on forme le pluriel en ajoutant un -s final — mais attention, ce -s ne se prononce presque jamais à l'oral, c'est l'article devant le nom qui indique le pluriel. Quelques familles de mots ont des règles particulières : les noms en -eau et -eu prennent un -x, et les noms déjà terminés en -s, -x, -z ne changent pas du tout.</p>
+    <h3 data-i18n="lbl_examples">Exemples</h3>
     <ul class="lesson-examples">
       <li>le livre → les livres</li>
       <li>la maison → les maisons</li>
@@ -79,14 +84,15 @@
       <li>le prix → les prix <em>(déjà terminé en -x, invariable)</em></li>
       <li>un enfant → des enfants</li>
     </ul>
-    <h3>Exercice</h3>
-    <p class="lesson-exercise">Mettez ces groupes au pluriel : (1) le cadeau (2) la voiture (3) l'animal → les animaux (exception à retenir !) (4) le gâteau.</p>
-    <h3>À vous</h3>
-    <p class="lesson-tryit">Écrivez une courte liste de courses (5 articles) en utilisant uniquement des noms au pluriel : <em>des pommes, des œufs...</em></p>
+    <h3 data-i18n="lbl_exercise">Exercice</h3>
+    <p class="lesson-exercise" data-i18n="t2_2_exercise">Mettez ces groupes au pluriel : (1) le cadeau (2) la voiture (3) l'animal → les animaux (exception à retenir !) (4) le gâteau.</p>
+    <h3 data-i18n="lbl_tryit">À vous</h3>
+    <p class="lesson-tryit" data-i18n="t2_2_tryit">Écrivez une courte liste de courses (5 articles) en utilisant uniquement des noms au pluriel : des pommes, des œufs...</p>
   </div>
 </article>
 
-<p class="track-next">Prochaines leçons de ce track : les verbes en -ER, -IR, -RE · la négation approfondie · les nombres · l'heure · les prépositions. À venir bientôt.</p>
+<p class="track-next" data-i18n="t2_next">Prochaines leçons de ce track : les verbes en -ER, -IR, -RE · la négation approfondie · les nombres · l'heure · les prépositions. À venir bientôt.</p>
 
+<script src="script.js"></script>
 </body>
 </html>
