@@ -25,16 +25,28 @@ const translations = {
     fr: "Classées par niveau (CECR). Ajoutez vos propres fiches, PDF ou liens au fur et à mesure — chaque carte est prête à recevoir un document.",
     en: "Organized by level (CEFR). Add your own worksheets, PDFs or links over time — each card is ready to hold a document."
   },
-  res_card1_title: { fr: "Les bases : se présenter", en: "The basics: introducing yourself" },
-  res_card1_desc: { fr: "Vocabulaire, salutations et premières phrases pour débuter.", en: "Vocabulary, greetings and first sentences to get started." },
-  res_card2_title: { fr: "La vie quotidienne", en: "Everyday life" },
-  res_card2_desc: { fr: "Le temps, les habitudes, parler de sa journée.", en: "Time, habits, talking about your day." },
-  res_card3_title: { fr: "Donner son opinion", en: "Giving your opinion" },
-  res_card3_desc: { fr: "Débattre, argumenter, nuancer un point de vue.", en: "Debating, arguing, nuancing a point of view." },
-  res_card4_title: { fr: "Culture et actualité", en: "Culture and current events" },
-  res_card4_desc: { fr: "Articles de presse simplifiés et discussion.", en: "Simplified news articles and discussion." },
-  res_card_link: { fr: "Ouvrir la fiche →", en: "Open worksheet →" },
-  res_card_add: { fr: "Ajoutez votre prochaine leçon ici", en: "Add your next lesson here" },
+  track1_title: { fr: "Sound & Survival", en: "Sound & Survival" },
+  track1_desc: { fr: "Prononciation, salutations, impératif, négation, questions.", en: "Pronunciation, greetings, the imperative, negation, questions." },
+  track1_progress: { fr: "5 / 5 leçons disponibles", en: "5 / 5 lessons available" },
+
+  track2_title: { fr: "Core Grammar", en: "Core Grammar" },
+  track2_desc: { fr: "Genre des noms, pluriel, groupes de verbes, négation, nombres, heure.", en: "Noun gender, plurals, verb groups, negation, numbers, time." },
+  track2_progress: { fr: "2 / 8 leçons disponibles", en: "2 / 8 lessons available" },
+
+  track3_title: { fr: "Real Communication", en: "Real Communication" },
+  track3_desc: { fr: "Verbes irréguliers, pronoms compléments, verbes réfléchis.", en: "Irregular verbs, object pronouns, reflexive verbs." },
+
+  track4_title: { fr: "Past, Future & Fluency", en: "Past, Future & Fluency" },
+  track4_desc: { fr: "Passé composé, imparfait, futur, conditionnel, subjonctif.", en: "Passé composé, imperfect, future, conditional, subjunctive." },
+
+  track5_title: { fr: "Real-Life Situations", en: "Real-Life Situations" },
+  track5_desc: { fr: "Aéroport, hôtel, restaurant, achats, santé, petites conversations.", en: "Airport, hotel, restaurant, shopping, health, small talk." },
+
+  track6_title: { fr: "Reading for Confidence", en: "Reading for Confidence" },
+  track6_desc: { fr: "Mini-dialogues et petites histoires pour lire avec plaisir.", en: "Mini-dialogues and short stories for reading enjoyment." },
+
+  track_link: { fr: "Ouvrir le track →", en: "Open track →" },
+  track_soon: { fr: "Bientôt disponible", en: "Coming soon" },
 
   tapif_eyebrow: { fr: "Un projet en cours", en: "A project in progress" },
   tapif_text: {
