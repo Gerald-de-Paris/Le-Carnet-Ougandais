@@ -199,3 +199,13 @@ function initLangToggle() {
 }
 
 document.addEventListener("DOMContentLoaded", initLangToggle);
+
+// ============================================
+// BASIC COPY DETERRENT (not foolproof — see note)
+// ============================================
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
+document.addEventListener("copy", function (e) {
+  e.preventDefault();
+});
