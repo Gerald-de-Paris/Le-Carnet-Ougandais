@@ -19,11 +19,11 @@ const translations = {
   hero_cta_resources: { fr: "Voir les ressources", en: "See the resources" },
   hero_cta_culture: { fr: "Découvrir la culture", en: "Explore the culture" },
 
-  res_eyebrow: { fr: "Pas prof, juste passionné", en: "Not a teacher, just passionate" },
+  res_eyebrow: { fr: "Juste passionné", en: "Just passionate" },
   res_title: { fr: "Ressources de français", en: "French resources" },
   res_lede: {
-    fr: "Mes propres notes pour apprendre (et partager) le français — pensées pour être claires, utiles, et pas trop sérieuses.",
-    en: "My own notes for learning (and sharing) French — made to be clear, useful, and not too serious."
+    fr: "Pour apprendre (et partager) le français — clair, utile, et pas trop sérieux.",
+    en: "For learning (and sharing) French — clear, useful, and not too serious."
   },
 
   track1_title: { fr: "Sound & Survival", en: "Sound & Survival" },
@@ -67,8 +67,8 @@ const translations = {
   about_eyebrow: { fr: "Un peu plus sur moi", en: "A little about me" },
   about_title: { fr: "À propos", en: "About" },
   about_text: {
-    fr: "Pas prof, juste un(e) passionné(e) de français basé(e) à Kampala. Ici, on m'appelle « L'Affaires Étrangères » — un clin d'œil à Gerald de Paris, mon nom de plume pour ce carnet.",
-    en: "Not a teacher, just a French enthusiast based in Kampala. Around here, people call me \"The Foreign Affairs Guy\" — a nod to Gerald de Paris, my pen name for this notebook."
+    fr: "Passionné(e) de français basé(e) à Kampala. Ici, on m'appelle « L'Affaires Étrangères » — un clin d'œil à Gerald de Paris, mon nom de plume pour ce carnet.",
+    en: "French enthusiast based in Kampala. Around here, people call me \"The Foreign Affairs Guy\" — a nod to Gerald de Paris, my pen name for this notebook."
   },
   about_ph_photo: { fr: "Votre photo ici", en: "Your photo here" },
 
