@@ -442,6 +442,11 @@ a{ color: inherit; }
 .back-link:hover{ text-decoration: underline; }
 .lesson-page-brand{ font-family: var(--display); font-size: 1.05rem; color: var(--parchment); text-decoration: none; }
 
+.lesson-page-header .lang-toggle{ border-color: var(--parchment); color: var(--parchment); }
+.lesson-page-header .lang-opt{ opacity: 0.5; }
+.lesson-page-header .lang-opt.is-active{ opacity: 1; color: var(--gold); }
+.lesson-page-header .lang-sep{ opacity: 0.5; }
+
 .track-hero{ padding: 56px 0 20px; }
 .track-hero h1{
   font-family: var(--display);
