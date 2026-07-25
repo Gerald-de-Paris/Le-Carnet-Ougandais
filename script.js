@@ -83,7 +83,7 @@ const translations = {
 
   footer_title: { fr: "Le Carnet Ougandais", en: "Le Carnet Ougandais" },
   footer_tagline: { fr: "Français & culture, depuis Kampala.", en: "French & culture, from Kampala." },
-  footer_fine: { fr: "Site conçu et déployé avec GitHub & Vercel.", en: "Site designed and deployed with GitHub & Vercel." }
+  footer_fine: { fr: "Préparé par Gerald de Paris.", en: "Prepared by Gerald de Paris." }
 };
 
 // ============================================
