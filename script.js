@@ -19,19 +19,20 @@ const translations = {
   hero_cta_resources: { fr: "Voir les ressources", en: "See the resources" },
   hero_cta_culture: { fr: "Découvrir la culture", en: "Explore the culture" },
 
-  res_eyebrow: { fr: "Matériel pédagogique", en: "Teaching material" },
+  res_eyebrow: { fr: "Pas prof, juste passionné", en: "Not a teacher, just passionate" },
   res_title: { fr: "Ressources de français", en: "French resources" },
   res_lede: {
-    fr: "Classées par niveau (CECR). Ajoutez vos propres fiches, PDF ou liens au fur et à mesure — chaque carte est prête à recevoir un document.",
-    en: "Organized by level (CEFR). Add your own worksheets, PDFs or links over time — each card is ready to hold a document."
+    fr: "Mes propres notes pour apprendre (et partager) le français — pensées pour être claires, utiles, et pas trop sérieuses.",
+    en: "My own notes for learning (and sharing) French — made to be clear, useful, and not too serious."
   },
+
   track1_title: { fr: "Sound & Survival", en: "Sound & Survival" },
   track1_desc: { fr: "Prononciation, salutations, impératif, négation, questions.", en: "Pronunciation, greetings, the imperative, negation, questions." },
   track1_progress: { fr: "5 / 5 leçons disponibles", en: "5 / 5 lessons available" },
 
   track2_title: { fr: "Core Grammar", en: "Core Grammar" },
-  track2_desc: { fr: "Genre des noms, pluriel, groupes de verbes, négation, nombres, heure.", en: "Noun gender, plurals, verb groups, negation, numbers, time." },
-  track2_progress: { fr: "2 / 8 leçons disponibles", en: "2 / 8 lessons available" },
+  track2_desc: { fr: "Articles, être/avoir, présent, nombres, heure, futur proche, comparatifs.", en: "Articles, être/avoir, present tense, numbers, time, near future, comparatives." },
+  track2_progress: { fr: "8 / 8 leçons disponibles", en: "8 / 8 lessons available" },
 
   track3_title: { fr: "Real Communication", en: "Real Communication" },
   track3_desc: { fr: "Verbes irréguliers, pronoms compléments, verbes réfléchis.", en: "Irregular verbs, object pronouns, reflexive verbs." },
@@ -48,17 +49,11 @@ const translations = {
   track_link: { fr: "Ouvrir le track →", en: "Open track →" },
   track_soon: { fr: "Bientôt disponible", en: "Coming soon" },
 
-  tapif_eyebrow: { fr: "Un projet en cours", en: "A project in progress" },
-  tapif_text: {
-    fr: "Je prépare ma candidature au programme TAPIF, pour enseigner l'anglais en France. Cette section racontera cette aventure, dès qu'elle commencera.",
-    en: "I'm preparing my application to the TAPIF program, to teach English in France. This section will tell that story once it begins."
-  },
-
   culture_eyebrow: { fr: "Cartes postales", en: "Postcards" },
   culture_title: { fr: "Culture ougandaise", en: "Ugandan culture" },
   culture_lede: {
-    fr: "Un aperçu de la vie et de la culture en Ouganda, comme des cartes postales envoyées à mes élèves. Remplacez les cadres ci-dessous par vos propres photos ou vidéos.",
-    en: "A glimpse of life and culture in Uganda, like postcards sent to my students. Replace the frames below with your own photos or videos."
+    fr: "J'adore ce pays, et j'ai décidé de le crier sur les toits (enfin, sur ce site). Voici quelques cartes postales de l'Ouganda — pas pour un cours, juste parce que ça vaut le coup d'œil.",
+    en: "I love this country, and I've decided to shout it from the rooftops (well, from this site). Here are a few postcards from Uganda — not for a lesson, just because it's worth a look."
   },
   culture_ph_photo: { fr: "Ajoutez une photo ici", en: "Add a photo here" },
   culture_ph_video: { fr: "Ajoutez une vidéo ici", en: "Add a video here" },
@@ -68,22 +63,18 @@ const translations = {
   culture_cap4: { fr: "Paysage du Nil", en: "A view of the Nile" },
   culture_cap5: { fr: "Un plat traditionnel", en: "A traditional dish" },
   culture_cap6: { fr: "Artisanat local", en: "Local craftwork" },
-  culture_note: {
-    fr: 'Astuce : ouvrez le fichier index.html et remplacez un cadre par une balise image pour une photo, ou une balise video pour une vidéo.',
-    en: "Tip: open index.html and replace a frame with an image tag for a photo, or a video tag for a video."
-  },
 
-  about_eyebrow: { fr: "Qui suis-je", en: "About me" },
+  about_eyebrow: { fr: "Un peu plus sur moi", en: "A little about me" },
   about_title: { fr: "À propos", en: "About" },
   about_text: {
-    fr: "Enseignante de français basée à Kampala, en Ouganda. Ce site rassemble mes ressources de cours et mes envies de partager la culture ougandaise avec mes élèves et le monde francophone.",
-    en: "French teacher based in Kampala, Uganda. This site gathers my teaching resources and my wish to share Ugandan culture with my students and the French-speaking world."
+    fr: "Pas prof, juste un(e) passionné(e) de français basé(e) à Kampala. Ici, on m'appelle « L'Affaires Étrangères » — un clin d'œil à Gerald de Paris, mon nom de plume pour ce carnet.",
+    en: "Not a teacher, just a French enthusiast based in Kampala. Around here, people call me \"The Foreign Affairs Guy\" — a nod to Gerald de Paris, my pen name for this notebook."
   },
   about_ph_photo: { fr: "Votre photo ici", en: "Your photo here" },
 
   footer_title: { fr: "Le Carnet Ougandais", en: "Le Carnet Ougandais" },
   footer_tagline: { fr: "Français & culture, depuis Kampala.", en: "French & culture, from Kampala." },
-  footer_fine: { fr: "Préparé par Gerald de Paris.", en: "Prepared by Gerald de Paris." },
+  footer_fine: { fr: "Préparé par Gerald de Paris, alias L'Affaires Étrangères.", en: "Prepared by Gerald de Paris, aka The Foreign Affairs Guy." },
 
   // ---------- shared lesson-page labels ----------
   lbl_objective: { fr: "Objectif :", en: "Objective:" },
@@ -93,76 +84,183 @@ const translations = {
   lbl_tryit: { fr: "À vous", en: "Your turn" },
   lbl_back: { fr: "← Retour aux ressources", en: "← Back to resources" },
 
-  // ---------- Track 1 hero ----------
+  // ================= TRACK 1 =================
   t1_hero_eyebrow: { fr: "Track 1 · 5 leçons", en: "Track 1 · 5 lessons" },
   t1_hero_title: { fr: "Sound & Survival", en: "Sound & Survival" },
   t1_hero_desc: {
-    fr: "Les bases pour bien prononcer, saluer, donner un ordre, dire non et poser une question — tout ce qu'il faut pour survivre dans une vraie conversation dès le premier jour.",
-    en: "The basics for good pronunciation, greetings, giving an order, saying no, and asking a question — everything you need to survive a real conversation from day one."
+    fr: "Se sentir à l'aise avec les sons du français et faire un premier échange simple, dès le premier jour.",
+    en: "Getting comfortable making basic French sounds and simple exchanges from day one."
   },
   t1_next_label: { fr: "→ Suite :", en: "→ Next:" },
   t1_next_link: { fr: "Track 2 — Core Grammar", en: "Track 2 — Core Grammar" },
 
-  // ---------- Lesson 1.1 ----------
-  t1_1_obj: { fr: "comprendre pourquoi le français « sonne » différemment de l'anglais, et où placer l'accent dans un mot.", en: "understand why French \"sounds\" different from English, and where to place the stress in a word." },
+  // 1.1 — Hello, French!
+  t1_1_obj: { fr: "se familiariser avec la sonorité du français par rapport à l'anglais.", en: "get comfortable with how French sounds and feels compared to English." },
   t1_1_hook: { fr: "Le français et l'anglais partagent des centaines de mots presque identiques à l'écrit — mais à l'oral, c'est une autre histoire. Bonne nouvelle : une seule règle change tout.", en: "French and English share hundreds of nearly identical written words — but out loud, it's a different story. Good news: one single rule changes everything." },
-  t1_1_expl: { fr: "En anglais, l'accent tonique (la syllabe qu'on prononce plus fort) change d'un mot à l'autre et il faut souvent le deviner. En français, c'est simple : l'accent tombe toujours sur la dernière syllabe du mot ou du groupe de mots — et on l'allonge légèrement, on ne la crie pas plus fort. C'est ce qui donne au français sa mélodie régulière, presque « posée ».", en: "In English, word stress (the syllable said louder) shifts from word to word and often has to be guessed. In French, it's simple: the stress always falls on the last syllable of the word or phrase — and it's slightly lengthened, not shouted louder. That's what gives French its steady, almost \"calm\" melody." },
-  t1_1_exercise: { fr: "Lisez ces mots à voix haute en allongeant bien la dernière syllabe : téléphone, restaurant, université, ordinateur, appartement.", en: "Read these words aloud, lengthening the last syllable clearly: téléphone, restaurant, université, ordinateur, appartement." },
-  t1_1_tryit: { fr: "Prenez une phrase que vous connaissez déjà en français et dites-la trois fois de suite, en exagérant l'allongement de la toute dernière syllabe. Sentez la différence avec l'anglais.", en: "Take a sentence you already know in French and say it three times in a row, exaggerating the lengthening of the very last syllable. Feel the difference from English." },
+  t1_1_expl: { fr: "Beaucoup de mots français ressemblent à l'anglais à l'écrit (nation, restaurant, information) mais se prononcent très différemment. Le français est une langue au rythme régulier : chaque syllabe dure à peu près le même temps, contrairement à l'anglais. Et l'accent tombe toujours sur la dernière syllabe du mot ou du groupe de mots.", en: "Many French words look like English in writing (nation, restaurant, information) but sound very different out loud. French has a steady rhythm: each syllable takes roughly the same amount of time, unlike English. And the stress always falls on the last syllable of the word or phrase." },
+  t1_1_ex1: { fr: "nation → na-si-ON (pas NAY-shun)", en: "nation → na-si-ON (not NAY-shun)" },
+  t1_1_ex2: { fr: "restaurant → res-to-RAN", en: "restaurant → res-to-RAHN" },
+  t1_1_ex3: { fr: "information → in-for-ma-si-ON", en: "information → an-for-ma-see-OHN" },
+  t1_1_ex4: { fr: "célébration → sé-lé-bra-si-ON", en: "célébration → say-lay-bra-see-OHN" },
+  t1_1_ex5: { fr: "Je vais au ci-né-MA", en: "Je vais au ci-né-MA (I'm going to the movies)" },
+  t1_1_ex6: { fr: "C'est vrai-MENT bon", en: "C'est vrai-MENT bon (It's really good)" },
+  t1_1_exercise: { fr: "Regardez ces mots : nation, information, animal, hôpital, télévision. Devinez pour chacun : est-ce proche de l'anglais, ou totalement différent à l'oral ? Puis dites-les à voix haute.", en: "Look at these words: nation, information, animal, hôpital, télévision. Guess for each: close to English, or totally different out loud? Then say them aloud." },
+  t1_1_tryit: { fr: "Prenez une phrase que vous connaissez déjà en français et dites-la trois fois, en exagérant l'allongement de la toute dernière syllabe.", en: "Take a sentence you already know in French and say it three times, exaggerating the lengthening of the very last syllable." },
 
-  // ---------- Lesson 1.2 ----------
-  t1_2_obj: { fr: "saluer, se présenter et être poli dans une conversation simple.", en: "greet someone, introduce yourself, and be polite in a simple conversation." },
-  t1_2_hook: { fr: "Impossible de commencer une conversation en français sans passer par la case politesse — c'est presque une religion nationale.", en: "You can't start a conversation in French without going through the politeness ritual first — it's practically a national religion." },
-  t1_2_expl: { fr: "Le français distingue le registre formel (vouvoiement, avec vous) du registre familier (tutoiement, avec tu). Avec un inconnu, un professeur ou un supérieur : vous. Avec un ami, un enfant, un membre de la famille : tu. Dans le doute, commencez toujours par vous.", en: "French distinguishes the formal register (using vous) from the familiar one (using tu). With a stranger, a teacher, or a superior: vous. With a friend, a child, a family member: tu. When in doubt, always start with vous." },
-  t1_2_exercise: { fr: "Écrivez un mini-dialogue de 4 lignes entre deux inconnus qui se rencontrent à un arrêt de bus. Utilisez vous.", en: "Write a 4-line mini-dialogue between two strangers meeting at a bus stop. Use vous." },
-  t1_2_tryit: { fr: "Présentez-vous en trois phrases : votre nom, d'où vous venez, ce que vous aimez faire. Dites-le à voix haute avant de l'écrire.", en: "Introduce yourself in three sentences: your name, where you're from, what you like to do. Say it out loud before writing it down." },
+  // 1.2 — Vowels That Change Everything (NEW)
+  t1_2_obj: { fr: "distinguer les voyelles françaises de leurs équivalents anglais, notamment les voyelles nasales et les accents.", en: "distinguish core French vowel sounds from English equivalents, especially nasal vowels and accents." },
+  t1_2_hook: { fr: "Une seule petite marque au-dessus d'une lettre peut changer complètement le sens d'un mot. Et le français a des sons que l'anglais n'a tout simplement pas : les voyelles nasales.", en: "One small mark above a letter can completely change a word's meaning. And French has sounds English simply doesn't have: nasal vowels." },
+  t1_2_expl: { fr: "Le français utilise trois accents sur le e : é (aigu), è (grave), ê (circonflexe) — chacun donne un son différent. Le français a aussi des voyelles nasales, où l'air passe par le nez : an/en, in/ain, on, un. Elles n'existent pas en anglais, donc il faut d'abord les entraîner à l'oreille avant de les prononcer.", en: "French uses three accents on the letter e: é (acute), è (grave), ê (circumflex) — each gives a different sound. French also has nasal vowels, where air passes through the nose: an/en, in/ain, on, un. These don't exist in English, so train your ear before your mouth." },
+  t1_2_ex1: { fr: "été (l'été, la saison) vs être (exister)", en: "été (summer) vs être (to be) — same base letter, different sound" },
+  t1_2_ex2: { fr: "élève / préféré — accent aigu (é)", en: "élève / préféré — acute accent (é)" },
+  t1_2_ex3: { fr: "père / mère — accent grave (è), son ouvert", en: "père / mère — grave accent (è), open sound" },
+  t1_2_ex4: { fr: "forêt / fenêtre — accent circonflexe (ê)", en: "forêt / fenêtre — circumflex accent (ê)" },
+  t1_2_ex5: { fr: "pain, vin, bon, un — quatre voyelles nasales différentes", en: "pain, vin, bon, un — four different nasal vowels" },
+  t1_2_exercise: { fr: "Classez ces mots selon leur voyelle nasale (an/en, in/ain, on, un) : pain, maison, bonjour, lundi, enfant, matin.", en: "Sort these words by their nasal vowel (an/en, in/ain, on, un): pain, maison, bonjour, lundi, enfant, matin." },
+  t1_2_tryit: { fr: "Écrivez trois mots français que vous connaissez déjà contenant une voyelle nasale, et prononcez-les à voix haute.", en: "Write three French words you already know that contain a nasal vowel, and say them aloud." },
 
-  // ---------- Lesson 1.3 ----------
-  t1_3_obj: { fr: "donner une instruction, un conseil ou une invitation sans dire « tu dois » à chaque fois.", en: "give an instruction, a piece of advice, or an invitation without saying \"you must\" every time." },
-  t1_3_hook: { fr: "Envie de dire « Écoute-moi », « Viens ici » ou « Amusons-nous » sans passer par une phrase compliquée ? C'est le rôle de l'impératif — le mode le plus direct du français.", en: "Want to say \"Listen to me,\" \"Come here,\" or \"Let's have fun\" without a complicated sentence? That's the job of the imperative — French's most direct mood." },
-  t1_3_expl: { fr: "L'impératif a trois formes, selon à qui vous parlez : familier (une personne proche), poli/pluriel (une personne qu'on vouvoie, ou plusieurs personnes), et inclusif (vous vous incluez vous-même, comme « let's... » en anglais). Pour les verbes en -er, la forme familière perd le -s final qu'on aurait normalement à la deuxième personne.", en: "The imperative has three forms, depending on who you're talking to: familiar (someone close to you), polite/plural (someone you address formally, or several people), and inclusive (you include yourself, like \"let's...\" in English). For -er verbs, the familiar form drops the final -s that would normally be there." },
-  t1_3_exercise: { fr: "Transformez ces phrases en ordres à la forme familière : (1) Tu regardes le tableau. (2) Tu manges tes légumes. (3) Tu arrêtes de parler.", en: "Turn these sentences into familiar-form commands: (1) Tu regardes le tableau. (2) Tu manges tes légumes. (3) Tu arrêtes de parler." },
-  t1_3_tryit: { fr: "Donnez trois instructions que vous donneriez à un élève le premier jour de cours.", en: "Give three instructions you'd give a student on the first day of class." },
+  // 1.3 — Say Hello & Goodbye Like a Local
+  t1_3_obj: { fr: "faire un premier vrai échange oral : saluer, se présenter, être poli.", en: "make your first real spoken exchange: greet, introduce yourself, be polite." },
+  t1_3_hook: { fr: "Impossible de commencer une conversation en français sans passer par la case politesse — c'est presque une religion nationale.", en: "You can't start a conversation in French without going through the politeness ritual first — it's practically a national religion." },
+  t1_3_expl: { fr: "Le français distingue le registre formel (vouvoiement, avec vous) du registre familier (tutoiement, avec tu). Avec un inconnu, un professeur ou un supérieur : vous. Avec un ami, un enfant, un membre de la famille : tu. Les salutations changent aussi selon le moment de la journée : bonjour le jour, bonsoir le soir. Dans le doute, commencez toujours par vous.", en: "French distinguishes the formal register (using vous) from the familiar one (using tu). With a stranger, a teacher, or a superior: vous. With a friend, a child, a family member: tu. Greetings also change with the time of day: bonjour during the day, bonsoir in the evening. When in doubt, always start with vous." },
+  t1_3_ex1: { fr: "Bonjour ! Comment allez-vous ? (formel, le jour)", en: "Bonjour! Comment allez-vous? (formal, daytime)" },
+  t1_3_ex2: { fr: "Salut ! Ça va ? (familier)", en: "Salut! Ça va? (familiar)" },
+  t1_3_ex3: { fr: "Bonsoir ! (le soir)", en: "Bonsoir! (evening)" },
+  t1_3_ex4: { fr: "Je m'appelle Aïcha, et vous ?", en: "Je m'appelle Aïcha, et vous? (My name is Aïcha, and you?)" },
+  t1_3_ex5: { fr: "Enchanté(e) de faire votre connaissance.", en: "Enchanté(e) de faire votre connaissance. (Pleased to meet you.)" },
+  t1_3_ex6: { fr: "À bientôt ! / À demain !", en: "À bientôt! / À demain! (See you soon! / See you tomorrow!)" },
+  t1_3_exercise: { fr: "Écrivez un mini-dialogue de 4 lignes entre deux inconnus qui se rencontrent à un arrêt de bus. Utilisez vous.", en: "Write a 4-line mini-dialogue between two strangers meeting at a bus stop. Use vous." },
+  t1_3_tryit: { fr: "Présentez-vous en trois phrases : votre nom, d'où vous venez, ce que vous aimez faire. Dites-le à voix haute avant de l'écrire.", en: "Introduce yourself in three sentences: your name, where you're from, what you like to do. Say it out loud before writing it down." },
 
-  // ---------- Lesson 1.4 ----------
-  t1_4_obj: { fr: "répondre à une question, et savoir dire non correctement — y compris à une question négative.", en: "answer a question, and know how to say no correctly — including to a negative question." },
-  t1_4_hook: { fr: "En français, répondre « oui » à une question négative peut créer un malentendu... sauf si vous connaissez le petit mot magique : si.", en: "In French, answering \"oui\" to a negative question can create a misunderstanding... unless you know the little magic word: si." },
-  t1_4_expl: { fr: "La négation de base se construit avec deux mots qui encadrent le verbe : ne avant, pas après. Mais le vrai piège pour les débutants, c'est de répondre à une question posée à la négative : dans ce cas, on n'utilise pas oui mais si, pour bien marquer qu'on contredit la négation.", en: "Basic negation is built with two words framing the verb: ne before, pas after. But the real trap for beginners is answering a question asked in the negative: in that case, you don't use oui but si, to clearly signal you're contradicting the negation." },
-  t1_4_exercise: { fr: "Répondez par si ou non : (1) Tu n'as pas faim ? (2) Tu ne veux pas venir ? (3) Il ne pleut pas aujourd'hui ? — imaginez une réponse logique pour chaque.", en: "Answer with si or non: (1) Tu n'as pas faim ? (2) Tu ne veux pas venir ? (3) Il ne pleut pas aujourd'hui ? — imagine a logical answer for each." },
-  t1_4_tryit: { fr: "Écrivez trois questions négatives que vous pourriez poser à un(e) élève curieux, et donnez la réponse avec si ou non.", en: "Write three negative questions you might ask a curious student, and give the answer using si or non." },
+  // 1.4 — Giving Simple Commands
+  t1_4_obj: { fr: "comprendre et utiliser des instructions de base.", en: "understand and use basic instructions." },
+  t1_4_hook: { fr: "Envie de dire « Écoute-moi », « Viens ici » ou « Amusons-nous » sans passer par une phrase compliquée ? C'est le rôle de l'impératif — le mode le plus direct du français.", en: "Want to say \"Listen to me,\" \"Come here,\" or \"Let's have fun\" without a complicated sentence? That's the job of the imperative — French's most direct mood." },
+  t1_4_expl: { fr: "L'impératif a trois formes, selon à qui vous parlez : familier (une personne proche), poli/pluriel (vouvoiement ou plusieurs personnes), et inclusif (vous vous incluez vous-même, comme « let's... »). Pour les verbes en -er, la forme familière perd le -s final. C'est la forme utilisée pour les instructions de type salle de classe : écoute, regarde, répète.", en: "The imperative has three forms depending on who you're talking to: familiar (someone close to you), polite/plural (formal or several people), and inclusive (you include yourself, like \"let's...\"). For -er verbs, the familiar form drops the final -s. This is the form used for classroom-style instructions: listen, look, repeat." },
+  t1_4_ex1: { fr: "Écoute ! / Écoutez ! / Écoutons !", en: "Écoute! / Écoutez! / Écoutons! (Listen! — familiar/polite/let's)" },
+  t1_4_ex2: { fr: "Regarde ! / Regardez !", en: "Regarde! / Regardez! (Look!)" },
+  t1_4_ex3: { fr: "Répète ! / Répétez !", en: "Répète! / Répétez! (Repeat!)" },
+  t1_4_ex4: { fr: "Viens avec moi ! / Venez avec moi !", en: "Viens avec moi! / Venez avec moi! (Come with me!)" },
+  t1_4_ex5: { fr: "Ne t'inquiète pas.", en: "Ne t'inquiète pas. (Don't worry.)" },
+  t1_4_ex6: { fr: "Amusons-nous bien !", en: "Amusons-nous bien! (Let's have fun!)" },
+  t1_4_exercise: { fr: "Transformez ces phrases en ordres à la forme familière : (1) Tu regardes le tableau. (2) Tu manges tes légumes. (3) Tu arrêtes de parler.", en: "Turn these sentences into familiar-form commands: (1) Tu regardes le tableau. (2) Tu manges tes légumes. (3) Tu arrêtes de parler." },
+  t1_4_tryit: { fr: "Donnez trois instructions que vous donneriez à un élève le premier jour de cours.", en: "Give three instructions you'd give a student on the first day of class." },
 
-  // ---------- Lesson 1.5 ----------
-  t1_5_obj: { fr: "poser une question simple de trois façons différentes, du plus familier au plus soutenu.", en: "ask a simple question three different ways, from the most casual to the most formal." },
-  t1_5_hook: { fr: "En français, on peut poser exactement la même question de trois manières — et choisir la bonne dépend uniquement du contexte, pas de la grammaire.", en: "In French, you can ask exactly the same question three different ways — and picking the right one depends only on context, not grammar." },
-  t1_5_expl: { fr: "La façon la plus simple est de garder l'ordre normal de la phrase et de lever la voix à la fin (l'intonation montante). Un cran plus formel : ajouter est-ce que devant la phrase affirmative. La forme la plus soutenue inverse le verbe et le sujet. Les trois sont correctes ; à l'oral, la première est de loin la plus utilisée.", en: "The simplest way is to keep the sentence's normal word order and raise your voice at the end (rising intonation). A step more formal: add est-ce que before the affirmative sentence. The most formal version inverts the verb and subject. All three are correct; in speech, the first is by far the most common." },
-  t1_5_exercise: { fr: "Transformez ces affirmations en questions avec est-ce que : (1) Tu aimes voyager. (2) Elle travaille à Kampala. (3) Ils parlent français.", en: "Turn these statements into questions using est-ce que: (1) Tu aimes voyager. (2) Elle travaille à Kampala. (3) Ils parlent français." },
-  t1_5_tryit: { fr: "Imaginez que vous rencontrez quelqu'un pour la première fois. Écrivez cinq questions que vous lui poseriez, en variant qui, quoi, où, quand, pourquoi.", en: "Imagine you're meeting someone for the first time. Write five questions you'd ask them, varying qui, quoi, où, quand, pourquoi." },
+  // 1.5 — Yes, No, and Everything In Between
+  t1_5_obj: { fr: "répondre à des questions simples avec confiance, en oui, en non, et à la négative.", en: "answer basic questions confidently — with yes, no, and in the negative." },
+  t1_5_hook: { fr: "En français, répondre « oui » à une question négative peut créer un malentendu... sauf si vous connaissez le petit mot magique : si.", en: "In French, answering \"oui\" to a negative question can create a misunderstanding... unless you know the little magic word: si." },
+  t1_5_expl: { fr: "La négation de base encadre le verbe avec deux mots : ne avant, pas après. À l'oral, une question simple se pose souvent juste en levant la voix à la fin de la phrase (intonation montante) — sans rien changer d'autre. Et pour répondre « oui » à une question posée à la négative, on utilise si, pas oui, pour bien marquer qu'on contredit la négation.", en: "Basic negation frames the verb with two words: ne before, pas after. In speech, a simple question is often formed just by raising your voice at the end of the sentence (rising intonation) — nothing else changes. And to answer \"yes\" to a question asked in the negative, you use si, not oui, to clearly signal you're contradicting the negation." },
+  t1_5_ex1: { fr: "Tu aimes le café ? — Oui, j'aime le café. / Non, je n'aime pas le café.", en: "Tu aimes le café? — Oui, j'aime le café. / Non, je n'aime pas le café." },
+  t1_5_ex2: { fr: "Tu ne parles pas anglais ? — Si, je parle anglais !", en: "Tu ne parles pas anglais? — Si, je parle anglais! (not \"oui\")" },
+  t1_5_ex3: { fr: "Tu viens ce soir ? (intonation montante ↗)", en: "Tu viens ce soir? (rising intonation ↗)" },
+  t1_5_ex4: { fr: "Je ne comprends pas.", en: "Je ne comprends pas. (I don't understand.)" },
+  t1_5_ex5: { fr: "Ce n'est pas grave.", en: "Ce n'est pas grave. (It's not a big deal.)" },
+  t1_5_ex6: { fr: "Il n'y a pas de problème.", en: "Il n'y a pas de problème. (No problem.)" },
+  t1_5_exercise: { fr: "Répondez par si ou non : (1) Tu n'as pas faim ? (2) Tu ne veux pas venir ? (3) Il ne pleut pas aujourd'hui ?", en: "Answer with si or non: (1) Tu n'as pas faim? (2) Tu ne veux pas venir? (3) Il ne pleut pas aujourd'hui?" },
+  t1_5_tryit: { fr: "Écrivez trois questions négatives que vous pourriez poser à un(e) élève curieux, et donnez la réponse avec si ou non.", en: "Write three negative questions you might ask a curious student, and give the answer using si or non." },
 
-  // ---------- Track 2 hero ----------
-  t2_hero_eyebrow: { fr: "Track 2 · 2 leçons disponibles sur 8", en: "Track 2 · 2 lessons available of 8" },
+  // ================= TRACK 2 =================
+  t2_hero_eyebrow: { fr: "Track 2 · 8 leçons", en: "Track 2 · 8 lessons" },
   t2_hero_title: { fr: "Core Grammar", en: "Core Grammar" },
   t2_hero_desc: {
-    fr: "La colonne vertébrale grammaticale du cours : articles et noms, groupes de verbes, négation approfondie, nombres, heure et prépositions. Cette page grandit au fil des leçons ajoutées.",
-    en: "The grammatical backbone of the course: articles and nouns, verb groups, deeper negation, numbers, time, and prepositions. This page grows as more lessons are added."
-  },
-  t2_next: {
-    fr: "Prochaines leçons de ce track : les verbes en -ER, -IR, -RE · la négation approfondie · les nombres · l'heure · les prépositions. À venir bientôt.",
-    en: "Coming next in this track: -ER, -IR, -RE verbs · deeper negation · numbers · telling time · prepositions. Coming soon."
+    fr: "Construire le « moteur » de la phrase : sujets, verbes, articles, temps.",
+    en: "Building the sentence \"engine\" — subjects, verbs, articles, time."
   },
 
-  // ---------- Lesson 2.1 ----------
-  t2_1_obj: { fr: "comprendre pourquoi chaque nom français a un genre, et choisir le bon article.", en: "understand why every French noun has a gender, and choose the right article." },
+  // 2.1 — Naming Things: Nouns & Articles
+  t2_1_obj: { fr: "comprendre le genre et les articles (le/la/les, un/une/des).", en: "understand gender and articles (le/la/les, un/une/des)." },
   t2_1_hook: { fr: "En français, même une table a un genre. Ça peut sembler étrange au début, mais une fois le réflexe pris, ça devient automatique.", en: "In French, even a table has a gender. It might seem strange at first, but once the reflex kicks in, it becomes automatic." },
-  t2_1_expl: { fr: "Tous les noms français sont soit masculins soit féminins — objets inclus, pas seulement les personnes. L'article qui accompagne le nom (le/la pour « the », un/une pour « a/an ») indique ce genre. Il n'existe pas de règle universelle pour deviner le genre d'un mot, donc la meilleure stratégie est d'apprendre le nom et son article ensemble, comme un seul bloc, dès le premier jour.", en: "All French nouns are either masculine or feminine — objects included, not just people. The article that goes with the noun (le/la for \"the\", un/une for \"a/an\") signals that gender. There's no universal rule for guessing a word's gender, so the best strategy is to learn the noun and its article together, as a single block, from day one." },
-  t2_1_exercise: { fr: "Classez ces mots en deux colonnes, masculin ou féminin (aidez-vous d'un dictionnaire si besoin) : voiture, téléphone, ville, jardin, musique, pays.", en: "Sort these words into two columns, masculine or feminine (use a dictionary if needed): voiture, téléphone, ville, jardin, musique, pays." },
-  t2_1_tryit: { fr: "Choisissez cinq objets autour de vous en ce moment et notez-les avec leur article : le stylo, la fenêtre...", en: "Pick five objects around you right now and write them down with their article: le stylo, la fenêtre..." },
+  t2_1_expl: { fr: "Tous les noms français sont masculins ou féminins — objets inclus. L'article qui accompagne le nom (le/la, un/une) indique ce genre ; au pluriel, un seul article, les ou des, sert pour les deux genres. Il n'existe pas de règle universelle pour deviner le genre, donc apprenez toujours le nom et son article ensemble. Pour le pluriel, on ajoute presque toujours un -s (silencieux à l'oral) ; les noms en -eau/-eu prennent un -x.", en: "All French nouns are masculine or feminine — objects included. The article with the noun (le/la, un/une) signals that gender; in the plural, a single article, les or des, covers both genders. There's no universal rule for guessing gender, so always learn the noun with its article. For the plural, you almost always add a silent -s; nouns ending in -eau/-eu take an -x instead." },
+  t2_1_ex1: { fr: "le livre / un livre (masculin) — la table / une table (féminin)", en: "le livre / un livre (masculine) — la table / une table (feminine)" },
+  t2_1_ex2: { fr: "l'ami / l'amie (devant une voyelle, le/la deviennent l')", en: "l'ami / l'amie (before a vowel, le/la become l')" },
+  t2_1_ex3: { fr: "le livre → les livres / des livres", en: "le livre → les livres / des livres" },
+  t2_1_ex4: { fr: "le bureau → les bureaux (mots en -eau prennent -x)", en: "le bureau → les bureaux (-eau words take -x)" },
+  t2_1_ex5: { fr: "le prix → les prix (déjà en -x, invariable)", en: "le prix → les prix (already ends in -x, unchanged)" },
+  t2_1_exercise: { fr: "Classez ces mots en masculin ou féminin, puis mettez-les au pluriel : voiture, téléphone, ville, jardin, animal (attention, exception !).", en: "Sort these words as masculine or feminine, then put them in the plural: voiture, téléphone, ville, jardin, animal (watch out, it's an exception!)." },
+  t2_1_tryit: { fr: "Choisissez cinq objets autour de vous et notez-les avec leur article : le stylo, la fenêtre...", en: "Pick five objects around you and write them down with their article: le stylo, la fenêtre..." },
 
-  // ---------- Lesson 2.2 ----------
-  t2_2_obj: { fr: "mettre un nom et son article au pluriel correctement.", en: "put a noun and its article correctly into the plural." },
-  t2_2_hook: { fr: "Bonne nouvelle pour une fois : le pluriel français est presque toujours d'une simplicité déconcertante.", en: "Good news for once: the French plural is almost always disarmingly simple." },
-  t2_2_expl: { fr: "Dans la grande majorité des cas, on forme le pluriel en ajoutant un -s final — mais attention, ce -s ne se prononce presque jamais à l'oral, c'est l'article devant le nom qui indique le pluriel. Quelques familles de mots ont des règles particulières : les noms en -eau et -eu prennent un -x, et les noms déjà terminés en -s, -x, -z ne changent pas du tout.", en: "In most cases, you form the plural by adding a final -s — but note, this -s is almost never pronounced out loud; it's the article before the noun that signals the plural. A few word families have special rules: nouns ending in -eau and -eu take an -x, and nouns already ending in -s, -x, -z don't change at all." },
-  t2_2_exercise: { fr: "Mettez ces groupes au pluriel : (1) le cadeau (2) la voiture (3) l'animal → les animaux (exception à retenir !) (4) le gâteau.", en: "Put these into the plural: (1) le cadeau (2) la voiture (3) l'animal → les animaux (an exception worth remembering!) (4) le gâteau." },
-  t2_2_tryit: { fr: "Écrivez une courte liste de courses (5 articles) en utilisant uniquement des noms au pluriel : des pommes, des œufs...", en: "Write a short shopping list (5 items) using only plural nouns: des pommes, des œufs..." }
+  // 2.2 — "I Am," "I Have"
+  t2_2_obj: { fr: "utiliser être et avoir, les deux verbes les plus essentiels, avec confiance.", en: "use être and avoir, the two most essential verbs, with confidence." },
+  t2_2_hook: { fr: "Si vous ne deviez apprendre que deux verbes en français, ce serait ceux-là — ils reviennent dans presque chaque phrase.", en: "If you only learned two verbs in French, these would be the ones — they show up in almost every sentence." },
+  t2_2_expl: { fr: "Être (to be) et avoir (to have) sont irréguliers et essentiels : être sert à décrire (je suis fatigué), avoir sert pour l'âge, les sensations et la possession (j'ai 20 ans, j'ai faim, j'ai un chat). La négation encadre toujours le verbe conjugué avec ne...pas.", en: "Être (to be) and avoir (to have) are irregular and essential: être is used to describe (je suis fatigué), avoir is used for age, sensations, and possession (j'ai 20 ans, j'ai faim, j'ai un chat). Negation always frames the conjugated verb with ne...pas." },
+  t2_2_ex1: { fr: "Je suis étudiante. / Je ne suis pas étudiante.", en: "Je suis étudiante. / Je ne suis pas étudiante." },
+  t2_2_ex2: { fr: "Tu es fatigué ?", en: "Tu es fatigué? (Are you tired?)" },
+  t2_2_ex3: { fr: "J'ai un chat. / Je n'ai pas de chat.", en: "J'ai un chat. / Je n'ai pas de chat." },
+  t2_2_ex4: { fr: "Nous avons vingt ans.", en: "Nous avons vingt ans. (We are twenty years old.)" },
+  t2_2_ex5: { fr: "J'ai faim. / J'ai soif.", en: "J'ai faim. / J'ai soif. (I'm hungry. / I'm thirsty.)" },
+  t2_2_exercise: { fr: "Complétez avec être ou avoir : (1) Je ___ 20 ans. (2) Tu ___ content ? (3) Nous ___ un chien.", en: "Fill in with être or avoir: (1) Je ___ 20 ans. (2) Tu ___ content? (3) Nous ___ un chien." },
+  t2_2_tryit: { fr: "Écrivez trois phrases sur vous-même en utilisant être et avoir.", en: "Write three sentences about yourself using être and avoir." },
+
+  // 2.3 — Talking About Now: Present Tense Basics
+  t2_3_obj: { fr: "conjuguer les verbes réguliers en -er au présent, et connaître jours/mois/saisons.", en: "conjugate regular -er verbs in the present tense, and know days/months/seasons." },
+  t2_3_hook: { fr: "Bonne nouvelle : la majorité des verbes français se terminent en -er, et ils suivent tous le même patron.", en: "Good news: most French verbs end in -er, and they all follow the same pattern." },
+  t2_3_expl: { fr: "Pour conjuguer un verbe en -er (comme parler), on retire -er et on ajoute : -e, -es, -e, -ons, -ez, -ent. Ce patron s'applique à des centaines de verbes. Les jours, mois et saisons sont essentiels pour organiser une phrase dans le temps.", en: "To conjugate an -er verb (like parler), remove -er and add: -e, -es, -e, -ons, -ez, -ent. This pattern applies to hundreds of verbs. Days, months, and seasons are essential for placing a sentence in time." },
+  t2_3_ex1: { fr: "parler → je parle, tu parles, il parle, nous parlons, vous parlez, ils parlent", en: "parler → je parle, tu parles, il parle, nous parlons, vous parlez, ils parlent" },
+  t2_3_ex2: { fr: "J'aime le chocolat.", en: "J'aime le chocolat. (I like chocolate.)" },
+  t2_3_ex3: { fr: "lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche", en: "lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche (the days of the week)" },
+  t2_3_ex4: { fr: "janvier, février, mars... décembre", en: "janvier, février, mars... décembre (the months)" },
+  t2_3_ex5: { fr: "le printemps, l'été, l'automne, l'hiver", en: "le printemps, l'été, l'automne, l'hiver (spring, summer, fall, winter)" },
+  t2_3_exercise: { fr: "Conjuguez « manger » à toutes les personnes (attention : nous mangeons, avec un e spécial).", en: "Conjugate manger for every person (watch out: nous mangeons, with a special e)." },
+  t2_3_tryit: { fr: "Écrivez une phrase pour trois jours de la semaine, décrivant ce que vous faites (verbe en -er).", en: "Write a sentence for three days of the week, describing what you do (use an -er verb)." },
+
+  // 2.4 — Numbers, Dates & Time
+  t2_4_obj: { fr: "compter, dire l'heure et la date.", en: "handle numbers, telling time, and dates." },
+  t2_4_hook: { fr: "Impossible de prendre rendez-vous ou de faire des courses sans maîtriser les nombres et l'heure.", en: "You can't make an appointment or go shopping without mastering numbers and time." },
+  t2_4_expl: { fr: "Les nombres cardinaux (un, deux, trois...) servent à compter ; les ordinaux (premier, deuxième...) à classer. Pour l'heure, on dit « Il est... heure(s) » ; pour la date, « Nous sommes le... » suivi du jour et du mois.", en: "Cardinal numbers (un, deux, trois...) are for counting; ordinals (premier, deuxième...) are for ranking. For time, you say \"Il est... heure(s)\"; for the date, \"Nous sommes le...\" followed by the day and month." },
+  t2_4_ex1: { fr: "un, deux, trois, dix, vingt, cent", en: "un, deux, trois, dix, vingt, cent (one, two, three, ten, twenty, one hundred)" },
+  t2_4_ex2: { fr: "premier, deuxième, troisième", en: "premier, deuxième, troisième (first, second, third)" },
+  t2_4_ex3: { fr: "Il est trois heures et demie.", en: "Il est trois heures et demie. (It's half past three.)" },
+  t2_4_ex4: { fr: "Quelle heure est-il ?", en: "Quelle heure est-il? (What time is it?)" },
+  t2_4_ex5: { fr: "Nous sommes le 25 juillet.", en: "Nous sommes le 25 juillet. (Today is July 25th.)" },
+  t2_4_exercise: { fr: "Écrivez ces heures en français : 9h00, 14h30, 18h15.", en: "Write these times in French: 9h00, 14h30, 18h15." },
+  t2_4_tryit: { fr: "Écrivez la date d'aujourd'hui et votre heure préférée de la journée, en français.", en: "Write today's date and your favorite time of day, in French." },
+
+  // 2.5 — More Action Verbs
+  t2_5_obj: { fr: "étendre son vocabulaire de verbes au-delà des verbes en -er.", en: "expand your verb vocabulary beyond -er verbs." },
+  t2_5_hook: { fr: "Le français a deux autres grandes familles de verbes réguliers — une fois qu'on les connaît, on peut décrire beaucoup plus d'actions.", en: "French has two other major families of regular verbs — once you know them, you can describe a lot more actions." },
+  t2_5_expl: { fr: "Les verbes en -ir (comme finir) suivent le patron : -is, -is, -it, -issons, -issez, -issent. Les verbes en -re (comme vendre) suivent : -s, -s, (rien), -ons, -ez, -ent.", en: "-ir verbs (like finir) follow the pattern: -is, -is, -it, -issons, -issez, -issent. -re verbs (like vendre) follow: -s, -s, (nothing), -ons, -ez, -ent." },
+  t2_5_ex1: { fr: "finir → je finis, tu finis, il finit, nous finissons, vous finissez, ils finissent", en: "finir → je finis, tu finis, il finit, nous finissons, vous finissez, ils finissent" },
+  t2_5_ex2: { fr: "Je choisis un livre.", en: "Je choisis un livre. (I'm choosing a book.)" },
+  t2_5_ex3: { fr: "vendre → je vends, tu vends, il vend, nous vendons, vous vendez, ils vendent", en: "vendre → je vends, tu vends, il vend, nous vendons, vous vendez, ils vendent" },
+  t2_5_ex4: { fr: "J'attends le bus.", en: "J'attends le bus. (I'm waiting for the bus.)" },
+  t2_5_ex5: { fr: "Tu entends ça ?", en: "Tu entends ça? (Do you hear that?)" },
+  t2_5_exercise: { fr: "Conjuguez « réussir » (réussir = to succeed) à toutes les personnes.", en: "Conjugate réussir (to succeed) for every person." },
+  t2_5_tryit: { fr: "Écrivez deux phrases : une avec un verbe en -ir, une avec un verbe en -re.", en: "Write two sentences: one with an -ir verb, one with an -re verb." },
+
+  // 2.6 — Talking About the Future
+  t2_6_obj: { fr: "exprimer des projets proches avec le futur proche.", en: "express near-future plans simply." },
+  t2_6_hook: { fr: "Pas besoin d'apprendre une conjugaison compliquée pour parler du futur — un seul verbe suffit pour commencer.", en: "You don't need a complicated conjugation to talk about the future — one verb is enough to get started." },
+  t2_6_expl: { fr: "Le futur proche se forme avec aller conjugué + un verbe à l'infinitif : je vais manger. C'est la façon la plus naturelle de parler de projets proches à l'oral. Les prépositions à et de indiquent la direction/le lieu (à Paris) ou l'origine (de Paris).", en: "The near future is formed with aller conjugated + a verb in the infinitive: je vais manger (I'm going to eat). It's the most natural way to talk about near-future plans in speech. The prepositions à and de indicate direction/place (à Paris) or origin (de Paris)." },
+  t2_6_ex1: { fr: "Je vais voyager cet été.", en: "Je vais voyager cet été. (I'm going to travel this summer.)" },
+  t2_6_ex2: { fr: "Tu vas étudier ce soir ?", en: "Tu vas étudier ce soir? (Are you going to study tonight?)" },
+  t2_6_ex3: { fr: "Nous allons manger au restaurant.", en: "Nous allons manger au restaurant. (We're going to eat at the restaurant.)" },
+  t2_6_ex4: { fr: "Ils vont arriver demain.", en: "Ils vont arriver demain. (They're going to arrive tomorrow.)" },
+  t2_6_ex5: { fr: "Je viens de Kampala. / Je vais à Paris.", en: "Je viens de Kampala. / Je vais à Paris. (I come from Kampala. / I'm going to Paris.)" },
+  t2_6_exercise: { fr: "Transformez en futur proche : (1) Je mange. (2) Tu voyages. (3) Elle travaille.", en: "Turn into the near future: (1) Je mange. (2) Tu voyages. (3) Elle travaille." },
+  t2_6_tryit: { fr: "Écrivez trois projets pour le week-end prochain, avec aller + infinitif.", en: "Write three plans for next weekend, using aller + infinitive." },
+
+  // 2.7 — What Are You Doing? (faire & prepositions)
+  t2_7_obj: { fr: "décrire des activités et des lieux avec le verbe faire et les prépositions.", en: "describe activities and locations with the verb faire and prepositions." },
+  t2_7_hook: { fr: "Le verbe faire est l'un des plus utilisés en français — et pourtant il ne se traduit pas toujours par « to do ».", en: "The verb faire is one of the most used in French — and yet it doesn't always translate as \"to do.\"" },
+  t2_7_expl: { fr: "Faire s'utilise pour les activités (faire du sport), la météo (il fait beau) et bien plus. Avec les pays, on utilise en devant un pays féminin ou commençant par une voyelle (en France, en Ouganda) et au devant un pays masculin commençant par une consonne (au Canada).", en: "Faire is used for activities (faire du sport), weather (il fait beau), and much more. With countries, use en before a feminine country or one starting with a vowel (en France, en Ouganda) and au before a masculine country starting with a consonant (au Canada)." },
+  t2_7_ex1: { fr: "Je fais du sport le matin.", en: "Je fais du sport le matin. (I exercise in the morning.)" },
+  t2_7_ex2: { fr: "Il fait beau aujourd'hui.", en: "Il fait beau aujourd'hui. (The weather's nice today.)" },
+  t2_7_ex3: { fr: "Qu'est-ce que tu fais ce soir ?", en: "Qu'est-ce que tu fais ce soir? (What are you doing tonight?)" },
+  t2_7_ex4: { fr: "Je vis en Ouganda.", en: "Je vis en Ouganda. (I live in Uganda.)" },
+  t2_7_ex5: { fr: "Il va au Canada. / Elle voyage en France.", en: "Il va au Canada. / Elle voyage en France." },
+  t2_7_exercise: { fr: "Complétez avec faire conjugué : (1) Je ___ mes devoirs. (2) Vous ___ la cuisine ? (3) Ils ___ du vélo.", en: "Fill in with faire conjugated: (1) Je ___ mes devoirs. (2) Vous ___ la cuisine? (3) Ils ___ du vélo." },
+  t2_7_tryit: { fr: "Décrivez trois activités que vous « faites » pendant une semaine typique, avec le verbe faire.", en: "Describe three activities you \"do\" during a typical week, using the verb faire." },
+
+  // 2.8 — Comparing Things
+  t2_8_obj: { fr: "comparer et décrire avec confiance : comparatifs, superlatifs, possessifs.", en: "compare and describe with confidence using comparatives, superlatives, and possessives." },
+  t2_8_hook: { fr: "Dire que quelque chose est « plus grand », « le plus beau » ou « à moi » — ce sont les outils qui rendent une description vivante.", en: "Saying something is \"bigger,\" \"the most beautiful,\" or \"mine\" — these are the tools that make a description come alive." },
+  t2_8_expl: { fr: "On compare avec plus...que, moins...que, aussi...que. Le superlatif utilise le/la/les plus ou moins. Les adjectifs s'accordent en genre et en nombre avec le nom, et se placent généralement après (sauf quelques exceptions comme beau, grand, petit). Les possessifs (mon/ma/mes...) s'accordent avec l'objet possédé, pas avec la personne.", en: "You compare with plus...que (more...than), moins...que (less...than), aussi...que (as...as). The superlative uses le/la/les plus or moins. Adjectives agree in gender and number with the noun and usually come after it (except a few like beau, grand, petit). Possessives (mon/ma/mes...) agree with the object owned, not the owner." },
+  t2_8_ex1: { fr: "Kampala est plus grande que Jinja.", en: "Kampala est plus grande que Jinja. (Kampala is bigger than Jinja.)" },
+  t2_8_ex2: { fr: "Ce livre est moins intéressant que l'autre.", en: "Ce livre est moins intéressant que l'autre. (This book is less interesting than the other.)" },
+  t2_8_ex3: { fr: "C'est le plus beau paysage que j'ai vu.", en: "C'est le plus beau paysage que j'ai vu. (It's the most beautiful landscape I've seen.)" },
+  t2_8_ex4: { fr: "une voiture rouge / un beau jardin", en: "une voiture rouge / un beau jardin (a red car / a beautiful garden)" },
+  t2_8_ex5: { fr: "mon livre, ma maison, mes amis", en: "mon livre, ma maison, mes amis (my book, my house, my friends)" },
+  t2_8_exercise: { fr: "Comparez deux villes que vous connaissez avec plus...que ou moins...que.", en: "Compare two cities you know using plus...que or moins...que." },
+  t2_8_tryit: { fr: "Décrivez votre objet préféré : « C'est mon/ma ___, il/elle est très ___. »", en: "Describe your favorite object: \"C'est mon/ma ___, il/elle est très ___.\"" }
 };
 
 // ============================================
@@ -192,10 +290,12 @@ function initLangToggle() {
   applyLanguage(saved);
 
   const toggle = document.getElementById("langToggle");
-  toggle.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-lang");
-    applyLanguage(current === "fr" ? "en" : "fr");
-  });
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-lang");
+      applyLanguage(current === "fr" ? "en" : "fr");
+    });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", initLangToggle);
