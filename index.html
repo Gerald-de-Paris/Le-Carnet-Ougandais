@@ -86,11 +86,12 @@
           <a href="track-2.html" class="track-link" data-i18n="track_link">Ouvrir le track →</a>
         </article>
 
-        <article class="track-card track-card--soon">
+        <article class="track-card">
           <div class="track-num">Track 3</div>
           <h3 data-i18n="track3_title">Real Communication</h3>
-          <p data-i18n="track3_desc">Verbes irréguliers, pronoms compléments, verbes réfléchis.</p>
-          <p class="track-progress" data-i18n="track_soon">Bientôt disponible</p>
+          <p data-i18n="track3_desc">Négations avancées, pronoms toniques — d'autres leçons à venir.</p>
+          <p class="track-progress" data-i18n="track3_progress">3 leçons disponibles</p>
+          <a href="track-3.html" class="track-link" data-i18n="track_link">Ouvrir le track →</a>
         </article>
 
         <article class="track-card track-card--soon">
@@ -127,7 +128,7 @@
 
       <div class="postcard-grid">
 
-        <figure class="postcard">
+        <figure class="postcard" data-detail-key="culture_detail1">
           <div class="postcard-photo placeholder-photo">
             <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
           </div>
@@ -137,7 +138,7 @@
           </figcaption>
         </figure>
 
-        <figure class="postcard">
+        <figure class="postcard" data-detail-key="culture_detail2">
           <div class="postcard-photo placeholder-photo">
             <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
           </div>
@@ -147,7 +148,7 @@
           </figcaption>
         </figure>
 
-        <figure class="postcard postcard--video">
+        <figure class="postcard postcard--video" data-detail-key="culture_detail3">
           <div class="postcard-photo placeholder-photo placeholder-video">
             <span data-i18n="culture_ph_video">Ajoutez une vidéo ici</span>
           </div>
@@ -157,7 +158,7 @@
           </figcaption>
         </figure>
 
-        <figure class="postcard">
+        <figure class="postcard" data-detail-key="culture_detail4">
           <div class="postcard-photo placeholder-photo">
             <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
           </div>
@@ -167,7 +168,7 @@
           </figcaption>
         </figure>
 
-        <figure class="postcard">
+        <figure class="postcard" data-detail-key="culture_detail5">
           <div class="postcard-photo placeholder-photo">
             <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
           </div>
@@ -177,7 +178,7 @@
           </figcaption>
         </figure>
 
-        <figure class="postcard">
+        <figure class="postcard" data-detail-key="culture_detail6">
           <div class="postcard-photo placeholder-photo">
             <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
           </div>
@@ -187,6 +188,17 @@
           </figcaption>
         </figure>
 
+      </div>
+
+      <div id="cultureModal" class="culture-modal" hidden>
+        <div class="culture-modal-inner">
+          <button class="culture-modal-close" id="cultureModalClose" aria-label="Fermer">&times;</button>
+          <div class="culture-modal-photo placeholder-photo" id="cultureModalPhoto">
+            <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
+          </div>
+          <h3 class="culture-modal-title" id="cultureModalTitle"></h3>
+          <p class="culture-modal-text" id="cultureModalText"></p>
+        </div>
       </div>
     </div>
   </section>
@@ -222,5 +234,4 @@
 
 <script src="script.js"></script>
 </body>
-  </html>
-        
+</html>
