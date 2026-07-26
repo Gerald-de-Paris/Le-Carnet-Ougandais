@@ -39,7 +39,8 @@ const translations = {
   track3_progress: { fr: "5 leçons disponibles", en: "5 lessons available" },
 
   track4_title: { fr: "Past, Future & Fluency", en: "Past, Future & Fluency" },
-  track4_desc: { fr: "Passé composé, imparfait, futur, conditionnel, subjonctif.", en: "Passé composé, imperfect, future, conditional, subjunctive." },
+  track4_desc: { fr: "Le passé composé (avoir & être) — imparfait, futur, conditionnel à venir.", en: "The passé composé (avoir & être) — imperfect, future, conditional coming next." },
+  track4_progress: { fr: "5 leçons disponibles", en: "5 lessons available" },
 
   track5_title: { fr: "Real-Life Situations", en: "Real-Life Situations" },
   track5_desc: { fr: "Aéroport, hôtel, restaurant, achats, santé, petites conversations.", en: "Airport, hotel, restaurant, shopping, health, small talk." },
@@ -139,6 +140,74 @@ const translations = {
   t3_5_ex5: { fr: "Ne te lève pas ! / Ne vous endormez pas devant la télé !", en: "Ne te lève pas! / Ne vous endormez pas devant la télé! (Don't get up! / Don't fall asleep in front of the TV!)" },
   t3_5_exercise: { fr: "Mettez à la forme négative : (1) Elle se maquille le week-end. (2) Nous nous levons tôt.", en: "Put in the negative: (1) Elle se maquille le week-end. (2) Nous nous levons tôt." },
   t3_5_tryit: { fr: "Donnez un ordre à un(e) ami(e) qui dort trop tard, en utilisant un verbe réfléchi à l'impératif.", en: "Give a command to a friend who's sleeping too late, using a reflexive verb in the imperative." },
+
+  // ================= TRACK 4 =================
+  t4_hero_eyebrow: { fr: "Track 4 · 5 leçons (d'autres à venir)", en: "Track 4 · 5 lessons (more coming)" },
+  t4_hero_title: { fr: "Past, Future & Fluency", en: "Past, Future & Fluency" },
+  t4_hero_desc: {
+    fr: "Raconter ce qui s'est passé : le passé composé, ses formes régulières et irrégulières, et comment bien accorder le participe passé.",
+    en: "Telling what happened: the passé composé, its regular and irregular forms, and how to agree the past participle correctly."
+  },
+
+  // 4.1 — Passé composé with avoir
+  t4_1_obj: { fr: "former le passé composé avec avoir pour raconter des actions terminées.", en: "form the passé composé with avoir to talk about completed actions." },
+  t4_1_hook: { fr: "Le français ne dit pas juste « I spoke » — il utilise une astuce à deux pièces : un petit « avoir » conjugué, plus un mot qui a changé de forme. Ensemble, ils racontent le passé.", en: "French doesn't just say \"I spoke\" — it uses a two-piece trick: a small conjugated \"avoir\", plus a word that's changed shape. Together, they tell the past." },
+  t4_1_expl: { fr: "Le passé composé est le temps le plus utilisé pour raconter un événement terminé. Il se forme avec le présent de l'auxiliaire avoir + le participe passé du verbe. Pour les verbes réguliers : -er devient -é (parler → parlé), -ir devient -i (finir → fini), -re devient -u (vendre → vendu).", en: "The passé composé is the most commonly used tense for a completed event. It's formed with the present tense of avoir + the verb's past participle. For regular verbs: -er becomes -é (parler → parlé), -ir becomes -i (finir → fini), -re becomes -u (vendre → vendu)." },
+  t4_1_ex1: { fr: "parler → j'ai parlé, tu as parlé, il a parlé, nous avons parlé, vous avez parlé, ils ont parlé", en: "parler (to speak) → j'ai parlé, tu as parlé, il a parlé, nous avons parlé, vous avez parlé, ils ont parlé" },
+  t4_1_ex2: { fr: "J'ai acheté un livre. (acheter → acheté)", en: "J'ai acheté un livre. (I bought a book.)" },
+  t4_1_ex3: { fr: "Nous avons fini de manger. (finir → fini)", en: "Nous avons fini de manger. (We finished eating.)" },
+  t4_1_ex4: { fr: "Elles ont perdu leurs clés. (perdre → perdu)", en: "Elles ont perdu leurs clés. (They lost their keys.)" },
+  t4_1_ex5: { fr: "As-tu vendu ta voiture ?", en: "As-tu vendu ta voiture? (Did you sell your car?)" },
+  t4_1_exercise: { fr: "Mettez au passé composé : (1) nous écoutons (2) tu réfléchis (3) elles parlent.", en: "Put into the passé composé: (1) nous écoutons (2) tu réfléchis (3) elles parlent." },
+  t4_1_tryit: { fr: "Racontez en 2 phrases au passé composé ce que vous avez mangé hier.", en: "Tell in 2 sentences, using the passé composé, what you ate yesterday." },
+
+  // 4.2 — Irregular Past Participles
+  t4_2_obj: { fr: "reconnaître et utiliser les participes passés irréguliers les plus fréquents.", en: "recognize and use the most common irregular past participles." },
+  t4_2_hook: { fr: "Certains verbes refusent obstinément de suivre les règles -é/-i/-u — il faut simplement les apprendre par cœur, comme une petite liste de mots de passe.", en: "Some verbs stubbornly refuse the -é/-i/-u rules — you just have to memorize them, like a short list of passwords." },
+  t4_2_expl: { fr: "Les participes passés irréguliers se regroupent en familles selon leur terminaison : -u (avoir→eu, boire→bu, pouvoir→pu, vouloir→voulu, voir→vu, savoir→su, lire→lu), -s (prendre→pris, mettre→mis, apprendre→appris), -t (faire→fait, dire→dit, écrire→écrit, ouvrir→ouvert), -i (dormir→dormi, rire→ri). Le verbe être a un participe passé irrégulier (été) mais s'utilise toujours avec avoir.", en: "Irregular past participles group into families by ending: -u (avoir→eu, boire→bu, pouvoir→pu, vouloir→voulu, voir→vu, savoir→su, lire→lu), -s (prendre→pris, mettre→mis, apprendre→appris), -t (faire→fait, dire→dit, écrire→écrit, ouvrir→ouvert), -i (dormir→dormi, rire→ri). The verb être has an irregular past participle (été) but is always used with avoir." },
+  t4_2_ex1: { fr: "J'ai eu une bonne idée. (avoir → eu)", en: "J'ai eu une bonne idée. (I had a good idea.)" },
+  t4_2_ex2: { fr: "Tu as bu un café ?", en: "Tu as bu un café? (Did you drink a coffee?)" },
+  t4_2_ex3: { fr: "Nous avons fait le ménage. (faire → fait)", en: "Nous avons fait le ménage. (We did the housework.)" },
+  t4_2_ex4: { fr: "Vous avez écrit une lettre ? (écrire → écrit)", en: "Vous avez écrit une lettre? (Did you write a letter?)" },
+  t4_2_ex5: { fr: "J'ai mis mon manteau. (mettre → mis) — Ils ont dormi tard. (dormir → dormi)", en: "J'ai mis mon manteau. (I put on my coat.) — Ils ont dormi tard. (They slept late.)" },
+  t4_2_exercise: { fr: "Associez chaque verbe à son participe passé : voir, prendre, faire, boire, dire, dormir.", en: "Match each verb to its past participle: voir, prendre, faire, boire, dire, dormir." },
+  t4_2_tryit: { fr: "Écrivez trois phrases sur votre journée d'hier en utilisant trois participes passés irréguliers différents.", en: "Write three sentences about your day yesterday using three different irregular past participles." },
+
+  // 4.3 — Negation, Questions & Time Words in the Past
+  t4_3_obj: { fr: "mettre le passé composé à la forme négative et interrogative, et situer une action dans le temps.", en: "put the passé composé in the negative and question forms, and place an action in time." },
+  t4_3_hook: { fr: "Raconter une histoire ne se limite pas à conjuguer un verbe — il faut aussi savoir dire « je n'ai pas fait ça » et « d'abord... puis... enfin ».", en: "Telling a story isn't just about conjugating a verb — you also need to say \"I didn't do that\" and \"first... then... finally\"." },
+  t4_3_expl: { fr: "À la négative, ne...pas encadre seulement l'auxiliaire (avoir), pas le participe passé : je n'ai pas fini. Les questions se forment comme au présent (intonation, est-ce que, inversion) — en inversion, seul l'auxiliaire s'inverse avec le sujet : As-tu vu Hélène ? Les adverbes courts comme déjà, souvent, toujours se placent entre l'auxiliaire et le participe passé. Pour organiser un récit : d'abord, puis/ensuite, après, enfin/finalement.", en: "In the negative, ne...pas frames only the auxiliary (avoir), not the past participle: je n'ai pas fini. Questions form as in the present (intonation, est-ce que, inversion) — with inversion, only the auxiliary inverts with the subject: As-tu vu Hélène? Short adverbs like déjà, souvent, toujours go between the auxiliary and the past participle. To organize a story: d'abord, puis/ensuite, après, enfin/finalement." },
+  t4_3_ex1: { fr: "Nous n'avons pas fait ce devoir.", en: "Nous n'avons pas fait ce devoir. (We didn't do that assignment.)" },
+  t4_3_ex2: { fr: "As-tu déjà visité Paris ?", en: "As-tu déjà visité Paris? (Have you already visited Paris?)" },
+  t4_3_ex3: { fr: "Je n'ai jamais voyagé en Asie.", en: "Je n'ai jamais voyagé en Asie. (I've never traveled in Asia.)" },
+  t4_3_ex4: { fr: "D'abord, j'ai pris le petit-déjeuner ; ensuite, je suis parti(e).", en: "D'abord, j'ai pris le petit-déjeuner; ensuite, je suis parti(e). (First I had breakfast; then I left.)" },
+  t4_3_ex5: { fr: "hier, avant-hier, la semaine dernière (expressions de temps utiles)", en: "hier (yesterday), avant-hier (the day before yesterday), la semaine dernière (last week)" },
+  t4_3_exercise: { fr: "Mettez à la négative : « J'ai vu ce film. » Puis transformez en question avec inversion : « Vous avez lu ce livre. »", en: "Put in the negative: \"J'ai vu ce film.\" Then turn into a question using inversion: \"Vous avez lu ce livre.\"" },
+  t4_3_tryit: { fr: "Racontez votre matinée d'hier en 4 phrases, en utilisant d'abord, puis, ensuite, enfin.", en: "Tell your morning yesterday in 4 sentences, using d'abord, puis, ensuite, enfin." },
+
+  // 4.4 — Passé composé with être
+  t4_4_obj: { fr: "reconnaître les verbes qui utilisent être au passé composé, et accorder le participe passé avec le sujet.", en: "recognize the verbs that use être in the passé composé, and agree the past participle with the subject." },
+  t4_4_hook: { fr: "Une petite bande de verbes — souvent liés au mouvement — refuse d'utiliser avoir. Ils insistent pour utiliser être, et en plus, ils veulent que le participe s'accorde avec vous.", en: "A small band of verbs — often about movement — refuses to use avoir. They insist on être, and on top of that, they want the participle to agree with you." },
+  t4_4_expl: { fr: "Un groupe limité de verbes (souvent de mouvement ou de changement d'état : aller, partir, arriver, rester, sortir, venir, monter, descendre, tomber, entrer, rentrer, retourner, revenir, devenir, mourir, naître) forme son passé composé avec être. Le participe passé s'accorde alors en genre et en nombre avec le sujet : on ajoute -e au féminin, -s au pluriel.", en: "A limited group of verbs (often about movement or change of state: aller, partir, arriver, rester, sortir, venir, monter, descendre, tomber, entrer, rentrer, retourner, revenir, devenir, mourir, naître) forms its passé composé with être. The past participle then agrees in gender and number with the subject: add -e for feminine, -s for plural." },
+  t4_4_ex1: { fr: "je suis allé(e), elle est allée, ils sont allés, elles sont allées", en: "je suis allé(e), elle est allée, ils sont allés, elles sont allées (I/she/they went)" },
+  t4_4_ex2: { fr: "Marie est arrivée en retard.", en: "Marie est arrivée en retard. (Marie arrived late.)" },
+  t4_4_ex3: { fr: "Nous sommes rentrés tard hier soir.", en: "Nous sommes rentrés tard hier soir. (We got home late last night.)" },
+  t4_4_ex4: { fr: "Elle est née à Kampala.", en: "Elle est née à Kampala. (She was born in Kampala.)" },
+  t4_4_ex5: { fr: "Ils sont restés trois jours.", en: "Ils sont restés trois jours. (They stayed three days.)" },
+  t4_4_exercise: { fr: "Conjuguez « partir » au passé composé pour « elle » et pour « ils ».", en: "Conjugate partir (to leave) in the passé composé for \"elle\" and for \"ils\"." },
+  t4_4_tryit: { fr: "Écrivez deux phrases sur un voyage (réel ou imaginaire) en utilisant deux verbes de la liste être (arriver, partir, rester...).", en: "Write two sentences about a trip (real or imaginary) using two verbs from the être list (arriver, partir, rester...)." },
+
+  // 4.5 — Reflexive Verbs in the Past
+  t4_5_obj: { fr: "conjuguer les verbes réfléchis au passé composé, et savoir quand accorder le participe passé.", en: "conjugate reflexive verbs in the passé composé, and know when to agree the past participle." },
+  t4_5_hook: { fr: "Tous les verbes réfléchis utilisent être au passé — logique, puisqu'ils parlent déjà de « soi-même ». Mais l'accord du participe passé cache un petit piège.", en: "All reflexive verbs use être in the past — makes sense, since they're already about \"oneself\". But the past participle agreement hides a small trap." },
+  t4_5_expl: { fr: "Tous les verbes pronominaux (réfléchis) se conjuguent avec être au passé composé, et le participe passé s'accorde généralement avec le pronom réfléchi — donc avec le sujet : elle s'est levée. Exception : si le verbe est suivi d'un objet direct (souvent une partie du corps), il n'y a pas d'accord : elle s'est lavé les mains (mais elle s'est lavée, sans objet direct).", en: "All pronominal (reflexive) verbs are conjugated with être in the passé composé, and the past participle generally agrees with the reflexive pronoun — so with the subject: elle s'est levée. Exception: if the verb is followed by a direct object (often a body part), there's no agreement: elle s'est lavé les mains (but elle s'est lavée, with no direct object)." },
+  t4_5_ex1: { fr: "Hier, elle s'est levée vers six heures.", en: "Hier, elle s'est levée vers six heures. (Yesterday, she got up around six.)" },
+  t4_5_ex2: { fr: "Nous nous sommes rencontrés à Paris.", en: "Nous nous sommes rencontrés à Paris. (We met each other in Paris.)" },
+  t4_5_ex3: { fr: "Hélène s'est lavée. (accord : « s' » est objet direct)", en: "Hélène s'est lavée. (agreement: \"s'\" is the direct object — Hélène washed up.)" },
+  t4_5_ex4: { fr: "Hélène s'est lavé les mains. (pas d'accord : « les mains » est l'objet direct)", en: "Hélène s'est lavé les mains. (no agreement: \"les mains\" is the direct object — Hélène washed her hands.)" },
+  t4_5_ex5: { fr: "Ils se sont téléphoné. (jamais d'accord avec téléphoner, verbe indirect)", en: "Ils se sont téléphoné. (never agrees with téléphoner, an indirect verb — They phoned each other.)" },
+  t4_5_exercise: { fr: "Accordez ou non le participe passé : (1) Elle s'est (réveillé) à sept heures. (2) Nous nous sommes (brossé) les dents. (3) Ils se sont (rencontré) hier.", en: "Agree or don't agree the past participle: (1) Elle s'est (réveillé) à sept heures. (2) Nous nous sommes (brossé) les dents. (3) Ils se sont (rencontré) hier." },
+  t4_5_tryit: { fr: "Racontez votre réveil de ce matin en 2 phrases avec des verbes réfléchis au passé composé.", en: "Tell how you woke up this morning in 2 sentences, using reflexive verbs in the passé composé." },
 
   about_eyebrow: { fr: "Un peu plus sur moi", en: "A little about me" },
   about_title: { fr: "À propos", en: "About" },
