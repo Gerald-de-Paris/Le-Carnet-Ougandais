@@ -36,7 +36,7 @@ const translations = {
 
   track3_title: { fr: "Real Communication", en: "Real Communication" },
   track3_desc: { fr: "Négations avancées, pronoms toniques — d'autres leçons à venir.", en: "Advanced negation, stressed pronouns — more lessons coming." },
-  track3_progress: { fr: "3 leçons disponibles", en: "3 lessons available" },
+  track3_progress: { fr: "5 leçons disponibles", en: "5 lessons available" },
 
   track4_title: { fr: "Past, Future & Fluency", en: "Past, Future & Fluency" },
   track4_desc: { fr: "Passé composé, imparfait, futur, conditionnel, subjonctif.", en: "Passé composé, imperfect, future, conditional, subjunctive." },
@@ -115,6 +115,30 @@ const translations = {
   t3_3_ex5: { fr: "Valérie et moi, nous allons gagner ! (sujet composé)", en: "Valérie et moi, nous allons gagner! (compound subject — Valérie and I, we're going to win!)" },
   t3_3_exercise: { fr: "Remplacez les mots soulignés par un pronom tonique : (1) Ce livre est à Marc. (2) Nous partons avec Julie et Paul. (3) C'est Sophie et Alex qui arrivent.", en: "Replace the underlined words with a stressed pronoun: (1) Ce livre est à Marc. (2) Nous partons avec Julie et Paul. (3) C'est Sophie et Alex qui arrivent." },
   t3_3_tryit: { fr: "Écrivez une phrase où vous insistez sur vous-même avec « Moi, je... », et une autre indiquant que quelque chose vous appartient avec « C'est à moi. »", en: "Write a sentence emphasizing yourself with \"Moi, je...\", and another showing something belongs to you with \"C'est à moi.\"" },
+
+  // 3.4 — Reflexive Verbs: Talking About Your Day
+  t3_4_obj: { fr: "comprendre ce qu'est un verbe pronominal, et conjuguer les verbes réfléchis du quotidien au présent.", en: "understand what a pronominal verb is, and conjugate everyday reflexive verbs in the present tense." },
+  t3_4_hook: { fr: "En français, on ne dit pas « je réveille » mais « je me réveille » — comme si on se réveillait soi-même. C'est le principe des verbes pronominaux (réfléchis).", en: "In French, you don't say \"je réveille\" but \"je me réveille\" — as if you're waking yourself up. That's the idea behind pronominal (reflexive) verbs." },
+  t3_4_expl: { fr: "Un verbe pronominal est toujours accompagné d'un pronom réfléchi (me, te, se, nous, vous, se), qui renvoie à la même personne que le sujet — comme les pronoms anglais en -self. Ce pronom se place juste avant le verbe conjugué. À l'infinitif, on l'écrit avec se : se lever, s'endormir, se laver.", en: "A pronominal verb always comes with a reflexive pronoun (me, te, se, nous, vous, se), referring to the same person as the subject — like English -self pronouns. The pronoun goes right before the conjugated verb. In the infinitive, it's written with se: se lever, s'endormir, se laver." },
+  t3_4_ex1: { fr: "se lever → je me lève, tu te lèves, il/elle se lève, nous nous levons, vous vous levez, ils/elles se lèvent", en: "se lever (to get up) → je me lève, tu te lèves, il/elle se lève, nous nous levons, vous vous levez, ils/elles se lèvent" },
+  t3_4_ex2: { fr: "Je me réveille à sept heures.", en: "Je me réveille à sept heures. (I wake up at 7am.)" },
+  t3_4_ex3: { fr: "Tu te brosses les dents ?", en: "Tu te brosses les dents? (Are you brushing your teeth?)" },
+  t3_4_ex4: { fr: "Elle se maquille rapidement.", en: "Elle se maquille rapidement. (She puts on makeup quickly.)" },
+  t3_4_ex5: { fr: "se doucher, s'habiller, se raser, se coucher, s'endormir, se reposer, s'amuser (vocabulaire du quotidien)", en: "se doucher (shower), s'habiller (get dressed), se raser (shave), se coucher (go to bed), s'endormir (fall asleep), se reposer (rest), s'amuser (have fun)" },
+  t3_4_exercise: { fr: "Conjuguez « se coucher » à toutes les personnes.", en: "Conjugate se coucher (to go to bed) for every person." },
+  t3_4_tryit: { fr: "Décrivez votre routine du matin en 3 phrases avec des verbes réfléchis : je me réveille..., je me..., je m'habille...", en: "Describe your morning routine in 3 sentences using reflexive verbs: je me réveille..., je me..., je m'habille..." },
+
+  // 3.5 — Reflexive Verbs: Negative, Questions & Commands
+  t3_5_obj: { fr: "mettre un verbe réfléchi à la forme négative, poser une question, et donner un ordre.", en: "put a reflexive verb in the negative, ask a question, and give a command." },
+  t3_5_hook: { fr: "Les verbes réfléchis suivent presque les mêmes règles que les autres — sauf à l'impératif affirmatif, où le pronom fait un petit saut de place.", en: "Reflexive verbs follow almost the same rules as other verbs — except in the affirmative imperative, where the pronoun jumps to a new spot." },
+  t3_5_expl: { fr: "À la négative, ne se place avant le pronom réfléchi et pas après le verbe : tu ne te reposes pas. Les questions se forment comme d'habitude (intonation, est-ce que, inversion). À l'impératif affirmatif, le pronom réfléchi passe après le verbe et s'attache par un trait d'union (te devient toi) : Lève-toi ! Mais à la forme négative, le pronom reste avant : Ne te lève pas !", en: "In the negative, ne goes before the reflexive pronoun and pas after the verb: tu ne te reposes pas. Questions form as usual (intonation, est-ce que, inversion). In the affirmative imperative, the reflexive pronoun moves after the verb and attaches with a hyphen (te becomes toi): Lève-toi! But in the negative, the pronoun stays before the verb: Ne te lève pas!" },
+  t3_5_ex1: { fr: "Tu ne te reposes pas suffisamment.", en: "Tu ne te reposes pas suffisamment. (You don't rest enough.)" },
+  t3_5_ex2: { fr: "Est-ce que vous vous brossez les dents souvent ?", en: "Est-ce que vous vous brossez les dents souvent? (Do you brush your teeth often?)" },
+  t3_5_ex3: { fr: "Vous endormez-vous tard le week-end ?", en: "Vous endormez-vous tard le week-end? (Do you fall asleep late on weekends?)" },
+  t3_5_ex4: { fr: "Lève-toi ! / Levez-vous ! / Levons-nous !", en: "Lève-toi! / Levez-vous! / Levons-nous! (Get up! — familiar/polite/let's)" },
+  t3_5_ex5: { fr: "Ne te lève pas ! / Ne vous endormez pas devant la télé !", en: "Ne te lève pas! / Ne vous endormez pas devant la télé! (Don't get up! / Don't fall asleep in front of the TV!)" },
+  t3_5_exercise: { fr: "Mettez à la forme négative : (1) Elle se maquille le week-end. (2) Nous nous levons tôt.", en: "Put in the negative: (1) Elle se maquille le week-end. (2) Nous nous levons tôt." },
+  t3_5_tryit: { fr: "Donnez un ordre à un(e) ami(e) qui dort trop tard, en utilisant un verbe réfléchi à l'impératif.", en: "Give a command to a friend who's sleeping too late, using a reflexive verb in the imperative." },
 
   about_eyebrow: { fr: "Un peu plus sur moi", en: "A little about me" },
   about_title: { fr: "À propos", en: "About" },
