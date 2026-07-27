@@ -36,11 +36,11 @@ const translations = {
 
   track3_title: { fr: "Real Communication", en: "Real Communication" },
   track3_desc: { fr: "Négations avancées, pronoms toniques — d'autres leçons à venir.", en: "Advanced negation, stressed pronouns — more lessons coming." },
-  track3_progress: { fr: "6 leçons disponibles", en: "6 lessons available" },
+  track3_progress: { fr: "10 leçons disponibles", en: "10 lessons available" },
 
   track4_title: { fr: "Past, Future & Fluency", en: "Past, Future & Fluency" },
   track4_desc: { fr: "Le passé composé (avoir & être) — imparfait, futur, conditionnel à venir.", en: "The passé composé (avoir & être) — imperfect, future, conditional coming next." },
-  track4_progress: { fr: "10 leçons disponibles", en: "10 lessons available" },
+  track4_progress: { fr: "11 leçons disponibles", en: "11 lessons available" },
 
   track5_title: { fr: "Real-Life Situations", en: "Real-Life Situations" },
   track5_desc: { fr: "Aéroport, hôtel, restaurant, achats, santé, petites conversations.", en: "Airport, hotel, restaurant, shopping, health, small talk." },
@@ -152,6 +152,54 @@ const translations = {
   t3_6_ex5: { fr: "Je ne t'offre pas d'argent. → Je ne t'en offre pas. (à la négative, ne précède les deux pronoms)", en: "Je ne t'offre pas d'argent. → Je ne t'en offre pas. (in the negative, ne comes before both pronouns)" },
   t3_6_exercise: { fr: "Remplacez les mots en italique par des pronoms : « Je donne la pomme au professeur. » « Tu m'offres dix euros. »", en: "Replace the object words with pronouns: \"Je donne la pomme au professeur.\" \"Tu m'offres dix euros.\"" },
   t3_6_tryit: { fr: "Écrivez une phrase avec un objet direct ET un objet indirect (par exemple, donner un cadeau à quelqu'un), puis remplacez les deux par des pronoms.", en: "Write a sentence with both a direct AND an indirect object (e.g. giving someone a gift), then replace both with pronouns." },
+
+  // 3.7 — Irregular Verbs You'll Use Constantly
+  t3_7_obj: { fr: "conjuguer au présent les verbes irréguliers les plus fréquents : partir, venir, dire, lire, écrire, mettre.", en: "conjugate the most common irregular verbs in the present: partir, venir, dire, lire, écrire, mettre." },
+  t3_7_hook: { fr: "Ces six verbes reviennent partout — dans les conversations, les livres, les chansons. Les apprendre maintenant vous fera gagner un temps précieux.", en: "These six verbs show up everywhere — in conversations, books, songs. Learning them now will save you a lot of time later." },
+  t3_7_expl: { fr: "Chaque verbe irrégulier a ses propres surprises, mais certains partagent des patrons. Partir et venir suivent un schéma proche (le radical change entre singulier et pluriel). Dire, lire et écrire ont chacun leurs formes propres à retenir par cœur. Mettre garde le même radical à toutes les personnes du singulier.", en: "Each irregular verb has its own quirks, but some share patterns. Partir and venir follow a similar shape (the stem changes between singular and plural). Dire, lire, and écrire each have their own forms to memorize. Mettre keeps the same stem across all singular persons." },
+  t3_7_ex1: { fr: "partir → je pars, tu pars, il part, nous partons, vous partez, ils partent", en: "partir (to leave) → je pars, tu pars, il part, nous partons, vous partez, ils partent" },
+  t3_7_ex2: { fr: "venir → je viens, tu viens, il vient, nous venons, vous venez, ils viennent", en: "venir (to come) → je viens, tu viens, il vient, nous venons, vous venez, ils viennent" },
+  t3_7_ex3: { fr: "dire → je dis, tu dis, il dit, nous disons, vous dites, ils disent", en: "dire (to say) → je dis, tu dis, il dit, nous disons, vous dites, ils disent" },
+  t3_7_ex4: { fr: "lire → je lis, tu lis, il lit, nous lisons, vous lisez, ils lisent — écrire → j'écris, tu écris, il écrit, nous écrivons, vous écrivez, ils écrivent", en: "lire (to read) → je lis, tu lis, il lit, nous lisons, vous lisez, ils lisent — écrire (to write) → j'écris, tu écris, il écrit, nous écrivons, vous écrivez, ils écrivent" },
+  t3_7_ex5: { fr: "mettre → je mets, tu mets, il met, nous mettons, vous mettez, ils mettent", en: "mettre (to put) → je mets, tu mets, il met, nous mettons, vous mettez, ils mettent" },
+  t3_7_exercise: { fr: "Conjuguez « venir » et « dire » à la troisième personne du pluriel (ils/elles).", en: "Conjugate venir and dire in the third person plural (ils/elles)." },
+  t3_7_tryit: { fr: "Écrivez trois phrases sur votre journée en utilisant trois de ces verbes irréguliers.", en: "Write three sentences about your day using three of these irregular verbs." },
+
+  // 3.8 — Wanting, Being Able To, Having To
+  t3_8_obj: { fr: "exprimer le désir, la capacité et l'obligation avec pouvoir, vouloir, devoir + infinitif.", en: "express desire, ability, and obligation with pouvoir, vouloir, devoir + infinitive." },
+  t3_8_hook: { fr: "Trois petits verbes, un immense pouvoir d'expression : ce que vous voulez, ce que vous pouvez, ce que vous devez faire.", en: "Three small verbs, huge expressive power: what you want, what you can do, what you have to do." },
+  t3_8_expl: { fr: "Pouvoir (capacité/permission), vouloir (désir), et devoir (obligation) sont tous suivis directement d'un infinitif, sans préposition. Tous les trois sont irréguliers au présent.", en: "Pouvoir (ability/permission), vouloir (desire), and devoir (obligation) are all followed directly by an infinitive, with no preposition. All three are irregular in the present." },
+  t3_8_ex1: { fr: "pouvoir → je peux, tu peux, il peut, nous pouvons, vous pouvez, ils peuvent", en: "pouvoir (can/to be able to) → je peux, tu peux, il peut, nous pouvons, vous pouvez, ils peuvent" },
+  t3_8_ex2: { fr: "vouloir → je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent", en: "vouloir (to want) → je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent" },
+  t3_8_ex3: { fr: "devoir → je dois, tu dois, il doit, nous devons, vous devez, ils doivent", en: "devoir (must/to have to) → je dois, tu dois, il doit, nous devons, vous devez, ils doivent" },
+  t3_8_ex4: { fr: "Je veux apprendre le français.", en: "Je veux apprendre le français. (I want to learn French.)" },
+  t3_8_ex5: { fr: "Tu dois finir ton travail avant de sortir. — Est-ce que je peux vous aider ?", en: "Tu dois finir ton travail avant de sortir. (You have to finish your work before going out.) — Est-ce que je peux vous aider? (Can I help you?)" },
+  t3_8_exercise: { fr: "Complétez avec pouvoir, vouloir ou devoir : (1) Je ___ partir maintenant. (2) Tu ___ voyager cet été ? (3) Nous ___ étudier ce soir.", en: "Fill in with pouvoir, vouloir, or devoir: (1) Je ___ partir maintenant. (2) Tu ___ voyager cet été? (3) Nous ___ étudier ce soir." },
+  t3_8_tryit: { fr: "Écrivez trois phrases sur vous-même : une avec vouloir, une avec pouvoir, une avec devoir.", en: "Write three sentences about yourself: one with vouloir, one with pouvoir, one with devoir." },
+
+  // 3.9 — Asking Great Questions
+  t3_9_obj: { fr: "poser des questions variées avec est-ce que et les pronoms interrogatifs (qui, quoi, où, quand, comment, pourquoi).", en: "ask varied questions using est-ce que and interrogative pronouns (qui, quoi, où, quand, comment, pourquoi)." },
+  t3_9_hook: { fr: "Une bonne conversation vit de bonnes questions — et le français a un mot précis pour chaque type de réponse que vous cherchez.", en: "A good conversation runs on good questions — and French has a precise word for each type of answer you're looking for." },
+  t3_9_expl: { fr: "Est-ce que transforme une affirmation en question sans changer l'ordre des mots. Les pronoms interrogatifs se placent en général au début de la phrase, souvent suivis de est-ce que : qui (personne), quoi (chose, souvent avec qu'est-ce que), où (lieu), quand (temps), comment (manière), pourquoi (raison).", en: "Est-ce que turns a statement into a question without changing word order. Interrogative pronouns generally go at the start of the sentence, often followed by est-ce que: qui (person), quoi (thing, often with qu'est-ce que), où (place), quand (time), comment (manner), pourquoi (reason)." },
+  t3_9_ex1: { fr: "Est-ce que tu aimes voyager ?", en: "Est-ce que tu aimes voyager? (Do you like to travel?)" },
+  t3_9_ex2: { fr: "Qui est-ce que tu attends ?", en: "Qui est-ce que tu attends? (Who are you waiting for?)" },
+  t3_9_ex3: { fr: "Qu'est-ce que tu fais ce soir ?", en: "Qu'est-ce que tu fais ce soir? (What are you doing tonight?)" },
+  t3_9_ex4: { fr: "Où est-ce que tu habites ? / Quand est-ce qu'on part ?", en: "Où est-ce que tu habites? (Where do you live?) / Quand est-ce qu'on part? (When are we leaving?)" },
+  t3_9_ex5: { fr: "Comment est-ce que ça marche ? / Pourquoi est-ce que tu ris ?", en: "Comment est-ce que ça marche? (How does it work?) / Pourquoi est-ce que tu ris? (Why are you laughing?)" },
+  t3_9_exercise: { fr: "Transformez en question avec le bon mot interrogatif : (1) Tu vas ___ (lieu) ? (2) Tu pars ___ (temps) ? (3) Tu fais ça ___ (manière) ?", en: "Turn into a question with the right interrogative word: (1) Tu vas ___ (place)? (2) Tu pars ___ (time)? (3) Tu fais ça ___ (manner)?" },
+  t3_9_tryit: { fr: "Imaginez un jeu de « 20 questions » — écrivez 5 questions pour deviner un objet mystère, en variant qui/quoi/où/quand/comment/pourquoi.", en: "Imagine a game of \"20 Questions\" — write 5 questions to guess a mystery object, varying qui/quoi/où/quand/comment/pourquoi." },
+
+  // 3.10 — Describing People and Things: Adverbs & Indefinite Words
+  t3_10_obj: { fr: "ajouter de la nuance avec des adverbes de manière/fréquence, et utiliser tout, quelques, chacun, aucun.", en: "add nuance with adverbs of manner/frequency, and use tout, quelques, chacun, aucun." },
+  t3_10_hook: { fr: "« Il travaille bien » et « il travaille très bien, mais rarement le lundi » — les adverbes transforment une phrase plate en description vivante.", en: "\"He works well\" and \"he works very well, but rarely on Mondays\" — adverbs turn a flat sentence into a vivid description." },
+  t3_10_expl: { fr: "Les adverbes de manière (bien, mal, vite, lentement) et de fréquence (souvent, toujours, parfois, rarement, jamais) se placent en général juste après le verbe. Tout(e)(s) peut être adjectif (tous les jours) ou pronom (tout va bien). Quelques (adjectif, « some/a few »), chacun (pronom, « each one ») et aucun...ne (négatif, « none ») complètent la boîte à outils pour décrire des quantités.", en: "Adverbs of manner (bien, mal, vite, lentement) and frequency (souvent, toujours, parfois, rarement, jamais) usually go right after the verb. Tout(e)(s) can be an adjective (tous les jours) or a pronoun (tout va bien). Quelques (adjective, \"some/a few\"), chacun (pronoun, \"each one\"), and aucun...ne (negative, \"none\") round out the toolkit for describing quantities." },
+  t3_10_ex1: { fr: "Il travaille bien mais lentement.", en: "Il travaille bien mais lentement. (He works well but slowly.)" },
+  t3_10_ex2: { fr: "Elle voyage souvent, mais rarement seule.", en: "Elle voyage souvent, mais rarement seule. (She travels often, but rarely alone.)" },
+  t3_10_ex3: { fr: "Nous avons roulé tout l'après-midi. (tout, adjectif) — Tout va bien ? (tout, pronom)", en: "Nous avons roulé tout l'après-midi. (tout as adjective — We drove all afternoon.) — Tout va bien? (tout as pronoun — Is everything OK?)" },
+  t3_10_ex4: { fr: "J'ai lu quelques livres ce mois-ci.", en: "J'ai lu quelques livres ce mois-ci. (I've read a few books this month.)" },
+  t3_10_ex5: { fr: "Chacun a son propre style. / Aucun ne pose de problème.", en: "Chacun a son propre style. (Each one has their own style.) / Aucun ne pose de problème. (None of them is a problem.)" },
+  t3_10_exercise: { fr: "Complétez avec tout, quelques ou chacun : (1) J'ai ___ mes affaires. (2) Il reste ___ places. (3) ___ élève a son cahier.", en: "Fill in with tout, quelques, or chacun: (1) J'ai ___ mes affaires. (2) Il reste ___ places. (3) ___ élève a son cahier." },
+  t3_10_tryit: { fr: "Décrivez une personne mystère en 3 phrases en utilisant un adverbe de fréquence et un mot indéfini (tout/quelques/chacun).", en: "Describe a mystery person in 3 sentences, using a frequency adverb and an indefinite word (tout/quelques/chacun)." },
 
   // ================= TRACK 4 =================
   t4_hero_eyebrow: { fr: "Track 4 · 5 leçons (d'autres à venir)", en: "Track 4 · 5 lessons (more coming)" },
@@ -281,6 +329,18 @@ const translations = {
   t4_10_exercise: { fr: "Mettez au subjonctif : « il faut que tu (finir) ton travail », « il est important que nous (être) présents. »", en: "Put into the subjunctive: \"il faut que tu (finir) ton travail\", \"il est important que nous (être) présents.\"" },
   t4_10_tryit: { fr: "Complétez trois phrases commençant par « Il faut que je... », « Il est important que... », en utilisant le subjonctif.", en: "Complete three sentences starting with \"Il faut que je...\", \"Il est important que...\", using the subjunctive." },
 
+  // 4.11 — Review & Confidence Check
+  t4_11_obj: { fr: "consolider tous les temps appris jusqu'ici en racontant sa semaine.", en: "consolidate all the tenses learned so far by telling the story of your week." },
+  t4_11_hook: { fr: "Le meilleur test pour savoir si une règle est vraiment apprise ? L'utiliser dans une histoire, pas dans un exercice isolé.", en: "The best test of whether a rule is truly learned? Using it in a story, not in an isolated exercise." },
+  t4_11_expl: { fr: "Une bonne histoire « ma semaine » mélange naturellement les temps : le passé composé pour les événements ponctuels, l'imparfait pour le contexte et les habitudes, le présent pour les faits actuels, et le futur (ou futur proche) pour ce qui vient. Essayez d'utiliser au moins un exemple de chaque temps déjà appris.", en: "A good \"my week\" story naturally mixes tenses: passé composé for one-time events, imparfait for context and habits, present for current facts, and future (or near future) for what's coming. Try to use at least one example of each tense learned so far." },
+  t4_11_ex1: { fr: "Lundi, j'ai commencé un nouveau projet. (passé composé)", en: "Lundi, j'ai commencé un nouveau projet. (passé composé — Monday, I started a new project.)" },
+  t4_11_ex2: { fr: "Il faisait beau toute la semaine. (imparfait)", en: "Il faisait beau toute la semaine. (imparfait — The weather was nice all week.)" },
+  t4_11_ex3: { fr: "En ce moment, je travaille sur mon site web. (présent)", en: "En ce moment, je travaille sur mon site web. (present — Right now, I'm working on my website.)" },
+  t4_11_ex4: { fr: "Demain, je vais me reposer. (futur proche)", en: "Demain, je vais me reposer. (near future — Tomorrow, I'm going to rest.)" },
+  t4_11_ex5: { fr: "J'espère que je réussirai mes examens. (futur simple)", en: "J'espère que je réussirai mes examens. (simple future — I hope I'll pass my exams.)" },
+  t4_11_exercise: { fr: "Relisez vos leçons du Track 4 (4.1 à 4.10) et notez un exemple personnel pour chaque temps.", en: "Look back through your Track 4 lessons (4.1 to 4.10) and jot down one personal example for each tense." },
+  t4_11_tryit: { fr: "Écrivez « Ma semaine » en 6-8 phrases, en utilisant au moins le présent, le passé composé, l'imparfait et le futur (proche ou simple).", en: "Write \"Ma semaine\" in 6-8 sentences, using at least the present, passé composé, imparfait, and future (near or simple)." },
+
   about_eyebrow: { fr: "Un peu plus sur moi", en: "A little about me" },
   about_title: { fr: "À propos", en: "About" },
   about_text: {
@@ -292,6 +352,13 @@ const translations = {
   footer_title: { fr: "Le Carnet Ougandais", en: "Le Carnet Ougandais" },
   footer_tagline: { fr: "Français & culture, depuis Kampala.", en: "French & culture, from Kampala." },
   footer_fine: { fr: "Préparé par Gerald de Paris, alias L'Affaires Étrangères.", en: "Prepared by Gerald de Paris, aka The Foreign Affairs Guy." },
+
+  lock_title: { fr: "Pas de cours pour le moment", en: "No Class at the Moment" },
+  lock_text: {
+    fr: "Ce carnet n'ouvre que pendant les cours en direct. Il n'y a pas de leçon en ce moment, mais nous serons bientôt de retour. À bientôt en cours !",
+    en: "This notebook only opens during live classes. There's no lesson in session right now, but we'll be back soon. See you in class!"
+  },
+  lock_sign: { fr: "— Gérard de Paris", en: "— Gérard de Paris" },
 
   // ---------- shared lesson-page labels ----------
   lbl_objective: { fr: "Objectif :", en: "Objective:" },
@@ -618,15 +685,19 @@ function initSiteLock() {
 
   document.body.style.overflow = "hidden";
 
+  const lang = document.documentElement.getAttribute("data-lang") || "fr";
+  const title = translations.lock_title[lang];
+  const text = translations.lock_text[lang];
+  const sign = translations.lock_sign[lang];
+
   const overlay = document.createElement("div");
   overlay.className = "site-lock-overlay";
   overlay.innerHTML = `
     <div class="site-lock-card">
       <div class="site-lock-icon">📚</div>
-      <h2 class="site-lock-title" id="lockTitle">Chut, on est en cours !</h2>
-      <p class="site-lock-text" id="lockTextFr">Ce carnet fait une petite pause. On se retrouve pendant le cours — ou repassez bientôt !</p>
-      <p class="site-lock-text" id="lockTextEn" style="font-style:italic;">Shh, class in session! This notebook is taking a short break. See you in class — or check back soon!</p>
-      <p class="site-lock-sub">— Gerald de Paris</p>
+      <h2 class="site-lock-title">${title}</h2>
+      <p class="site-lock-text">${text}</p>
+      <p class="site-lock-sub">${sign}</p>
     </div>
   `;
   document.body.appendChild(overlay);
