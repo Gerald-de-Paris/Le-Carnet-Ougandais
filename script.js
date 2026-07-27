@@ -381,7 +381,14 @@ const translations = {
   // 1.1 — Hello, French!
   t1_1_obj: { fr: "se familiariser avec la sonorité du français par rapport à l'anglais.", en: "get comfortable with how French sounds and feels compared to English." },
   t1_1_hook: { fr: "Le français et l'anglais partagent des centaines de mots presque identiques à l'écrit — mais à l'oral, c'est une autre histoire. Bonne nouvelle : une seule règle change tout.", en: "French and English share hundreds of nearly identical written words — but out loud, it's a different story. Good news: one single rule changes everything." },
-  t1_1_expl: { fr: "Avant toute chose, un point de départ trop souvent oublié : l'alphabet. Les 26 lettres se prononcent différemment en français — savoir les nommer permet d'épeler un mot ou son nom à voix haute, une compétence de survie très pratique. Au-delà des lettres, beaucoup de mots français ressemblent à l'anglais à l'écrit (nation, restaurant, information) mais se prononcent très différemment. Le français est une langue au rythme régulier : chaque syllabe dure à peu près le même temps, contrairement à l'anglais. Et l'accent tombe toujours sur la dernière syllabe du mot ou du groupe de mots. Autre réflexe à prendre : en français, les mots s'enchaînent — une consonne finale normalement muette se prononce si le mot suivant commence par une voyelle. C'est ce qu'on appelle la liaison.", en: "Before anything else, a starting point that's too often skipped: the alphabet. The 26 letters are pronounced differently in French — knowing their names lets you spell a word or your name out loud, a genuinely practical survival skill. Beyond letters, many French words look like English in writing (nation, restaurant, information) but sound very different out loud. French has a steady rhythm: each syllable takes roughly the same amount of time, unlike English. And the stress always falls on the last syllable of the word or phrase. One more reflex to build: in French, words link together — a normally-silent final consonant gets pronounced if the next word starts with a vowel. This is called liaison." },
+  t1_1_c1_title: { fr: "L'alphabet d'abord", en: "The alphabet first" },
+  t1_1_c1_text: { fr: "Un point de départ trop souvent oublié. Les 26 lettres se prononcent différemment en français — savoir les nommer permet d'épeler un mot ou son nom à voix haute.", en: "A starting point that's too often skipped. The 26 letters are pronounced differently in French — knowing their names lets you spell a word or your name out loud." },
+  t1_1_c2_title: { fr: "Les mots-cousins", en: "Cognates (look-alike words)" },
+  t1_1_c2_text: { fr: "Beaucoup de mots français ressemblent à l'anglais à l'écrit — nation, restaurant, information — mais se prononcent très différemment à l'oral.", en: "Many French words look like English in writing — nation, restaurant, information — but sound very different out loud." },
+  t1_1_c3_title: { fr: "Le rythme et l'accent", en: "Rhythm and stress" },
+  t1_1_c3_text: { fr: "Le français a un rythme régulier : chaque syllabe dure à peu près le même temps, contrairement à l'anglais. L'accent tombe toujours sur la dernière syllabe.", en: "French has a steady rhythm: each syllable takes roughly the same amount of time, unlike English. The stress always falls on the last syllable." },
+  t1_1_c4_title: { fr: "La liaison", en: "Liaison" },
+  t1_1_c4_text: { fr: "Les mots s'enchaînent : une consonne finale normalement muette se prononce si le mot suivant commence par une voyelle.", en: "Words link together: a normally-silent final consonant gets pronounced if the next word starts with a vowel." },
   t1_1_ex1: { fr: "nation → na-si-ON (pas NAY-shun)", en: "nation → na-si-ON (not NAY-shun)" },
   t1_1_ex2: { fr: "restaurant → res-to-RAN", en: "restaurant → res-to-RAHN" },
   t1_1_ex3: { fr: "information → in-for-ma-si-ON", en: "information → an-for-ma-see-OHN" },
@@ -550,6 +557,17 @@ const translations = {
 // ============================================
 // LANGUAGE TOGGLE LOGIC
 // ============================================
+function splitIntoConceptCards(el, text) {
+  // Break on sentence boundaries (. ! ?) while keeping the punctuation.
+  const sentences = text.match(/[^.!?]+[.!?]+(\s+|$)/g) || [text];
+  el.innerHTML = sentences.map((s, i) => `
+    <div class="concept-card">
+      <span class="concept-num">${i + 1}</span>
+      <div><p>${s.trim()}</p></div>
+    </div>
+  `).join("");
+}
+
 function applyLanguage(lang) {
   document.documentElement.setAttribute("data-lang", lang);
   document.documentElement.setAttribute("lang", lang);
@@ -557,7 +575,12 @@ function applyLanguage(lang) {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     const entry = translations[key];
-    if (entry && entry[lang]) {
+    if (!entry || !entry[lang]) return;
+
+    const isExplParagraph = key.endsWith("_expl") && el.tagName === "P" && el.closest(".lesson-body");
+    if (isExplParagraph) {
+      splitIntoConceptCards(el, entry[lang]);
+    } else {
       el.textContent = entry[lang];
     }
   });
@@ -685,10 +708,9 @@ function initSiteLock() {
 
   document.body.style.overflow = "hidden";
 
-  const lang = document.documentElement.getAttribute("data-lang") || "fr";
-  const title = translations.lock_title[lang];
-  const text = translations.lock_text[lang];
-  const sign = translations.lock_sign[lang];
+  const title = translations.lock_title.fr;
+  const text = translations.lock_text.fr;
+  const sign = translations.lock_sign.fr;
 
   const overlay = document.createElement("div");
   overlay.className = "site-lock-overlay";
