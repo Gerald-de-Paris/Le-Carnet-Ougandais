@@ -590,6 +590,8 @@ function applyLanguage(lang) {
   });
 
   localStorage.setItem("site-lang", lang);
+
+  if (typeof initListenButtons === "function") initListenButtons();
 }
 
 function initLangToggle() {
@@ -629,10 +631,11 @@ function initListenButtons() {
   document.querySelectorAll(".lesson-examples li").forEach((li) => {
     if (li.querySelector(".listen-btn")) return;
 
-    // Speak only the French part: cut off at the first " — " or " ("
-    // since many lines have an English gloss or note after that point.
+    // Speak only the real French word/phrase: cut off at the first arrow,
+    // dash, "vs", or parenthesis — everything after that is a phonetic
+    // breakdown, an English gloss, or a note, not French to read aloud.
     const rawText = li.textContent;
-    const frenchPart = rawText.split(/\s+—\s+|\s+\(/)[0].trim();
+    const frenchPart = rawText.split(/\s*(?:→|—|–|\bvs\b|\()/)[0].trim();
     if (!frenchPart) return;
 
     const btn = document.createElement("button");
