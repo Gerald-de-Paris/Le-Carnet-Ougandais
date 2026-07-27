@@ -36,11 +36,11 @@ const translations = {
 
   track3_title: { fr: "Real Communication", en: "Real Communication" },
   track3_desc: { fr: "Négations avancées, pronoms toniques — d'autres leçons à venir.", en: "Advanced negation, stressed pronouns — more lessons coming." },
-  track3_progress: { fr: "5 leçons disponibles", en: "5 lessons available" },
+  track3_progress: { fr: "6 leçons disponibles", en: "6 lessons available" },
 
   track4_title: { fr: "Past, Future & Fluency", en: "Past, Future & Fluency" },
   track4_desc: { fr: "Le passé composé (avoir & être) — imparfait, futur, conditionnel à venir.", en: "The passé composé (avoir & être) — imperfect, future, conditional coming next." },
-  track4_progress: { fr: "5 leçons disponibles", en: "5 lessons available" },
+  track4_progress: { fr: "10 leçons disponibles", en: "10 lessons available" },
 
   track5_title: { fr: "Real-Life Situations", en: "Real-Life Situations" },
   track5_desc: { fr: "Aéroport, hôtel, restaurant, achats, santé, petites conversations.", en: "Airport, hotel, restaurant, shopping, health, small talk." },
@@ -141,6 +141,18 @@ const translations = {
   t3_5_exercise: { fr: "Mettez à la forme négative : (1) Elle se maquille le week-end. (2) Nous nous levons tôt.", en: "Put in the negative: (1) Elle se maquille le week-end. (2) Nous nous levons tôt." },
   t3_5_tryit: { fr: "Donnez un ordre à un(e) ami(e) qui dort trop tard, en utilisant un verbe réfléchi à l'impératif.", en: "Give a command to a friend who's sleeping too late, using a reflexive verb in the imperative." },
 
+  // 3.6 — Object Pronouns: le/la/les, lui/leur
+  t3_6_obj: { fr: "remplacer un objet direct ou indirect par un pronom (le/la/les, lui/leur), et savoir les combiner.", en: "replace a direct or indirect object with a pronoun (le/la/les, lui/leur), and combine them correctly." },
+  t3_6_hook: { fr: "Répéter « le livre » trois fois dans la même conversation, personne ne fait ça. Les pronoms objets existent pour éviter cette répétition.", en: "No one repeats \"the book\" three times in the same conversation. Object pronouns exist to avoid exactly that repetition." },
+  t3_6_expl: { fr: "Le/la/les remplacent un objet direct (une personne ou une chose précise) ; lui/leur remplacent un objet indirect (introduit par à). Ces pronoms se placent juste avant le verbe conjugué. Quand une phrase a les deux à la fois, l'ordre est fixe : me/te/se/nous/vous, puis le/la/les, puis lui/leur, puis y et en en dernier.", en: "Le/la/les replace a direct object (a specific person or thing); lui/leur replace an indirect object (introduced by à). These pronouns go right before the conjugated verb. When a sentence has both, the order is fixed: me/te/se/nous/vous, then le/la/les, then lui/leur, then y and en last." },
+  t3_6_ex1: { fr: "Je donne le livre à Marie. → Je le lui donne.", en: "Je donne le livre à Marie. → Je le lui donne. (I give the book to Marie. → I give it to her.)" },
+  t3_6_ex2: { fr: "Tu m'offres cette écharpe ? → Tu me la donnes ?", en: "Tu m'offres cette écharpe? → Tu me la donnes? (Are you giving me that scarf? → Are you giving it to me?)" },
+  t3_6_ex3: { fr: "Il envoie des mails à Corinne. → Il lui en envoie.", en: "Il envoie des mails à Corinne. → Il lui en envoie. (He sends emails to Corinne. → He sends her some.)" },
+  t3_6_ex4: { fr: "Elle vous a retrouvés à la gare ? → Elle vous y a retrouvés ?", en: "Elle vous a retrouvés à la gare? → Elle vous y a retrouvés? (Did she meet you at the station? → Did she meet you there?)" },
+  t3_6_ex5: { fr: "Je ne t'offre pas d'argent. → Je ne t'en offre pas. (à la négative, ne précède les deux pronoms)", en: "Je ne t'offre pas d'argent. → Je ne t'en offre pas. (in the negative, ne comes before both pronouns)" },
+  t3_6_exercise: { fr: "Remplacez les mots en italique par des pronoms : « Je donne la pomme au professeur. » « Tu m'offres dix euros. »", en: "Replace the object words with pronouns: \"Je donne la pomme au professeur.\" \"Tu m'offres dix euros.\"" },
+  t3_6_tryit: { fr: "Écrivez une phrase avec un objet direct ET un objet indirect (par exemple, donner un cadeau à quelqu'un), puis remplacez les deux par des pronoms.", en: "Write a sentence with both a direct AND an indirect object (e.g. giving someone a gift), then replace both with pronouns." },
+
   // ================= TRACK 4 =================
   t4_hero_eyebrow: { fr: "Track 4 · 5 leçons (d'autres à venir)", en: "Track 4 · 5 lessons (more coming)" },
   t4_hero_title: { fr: "Past, Future & Fluency", en: "Past, Future & Fluency" },
@@ -208,6 +220,66 @@ const translations = {
   t4_5_ex5: { fr: "Ils se sont téléphoné. (jamais d'accord avec téléphoner, verbe indirect)", en: "Ils se sont téléphoné. (never agrees with téléphoner, an indirect verb — They phoned each other.)" },
   t4_5_exercise: { fr: "Accordez ou non le participe passé : (1) Elle s'est (réveillé) à sept heures. (2) Nous nous sommes (brossé) les dents. (3) Ils se sont (rencontré) hier.", en: "Agree or don't agree the past participle: (1) Elle s'est (réveillé) à sept heures. (2) Nous nous sommes (brossé) les dents. (3) Ils se sont (rencontré) hier." },
   t4_5_tryit: { fr: "Racontez votre réveil de ce matin en 2 phrases avec des verbes réfléchis au passé composé.", en: "Tell how you woke up this morning in 2 sentences, using reflexive verbs in the passé composé." },
+
+  // 4.6 — The Imperfect: Formation
+  t4_6_obj: { fr: "former l'imparfait, le temps des habitudes et des descriptions passées.", en: "form the imparfait, the tense for habits and descriptions in the past." },
+  t4_6_hook: { fr: "Le passé composé raconte ce qui s'est passé ; l'imparfait peint le décor autour — le temps qu'il faisait, ce qu'on faisait d'habitude.", en: "The passé composé tells what happened; the imparfait paints the scenery around it — what the weather was like, what you used to do." },
+  t4_6_expl: { fr: "Pour former l'imparfait, on part de la forme « nous » du présent, on enlève -ons, et on ajoute : -ais, -ais, -ait, -ions, -iez, -aient. Seul être a un radical irrégulier (ét-). C'est le temps le plus régulier du français — presque tous les verbes suivent ce même patron.", en: "To form the imparfait, take the present-tense \"nous\" form, drop -ons, and add: -ais, -ais, -ait, -ions, -iez, -aient. Only être has an irregular stem (ét-). It's French's most regular tense — almost every verb follows this same pattern." },
+  t4_6_ex1: { fr: "nous parlons → je parlais, tu parlais, il parlait, nous parlions, vous parliez, ils parlaient", en: "nous parlons → je parlais, tu parlais, il parlait, nous parlions, vous parliez, ils parlaient" },
+  t4_6_ex2: { fr: "nous finissons → je finissais", en: "nous finissons → je finissais (I was finishing)" },
+  t4_6_ex3: { fr: "nous attendons → j'attendais", en: "nous attendons → j'attendais (I was waiting)" },
+  t4_6_ex4: { fr: "être → j'étais, tu étais, il était, nous étions, vous étiez, ils étaient", en: "être (to be) → j'étais, tu étais, il était, nous étions, vous étiez, ils étaient" },
+  t4_6_ex5: { fr: "nous mangeons → je mangeais (mais nous mangions, sans le e supplémentaire)", en: "nous mangeons → je mangeais (but nous mangions, without the extra e)" },
+  t4_6_exercise: { fr: "Conjuguez « choisir » à l'imparfait pour toutes les personnes.", en: "Conjugate choisir (to choose) in the imparfait for every person." },
+  t4_6_tryit: { fr: "Décrivez votre vie quand vous aviez dix ans, en 3 phrases à l'imparfait : j'habitais..., je jouais..., j'aimais...", en: "Describe your life when you were ten, in 3 sentences using the imparfait: j'habitais..., je jouais..., j'aimais..." },
+
+  // 4.7 — Imparfait vs Passé Composé
+  t4_7_obj: { fr: "choisir entre l'imparfait et le passé composé pour raconter une histoire.", en: "choose between the imparfait and the passé composé when telling a story." },
+  t4_7_hook: { fr: "« Il pleuvait quand je suis sorti. » Deux temps du passé, une seule phrase — et chacun a un rôle bien précis.", en: "\"Il pleuvait quand je suis sorti.\" Two past tenses, one sentence — and each has a very specific job." },
+  t4_7_expl: { fr: "Le passé composé raconte une action ponctuelle, terminée, ou une suite d'événements. L'imparfait décrit le décor, une habitude, ou un état continu — sans préciser de début ni de fin. Très souvent, l'imparfait pose le décor et le passé composé y introduit un événement soudain qui « interrompt » la scène.", en: "The passé composé tells a one-time, completed action, or a sequence of events. The imparfait describes the scenery, a habit, or an ongoing state — with no specific beginning or end. Very often, the imparfait sets the scene and the passé composé introduces a sudden event that \"interrupts\" it." },
+  t4_7_ex1: { fr: "Il faisait beau quand je suis arrivée à Paris. (imparfait = décor, passé composé = événement)", en: "Il faisait beau quand je suis arrivée à Paris. (imparfait = scenery, passé composé = event — The weather was nice when I arrived in Paris.)" },
+  t4_7_ex2: { fr: "Nous nous reposions quand Éric a téléphoné.", en: "Nous nous reposions quand Éric a téléphoné. (We were resting when Éric called.)" },
+  t4_7_ex3: { fr: "Quand j'étais jeune, j'allais chez ma tante chaque été. (habitude = imparfait)", en: "Quand j'étais jeune, j'allais chez ma tante chaque été. (habit = imparfait — When I was young, I used to go to my aunt's every summer.)" },
+  t4_7_ex4: { fr: "Hier, je suis allée deux fois au marché. (action comptée = passé composé)", en: "Hier, je suis allée deux fois au marché. (counted action = passé composé — Yesterday I went to the market twice.)" },
+  t4_7_ex5: { fr: "J'avais faim quand je me suis réveillé.", en: "J'avais faim quand je me suis réveillé. (I was hungry when I woke up.)" },
+  t4_7_exercise: { fr: "Choisissez le bon temps : « Il (pleuvoir) quand nous (sortir). »", en: "Choose the right tense: \"Il (pleuvoir) quand nous (sortir).\" (It was raining when we went out.)" },
+  t4_7_tryit: { fr: "Racontez un souvenir d'enfance en 3-4 phrases, en mélangeant imparfait (décor/habitudes) et passé composé (un événement précis).", en: "Tell a childhood memory in 3-4 sentences, mixing imparfait (scenery/habits) and passé composé (one specific event)." },
+
+  // 4.8 — The Future Tense
+  t4_8_obj: { fr: "former et utiliser le futur simple pour parler de projets et de certitudes.", en: "form and use the future tense to talk about plans and certainties." },
+  t4_8_hook: { fr: "« Je vais partir » (futur proche) et « je partirai » (futur simple) parlent tous les deux de l'avenir — mais le futur simple sonne un peu plus sûr, un peu plus formel.", en: "\"Je vais partir\" (near future) and \"je partirai\" (simple future) both talk about the future — but the simple future sounds a bit more certain, a bit more formal." },
+  t4_8_expl: { fr: "Le futur simple s'obtient en ajoutant -ai, -as, -a, -ons, -ez, -ont directement à l'infinitif (les verbes en -re perdent leur -e final). Certains verbes ont un radical irrégulier à apprendre par cœur : être→ser-, avoir→aur-, aller→ir-, faire→fer-, pouvoir→pourr-, vouloir→voudr-, venir→viendr-. Avec si + présent, la proposition principale se met au futur.", en: "The simple future is formed by adding -ai, -as, -a, -ons, -ez, -ont directly to the infinitive (-re verbs drop the final -e). Some verbs have an irregular stem to memorize: être→ser-, avoir→aur-, aller→ir-, faire→fer-, pouvoir→pourr-, vouloir→voudr-, venir→viendr-. With si + present tense, the main clause goes in the future." },
+  t4_8_ex1: { fr: "parler → je parlerai, tu parleras, il parlera, nous parlerons, vous parlerez, ils parleront", en: "parler (to speak) → je parlerai, tu parleras, il parlera, nous parlerons, vous parlerez, ils parleront" },
+  t4_8_ex2: { fr: "Je serai à Boston demain. (être → ser-)", en: "Je serai à Boston demain. (I will be in Boston tomorrow.)" },
+  t4_8_ex3: { fr: "Nous devrons chercher une vidéo. (devoir → devr-)", en: "Nous devrons chercher une vidéo. (We will have to look for a video.)" },
+  t4_8_ex4: { fr: "Si tu le veux, je prendrai le métro. (si + présent, futur dans la proposition principale)", en: "Si tu le veux, je prendrai le métro. (If you want, I'll take the metro.)" },
+  t4_8_ex5: { fr: "Quand Marthe arrivera, nous déjeunerons. (les deux verbes au futur après quand)", en: "Quand Marthe arrivera, nous déjeunerons. (When Marthe arrives, we'll have lunch — both verbs in the future after quand)" },
+  t4_8_exercise: { fr: "Mettez au futur : (1) nous/prendre le train (2) tu/pouvoir venir (3) il/falloir partir tôt.", en: "Put into the future: (1) nous/prendre le train (2) tu/pouvoir venir (3) il/falloir partir tôt." },
+  t4_8_tryit: { fr: "Écrivez trois phrases sur vos projets pour l'année prochaine, au futur simple.", en: "Write three sentences about your plans for next year, using the simple future." },
+
+  // 4.9 — The Conditional
+  t4_9_obj: { fr: "utiliser le conditionnel pour être poli, donner un conseil, ou imaginer une situation hypothétique.", en: "use the conditional to be polite, give advice, or imagine a hypothetical situation." },
+  t4_9_hook: { fr: "« Je veux un café » sonne un peu brusque. « Je voudrais un café » — voilà la politesse française en une seule syllabe changée.", en: "\"Je veux un café\" sounds a bit blunt. \"Je voudrais un café\" — that's French politeness in one changed syllable." },
+  t4_9_expl: { fr: "Le conditionnel utilise les mêmes radicaux irréguliers que le futur, mais avec les terminaisons de l'imparfait (-ais, -ais, -ait, -ions, -iez, -aient). Il sert à demander poliment, à donner un conseil avec devoir, et dans les phrases avec si : si + imparfait, puis conditionnel dans la proposition principale.", en: "The conditional uses the same irregular stems as the future, but with the imparfait's endings (-ais, -ais, -ait, -ions, -iez, -aient). It's used to ask politely, give advice with devoir, and in si-sentences: si + imparfait, then conditional in the main clause." },
+  t4_9_ex1: { fr: "Je voudrais deux cafés, s'il vous plaît. (demande polie)", en: "Je voudrais deux cafés, s'il vous plaît. (polite request — I would like two coffees, please.)" },
+  t4_9_ex2: { fr: "Pourriez-vous m'aider ?", en: "Pourriez-vous m'aider? (Could you help me?)" },
+  t4_9_ex3: { fr: "Tu devrais faire plus d'exercice. (conseil)", en: "Tu devrais faire plus d'exercice. (advice — You should exercise more.)" },
+  t4_9_ex4: { fr: "Si j'avais le temps, je voyagerais plus. (si + imparfait → conditionnel)", en: "Si j'avais le temps, je voyagerais plus. (If I had time, I would travel more.)" },
+  t4_9_ex5: { fr: "Si tu venais, je serais content(e).", en: "Si tu venais, je serais content(e). (If you came, I would be happy.)" },
+  t4_9_exercise: { fr: "Transformez en demande polie : « Je veux un verre d'eau. » Puis complétez : « Si j'avais assez d'argent, je... »", en: "Turn into a polite request: \"Je veux un verre d'eau.\" Then complete: \"Si j'avais assez d'argent, je...\"" },
+  t4_9_tryit: { fr: "Donnez un conseil à un ami avec « tu devrais... », puis écrivez une phrase hypothétique avec « si j'étais..., je... »", en: "Give a friend advice using \"tu devrais...\", then write a hypothetical sentence with \"si j'étais..., je...\"" },
+
+  // 4.10 — The Subjunctive: The Basics
+  t4_10_obj: { fr: "reconnaître quand utiliser le subjonctif, et former ses formes régulières.", en: "recognize when to use the subjunctive, and form its regular forms." },
+  t4_10_hook: { fr: "« Il faut que tu viennes » — ce petit changement après « que » est le subjonctif, le mode des souhaits, des nécessités et des sentiments.", en: "\"Il faut que tu viennes\" — that small change after \"que\" is the subjunctive, the mood of wishes, necessity, and feelings." },
+  t4_10_expl: { fr: "Le subjonctif apparaît presque toujours dans une proposition introduite par « que », après une expression de nécessité, de volonté ou de sentiment (il faut que, il est important que, je veux que...). Pour le former, on part de la forme « ils » du présent, on enlève -ent, et on ajoute -e, -es, -e, -ions, -iez, -ent. Être et avoir sont irréguliers.", en: "The subjunctive almost always appears in a clause introduced by \"que\", after an expression of necessity, will, or feeling (il faut que, il est important que, je veux que...). To form it, take the present-tense \"ils\" form, drop -ent, and add -e, -es, -e, -ions, -iez, -ent. Être and avoir are irregular." },
+  t4_10_ex1: { fr: "il faut que tu fasses tes devoirs (faire → fasse)", en: "il faut que tu fasses tes devoirs (you need to do your homework)" },
+  t4_10_ex2: { fr: "il est important que nous soyons à l'heure (être, irrégulier)", en: "il est important que nous soyons à l'heure (it's important that we're on time — être is irregular)" },
+  t4_10_ex3: { fr: "je veux que tu viennes (venir, radical irrégulier)", en: "je veux que tu viennes (I want you to come — venir has an irregular stem)" },
+  t4_10_ex4: { fr: "il ne faut pas que vous partiez trop tard", en: "il ne faut pas que vous partiez trop tard (you mustn't leave too late)" },
+  t4_10_ex5: { fr: "il est nécessaire qu'elle sache la réponse (savoir, irrégulier)", en: "il est nécessaire qu'elle sache la réponse (she needs to know the answer — savoir is irregular)" },
+  t4_10_exercise: { fr: "Mettez au subjonctif : « il faut que tu (finir) ton travail », « il est important que nous (être) présents. »", en: "Put into the subjunctive: \"il faut que tu (finir) ton travail\", \"il est important que nous (être) présents.\"" },
+  t4_10_tryit: { fr: "Complétez trois phrases commençant par « Il faut que je... », « Il est important que... », en utilisant le subjonctif.", en: "Complete three sentences starting with \"Il faut que je...\", \"Il est important que...\", using the subjunctive." },
 
   about_eyebrow: { fr: "Un peu plus sur moi", en: "A little about me" },
   about_title: { fr: "À propos", en: "About" },
@@ -534,3 +606,30 @@ function initCultureModal() {
 }
 
 document.addEventListener("DOMContentLoaded", initCultureModal);
+
+// ============================================
+// SITE LOCK CHECK
+// Reads SITE_LOCKED from lock.js. If true, covers the page with a
+// friendly "closed" message instead of the real content.
+// ============================================
+function initSiteLock() {
+  const locked = typeof SITE_LOCKED !== "undefined" && SITE_LOCKED === true;
+  if (!locked) return;
+
+  document.body.style.overflow = "hidden";
+
+  const overlay = document.createElement("div");
+  overlay.className = "site-lock-overlay";
+  overlay.innerHTML = `
+    <div class="site-lock-card">
+      <div class="site-lock-icon">📚</div>
+      <h2 class="site-lock-title" id="lockTitle">Chut, on est en cours !</h2>
+      <p class="site-lock-text" id="lockTextFr">Ce carnet fait une petite pause. On se retrouve pendant le cours — ou repassez bientôt !</p>
+      <p class="site-lock-text" id="lockTextEn" style="font-style:italic;">Shh, class in session! This notebook is taking a short break. See you in class — or check back soon!</p>
+      <p class="site-lock-sub">— Gerald de Paris</p>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+}
+
+document.addEventListener("DOMContentLoaded", initSiteLock);
