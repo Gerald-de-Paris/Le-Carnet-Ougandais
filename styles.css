@@ -594,6 +594,44 @@ a{ color: inherit; }
   flex: none;
 }
 .lesson-body p{ margin: 0 0 6px; line-height: 1.6; }
+
+/* Concept cards — one idea per block, instead of one long paragraph */
+.concept-card{
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--parchment-deep);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+.concept-num{
+  flex: none;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--leaf);
+  color: var(--cream);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+.concept-card h4{
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+.concept-card p{
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
 .lesson-examples{ margin: 0; padding-left: 20px; }
 .lesson-examples li{ margin-bottom: 8px; line-height: 1.5; }
 .lesson-exercise, .lesson-tryit{
