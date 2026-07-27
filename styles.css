@@ -652,6 +652,46 @@ a{ color: inherit; }
   color: var(--ink-soft);
 }
 
+/* ============================================
+   SITE LOCK OVERLAY
+   ============================================ */
+.site-lock-overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--parchment);
+}
+.site-lock-card{
+  max-width: 420px;
+  text-align: center;
+  background: var(--cream);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lift);
+  padding: 44px 36px;
+}
+.site-lock-icon{ font-size: 2.6rem; margin-bottom: 16px; }
+.site-lock-title{
+  font-family: var(--display);
+  font-size: 1.6rem;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.site-lock-text{
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 0 0 6px;
+}
+.site-lock-sub{
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--laterite);
+  margin-top: 18px;
+}
+
 .textile-strip{
   height: 10px;
   width: 100%;
