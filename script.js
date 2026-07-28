@@ -643,16 +643,32 @@ function initListenButtons() {
     btn.setAttribute("aria-label", "Écouter la prononciation");
     btn.innerHTML = "🔊";
     btn.addEventListener("click", () => {
-      window.speechSynthesis.cancel();
+      // Only cancel if something is actually mid-speech — cancelling
+      // unnecessarily before every click adds extra startup delay.
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+      }
       const utterance = new SpeechSynthesisUtterance(frenchPart);
       utterance.lang = "fr-FR";
       utterance.rate = 0.9;
+      const frenchVoice = cachedVoices.find((v) => v.lang && v.lang.toLowerCase().startsWith("fr"));
+      if (frenchVoice) utterance.voice = frenchVoice;
       btn.classList.add("is-playing");
       utterance.onend = () => btn.classList.remove("is-playing");
       window.speechSynthesis.speak(utterance);
     });
     li.appendChild(btn);
   });
+}
+
+// Pre-load the voice list as soon as possible, instead of waiting for the
+// first click — this is what causes the noticeable delay on first play.
+let cachedVoices = [];
+if ("speechSynthesis" in window) {
+  cachedVoices = window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = () => {
+    cachedVoices = window.speechSynthesis.getVoices();
+  };
 }
 
 document.addEventListener("DOMContentLoaded", initListenButtons);
