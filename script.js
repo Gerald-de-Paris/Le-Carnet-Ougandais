@@ -46,7 +46,8 @@ const translations = {
   track5_desc: { fr: "Aéroport, hôtel, restaurant, achats, santé, petites conversations.", en: "Airport, hotel, restaurant, shopping, health, small talk." },
 
   track6_title: { fr: "Reading for Confidence", en: "Reading for Confidence" },
-  track6_desc: { fr: "Mini-dialogues et petites histoires pour lire avec plaisir.", en: "Mini-dialogues and short stories for reading enjoyment." },
+  track6_desc: { fr: "Des histoires originales, en Ouganda, pour lire avec plaisir.", en: "Original stories, set in Uganda, to enjoy reading." },
+  track6_progress: { fr: "1 histoire disponible", en: "1 story available" },
 
   track_link: { fr: "Ouvrir le track →", en: "Open track →" },
   track_soon: { fr: "Bientôt disponible", en: "Coming soon" },
@@ -72,6 +73,45 @@ const translations = {
   culture_detail4: { fr: "[Texte à venir] Où se trouve ce point de vue sur le Nil, et pourquoi il vaut le détour.", en: "[Text coming soon] Where this view of the Nile is, and why it's worth the trip." },
   culture_detail5: { fr: "[Texte à venir] Le nom du plat, ses ingrédients, quand on le mange.", en: "[Text coming soon] The dish's name, its ingredients, when it's eaten." },
   culture_detail6: { fr: "[Texte à venir] L'artisan ou la région derrière cet objet, sa signification.", en: "[Text coming soon] The craftsperson or region behind this piece, and what it means." },
+
+  // ================= TRACK 6 =================
+  t6_hero_eyebrow: { fr: "Track 6 · 1 histoire (d'autres à venir)", en: "Track 6 · 1 story (more coming)" },
+  t6_hero_title: { fr: "Reading for Confidence", en: "Reading for Confidence" },
+  t6_hero_desc: {
+    fr: "De petites histoires originales, écrites pour ce carnet, pour prendre plaisir à lire en français — avec du vocabulaire et des questions après chaque récit.",
+    en: "Short original stories, written for this notebook, to enjoy reading in French — with vocabulary and questions after each one."
+  },
+
+  t6_1_title: { fr: "Le marché de Nakasero", en: "Nakasero Market" },
+  t6_1_obj: { fr: "lire une première petite histoire en français simple, et répondre à des questions de compréhension.", en: "read a first short story in simple French, and answer comprehension questions." },
+  t6_1_hook: { fr: "Une matinée au marché à Kampala, une rencontre inattendue, et une bonne excuse de pratiquer son français.", en: "A morning at the market in Kampala, an unexpected encounter, and a good excuse to practice French." },
+  t6_1_story: {
+    fr: "Kato habite à Kampala. Il a vingt ans et il étudie le français à l'université. Le samedi matin, il aime aller au marché de Nakasero avec sa mère.\n\nLe marché est très animé. Il y a des fruits, des légumes, des épices et des tissus colorés. Les vendeurs crient les prix et les clients marchandent.\n\nCe matin, Kato voit une touriste. Elle regarde une pile de mangues, mais elle ne parle pas anglais. Elle parle français.\n\n« Bonjour, dit Kato. Vous cherchez quelque chose ? »\n\nLa touriste sourit, surprise. « Oh, vous parlez français ! Je m'appelle Camille. Je ne comprends pas le prix des mangues. »\n\nKato demande au vendeur. « Trois mille shillings pour un kilo », dit-il à Camille.\n\n« Merci beaucoup ! C'est gentil. Vous parlez très bien français.\n\n— J'apprends depuis un an, répond Kato. Je veux voyager en France un jour.\n\n— Alors continuez ! Le français vous ouvre déjà des portes ici, à Kampala. »\n\nCamille achète des mangues et un petit sac d'épices. Avant de partir, elle donne son adresse mail à Kato.\n\n« Écrivez-moi en français ! Ça vous aidera à pratiquer. »\n\nKato sourit. C'est une belle matinée au marché.",
+    en: "Kato lives in Kampala. He's twenty years old and studies French at university. On Saturday mornings, he likes going to Nakasero Market with his mother.\n\nThe market is very lively. There's fruit, vegetables, spices, and colorful fabrics. Vendors call out prices and customers haggle.\n\nThis morning, Kato notices a tourist. She's looking at a pile of mangoes, but she doesn't speak English. She speaks French.\n\n\"Hello,\" says Kato. \"Are you looking for something?\"\n\nThe tourist smiles, surprised. \"Oh, you speak French! My name's Camille. I don't understand the price of the mangoes.\"\n\nKato asks the vendor. \"Three thousand shillings a kilo,\" he tells Camille.\n\n\"Thank you so much! That's kind of you. You speak French very well.\n\n— I've been learning for a year, Kato answers. I want to travel to France one day.\n\n— Then keep going! French is already opening doors for you right here in Kampala.\"\n\nCamille buys mangoes and a small bag of spices. Before leaving, she gives Kato her email address.\n\n\"Write to me in French! It'll help you practice.\"\n\nKato smiles. It's a beautiful morning at the market."
+  },
+  t6_1_vocab_title: { fr: "Vocabulaire", en: "Vocabulary" },
+  t6_1_v1: { fr: "animé(e) — vivant, plein de monde", en: "animé(e) — lively, bustling" },
+  t6_1_v2: { fr: "épices (f.) — utilisées pour donner du goût aux plats", en: "épices (f.) — spices" },
+  t6_1_v3: { fr: "marchander — discuter le prix pour le faire baisser", en: "marchander — to haggle, to bargain" },
+  t6_1_v4: { fr: "une pile de — un tas, un groupe empilé", en: "une pile de — a pile of" },
+  t6_1_v5: { fr: "surprise(e) — étonné(e)", en: "surprise(e) — surprised" },
+  t6_1_q_title: { fr: "Questions de compréhension", en: "Comprehension Questions" },
+  t6_1_q1: { fr: "Où habite Kato ?", en: "Where does Kato live?" },
+  t6_1_q2: { fr: "Qu'est-ce que Kato fait le samedi matin ?", en: "What does Kato do on Saturday mornings?" },
+  t6_1_q3: { fr: "Qui rencontre-t-il au marché ?", en: "Who does he meet at the market?" },
+  t6_1_q4: { fr: "Quel est le problème de Camille ?", en: "What is Camille's problem?" },
+  t6_1_q5: { fr: "Combien coûte un kilo de mangues ?", en: "How much does a kilo of mangoes cost?" },
+  t6_1_q6: { fr: "Pourquoi Kato apprend-il le français ?", en: "Why is Kato learning French?" },
+  t6_1_q7: { fr: "Qu'est-ce que Camille demande à Kato de faire ?", en: "What does Camille ask Kato to do?" },
+  t6_1_answers_title: { fr: "Voir les réponses", en: "See the answers" },
+  t6_1_a1: { fr: "Kato habite à Kampala.", en: "Kato lives in Kampala." },
+  t6_1_a2: { fr: "Il va au marché de Nakasero avec sa mère.", en: "He goes to Nakasero Market with his mother." },
+  t6_1_a3: { fr: "Il rencontre une touriste française, Camille.", en: "He meets a French tourist, Camille." },
+  t6_1_a4: { fr: "Elle ne comprend pas le prix des mangues.", en: "She doesn't understand the price of the mangoes." },
+  t6_1_a5: { fr: "Trois mille shillings.", en: "Three thousand shillings." },
+  t6_1_a6: { fr: "Parce qu'il veut voyager en France un jour.", en: "Because he wants to travel to France one day." },
+  t6_1_a7: { fr: "De lui écrire en français pour pratiquer.", en: "To write to her in French to practice." },
+  t6_1_tryit: { fr: "Relisez l'histoire une deuxième fois, puis écrivez 2-3 phrases sur ce que vous feriez à la place de Kato.", en: "Read the story a second time, then write 2-3 sentences on what you would do in Kato's place." },
 
   // ================= TRACK 3 =================
   t3_hero_eyebrow: { fr: "Track 3 · 3 leçons (d'autres à venir)", en: "Track 3 · 3 lessons (more coming)" },
@@ -578,8 +618,11 @@ function applyLanguage(lang) {
     if (!entry || !entry[lang]) return;
 
     const isExplParagraph = key.endsWith("_expl") && el.tagName === "P" && el.closest(".lesson-body");
+    const isStoryBlock = key.endsWith("_story");
     if (isExplParagraph) {
       splitIntoConceptCards(el, entry[lang]);
+    } else if (isStoryBlock) {
+      el.innerHTML = entry[lang].split(/\n\n+/).map((p) => `<p>${p.trim()}</p>`).join("");
     } else {
       el.textContent = entry[lang];
     }
