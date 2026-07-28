@@ -691,6 +691,56 @@ a{ color: inherit; }
 }
 
 /* ============================================
+   STORY LESSONS (Track 6)
+   ============================================ */
+.story-block{
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  padding: 26px 28px;
+  margin: 4px 0 24px;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  box-shadow: var(--shadow-soft);
+}
+.story-block p{ margin: 0 0 16px; }
+.story-block p:last-child{ margin-bottom: 0; }
+
+.vocab-list{
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+.vocab-list li{
+  padding: 8px 14px;
+  background: var(--parchment-deep);
+  border-radius: var(--radius-sm);
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.story-questions{
+  margin: 0 0 20px;
+  padding-left: 20px;
+}
+.story-questions li{ margin-bottom: 8px; }
+
+.story-answers{
+  background: var(--parchment-deep);
+  border-radius: var(--radius-sm);
+  padding: 4px 20px;
+  margin-bottom: 20px;
+}
+.story-answers summary{
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--laterite);
+  padding: 12px 0;
+}
+.story-answers ol{ margin: 0 0 14px; padding-left: 20px; }
+.story-answers li{ margin-bottom: 6px; color: var(--ink-soft); }
+
+/* ============================================
    SITE LOCK OVERLAY
    ============================================ */
 .site-lock-overlay{
