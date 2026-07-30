@@ -741,6 +741,38 @@ a{ color: inherit; }
 .story-answers li{ margin-bottom: 6px; color: var(--ink-soft); }
 
 /* ============================================
+   DIALOGUE LESSONS (Track 5) — chunk + inline vocab
+   ============================================ */
+.dialogue-chunk{
+  margin-bottom: 18px;
+}
+.dialogue-text{
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 6px;
+}
+.dialogue-text p{ margin: 0 0 6px; }
+.dialogue-text p:last-child{ margin-bottom: 0; }
+.dialogue-vocab{
+  list-style: none;
+  margin: 0;
+  padding: 8px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+}
+.dialogue-vocab li{
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+.dialogue-vocab li strong{ color: var(--leaf); font-weight: 600; }
+
+/* ============================================
    SITE LOCK OVERLAY
    ============================================ */
 .site-lock-overlay{
