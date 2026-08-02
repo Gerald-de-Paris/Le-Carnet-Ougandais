@@ -283,95 +283,40 @@ a{ color: inherit; }
 .tapif-text{ margin: 0; color: var(--parchment); opacity: 0.92; max-width: 62ch; }
 
 /* ============================================
-   CULTURE / POSTCARDS  (signature element)
+   CULTURE CATEGORY CARDS
    ============================================ */
 .section--culture{ background: var(--parchment-deep); }
-.postcard-grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 30px;
+.category-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 18px;
 }
-.postcard{
-  margin: 0;
+.category-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   background: var(--cream);
-  padding: 14px 14px 18px;
+  border: none;
   border-radius: var(--radius);
-  border: 1px solid rgba(255,255,255,0.6);
+  padding: 28px 16px;
+  cursor: pointer;
   box-shadow: var(--shadow-soft);
-  position: relative;
-  transform: rotate(var(--tilt, 0deg));
   transition: box-shadow 0.25s ease, transform 0.25s ease;
+  font-family: inherit;
 }
-.postcard:nth-child(2n){ --tilt: 0.6deg; }
-.postcard:nth-child(3n){ --tilt: -0.7deg; }
-.postcard:hover{ transform: rotate(0deg) translateY(-5px); box-shadow: var(--shadow-lift); }
-
-.postcard-photo{
-  aspect-ratio: 4/3;
-  width: 100%;
-  border-radius: var(--radius-sm);
-  position: relative;
-  overflow: hidden;
-}
-.placeholder-photo{
-  display:flex; align-items:center; justify-content:center;
-  text-align:center;
-  background:
-    repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(43,35,32,0.05) 10px, rgba(43,35,32,0.05) 11px),
-    var(--parchment-deep);
-  border: 1px dashed rgba(43,35,32,0.3);
-  color: var(--ink-soft);
-  font-family: var(--mono);
-  font-size: 0.82rem;
-  padding: 12px;
-}
-.placeholder-video::before{
-  content: "▶";
-  display:block;
-  font-size: 1.6rem;
-  color: var(--laterite);
-  margin-bottom: 6px;
-}
-
-.postcard-stamp{
-  position: absolute;
-  top: 24px; right: 24px;
-  width: 46px; height: 56px;
-  background: var(--parchment);
-  border: 2px solid var(--ink);
-  outline: 2px dotted rgba(43,35,32,0.5);
-  outline-offset: -6px;
-  transform: rotate(6deg);
-  opacity: 0.85;
-}
-.postcard figcaption{ margin-top: 12px; }
-.postcard-caption{
+.category-card:hover{ box-shadow: var(--shadow-lift); transform: translateY(-4px); }
+.category-icon{ font-size: 2.2rem; }
+.category-name{
   font-family: var(--display);
-  font-style: italic;
+  font-weight: 600;
   font-size: 1rem;
   color: var(--ink);
 }
 
-.culture-note{
-  margin-top: 40px;
-  font-family: var(--mono);
-  font-size: 0.82rem;
-  color: var(--ink-soft);
-  background: var(--cream);
-  border-left: 3px solid var(--gold);
-  padding: 14px 18px;
-  border-radius: 2px;
-}
-.culture-note code{
-  background: var(--parchment-deep);
-  padding: 1px 5px;
-  border-radius: 3px;
-}
-
 /* ============================================
-   CULTURE CLICK-THROUGH MODAL
+   CULTURE MODAL (category detail)
    ============================================ */
-.postcard{ cursor: pointer; }
 .culture-modal{
   position: fixed;
   inset: 0;
@@ -387,7 +332,7 @@ a{ color: inherit; }
 .culture-modal-inner{
   position: relative;
   width: 100%;
-  max-width: 460px;
+  max-width: 560px;
   max-height: 88vh;
   overflow-y: auto;
   background: var(--cream);
@@ -395,21 +340,11 @@ a{ color: inherit; }
   box-shadow: var(--shadow-lift);
   padding: 28px;
 }
-.culture-modal-photo{
-  aspect-ratio: 4/3;
-  width: 100%;
-  border-radius: var(--radius-sm);
-  margin-bottom: 18px;
-}
 .culture-modal-title{
   font-family: var(--display);
   font-size: 1.4rem;
-  margin: 0 0 10px;
-}
-.culture-modal-text{
-  color: var(--ink-soft);
-  line-height: 1.6;
-  margin: 0;
+  margin: 0 0 20px;
+  text-align: center;
 }
 .culture-modal-close{
   position: absolute;
@@ -422,12 +357,103 @@ a{ color: inherit; }
   font-size: 1.2rem;
   line-height: 1;
   cursor: pointer;
+  z-index: 2;
 }
 .culture-modal-close:hover{ background: var(--gold); color: var(--cream); }
+
+/* Stories inside the modal */
+.culture-story{ margin-bottom: 26px; }
+.culture-story:last-child{ margin-bottom: 0; }
+.culture-story h4{
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--laterite);
+  margin: 0 0 8px;
+}
+.culture-story p{
+  margin: 0 0 10px;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  font-size: 0.98rem;
+}
+
+/* Carousel — up to 8 placeholder photos, no video */
+.carousel{
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.carousel-track{
+  display: flex;
+  transition: transform 0.3s ease;
+}
+.carousel-slide{
+  flex: none;
+  width: 100%;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  background:
+    repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(43,35,32,0.05) 10px, rgba(43,35,32,0.05) 11px),
+    var(--parchment-deep);
+  border: 1px dashed rgba(43,35,32,0.3);
+  box-sizing: border-box;
+}
+.carousel-nav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.85);
+  color: var(--ink);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-prev{ left: 10px; }
+.carousel-next{ right: 10px; }
+.carousel-dots{
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 0 0;
+}
+.carousel-dot{
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: rgba(43,35,32,0.25);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.carousel-dot.is-active{ background: var(--laterite); }
 
 /* ============================================
    ABOUT
    ============================================ */
+.placeholder-photo{
+  display:flex; align-items:center; justify-content:center;
+  text-align:center;
+  background:
+    repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(43,35,32,0.05) 10px, rgba(43,35,32,0.05) 11px),
+    var(--parchment-deep);
+  border: 1px dashed rgba(43,35,32,0.3);
+  color: var(--ink-soft);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  padding: 12px;
+}
 .about-inner{
   display:grid;
   grid-template-columns: 220px 1fr;
@@ -739,6 +765,15 @@ a{ color: inherit; }
 }
 .story-answers ol{ margin: 0 0 14px; padding-left: 20px; }
 .story-answers li{ margin-bottom: 6px; color: var(--ink-soft); }
+
+.translation-reveal summary{ color: var(--gold); }
+.translation-text{ padding-bottom: 8px; }
+.translation-text p{
+  margin: 0 0 12px;
+  font-style: italic;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
 
 /* ============================================
    DIALOGUE LESSONS (Track 5) — chunk + inline vocab
