@@ -56,12 +56,17 @@ const translations = {
   track_link: { fr: "Ouvrir le track →", en: "Open track →" },
   track_soon: { fr: "Bientôt disponible", en: "Coming soon" },
 
-  culture_eyebrow: { fr: "Cartes postales", en: "Postcards" },
+  culture_eyebrow: { fr: "Le carnet culturel", en: "The culture notebook" },
   culture_title: { fr: "Culture ougandaise", en: "Ugandan culture" },
   culture_lede: {
-    fr: "J'adore ce pays, et j'ai décidé de le crier sur les toits (enfin, sur ce site). Voici quelques cartes postales de l'Ouganda — pas pour un cours, juste parce que ça vaut le coup d'œil.",
-    en: "I love this country, and I've decided to shout it from the rooftops (well, from this site). Here are a few postcards from Uganda — not for a lesson, just because it's worth a look."
+    fr: "J'adore ce pays, et j'ai décidé de le crier sur les toits (enfin, sur ce site). Cinq portes d'entrée sur l'Ouganda — appuyez sur une carte pour l'ouvrir.",
+    en: "I love this country, and I've decided to shout it from the rooftops (well, from this site). Five doors into Uganda — tap a card to open it."
   },
+  cat_culture_name: { fr: "Culture", en: "Culture" },
+  cat_voyages_name: { fr: "Voyages", en: "Travel" },
+  cat_tradition_name: { fr: "Tradition", en: "Tradition" },
+  cat_celebration_name: { fr: "Célébration", en: "Celebration" },
+  cat_biographie_name: { fr: "Biographie", en: "Biography" },
   culture_ph_photo: { fr: "Ajoutez une photo ici", en: "Add a photo here" },
   culture_ph_video: { fr: "Ajoutez une vidéo ici", en: "Add a video here" },
   culture_cap1: { fr: "Un marché local", en: "A local market" },
@@ -199,26 +204,26 @@ const translations = {
   t6_1_tryit: { fr: "Relisez l'histoire une deuxième fois, puis écrivez 2-3 phrases sur ce que vous feriez à la place de Kato.", en: "Read the story a second time, then write 2-3 sentences on what you would do in Kato's place." },
 
   // 6.2 — Kato se fait un ami
-  t6_2_title: { fr: "Kato se fait un ami", en: "Kato Makes a Friend" },
+  t6_2_title: { fr: "Tendo se fait un ami", en: "Tendo Makes a Friend" },
   t6_2_obj: { fr: "lire une histoire sur une nouvelle amitié, et pratiquer le vocabulaire des loisirs.", en: "read a story about a new friendship, and practice leisure vocabulary." },
   t6_2_hook: { fr: "Un ballon perdu, un après-midi au parc, et le début d'une amitié.", en: "A stray ball, an afternoon at the park, and the start of a friendship." },
   t6_2_story: {
-    fr: "Kato est arrivé en France il y a une semaine. Il ne connaît personne dans son nouveau quartier. Un après-midi, il va au parc pour lire un peu.\n\nUn garçon joue seul avec un ballon de football près du banc de Kato. Le ballon roule jusqu'aux pieds de Kato.\n\n« Excuse-moi, tu peux me le renvoyer ? » demande le garçon.\n\nKato lui renvoie le ballon en souriant. « Tu veux jouer un peu ? » propose le garçon.\n\n« Je ne suis pas très fort au foot, mais d'accord ! » répond Kato en riant.\n\nIls jouent pendant une heure. Le garçon s'appelle Léo. Il pose beaucoup de questions à Kato sur l'Ouganda : les animaux, la nourriture, la musique.\n\n« Tu dois me montrer des photos un jour ! » dit Léo.\n\n« Avec plaisir », répond Kato. « Et toi, tu me montreras Paris ? »\n\nLéo sourit. « Marché conclu. »\n\nCe soir-là, Kato rentre chez lui heureux. Il vient de se faire son premier ami en France.",
-    en: "Kato arrived in France a week ago. He doesn't know anyone in his new neighborhood. One afternoon, he goes to the park to read a little.\n\nA boy is playing alone with a soccer ball near Kato's bench. The ball rolls up to Kato's feet.\n\n\"Excuse me, could you throw it back?\" the boy asks.\n\nKato throws the ball back, smiling. \"Want to play a bit?\" the boy suggests.\n\n\"I'm not very good at soccer, but okay!\" Kato replies, laughing.\n\nThey play for an hour. The boy's name is Léo. He asks Kato lots of questions about Uganda: the animals, the food, the music.\n\n\"You have to show me photos sometime!\" says Léo.\n\n\"Gladly,\" Kato replies. \"And you'll show me Paris?\"\n\nLéo smiles. \"Deal.\"\n\nThat evening, Kato goes home happy. He's just made his first friend in France."
+    fr: "Tendo est arrivé en France il y a une semaine. Il ne connaît personne dans son nouveau quartier. Un après-midi, il va au parc pour lire un peu.\n\nUn garçon joue seul avec un ballon de football près du banc de Tendo. Le ballon roule jusqu'aux pieds de Tendo.\n\n« Excuse-moi, tu peux me le renvoyer ? » demande le garçon.\n\nTendo lui renvoie le ballon en souriant. « Tu veux jouer un peu ? » propose le garçon.\n\n« Je ne suis pas très fort au foot, mais d'accord ! » répond Tendo en riant.\n\nIls jouent pendant une heure. Le garçon s'appelle Léo. Il pose beaucoup de questions à Tendo sur l'Ouganda : les animaux, la nourriture, la musique.\n\n« Tu dois me montrer des photos un jour ! » dit Léo.\n\n« Avec plaisir », répond Tendo. « Et toi, tu me montreras Paris ? »\n\nLéo sourit. « Marché conclu. »\n\nCe soir-là, Tendo rentre chez lui heureux. Il vient de se faire son premier ami en France.",
+    en: "Tendo arrived in France a week ago. He doesn't know anyone in his new neighborhood. One afternoon, he goes to the park to read a little.\n\nA boy is playing alone with a soccer ball near Tendo's bench. The ball rolls up to Tendo's feet.\n\n\"Excuse me, could you throw it back?\" the boy asks.\n\nTendo throws the ball back, smiling. \"Want to play a bit?\" the boy suggests.\n\n\"I'm not very good at soccer, but okay!\" Tendo replies, laughing.\n\nThey play for an hour. The boy's name is Léo. He asks Tendo lots of questions about Uganda: the animals, the food, the music.\n\n\"You have to show me photos sometime!\" says Léo.\n\n\"Gladly,\" Tendo replies. \"And you'll show me Paris?\"\n\nLéo smiles. \"Deal.\"\n\nThat evening, Tendo goes home happy. He's just made his first friend in France."
   },
   t6_2_v1: { fr: "seul — sans personne d'autre", en: "seul — alone" },
   t6_2_v2: { fr: "roule — se déplace en tournant", en: "roule — rolls" },
   t6_2_v3: { fr: "renvoyer — jeter en retour", en: "renvoyer — to throw back" },
   t6_2_v4: { fr: "fort (à un jeu) — doué, bon", en: "fort (at a game) — good, skilled" },
   t6_2_v5: { fr: "marché conclu — c'est d'accord !", en: "marché conclu — it's a deal!" },
-  t6_2_q1: { fr: "Où Kato rencontre-t-il Léo ?", en: "Where does Kato meet Léo?" },
-  t6_2_q2: { fr: "Comment le ballon arrive-t-il près de Kato ?", en: "How does the ball end up near Kato?" },
+  t6_2_q1: { fr: "Où Tendo rencontre-t-il Léo ?", en: "Where does Tendo meet Léo?" },
+  t6_2_q2: { fr: "Comment le ballon arrive-t-il près de Tendo ?", en: "How does the ball end up near Tendo?" },
   t6_2_q3: { fr: "De quoi parlent-ils en jouant ?", en: "What do they talk about while playing?" },
   t6_2_q4: { fr: "Que propose Léo à la fin ?", en: "What does Léo suggest at the end?" },
   t6_2_a1: { fr: "Il le rencontre au parc.", en: "He meets him at the park." },
   t6_2_a2: { fr: "Le ballon roule jusqu'à ses pieds.", en: "The ball rolls up to his feet." },
   t6_2_a3: { fr: "Ils parlent de l'Ouganda : les animaux, la nourriture, la musique.", en: "They talk about Uganda: the animals, the food, the music." },
-  t6_2_a4: { fr: "Léo propose de montrer Paris à Kato.", en: "Léo suggests showing Kato Paris." },
+  t6_2_a4: { fr: "Léo propose de montrer Paris à Tendo.", en: "Léo suggests showing Tendo Paris." },
   t6_2_tryit: { fr: "Racontez comment vous avez rencontré un(e) de vos ami(e)s.", en: "Tell the story of how you met one of your friends." },
 
   // 6.3 — Une visite au zoo
@@ -274,12 +279,12 @@ const translations = {
   t6_4_tryit: { fr: "Écrivez une phrase pour résumer la morale de cette histoire avec vos propres mots.", en: "Write a sentence summarizing this story's moral in your own words." },
 
   // 6.5 — Le premier œuf de Kato
-  t6_5_title: { fr: "Le premier œuf de Kato", en: "Kato's First Egg" },
+  t6_5_title: { fr: "Le premier œuf de Mukasa", en: "Mukasa's First Egg" },
   t6_5_obj: { fr: "lire une histoire sur une première tentative de cuisine.", en: "read a story about a first attempt at cooking." },
   t6_5_hook: { fr: "Une omelette, un peu de coquille, et une première leçon d'indépendance.", en: "An omelet, a bit of eggshell, and a first lesson in independence." },
   t6_5_story: {
-    fr: "Kato a quinze ans, et aujourd'hui, il va cuisiner tout seul pour la première fois. Sa mère lui a laissé une recette simple : une omelette.\n\n« C'est facile, se dit-il. Je casse les œufs, j'ajoute du sel, et je mélange. »\n\nIl casse deux œufs dans un bol... et un morceau de coquille tombe dedans aussi.\n\n« Oups », dit-il en essayant de le retirer avec une cuillère.\n\nIl ajoute du sel, un peu de poivre, et bat les œufs. Puis il verse le mélange dans une poêle chaude.\n\nL'omelette grésille. Ça sent bon dans toute la cuisine. Mais quand Kato essaie de la retourner... elle se casse en plusieurs morceaux.\n\n« Ce n'est pas très joli, dit-il en regardant son assiette, mais ça sent délicieux. »\n\nIl goûte. C'est vraiment bon !\n\nSa mère entre dans la cuisine et sourit en voyant le désordre. « Ta première omelette. Pas parfaite, mais réussie. »\n\nKato est fier. La prochaine fois, il fera moins de dégâts... peut-être.",
-    en: "Kato is fifteen, and today he's going to cook alone for the first time. His mother left him a simple recipe: an omelet.\n\n\"That's easy,\" he tells himself. \"I break the eggs, add salt, and mix.\"\n\nHe cracks two eggs into a bowl... and a piece of shell falls in too.\n\n\"Oops,\" he says, trying to fish it out with a spoon.\n\nHe adds salt, a bit of pepper, and beats the eggs. Then he pours the mixture into a hot pan.\n\nThe omelet sizzles. It smells good throughout the kitchen. But when Kato tries to flip it... it breaks into several pieces.\n\n\"It's not very pretty,\" he says, looking at his plate, \"but it smells delicious.\"\n\nHe tastes it. It's really good!\n\nHis mother comes into the kitchen and smiles at the mess. \"Your first omelet. Not perfect, but a success.\"\n\nKato is proud. Next time, he'll make less of a mess... maybe."
+    fr: "Mukasa a quinze ans, et aujourd'hui, il va cuisiner tout seul pour la première fois. Sa mère lui a laissé une recette simple : une omelette.\n\n« C'est facile, se dit-il. Je casse les œufs, j'ajoute du sel, et je mélange. »\n\nIl casse deux œufs dans un bol... et un morceau de coquille tombe dedans aussi.\n\n« Oups », dit-il en essayant de le retirer avec une cuillère.\n\nIl ajoute du sel, un peu de poivre, et bat les œufs. Puis il verse le mélange dans une poêle chaude.\n\nL'omelette grésille. Ça sent bon dans toute la cuisine. Mais quand Mukasa essaie de la retourner... elle se casse en plusieurs morceaux.\n\n« Ce n'est pas très joli, dit-il en regardant son assiette, mais ça sent délicieux. »\n\nIl goûte. C'est vraiment bon !\n\nSa mère entre dans la cuisine et sourit en voyant le désordre. « Ta première omelette. Pas parfaite, mais réussie. »\n\nMukasa est fier. La prochaine fois, il fera moins de dégâts... peut-être.",
+    en: "Mukasa is fifteen, and today he's going to cook alone for the first time. His mother left him a simple recipe: an omelet.\n\n\"That's easy,\" he tells himself. \"I break the eggs, add salt, and mix.\"\n\nHe cracks two eggs into a bowl... and a piece of shell falls in too.\n\n\"Oops,\" he says, trying to fish it out with a spoon.\n\nHe adds salt, a bit of pepper, and beats the eggs. Then he pours the mixture into a hot pan.\n\nThe omelet sizzles. It smells good throughout the kitchen. But when Mukasa tries to flip it... it breaks into several pieces.\n\n\"It's not very pretty,\" he says, looking at his plate, \"but it smells delicious.\"\n\nHe tastes it. It's really good!\n\nHis mother comes into the kitchen and smiles at the mess. \"Your first omelet. Not perfect, but a success.\"\n\nMukasa is proud. Next time, he'll make less of a mess... maybe."
   },
   t6_5_v1: { fr: "une recette — instructions pour cuisiner", en: "une recette — a recipe" },
   t6_5_v2: { fr: "casse — brise (un œuf)", en: "casse — breaks/cracks" },
@@ -287,7 +292,7 @@ const translations = {
   t6_5_v4: { fr: "une poêle — pour cuire à la poêle", en: "une poêle — a frying pan" },
   t6_5_v5: { fr: "grésille — fait un petit bruit en cuisant", en: "grésille — sizzles" },
   t6_5_v6: { fr: "le désordre — pas rangé, en bazar", en: "le désordre — the mess" },
-  t6_5_q1: { fr: "Que va préparer Kato ?", en: "What is Kato going to make?" },
+  t6_5_q1: { fr: "Que va préparer Mukasa ?", en: "What is Mukasa going to make?" },
   t6_5_q2: { fr: "Quel problème a-t-il en cassant les œufs ?", en: "What problem does he have cracking the eggs?" },
   t6_5_q3: { fr: "Que se passe-t-il quand il retourne l'omelette ?", en: "What happens when he flips the omelet?" },
   t6_5_q4: { fr: "Comment se sent-il à la fin ?", en: "How does he feel at the end?" },
@@ -927,26 +932,158 @@ if ("speechSynthesis" in window) {
 document.addEventListener("DOMContentLoaded", initListenButtons);
 
 // ============================================
-// CULTURE CLICK-THROUGH MODAL
-// Clicking a postcard opens a bigger view with a title + "brief talk"
-// paragraph, similar to opening a listing for more detail.
+// CULTURE CATEGORIES — five doors into Uganda, each with
+// two short stories and a photo carousel (8 placeholder slots,
+// no video).
 // ============================================
+const cultureCategories = {
+  culture: {
+    name: { fr: "Culture", en: "Culture" },
+    stories: [
+      {
+        title: { fr: "Un dimanche en Ouganda", en: "A Sunday in Uganda" },
+        fr: "Le dimanche commence tôt. Beaucoup de familles vont à l'église ou à la mosquée, habillées avec soin — les femmes en gomesi coloré, les hommes en kanzu blanche pour les grandes occasions. Après le service, c'est l'heure du déjeuner en famille : matoke, riz, poulet, souvent partagés avec des voisins qui passent à l'improviste. Personne ne s'excuse d'arriver sans prévenir — chez nous, la porte reste ouverte.\n\nL'après-midi ralentit encore. On s'assoit dehors, on discute, les enfants jouent dans la cour. Le dimanche ougandais n'est pas un jour de repos silencieux : c'est un jour de présence, de visites, de plats qui n'en finissent pas.",
+        en: "Sunday starts early. Many families go to church or the mosque, dressed with care — women in colorful gomesi, men in white kanzu for special occasions. After the service comes family lunch: matoke, rice, chicken, often shared with neighbors who drop by unannounced. No one apologizes for showing up without warning — in our homes, the door stays open.\n\nThe afternoon slows down further. People sit outside, talk, children play in the yard. A Ugandan Sunday isn't a quiet day of rest: it's a day of presence, of visits, of meals that never quite end."
+      },
+      {
+        title: { fr: "Les marchés de Kampala", en: "The Markets of Kampala" },
+        fr: "À Owino, à Nakasero, à Kalerwe, le marché est bien plus qu'un lieu pour acheter à manger. C'est un théâtre à ciel ouvert : les vendeuses appellent les clients par des surnoms affectueux, les prix se négocient en riant, et on repart souvent avec un fruit offert « pour goûter ».\n\nChaque marché a sa spécialité — Owino pour les vêtements de seconde main, Nakasero pour les fruits et légumes frais, Kalerwe pour les prix serrés. S'y perdre fait partie du plaisir : entre les étals de tomates et les sacs de charbon, on croise des amis, on échange des nouvelles, on négocie pour le plaisir de négocier.",
+        en: "At Owino, at Nakasero, at Kalerwe, the market is far more than a place to buy food. It's an open-air theater: vendors call out to customers with affectionate nicknames, prices are haggled over with laughter, and you often leave with a piece of fruit handed over \"to taste.\"\n\nEach market has its specialty — Owino for secondhand clothes, Nakasero for fresh fruit and vegetables, Kalerwe for tight prices. Getting a little lost is part of the fun: between the tomato stalls and the sacks of charcoal, you run into friends, trade news, and haggle just for the pleasure of it."
+      }
+    ]
+  },
+  voyages: {
+    name: { fr: "Voyages", en: "Travel" },
+    stories: [
+      {
+        title: { fr: "La source du Nil à Jinja", en: "The Source of the Nile, Jinja" },
+        fr: "À Jinja, le Nil quitte le lac Victoria et commence son voyage de plus de 6 000 kilomètres jusqu'en Égypte. C'est ici que l'explorateur britannique John Speke a « découvert » la source du fleuve en 1862 — même si les communautés locales la connaissaient depuis toujours.\n\nAujourd'hui, Jinja attire les amateurs de sensations fortes : rafting sur les rapides, kayak, tyrolienne au-dessus de l'eau. Mais on peut aussi simplement s'asseoir au bord du fleuve, regarder l'eau bleue-verte s'écouler calmement, et se dire qu'elle finira sa course des milliers de kilomètres plus loin.",
+        en: "At Jinja, the Nile leaves Lake Victoria and begins its journey of over 6,000 kilometers to Egypt. It was here that British explorer John Speke \"discovered\" the river's source in 1862 — even though local communities had always known it.\n\nToday, Jinja draws thrill-seekers: white-water rafting, kayaking, zip-lining over the water. But you can also simply sit by the river, watch the blue-green water flow calmly by, and think about how it will end its journey thousands of kilometers away."
+      },
+      {
+        title: { fr: "Bwindi, la forêt des gorilles des montagnes", en: "Bwindi, the Mountain Gorilla Forest" },
+        fr: "La forêt impénétrable de Bwindi, au sud-ouest de l'Ouganda, abrite près de la moitié des gorilles des montagnes qui existent encore dans le monde. Marcher dans cette forêt dense et humide, guidé par des pisteurs qui connaissent chaque famille de gorilles par son nom, est une expérience rare.\n\nQuand on croise enfin un groupe — un dos argenté imposant, des jeunes qui jouent dans les branches — le silence s'impose de lui-même. On reste là, à quelques mètres, une heure au maximum, pour ne pas perturber leur quotidien. Peu d'endroits au monde rapprochent autant d'un animal sauvage aussi majestueux.",
+        en: "Bwindi Impenetrable Forest, in southwestern Uganda, is home to nearly half of the world's remaining mountain gorillas. Walking through this dense, humid forest, guided by trackers who know each gorilla family by name, is a rare experience.\n\nWhen you finally come across a group — an imposing silverback, youngsters playing in the branches — silence falls naturally. You stay there, just a few meters away, for an hour at most, so as not to disturb their daily life. Few places in the world bring you this close to such a majestic wild animal."
+      }
+    ]
+  },
+  tradition: {
+    name: { fr: "Tradition", en: "Tradition" },
+    stories: [
+      {
+        title: { fr: "Le Kwanjula, cérémonie d'introduction", en: "The Kwanjula, an Introduction Ceremony" },
+        fr: "Chez les Baganda, avant un mariage, il y a le Kwanjula : le jour où le futur marié est officiellement présenté à la famille de sa fiancée. C'est un événement haut en couleur, souvent plus grand que le mariage lui-même, avec des dizaines, parfois des centaines d'invités.\n\nLa famille du marié arrive en cortège, apportant des cadeaux soigneusement choisis pour les parents et les proches de la mariée. Les tantes (ssenga) jouent un rôle central : elles ont préparé la mariée dans les semaines précédentes, lui transmettant conseils et traditions. La cérémonie mélange rituel, humour et négociations symboliques — un moment où deux familles se lient officiellement.",
+        en: "Among the Baganda, before a wedding there is the Kwanjula: the day the groom-to-be is officially introduced to his fiancée's family. It's a colorful event, often bigger than the wedding itself, with dozens — sometimes hundreds — of guests.\n\nThe groom's family arrives in procession, bringing carefully chosen gifts for the bride's parents and relatives. The aunts (ssenga) play a central role: they've been preparing the bride in the weeks before, passing on advice and tradition. The ceremony blends ritual, humor, and symbolic negotiation — a moment when two families officially become linked."
+      },
+      {
+        title: { fr: "L'Imbalu, le rite de passage des Bagisu", en: "Imbalu, the Bagisu Rite of Passage" },
+        fr: "Tous les deux ans, dans l'est de l'Ouganda, la communauté Bagisu célèbre l'Imbalu : le rite de circoncision qui marque le passage de l'adolescence à l'âge adulte pour les jeunes hommes. Ce n'est pas un acte privé — c'est un événement communautaire, précédé de semaines de préparation, de danses et de chants traditionnels.\n\nLe jour venu, les initiés sont couverts de farine et de cendre, puis dansent dans les rues au son des tambours, entourés de leur famille et de la communauté entière. Endurer le rite sans montrer de peur est perçu comme une preuve de courage — le début officiel d'une nouvelle place dans la société, avec de nouvelles responsabilités.",
+        en: "Every two years, in eastern Uganda, the Bagisu community celebrates Imbalu: the circumcision rite that marks the passage from adolescence to adulthood for young men. It isn't a private act — it's a communal event, preceded by weeks of preparation, traditional dancing, and singing.\n\nWhen the day comes, initiates are covered in flour and ash, then dance through the streets to the sound of drums, surrounded by family and the whole community. Enduring the rite without showing fear is seen as proof of courage — the official start of a new place in society, with new responsibilities."
+      }
+    ]
+  },
+  celebration: {
+    name: { fr: "Célébration", en: "Celebration" },
+    stories: [
+      {
+        title: { fr: "Le 9 octobre, jour de l'indépendance", en: "October 9th, Independence Day" },
+        fr: "Le 9 octobre 1962, l'Ouganda accède à l'indépendance après des décennies de protectorat britannique. Chaque année, cette date est célébrée par des défilés, des discours officiels et des rassemblements dans tout le pays, souvent retransmis à la télévision nationale.\n\nPour beaucoup de familles, c'est aussi un jour plus simple : un jour férié pour se retrouver, cuisiner un bon repas, et parfois se souvenir des récits des grands-parents sur cette époque charnière. Le drapeau noir, jaune et rouge flotte un peu partout, rappelant que l'histoire du pays reste vivante dans le quotidien.",
+        en: "On October 9, 1962, Uganda gained independence after decades as a British protectorate. Every year, the date is marked by parades, official speeches, and gatherings across the country, often broadcast on national television.\n\nFor many families, it's also a simpler day: a public holiday to gather, cook a good meal, and sometimes remember grandparents' stories about that pivotal time. The black, yellow, and red flag flies everywhere, a reminder that the country's history stays alive in everyday life."
+      },
+      {
+        title: { fr: "Nyege Nyege, le festival qui fait danser le Nil", en: "Nyege Nyege, the Festival That Gets the Nile Dancing" },
+        fr: "Depuis 2015, le festival Nyege Nyege rassemble chaque année des milliers de personnes sur les rives du Nil, près de Jinja. Le nom, emprunté au luganda, évoque une envie irrésistible de danser. C'est devenu l'un des rendez-vous incontournables de la musique électronique en Afrique de l'Est, mêlant artistes ougandais, est-africains et internationaux.\n\nPendant quatre jours, les scènes s'enchaînent au bord du fleuve, de jour comme de nuit. Le festival a mis en lumière une nouvelle génération de producteurs ougandais, et attire aujourd'hui des visiteurs venus du monde entier, curieux de découvrir cette scène musicale en pleine effervescence.",
+        en: "Since 2015, the Nyege Nyege festival has gathered thousands of people each year on the banks of the Nile, near Jinja. The name, borrowed from Luganda, evokes an irresistible urge to dance. It has become one of East Africa's must-attend electronic music events, blending Ugandan, East African, and international artists.\n\nFor four days, stages run one after another along the riverbank, day and night. The festival has spotlighted a new generation of Ugandan producers, and today draws visitors from around the world, curious to discover this thriving music scene."
+      }
+    ]
+  },
+  biographie: {
+    name: { fr: "Biographie", en: "Biography" },
+    stories: [
+      {
+        title: { fr: "Idi Amin, le dictateur redouté", en: "Idi Amin, the Feared Dictator" },
+        fr: "Idi Amin a dirigé l'Ouganda de 1971 à 1979, après un coup d'État militaire. Son règne reste associé à l'une des périodes les plus sombres de l'histoire du pays : répression violente, expulsion de la communauté asiatique d'Ouganda en 1972, et un climat de peur qui a poussé des milliers de personnes à l'exil.\n\nSon régime a pris fin en 1979, après une guerre avec la Tanzanie voisine. Amin est mort en exil en Arabie saoudite en 2003. Aujourd'hui encore, son nom reste un point de repère incontournable — et douloureux — pour comprendre l'histoire politique de l'Ouganda au vingtième siècle.",
+        en: "Idi Amin ruled Uganda from 1971 to 1979, after a military coup. His rule remains linked to one of the darkest periods in the country's history: violent repression, the 1972 expulsion of Uganda's Asian community, and a climate of fear that pushed thousands into exile.\n\nHis regime ended in 1979, after a war with neighboring Tanzania. Amin died in exile in Saudi Arabia in 2003. Even today, his name remains an unavoidable — and painful — reference point for understanding Uganda's political history in the twentieth century."
+      },
+      {
+        title: { fr: "Philly Lutaaya, la voix qui a donné un visage au sida", en: "Philly Lutaaya, the Voice That Gave AIDS a Face" },
+        fr: "Philly Bongoley Lutaaya était l'une des plus grandes stars de la musique ougandaise dans les années 1980. En 1989, il devient la première personnalité publique ougandaise à annoncer publiquement être séropositif, à une époque où le sida était entouré de silence et de stigmatisation.\n\nPlutôt que de se retirer, il a passé ses derniers mois à parcourir le pays pour parler ouvertement de la maladie, encourager le dépistage et combattre la peur qui entourait le sujet. Il est mort en 1989, mais son courage a changé la façon dont l'Ouganda a abordé la crise du sida, contribuant à faire du pays un exemple précoce de réponse communautaire à l'épidémie.",
+        en: "Philly Bongoley Lutaaya was one of Uganda's biggest music stars in the 1980s. In 1989, he became the first Ugandan public figure to openly announce he was HIV-positive, at a time when AIDS was surrounded by silence and stigma.\n\nRather than withdraw, he spent his final months traveling the country to speak openly about the disease, encourage testing, and fight the fear surrounding the subject. He died in 1989, but his courage changed how Uganda approached the AIDS crisis, helping make the country an early example of community response to the epidemic."
+      }
+    ]
+  }
+};
+
+// ============================================
+// CULTURE MODAL — category cards open a modal with that
+// category's stories and an 8-slide photo carousel.
+// ============================================
+function buildCarousel(container) {
+  container.innerHTML = "";
+  const track = document.createElement("div");
+  track.className = "carousel-track";
+  for (let i = 1; i <= 8; i++) {
+    const slide = document.createElement("div");
+    slide.className = "carousel-slide";
+    slide.textContent = `Photo ${i} / 8`;
+    track.appendChild(slide);
+  }
+  const prevBtn = document.createElement("button");
+  prevBtn.className = "carousel-nav carousel-prev";
+  prevBtn.setAttribute("aria-label", "Photo précédente");
+  prevBtn.innerHTML = "‹";
+  const nextBtn = document.createElement("button");
+  nextBtn.className = "carousel-nav carousel-next";
+  nextBtn.setAttribute("aria-label", "Photo suivante");
+  nextBtn.innerHTML = "›";
+  const dots = document.createElement("div");
+  dots.className = "carousel-dots";
+  const dotEls = [];
+  for (let i = 0; i < 8; i++) {
+    const dot = document.createElement("button");
+    dot.className = "carousel-dot" + (i === 0 ? " is-active" : "");
+    dot.setAttribute("aria-label", `Aller à la photo ${i + 1}`);
+    dots.appendChild(dot);
+    dotEls.push(dot);
+  }
+
+  let index = 0;
+  function goTo(i) {
+    index = (i + 8) % 8;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dotEls.forEach((d, di) => d.classList.toggle("is-active", di === index));
+  }
+  prevBtn.addEventListener("click", () => goTo(index - 1));
+  nextBtn.addEventListener("click", () => goTo(index + 1));
+  dotEls.forEach((d, di) => d.addEventListener("click", () => goTo(di)));
+
+  container.appendChild(track);
+  container.appendChild(prevBtn);
+  container.appendChild(nextBtn);
+  container.appendChild(dots);
+}
+
 function initCultureModal() {
   const modal = document.getElementById("cultureModal");
   if (!modal) return;
 
   const closeBtn = document.getElementById("cultureModalClose");
   const titleEl = document.getElementById("cultureModalTitle");
-  const textEl = document.getElementById("cultureModalText");
+  const storiesEl = document.getElementById("cultureModalStories");
+  const carouselEl = document.getElementById("cultureModalCarousel");
 
-  function openModal(postcard) {
+  function openModal(catKey) {
     const lang = document.documentElement.getAttribute("data-lang") || "fr";
-    const captionEl = postcard.querySelector(".postcard-caption");
-    const detailKey = postcard.getAttribute("data-detail-key");
-    const detailEntry = translations[detailKey];
+    const cat = cultureCategories[catKey];
+    if (!cat) return;
 
-    titleEl.textContent = captionEl ? captionEl.textContent : "";
-    textEl.textContent = detailEntry ? detailEntry[lang] : "";
+    titleEl.textContent = cat.name[lang];
+    storiesEl.innerHTML = cat.stories.map((story) => {
+      const paras = story[lang].split("\n\n").map((p) => `<p>${p}</p>`).join("");
+      return `<div class="culture-story"><h4>${story.title[lang]}</h4>${paras}</div>`;
+    }).join("");
+
+    buildCarousel(carouselEl);
     modal.hidden = false;
   }
 
@@ -954,8 +1091,8 @@ function initCultureModal() {
     modal.hidden = true;
   }
 
-  document.querySelectorAll(".postcard").forEach((postcard) => {
-    postcard.addEventListener("click", () => openModal(postcard));
+  document.querySelectorAll(".category-card").forEach((card) => {
+    card.addEventListener("click", () => openModal(card.getAttribute("data-category")));
   });
 
   closeBtn.addEventListener("click", closeModal);
@@ -968,6 +1105,7 @@ function initCultureModal() {
 }
 
 document.addEventListener("DOMContentLoaded", initCultureModal);
+
 
 // ============================================
 // SITE LOCK CHECK
