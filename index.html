@@ -122,85 +122,42 @@
     </div>
   </section>
 
-  <!-- CULTURE GALLERY -->
+  <!-- CULTURE -->
   <section id="culture" class="section section--culture">
     <div class="wrap">
-      <p class="eyebrow" data-i18n="culture_eyebrow">Cartes postales</p>
+      <p class="eyebrow" data-i18n="culture_eyebrow">Le carnet culturel</p>
       <h2 class="section-title" data-i18n="culture_title">Culture ougandaise</h2>
-      <p class="section-lede" data-i18n="culture_lede">J'adore ce pays, et j'ai décidé de le crier sur les toits (enfin, sur ce site). Voici quelques cartes postales de l'Ouganda — pas pour un cours, juste parce que ça vaut le coup d'œil.</p>
+      <p class="section-lede" data-i18n="culture_lede">J'adore ce pays, et j'ai décidé de le crier sur les toits (enfin, sur ce site). Cinq portes d'entrée sur l'Ouganda — appuyez sur une carte pour l'ouvrir.</p>
 
-      <div class="postcard-grid">
-
-        <figure class="postcard" data-detail-key="culture_detail1">
-          <div class="postcard-photo placeholder-photo">
-            <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
-          </div>
-          <span class="postcard-stamp" aria-hidden="true"></span>
-          <figcaption>
-            <span class="postcard-caption" data-i18n="culture_cap1">Un marché local</span>
-          </figcaption>
-        </figure>
-
-        <figure class="postcard" data-detail-key="culture_detail2">
-          <div class="postcard-photo placeholder-photo">
-            <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
-          </div>
-          <span class="postcard-stamp" aria-hidden="true"></span>
-          <figcaption>
-            <span class="postcard-caption" data-i18n="culture_cap2">Danse traditionnelle</span>
-          </figcaption>
-        </figure>
-
-        <figure class="postcard postcard--video" data-detail-key="culture_detail3">
-          <div class="postcard-photo placeholder-photo placeholder-video">
-            <span data-i18n="culture_ph_video">Ajoutez une vidéo ici</span>
-          </div>
-          <span class="postcard-stamp" aria-hidden="true"></span>
-          <figcaption>
-            <span class="postcard-caption" data-i18n="culture_cap3">Un festival près de Kampala</span>
-          </figcaption>
-        </figure>
-
-        <figure class="postcard" data-detail-key="culture_detail4">
-          <div class="postcard-photo placeholder-photo">
-            <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
-          </div>
-          <span class="postcard-stamp" aria-hidden="true"></span>
-          <figcaption>
-            <span class="postcard-caption" data-i18n="culture_cap4">Paysage du Nil</span>
-          </figcaption>
-        </figure>
-
-        <figure class="postcard" data-detail-key="culture_detail5">
-          <div class="postcard-photo placeholder-photo">
-            <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
-          </div>
-          <span class="postcard-stamp" aria-hidden="true"></span>
-          <figcaption>
-            <span class="postcard-caption" data-i18n="culture_cap5">Un plat traditionnel</span>
-          </figcaption>
-        </figure>
-
-        <figure class="postcard" data-detail-key="culture_detail6">
-          <div class="postcard-photo placeholder-photo">
-            <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
-          </div>
-          <span class="postcard-stamp" aria-hidden="true"></span>
-          <figcaption>
-            <span class="postcard-caption" data-i18n="culture_cap6">Artisanat local</span>
-          </figcaption>
-        </figure>
-
+      <div class="category-grid">
+        <button class="category-card" data-category="culture">
+          <span class="category-icon" aria-hidden="true">🏠</span>
+          <span class="category-name" data-i18n="cat_culture_name">Culture</span>
+        </button>
+        <button class="category-card" data-category="voyages">
+          <span class="category-icon" aria-hidden="true">🗺️</span>
+          <span class="category-name" data-i18n="cat_voyages_name">Voyages</span>
+        </button>
+        <button class="category-card" data-category="tradition">
+          <span class="category-icon" aria-hidden="true">🌿</span>
+          <span class="category-name" data-i18n="cat_tradition_name">Tradition</span>
+        </button>
+        <button class="category-card" data-category="celebration">
+          <span class="category-icon" aria-hidden="true">🎉</span>
+          <span class="category-name" data-i18n="cat_celebration_name">Célébration</span>
+        </button>
+        <button class="category-card" data-category="biographie">
+          <span class="category-icon" aria-hidden="true">👤</span>
+          <span class="category-name" data-i18n="cat_biographie_name">Biographie</span>
+        </button>
       </div>
 
       <div id="cultureModal" class="culture-modal" hidden>
         <div class="culture-modal-inner">
           <button class="culture-modal-close" id="cultureModalClose" aria-label="Fermer">&times;</button>
-          <div class="culture-modal-photo placeholder-photo" id="cultureModalPhoto">
-            <span data-i18n="culture_ph_photo">Ajoutez une photo ici</span>
-          </div>
+          <div id="cultureModalCarousel" class="carousel"></div>
           <h3 class="culture-modal-title" id="cultureModalTitle"></h3>
-          <p class="culture-modal-text" id="cultureModalText"></p>
+          <div id="cultureModalStories"></div>
         </div>
       </div>
     </div>
