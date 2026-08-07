@@ -59,14 +59,19 @@ const translations = {
   culture_eyebrow: { fr: "Le carnet culturel", en: "The culture notebook" },
   culture_title: { fr: "Culture ougandaise", en: "Ugandan culture" },
   culture_lede: {
-    fr: "J'adore ce pays, et j'ai décidé de le crier sur les toits (enfin, sur ce site). Cinq portes d'entrée sur l'Ouganda — appuyez sur une carte pour l'ouvrir.",
-    en: "I love this country, and I've decided to shout it from the rooftops (well, from this site). Five doors into Uganda — tap a card to open it."
+    fr: "J'adore ce pays, et j'ai décidé de le crier sur les toits (enfin, sur ce site). Dix portes d'entrée sur l'Ouganda — appuyez sur une carte pour l'ouvrir.",
+    en: "I love this country, and I've decided to shout it from the rooftops (well, from this site). Ten doors into Uganda — tap a card to open it."
   },
   cat_culture_name: { fr: "Culture", en: "Culture" },
   cat_voyages_name: { fr: "Voyages", en: "Travel" },
   cat_tradition_name: { fr: "Tradition", en: "Tradition" },
   cat_celebration_name: { fr: "Célébration", en: "Celebration" },
   cat_biographie_name: { fr: "Biographie", en: "Biography" },
+  cat_coutumes_name: { fr: "Coutumes", en: "Customs" },
+  cat_arts_name: { fr: "Les Arts", en: "The Arts" },
+  cat_histoire_name: { fr: "Histoire", en: "History" },
+  cat_geographie_name: { fr: "Géographie", en: "Geography" },
+  cat_gastronomie_name: { fr: "Gastronomie", en: "Food" },
   culture_ph_photo: { fr: "Ajoutez une photo ici", en: "Add a photo here" },
   culture_ph_video: { fr: "Ajoutez une vidéo ici", en: "Add a video here" },
   culture_cap1: { fr: "Un marché local", en: "A local market" },
@@ -937,6 +942,81 @@ document.addEventListener("DOMContentLoaded", initListenButtons);
 // no video).
 // ============================================
 const cultureCategories = {
+  coutumes: {
+    name: { fr: "Coutumes", en: "Customs" },
+    stories: [
+      {
+        title: { fr: "Se saluer en Ouganda", en: "Greeting Someone in Uganda" },
+        fr: "En Ouganda, une salutation ne se résume jamais à un simple « bonjour » lancé en passant. Saluer quelqu'un, c'est prendre le temps de demander comment va sa famille, son travail, sa santé — même si on est pressé. Ignorer ce rituel peut sembler froid, presque impoli.\n\nLes salutations varient aussi selon la langue et la région : « Oli otya » en luganda, une poignée de main appuyée, parfois accompagnée d'une légère inclinaison de la tête pour montrer le respect envers un aîné. Prendre le temps de bien saluer, c'est déjà montrer qu'on considère l'autre.",
+        en: "In Uganda, a greeting is never just a quick \"hello\" tossed out in passing. Greeting someone means taking the time to ask how their family is, their work, their health — even if you're in a hurry. Skipping this ritual can come across as cold, almost rude.\n\nGreetings also vary by language and region: \"Oli otya\" in Luganda, a firm handshake, sometimes with a slight bow of the head to show respect for an elder. Taking the time to greet someone properly is already a way of showing you value them."
+      },
+      {
+        title: { fr: "L'hospitalité ougandaise", en: "Ugandan Hospitality" },
+        fr: "Chez nous, un invité ne repart jamais les mains vides — ni le ventre vide. Arriver chez quelqu'un, même sans prévenir, déclenche presque automatiquement une offre à manger ou à boire. Refuser peut être perçu comme un léger manque de respect envers l'hôte.\n\nCette générosité dépasse le cercle familial. Un voisin, un ami d'un ami, parfois même un inconnu de passage, peut se voir offrir un repas ou un endroit où dormir. C'est une valeur profondément ancrée : accueillir l'autre, quel qu'il soit, fait partie de ce que signifie bien vivre ensemble.",
+        en: "Here, a guest never leaves empty-handed — or empty-stomached. Showing up at someone's home, even unannounced, almost automatically triggers an offer of food or drink. Refusing can be seen as a small slight to the host.\n\nThis generosity goes beyond family. A neighbor, a friend of a friend, sometimes even a passing stranger, might be offered a meal or a place to sleep. It's a deeply rooted value: welcoming others, whoever they are, is part of what it means to live well together."
+      }
+    ]
+  },
+  arts: {
+    name: { fr: "Les Arts", en: "The Arts" },
+    stories: [
+      {
+        title: { fr: "Wakaliwood, le Hollywood des bidonvilles", en: "Wakaliwood, the Slum's Hollywood" },
+        fr: "Dans le quartier de Wakaliga, à Kampala, un studio de cinéma improbable s'est fait un nom bien au-delà de l'Ouganda : Wakaliwood. Fondé par Isaac Nabwana, ancien maçon devenu réalisateur autodidacte, le studio produit des films d'action à très petit budget, avec des effets spéciaux faits maison — sang en latex, explosions bricolées, cascades improvisées dans la rue.\n\nLe style volontairement excessif et l'énergie communicative des films de Wakaliwood leur ont valu un public international, notamment grâce à Internet. Ce qui a commencé comme un projet de quartier est devenu un symbole de créativité ougandaise : preuve qu'on peut raconter des histoires avec très peu de moyens, mais énormément d'imagination.",
+        en: "In the Wakaliga neighborhood of Kampala, an unlikely film studio has made a name for itself far beyond Uganda: Wakaliwood. Founded by Isaac Nabwana, a former mason turned self-taught director, the studio produces ultra-low-budget action films with homemade special effects — latex blood, rigged-up explosions, improvised street stunts.\n\nThe deliberately over-the-top style and infectious energy of Wakaliwood's films have earned them an international audience, largely thanks to the internet. What started as a neighborhood project has become a symbol of Ugandan creativity: proof that you can tell stories with very little money, but enormous imagination."
+      },
+      {
+        title: { fr: "Ndere, gardienne des danses traditionnelles", en: "Ndere, Guardian of Traditional Dance" },
+        fr: "Depuis 1984, la troupe Ndere s'est donné une mission : préserver et transmettre les danses et musiques traditionnelles des différentes ethnies d'Ouganda, à une époque où beaucoup risquaient de se perdre. Chaque spectacle rassemble des danses venues de tout le pays — du bwola des Acholi aux rythmes des Baganda.\n\nAu Ndere Cultural Centre, à Kampala, les spectacles se donnent en plein air, tambours et costumes traditionnels à l'appui. Pour beaucoup de visiteurs, c'est une des façons les plus vivantes de découvrir en une seule soirée la diversité culturelle du pays.",
+        en: "Since 1984, the Ndere Troupe has set itself a mission: to preserve and pass on the traditional dances and music of Uganda's many ethnic groups, at a time when much of it risked being lost. Each show brings together dances from across the country — from the Acholi's bwola to Baganda rhythms.\n\nAt the Ndere Cultural Centre in Kampala, performances are held outdoors, with drums and traditional costumes. For many visitors, it's one of the most vivid ways to experience the country's cultural diversity in a single evening."
+      }
+    ]
+  },
+  histoire: {
+    name: { fr: "Histoire", en: "History" },
+    stories: [
+      {
+        title: { fr: "Le royaume du Buganda", en: "The Kingdom of Buganda" },
+        fr: "Bien avant la création de l'Ouganda moderne, le royaume du Buganda existait déjà, centré sur la région autour de Kampala. Dirigé par un roi, le Kabaka, il reste aujourd'hui l'un des royaumes traditionnels les plus influents du pays, avec son propre palais, ses cérémonies et sa structure administrative parallèle à l'État.\n\nLe Buganda n'a pas de pouvoir politique officiel dans l'Ouganda actuel, mais son influence culturelle reste immense : la langue luganda, les traditions du Kwanjula, le respect porté au Kabaka font partie du quotidien de millions d'Ougandais, bien au-delà des frontières historiques du royaume.",
+        en: "Long before the creation of modern Uganda, the Kingdom of Buganda already existed, centered on the region around Kampala. Led by a king, the Kabaka, it remains one of the country's most influential traditional kingdoms today, with its own palace, ceremonies, and administrative structure running alongside the state.\n\nBuganda holds no official political power in Uganda today, but its cultural influence remains immense: the Luganda language, Kwanjula traditions, and the respect shown to the Kabaka are part of daily life for millions of Ugandans, well beyond the kingdom's historical borders."
+      },
+      {
+        title: { fr: "Les martyrs de Namugongo", en: "The Martyrs of Namugongo" },
+        fr: "Entre 1885 et 1887, un groupe de jeunes convertis chrétiens — catholiques et anglicans — furent exécutés sur ordre du Kabaka Mwanga II, à Namugongo, près de Kampala, pour avoir refusé de renoncer à leur foi. Leur histoire est devenue un événement fondateur pour les communautés chrétiennes du pays.\n\nChaque 3 juin, le Jour des Martyrs rassemble des centaines de milliers de pèlerins venus de tout l'Ouganda et de la région, marchant parfois pendant des jours pour atteindre le sanctuaire de Namugongo. C'est aujourd'hui l'un des rassemblements religieux les plus importants d'Afrique de l'Est, et un jour férié national.",
+        en: "Between 1885 and 1887, a group of young Christian converts — both Catholic and Anglican — were executed on the orders of Kabaka Mwanga II at Namugongo, near Kampala, for refusing to renounce their faith. Their story became a founding event for the country's Christian communities.\n\nEvery June 3rd, Martyrs' Day draws hundreds of thousands of pilgrims from across Uganda and the wider region, some walking for days to reach the Namugongo shrine. It is today one of East Africa's largest religious gatherings, and a national public holiday."
+      }
+    ]
+  },
+  geographie: {
+    name: { fr: "Géographie", en: "Geography" },
+    stories: [
+      {
+        title: { fr: "Le lac Victoria, mer intérieure de l'Afrique", en: "Lake Victoria, Africa's Inland Sea" },
+        fr: "Avec ses 68 000 km², le lac Victoria est le plus grand lac d'Afrique et le deuxième plus grand lac d'eau douce du monde. Partagé entre l'Ouganda, le Kenya et la Tanzanie, il ressemble davantage à une mer intérieure qu'à un lac : on n'en voit pas l'autre rive.\n\nPour des millions de personnes autour de ses rives, le lac est une source de vie — pêche, transport, commerce — mais aussi un défi environnemental, entre surpêche et pollution. C'est aussi de ce lac que le Nil prend sa source à Jinja, reliant l'Ouganda à l'un des fleuves les plus mythiques du monde.",
+        en: "At 68,000 km², Lake Victoria is Africa's largest lake and the world's second-largest freshwater lake. Shared between Uganda, Kenya, and Tanzania, it feels more like an inland sea than a lake — you can't see the opposite shore.\n\nFor millions of people living along its shores, the lake is a source of life — fishing, transport, trade — but also an environmental challenge, caught between overfishing and pollution. It's also from this lake that the Nile takes its source at Jinja, linking Uganda to one of the world's most storied rivers."
+      },
+      {
+        title: { fr: "Les Rwenzori, montagnes de la lune", en: "The Rwenzori, Mountains of the Moon" },
+        fr: "À la frontière avec la République démocratique du Congo, la chaîne des Rwenzori s'élève jusqu'à plus de 5 000 mètres, avec des sommets enneigés en plein équateur — une rareté qui a longtemps intrigué les explorateurs. Les Grecs anciens les auraient surnommées « montagnes de la lune », les imaginant comme la source mythique du Nil.\n\nLa végétation change radicalement avec l'altitude : forêt tropicale dense, puis bruyère géante, puis paysage presque lunaire près des glaciers. C'est une randonnée exigeante, réservée aux plus aventureux, mais aussi l'un des paysages les plus spectaculaires et les moins visités d'Ouganda.",
+        en: "On the border with the Democratic Republic of Congo, the Rwenzori range rises to over 5,000 meters, with snow-capped peaks right on the equator — a rarity that long intrigued explorers. The ancient Greeks are said to have called them the \"Mountains of the Moon,\" imagining them as the mythical source of the Nile.\n\nVegetation shifts dramatically with altitude: dense tropical forest, then giant heather, then an almost lunar landscape near the glaciers. It's a demanding trek, reserved for the most adventurous, but also one of Uganda's most spectacular and least-visited landscapes."
+      }
+    ]
+  },
+  gastronomie: {
+    name: { fr: "Gastronomie", en: "Food" },
+    stories: [
+      {
+        title: { fr: "Le rolex, l'icône des rues ougandaises", en: "The Rolex, Icon of Ugandan Streets" },
+        fr: "Non, ce n'est pas une montre. Le rolex — contraction de « rolled eggs » — est sans doute le street food le plus emblématique d'Ouganda : une omelette roulée dans un chapati chaud, souvent garnie de tomates, d'oignons et de chou. Simple, rapide, bon marché, et absolument partout.\n\nOn le trouve à chaque coin de rue, préparé sur un petit stand par un « rolex guy » qui bat les œufs à la demande. Pour beaucoup d'Ougandais, c'est le repas de rue par excellence — petit-déjeuner, déjeuner ou en-cas de minuit — et une véritable fierté nationale, au point d'avoir son propre festival annuel à Kampala.",
+        en: "No, it's not a watch. The rolex — short for \"rolled eggs\" — is arguably Uganda's most iconic street food: an omelet rolled inside a warm chapati, often filled with tomatoes, onions, and cabbage. Simple, fast, cheap, and absolutely everywhere.\n\nYou'll find it on every street corner, cooked to order at a small stand by a \"rolex guy\" who beats the eggs fresh each time. For many Ugandans, it's the ultimate street meal — breakfast, lunch, or a midnight snack — and a genuine source of national pride, with its own annual festival in Kampala."
+      },
+      {
+        title: { fr: "Le matooke, pilier du repas ougandais", en: "Matooke, the Backbone of a Ugandan Meal" },
+        fr: "Pour beaucoup d'Ougandais, un repas sans matooke n'est pas tout à fait un repas. Cette variété de banane verte, cuite à la vapeur puis écrasée en une purée dense, accompagne la plupart des plats principaux, surtout dans le sud et le centre du pays.\n\nSa préparation traditionnelle demande du temps : les bananes sont épluchées, enveloppées dans leurs propres feuilles, puis cuites à la vapeur pendant des heures sur un feu doux. Le résultat est doux, légèrement sucré, et sert de base neutre pour accompagner sauce d'arachide, ragoût de viande ou légumes. Simple en apparence, le matooke est un pilier culturel autant que culinaire.",
+        en: "For many Ugandans, a meal without matooke isn't quite a meal. This variety of green banana, steamed and mashed into a dense purée, accompanies most main dishes, especially in the south and center of the country.\n\nTraditional preparation takes time: the bananas are peeled, wrapped in their own leaves, then steamed for hours over a low fire. The result is soft, lightly sweet, and serves as a neutral base for groundnut sauce, meat stew, or vegetables. Simple in appearance, matooke is as much a cultural pillar as a culinary one."
+      }
+    ]
+  },
   culture: {
     name: { fr: "Culture", en: "Culture" },
     stories: [
@@ -1020,6 +1100,10 @@ const cultureCategories = {
 // ============================================
 function buildCarousel(container) {
   container.innerHTML = "";
+  const existingCaption = container.nextElementSibling;
+  if (existingCaption && existingCaption.classList.contains("carousel-caption")) {
+    existingCaption.remove();
+  }
   const track = document.createElement("div");
   track.className = "carousel-track";
   for (let i = 1; i <= 8; i++) {
@@ -1061,6 +1145,11 @@ function buildCarousel(container) {
   container.appendChild(prevBtn);
   container.appendChild(nextBtn);
   container.appendChild(dots);
+
+  const caption = document.createElement("p");
+  caption.className = "carousel-caption";
+  caption.textContent = "Ajoutez une légende ici";
+  container.insertAdjacentElement("afterend", caption);
 }
 
 function initCultureModal() {
@@ -1079,8 +1168,13 @@ function initCultureModal() {
 
     titleEl.textContent = cat.name[lang];
     storiesEl.innerHTML = cat.stories.map((story) => {
-      const paras = story[lang].split("\n\n").map((p) => `<p>${p}</p>`).join("");
-      return `<div class="culture-story"><h4>${story.title[lang]}</h4>${paras}</div>`;
+      const paraList = story[lang].split("\n\n");
+      let bodyHtml = `<p>${paraList[0]}</p>`;
+      if (paraList.length > 1) {
+        bodyHtml += `<div class="culture-story-photo">Ajoutez une photo ici</div>`;
+        bodyHtml += paraList.slice(1).map((p) => `<p>${p}</p>`).join("");
+      }
+      return `<div class="culture-story"><h4>${story.title[lang]}</h4>${bodyHtml}</div>`;
     }).join("");
 
     buildCarousel(carouselEl);
