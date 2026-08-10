@@ -332,19 +332,21 @@ a{ color: inherit; }
 .culture-modal-inner{
   position: relative;
   width: 100%;
-  max-width: 560px;
-  max-height: 88vh;
+  max-width: 680px;
+  max-height: 90vh;
   overflow-y: auto;
   background: var(--cream);
   border-radius: var(--radius);
   box-shadow: var(--shadow-lift);
-  padding: 28px;
+  padding: 30px;
 }
 .culture-modal-title{
   font-family: var(--display);
-  font-size: 1.4rem;
-  margin: 0 0 20px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 4px 0 24px;
   text-align: center;
+  color: var(--ink);
 }
 .culture-modal-close{
   position: absolute;
@@ -361,29 +363,50 @@ a{ color: inherit; }
 }
 .culture-modal-close:hover{ background: var(--gold); color: var(--cream); }
 
-/* Stories inside the modal */
-.culture-story{ margin-bottom: 26px; }
+/* Stories inside the modal — each one a clearly distinct section */
+.culture-story{ margin-bottom: 42px; }
 .culture-story:last-child{ margin-bottom: 0; }
 .culture-story h4{
   font-family: var(--display);
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--laterite);
-  margin: 0 0 8px;
+  text-align: left;
+  margin: 0 0 12px;
 }
 .culture-story p{
-  margin: 0 0 10px;
+  margin: 0 0 14px;
   color: var(--ink-soft);
-  line-height: 1.65;
-  font-size: 0.98rem;
+  line-height: 1.78;
+  font-size: 1rem;
+}
+.culture-story-photo{
+  aspect-ratio: 16/10;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 6px 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  background:
+    repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(43,35,32,0.05) 10px, rgba(43,35,32,0.05) 11px),
+    var(--parchment-deep);
+  border: 1px dashed rgba(43,35,32,0.3);
+  box-sizing: border-box;
 }
 
 /* Carousel — up to 8 placeholder photos, no video */
 .carousel{
   position: relative;
-  margin-bottom: 20px;
-  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+  border-radius: 18px;
   overflow: hidden;
+  box-shadow: var(--shadow-soft);
 }
 .carousel-track{
   display: flex;
@@ -410,34 +433,50 @@ a{ color: inherit; }
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 34px; height: 34px;
+  width: 36px; height: 36px;
   border-radius: 50%;
   border: none;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 2px 8px rgba(43,35,32,0.2);
   color: var(--ink);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.carousel-prev{ left: 10px; }
-.carousel-next{ right: 10px; }
+.carousel-prev{ left: 12px; }
+.carousel-next{ right: 12px; }
 .carousel-dots{
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 6px;
-  padding: 10px 0 0;
+  padding: 12px 0 4px;
 }
 .carousel-dot{
   width: 7px; height: 7px;
   border-radius: 50%;
-  background: rgba(43,35,32,0.25);
+  background: rgba(43,35,32,0.22);
   border: none;
   padding: 0;
   cursor: pointer;
+  transition: width 0.2s ease, border-radius 0.2s ease;
 }
-.carousel-dot.is-active{ background: var(--laterite); }
+.carousel-dot.is-active{
+  width: 20px;
+  height: 7px;
+  border-radius: 4px;
+  background: var(--laterite);
+}
+.carousel-caption{
+  text-align: center;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 0 0 26px;
+}
 
 /* ============================================
    ABOUT
