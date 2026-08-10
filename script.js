@@ -1098,7 +1098,7 @@ const cultureCategories = {
 // CULTURE MODAL — category cards open a modal with that
 // category's stories and an 8-slide photo carousel.
 // ============================================
-function buildCarousel(container) {
+function buildCarousel(container, catKey) {
   container.innerHTML = "";
   const existingCaption = container.nextElementSibling;
   if (existingCaption && existingCaption.classList.contains("carousel-caption")) {
@@ -1109,7 +1109,19 @@ function buildCarousel(container) {
   for (let i = 1; i <= 8; i++) {
     const slide = document.createElement("div");
     slide.className = "carousel-slide";
-    slide.textContent = `Photo ${i} / 8`;
+
+    const img = document.createElement("img");
+    img.alt = "";
+    img.style.width = "100%";
+    img.style.height = "100%";
+    img.style.objectFit = "cover";
+    img.src = `images/${catKey}-${i}.jpg`;
+    img.onerror = function () {
+      // No photo uploaded yet for this slot — fall back to the placeholder.
+      slide.innerHTML = "";
+      slide.textContent = `Photo ${i} / 8`;
+    };
+    slide.appendChild(img);
     track.appendChild(slide);
   }
   const prevBtn = document.createElement("button");
@@ -1167,17 +1179,18 @@ function initCultureModal() {
     if (!cat) return;
 
     titleEl.textContent = cat.name[lang];
-    storiesEl.innerHTML = cat.stories.map((story) => {
+    storiesEl.innerHTML = cat.stories.map((story, storyIndex) => {
       const paraList = story[lang].split("\n\n");
       let bodyHtml = `<p>${paraList[0]}</p>`;
       if (paraList.length > 1) {
-        bodyHtml += `<div class="culture-story-photo">Ajoutez une photo ici</div>`;
+        const imgSrc = `images/${catKey}-story${storyIndex + 1}.jpg`;
+        bodyHtml += `<div class="culture-story-photo" data-fallback="Ajoutez une photo ici"><img src="${imgSrc}" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.textContent=this.parentElement.dataset.fallback;"></div>`;
         bodyHtml += paraList.slice(1).map((p) => `<p>${p}</p>`).join("");
       }
       return `<div class="culture-story"><h4>${story.title[lang]}</h4>${bodyHtml}</div>`;
     }).join("");
 
-    buildCarousel(carouselEl);
+    buildCarousel(carouselEl, catKey);
     modal.hidden = false;
   }
 
