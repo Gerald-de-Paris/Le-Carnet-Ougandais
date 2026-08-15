@@ -321,45 +321,42 @@ a{ color: inherit; }
   position: fixed;
   inset: 0;
   z-index: 200;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background: rgba(43,35,32,0.55);
-  backdrop-filter: blur(4px);
+  background: var(--parchment);
+  overflow-y: auto;
 }
 .culture-modal[hidden]{ display: none; }
 .culture-modal-inner{
   position: relative;
   width: 100%;
-  max-width: 680px;
-  max-height: 90vh;
-  overflow-y: auto;
+  max-width: 720px;
+  min-height: 100vh;
+  margin: 0 auto;
   background: var(--cream);
-  border-radius: var(--radius);
   box-shadow: var(--shadow-lift);
-  padding: 30px;
+  padding: 70px 28px 60px;
+  box-sizing: border-box;
 }
 .culture-modal-title{
   font-family: var(--display);
   font-weight: 700;
-  font-size: 1.5rem;
-  margin: 4px 0 24px;
+  font-size: 1.6rem;
+  margin: 4px 0 28px;
   text-align: center;
   color: var(--ink);
 }
 .culture-modal-close{
-  position: absolute;
-  top: 14px; right: 14px;
-  width: 32px; height: 32px;
+  position: fixed;
+  top: 18px; right: 18px;
+  width: 40px; height: 40px;
   border: none;
   border-radius: 50%;
-  background: var(--parchment-deep);
+  background: var(--cream);
+  box-shadow: var(--shadow-soft);
   color: var(--ink);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1;
   cursor: pointer;
-  z-index: 2;
+  z-index: 210;
 }
 .culture-modal-close:hover{ background: var(--gold); color: var(--cream); }
 
