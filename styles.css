@@ -696,6 +696,7 @@ a{ color: inherit; }
 }
 .lesson-examples{ margin: 0; padding-left: 20px; }
 .lesson-examples li{ margin-bottom: 8px; line-height: 1.5; }
+.lesson-note{ margin: -8px 0 18px; color: var(--ink-soft); font-size: 0.92rem; line-height: 1.55; }
 .lesson-exercise, .lesson-tryit{
   background: var(--parchment-deep);
   border-radius: var(--radius-sm);
