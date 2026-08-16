@@ -35,7 +35,7 @@ const translations = {
   track2_progress: { fr: "8 / 8 leçons disponibles", en: "8 / 8 lessons available" },
 
   track3_title: { fr: "Real Communication", en: "Real Communication" },
-  track3_desc: { fr: "Négations avancées, pronoms toniques — d'autres leçons à venir.", en: "Advanced negation, stressed pronouns — more lessons coming." },
+  track3_desc: { fr: "Communication A2 : négations, pronoms, questions, routines, verbes clés et réponses naturelles.", en: "A2 communication: negatives, pronouns, questions, routines, key verbs, and natural short responses." },
   track3_progress: { fr: "10 leçons disponibles", en: "10 lessons available" },
 
   track4_title: { fr: "Past, Future & Fluency", en: "Past, Future & Fluency" },
@@ -334,11 +334,11 @@ const translations = {
   t6_6_tryit: { fr: "Quelle est votre fleur ou couleur préférée ? Écrivez une phrase pour l'expliquer.", en: "What's your favorite flower or color? Write a sentence explaining why." },
 
   // ================= TRACK 3 =================
-  t3_hero_eyebrow: { fr: "Track 3 · 3 leçons (d'autres à venir)", en: "Track 3 · 3 lessons (more coming)" },
+  t3_hero_eyebrow: { fr: "Track 3 · A2 · 10 leçons", en: "Track 3 · A2 · 10 lessons" },
   t3_hero_title: { fr: "Real Communication", en: "Real Communication" },
   t3_hero_desc: {
-    fr: "Nuancer ce qu'on dit : les négations qui vont au-delà de « ne...pas », et les pronoms qui donnent du caractère à une phrase.",
-    en: "Adding nuance to what you say: negations that go beyond \"ne...pas\", and the pronouns that give a sentence some character."
+    fr: "Communication A2 : négations, pronoms, questions, routines, verbes clés et réponses naturelles.",
+    en: "A2 communication: negatives, pronouns, questions, routines, key verbs, and natural short responses."
   },
 
   // 3.1 — Negation Beyond "ne...pas"
