@@ -4,4 +4,4 @@
 // true  = visitors see the "closed" message on every page
 // false = site is fully visible to everyone
 // ============================================
-const SITE_LOCKED = false
+const SITE_LOCKED = true
