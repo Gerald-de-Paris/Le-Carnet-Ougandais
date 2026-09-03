@@ -13,8 +13,8 @@ const translations = {
   hero_title_2: { fr: "carnet", en: "notebook" },
   hero_title_3: { fr: "de classe", en: "of lessons" },
   hero_sub: {
-    fr: "Des ressources pour apprendre le français, et un carnet de voyage sur la culture ougandaise — photos, histoires et bientôt vidéos.",
-    en: "Resources for learning French, and a travel notebook about Ugandan culture — photos, stories, and soon videos."
+    fr: "Des ressources pour apprendre le français et un carnet de voyage consacré à la culture ougandaise, avec des photos, des histoires et bientôt des vidéos.",
+    en: "Resources for learning French and a travel notebook about Ugandan culture, with photos, stories, and soon videos."
   },
   hero_cta_resources: { fr: "Voir les ressources", en: "See the resources" },
   hero_cta_culture: { fr: "Découvrir la culture", en: "Explore the culture" },
@@ -22,8 +22,8 @@ const translations = {
   res_eyebrow: { fr: "Juste passionné", en: "Just passionate" },
   res_title: { fr: "Ressources de français", en: "French resources" },
   res_lede: {
-    fr: "Pour apprendre (et partager) le français — clair, utile, et pas trop sérieux.",
-    en: "For learning (and sharing) French — clear, useful, and not too serious."
+    fr: "Pour apprendre et partager le français, simplement et sans se prendre trop au sérieux.",
+    en: "A place to learn and share French, simply and without taking ourselves too seriously."
   },
 
   track1_title: { fr: "Sound & Survival", en: "Sound & Survival" },
@@ -59,8 +59,8 @@ const translations = {
   culture_eyebrow: { fr: "Le carnet culturel", en: "The culture notebook" },
   culture_title: { fr: "Culture ougandaise", en: "Ugandan culture" },
   culture_lede: {
-    fr: "J'adore ce pays, et j'ai décidé de le crier sur les toits (enfin, sur ce site). Dix portes d'entrée sur l'Ouganda — appuyez sur une carte pour l'ouvrir.",
-    en: "I love this country, and I've decided to shout it from the rooftops (well, from this site). Ten doors into Uganda — tap a card to open it."
+    fr: "J'adore ce pays et j'ai décidé de le crier sur les toits. Enfin, sur ce site. Choisissez une carte pour ouvrir une porte sur l'Ouganda.",
+    en: "I love this country and wanted to share it here. Choose a card to open a door into Uganda."
   },
   cat_culture_name: { fr: "Culture", en: "Culture" },
   cat_voyages_name: { fr: "Voyages", en: "Travel" },
@@ -616,8 +616,8 @@ const translations = {
   about_eyebrow: { fr: "Un peu plus sur moi", en: "A little about me" },
   about_title: { fr: "À propos", en: "About" },
   about_text: {
-    fr: "Passionné(e) de français basé(e) à Kampala. Ici, on m'appelle « L'Affaires Étrangères » — un clin d'œil à Gerald de Paris, mon nom de plume pour ce carnet.",
-    en: "French enthusiast based in Kampala. Around here, people call me \"The Foreign Affairs Guy\" — a nod to Gerald de Paris, my pen name for this notebook."
+    fr: "Passionné(e) de français basé(e) à Kampala. Ici, on m'appelle « L'Affaires Étrangères », un clin d'œil à Gerald de Paris, mon nom de plume pour ce carnet.",
+    en: "A French enthusiast based in Kampala. Around here, people call me \"The Foreign Affairs Guy\", a nod to Gerald de Paris, my pen name for this notebook."
   },
   about_ph_photo: { fr: "Votre photo ici", en: "Your photo here" },
 
@@ -638,6 +638,25 @@ const translations = {
   lbl_examples: { fr: "Exemples", en: "Examples" },
   lbl_exercise: { fr: "Exercice", en: "Exercise" },
   lbl_tryit: { fr: "À vous", en: "Your turn" },
+  lbl_why_matters: { fr: "Pourquoi c'est utile", en: "Why this matters" },
+  lbl_reference: { fr: "Repère rapide", en: "Quick reference" },
+  lbl_natural_examples: { fr: "Exemples naturels et sens en anglais", en: "Natural French examples and English meaning" },
+  lbl_common_mistake: { fr: "Erreur fréquente", en: "Common mistake" },
+  lbl_quick_check: { fr: "Vérification rapide", en: "Quick check" },
+  lbl_guided_exercise: { fr: "Exercice guidé", en: "Guided exercise" },
+  lbl_communication_exercise: { fr: "Exercice de communication", en: "Real communication exercise" },
+  lbl_your_turn: { fr: "À vous", en: "Your Turn" },
+
+  t3_1_heading: { fr: "3.1 Négations avancées · A2", en: "3.1 Advanced Negation · A2" },
+  t3_2_heading: { fr: "3.2 Ne...que et réponses courtes · A2", en: "3.2 Ne...que and Short Answers · A2" },
+  t3_3_heading: { fr: "3.3 Pronoms toniques · A2", en: "3.3 Stressed Pronouns · A2" },
+  t3_4_heading: { fr: "3.4 Verbes réfléchis · A2", en: "3.4 Reflexive Verbs · A2" },
+  t3_5_heading: { fr: "3.5 Réfléchis : négation et ordres · A2", en: "3.5 Reflexives: Negation and Commands · A2" },
+  t3_6_heading: { fr: "3.6 Pronoms objets · A2", en: "3.6 Object Pronouns · A2" },
+  t3_7_heading: { fr: "3.7 Verbes irréguliers clés · A2", en: "3.7 Key Irregular Verbs · A2" },
+  t3_8_heading: { fr: "3.8 Pouvoir, vouloir, devoir · A2", en: "3.8 Can, Want, Must · A2" },
+  t3_9_heading: { fr: "3.9 Poser des questions · A2", en: "3.9 Asking Questions · A2" },
+  t3_10_heading: { fr: "3.10 Adverbes et mots indéfinis · A2", en: "3.10 Adverbs and Indefinite Words · A2" },
   lbl_back: { fr: "← Retour aux ressources", en: "← Back to resources" },
 
   // ================= TRACK 1 =================
@@ -904,7 +923,60 @@ function applyLanguage(lang) {
   if (typeof initListenButtons === "function") initListenButtons();
 }
 
+function wireTrack3Translations() {
+  document.querySelectorAll('.lesson-detail[id^="lecon-3-"]').forEach((lesson) => {
+    const number = lesson.id.replace("lecon-", "").replace("-", "_");
+    const keyPrefix = `t${number}`;
+
+    const objective = lesson.querySelector(".lesson-objective");
+    const objectiveLabel = objective?.querySelector("strong");
+    if (objective) objective.setAttribute("data-i18n", `${keyPrefix}_obj`);
+    if (objectiveLabel) objectiveLabel.setAttribute("data-i18n", "lbl_objective");
+
+    const title = lesson.querySelector(".lesson-detail-head h2");
+    if (title) title.setAttribute("data-i18n", `${keyPrefix}_heading`);
+    const tocTitle = document.querySelector(`.lesson-toc a[href="#${lesson.id}"]`);
+    if (tocTitle) tocTitle.setAttribute("data-i18n", `${keyPrefix}_heading`);
+
+    const hook = lesson.querySelector(".lesson-hook");
+    if (hook) hook.setAttribute("data-i18n", `${keyPrefix}_hook`);
+
+    const explanationHeading = [...lesson.querySelectorAll(".lesson-body > h3")]
+      .find((heading) => heading.textContent.trim() === "Explanation");
+    const explanation = explanationHeading?.nextElementSibling;
+    if (explanation?.tagName === "P") explanation.setAttribute("data-i18n", `${keyPrefix}_expl`);
+    if (explanationHeading) explanationHeading.setAttribute("data-i18n", "lbl_explanation");
+
+    const headingKeys = {
+      "Why this matters": "lbl_why_matters",
+      "Quick reference / pattern": "lbl_reference",
+      "Natural French examples + English meaning": "lbl_natural_examples",
+      "Common mistake / warning": "lbl_common_mistake",
+      "Quick check": "lbl_quick_check",
+      "Guided exercise": "lbl_guided_exercise",
+      "Real communication exercise": "lbl_communication_exercise",
+      "Your Turn": "lbl_your_turn"
+    };
+    lesson.querySelectorAll(".lesson-body > h3").forEach((heading) => {
+      const key = headingKeys[heading.textContent.trim()];
+      if (key) heading.setAttribute("data-i18n", key);
+    });
+
+    const referenceItems = lesson.querySelector(".lesson-body .lesson-examples")?.querySelectorAll(":scope > li") || [];
+    referenceItems.forEach((item, index) => {
+      if (index < 5) item.setAttribute("data-i18n", `${keyPrefix}_ex${index + 1}`);
+    });
+
+    const exercise = lesson.querySelector(".lesson-exercise");
+    if (exercise) exercise.setAttribute("data-i18n", `${keyPrefix}_exercise`);
+
+    const yourTurn = lesson.querySelector(".lesson-tryit:last-of-type");
+    if (yourTurn) yourTurn.setAttribute("data-i18n", `${keyPrefix}_tryit`);
+  });
+}
+
 function initLangToggle() {
+  wireTrack3Translations();
   const saved = localStorage.getItem("site-lang") || "fr";
   applyLanguage(saved);
 
