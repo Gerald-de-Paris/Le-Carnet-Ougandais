@@ -340,6 +340,18 @@ const translations = {
     fr: "Communication A2 : négations, pronoms, questions, routines, verbes clés et réponses naturelles.",
     en: "A2 communication: negatives, pronouns, questions, routines, key verbs, and natural short responses."
   },
+  t3_capstone_eyebrow: { fr: "Bilan final", en: "Final review" },
+  t3_capstone_title: { fr: "Défi communication A2", en: "A2 Communication Challenge" },
+  t3_capstone_intro: { fr: "Mettez les dix leçons en pratique dans une seule conversation réaliste. Faites le défi à l'écrit, puis lisez votre réponse à voix haute.", en: "Put all ten lessons into practice in one realistic conversation. Complete the challenge in writing, then read your response aloud." },
+  t3_capstone_step1: { fr: "Vous écrivez à un ami pour organiser un rendez-vous cette semaine. Commencez par une question et précisez le jour ou l'heure.", en: "Write to a friend to arrange a meeting this week. Start with a question and give the day or time." },
+  t3_capstone_step2: { fr: "Dites ce que vous pouvez, voulez ou devez faire, puis ajoutez une limite avec ne...que ou une négation plus précise.", en: "Say what you can, want to, or must do, then add a limit with ne...que or a more precise negative." },
+  t3_capstone_step3: { fr: "Ajoutez un verbe réfléchi, un pronom objet ou tonique, et un verbe irrégulier au présent.", en: "Add a reflexive verb, an object or stressed pronoun, and an irregular verb in the present." },
+  t3_capstone_step4: { fr: "Terminez avec un adverbe de fréquence ou de manière et une réponse courte naturelle.", en: "Finish with an adverb of frequency or manner and a natural short answer." },
+  t3_capstone_check_title: { fr: "Avant de continuer, vérifiez que votre message contient :", en: "Before you continue, check that your message includes:" },
+  t3_capstone_check1: { fr: "une question claire ;", en: "a clear question;" },
+  t3_capstone_check2: { fr: "une négation ou une limite ;", en: "a negative or a limit;" },
+  t3_capstone_check3: { fr: "un pronom et un verbe irrégulier ;", en: "a pronoun and an irregular verb;" },
+  t3_capstone_check4: { fr: "un détail concret : jour, heure, date, prix ou quantité.", en: "one concrete detail: a day, time, date, price, or quantity." },
 
   // 3.1 — Negation Beyond "ne...pas"
   t3_1_obj: { fr: "exprimer des nuances de négation au-delà de ne...pas : ne...plus, ne...pas encore, ne...rien, ne...personne.", en: "express shades of negation beyond ne...pas: ne...plus, ne...pas encore, ne...rien, ne...personne." },
