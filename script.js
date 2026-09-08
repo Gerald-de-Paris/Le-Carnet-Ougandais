@@ -1362,7 +1362,7 @@ function initCultureModal() {
       let bodyHtml = `<p>${paraList[0]}</p>`;
       if (paraList.length > 1) {
         const imgSrc = `images/${catKey}-story${storyIndex + 1}.jpg`;
-        bodyHtml += `<div class="culture-story-photo" data-fallback="Ajoutez une photo ici"><img src="${imgSrc}" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.textContent=this.parentElement.dataset.fallback;"></div>`;
+        bodyHtml += `<div class="culture-story-photo" data-fallback="Ajoutez une photo ici"><img src="${imgSrc}" alt="" style="width:100%;height:100%;object-fit:cover;object-position:top;" onerror="this.parentElement.textContent=this.parentElement.dataset.fallback;"></div>`;
         bodyHtml += paraList.slice(1).map((p) => `<p>${p}</p>`).join("");
       }
       return `<div class="culture-story"><h4>${story.title[lang]}</h4>${bodyHtml}</div>`;
