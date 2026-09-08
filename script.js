@@ -1292,7 +1292,7 @@ function buildCarousel(container, catKey) {
     img.alt = "";
     img.style.width = "100%";
     img.style.height = "100%";
-    img.style.objectFit = "cover"; img.style.objectPosition = "top";
+    img.style.objectFit = "cover";
     img.src = `images/${catKey}-${i}.jpg`;
     img.onerror = function () {
       // No photo uploaded yet for this slot — fall back to the placeholder.
