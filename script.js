@@ -27,33 +27,51 @@ const translations = {
     en: "A place to learn and share French, simply and without taking ourselves too seriously."
   },
 
-  track1_title: { fr: "Sound & Survival", en: "Sound & Survival" },
-  track1_desc: { fr: "Prononciation, salutations, impératif, négation, questions.", en: "Pronunciation, greetings, the imperative, negation, questions." },
+  track1_title: { fr: "Fondations A1", en: "A1 Foundation" },
+  track1_desc: { fr: "Sons, salutations, présentations, questions simples et stratégies pour communiquer.", en: "Sounds, greetings, introductions, simple questions, and communication repair." },
   track1_progress: { fr: "5 / 5 leçons disponibles", en: "5 / 5 lessons available" },
 
-  track2_title: { fr: "Core Grammar", en: "Core Grammar" },
+  track2_title: { fr: "Passage A1 → A2", en: "A1 → A2 Transition" },
   track2_desc: { fr: "Articles, être/avoir, présent, nombres, heure, futur proche, comparatifs.", en: "Articles, être/avoir, present tense, numbers, time, near future, comparatives." },
   track2_progress: { fr: "8 / 8 leçons disponibles", en: "8 / 8 lessons available" },
 
-  track3_title: { fr: "Real Communication", en: "Real Communication" },
-  track3_desc: { fr: "Communication A2 : négations, pronoms, questions, routines, verbes clés et réponses naturelles.", en: "A2 communication: negatives, pronouns, questions, routines, key verbs, and natural short responses." },
+  track3_title: { fr: "Communication A2", en: "A2 Communication" },
+  track3_desc: { fr: "Négations, pronoms, routines, questions développées, comparaisons et réponses naturelles.", en: "Negatives, pronouns, routines, developed questions, comparisons, and natural responses." },
   track3_progress: { fr: "10 leçons disponibles", en: "10 lessons available" },
 
-  track4_title: { fr: "Past, Future & Fluency", en: "Past, Future & Fluency" },
+  track4_title: { fr: "Passage A2 → B1", en: "A2 → B1 Bridge" },
   track4_desc: { fr: "Le passé composé (avoir & être) — imparfait, futur, conditionnel à venir.", en: "The passé composé (avoir & être) — imperfect, future, conditional coming next." },
   track4_progress: { fr: "11 leçons disponibles", en: "11 lessons available" },
 
-  track5_title: { fr: "Real-Life Situations", en: "Real-Life Situations" },
+  track5_title: { fr: "Communiquer et argumenter", en: "Communicate and argue" },
   track5_desc: { fr: "Aéroport, hôtel, restaurant, achats, santé, petites conversations.", en: "Airport, hotel, restaurant, shopping, health, small talk." },
 
-  track5_title: { fr: "Real-Life Situations", en: "Real-Life Situations" },
-  track5_desc: { fr: "Le voyage de Kato vers la France : aéroport, taxi, restaurant, médecin.", en: "Kato's journey to France: airport, taxi, restaurant, doctor." },
+  track5_title: { fr: "Communiquer et argumenter", en: "Communicate and argue" },
+  track5_desc: { fr: "Opinions, récits, comparaisons, solutions et discussions du quotidien.", en: "Opinions, stories, comparisons, solutions, and everyday discussions." },
   track5_progress: { fr: "6 leçons disponibles", en: "6 lessons available" },
 
-  track6_title: { fr: "Reading for Confidence", en: "Reading for Confidence" },
-  track6_desc: { fr: "Six histoires originales, en Ouganda, pour lire avec plaisir.", en: "Six original stories, set in Uganda, to enjoy reading." },
+  track6_title: { fr: "Français autonome", en: "Independent French" },
+  track6_desc: { fr: "Argumenter, reformuler, nuancer et analyser des idées complexes.", en: "Argue, reformulate, qualify, and analyse complex ideas." },
   track6_progress: { fr: "6 histoires disponibles", en: "6 stories available" },
 
+
+  track7_title: { fr: "Histoires vivantes", en: "Living Stories" },
+  track7_desc: { fr: "Des récits pour imaginer, ressentir et répondre en français.", en: "Stories for imagining, experiencing, and responding in French." },
+  track7_progress: { fr: "6 histoires disponibles", en: "6 stories available" },
+  track8_title: { fr: "Lire, comprendre, raconter", en: "Read, understand, retell" },
+  track8_desc: { fr: "Lire des récits et en discuter avec précision.", en: "Read stories and discuss them precisely." },
+  track8_progress: { fr: "6 récits disponibles", en: "6 stories available" },
+
+  t2_8_title: { fr: "Prix et quantités utiles", en: "Useful prices and quantities" },
+  t2_8_obj: { fr: "demander un prix, indiquer une quantité et faire un achat simple.", en: "ask a price, state a quantity, and make a simple purchase." },
+  t2_8_hook: { fr: "Au marché, dans un café ou dans un magasin, les nombres deviennent une vraie conversation.", en: "At a market, café, or shop, numbers become a real conversation." },
+  t2_8_expl: { fr: "Pour demander le prix, dites Combien coûte… ? ou C’est combien ? Après une quantité, utilisez souvent de : un kilo de mangues, deux bouteilles d’eau, beaucoup de temps. Avec une quantité approximative, dites un peu de, assez de ou trop de.", en: "To ask a price, say Combien coûte… ? or C’est combien ? After a quantity, French often uses de: un kilo de mangues, deux bouteilles d’eau, beaucoup de temps. For an approximate quantity, use un peu de, assez de, or trop de." },
+  t2_8_ex1: { fr: "Combien coûte ce livre ? Il coûte vingt mille shillings.", en: "How much does this book cost? It costs twenty thousand shillings." },
+  t2_8_ex2: { fr: "Je voudrais un kilo de tomates et deux bouteilles d’eau.", en: "I would like a kilo of tomatoes and two bottles of water." },
+  t2_8_ex3: { fr: "Il y a beaucoup de monde au marché.", en: "There are a lot of people at the market." },
+  t2_8_ex4: { fr: "Je n’ai pas assez de monnaie.", en: "I do not have enough change." },
+  t2_8_exercise: { fr: "Choisissez : un kilo de / beaucoup de / deux. Puis complétez un mini-ticket avec une quantité et un prix.", en: "Choose: un kilo de / beaucoup de / deux. Then complete a short receipt with a quantity and a price." },
+  t2_8_tryit: { fr: "Imaginez un achat au marché. Demandez deux prix, commandez deux produits et dites combien vous avez à payer.", en: "Imagine a market purchase. Ask for two prices, order two products, and say how much you have to pay." },
   track_link: { fr: "Ouvrir le track →", en: "Open track →" },
   track_soon: { fr: "Bientôt disponible", en: "Coming soon" },
 
@@ -335,7 +353,7 @@ const translations = {
   t6_6_tryit: { fr: "Quelle est votre fleur ou couleur préférée ? Écrivez une phrase pour l'expliquer.", en: "What's your favorite flower or color? Write a sentence explaining why." },
 
   // ================= TRACK 3 =================
-  t3_hero_eyebrow: { fr: "Track 3 · A2 · 10 leçons", en: "Track 3 · A2 · 10 lessons" },
+  t3_hero_eyebrow: { fr: "Track 3 · 10 leçons", en: "Track 3 · 10 lessons" },
   t3_hero_title: { fr: "Real Communication", en: "Real Communication" },
   t3_hero_desc: {
     fr: "Communication A2 : négations, pronoms, questions, routines, verbes clés et réponses naturelles.",
@@ -648,16 +666,16 @@ const translations = {
   lbl_communication_exercise: { fr: "Exercice de communication", en: "Real communication exercise" },
   lbl_your_turn: { fr: "À vous", en: "Your Turn" },
 
-  t3_1_heading: { fr: "3.1 Négations avancées · A2", en: "3.1 Advanced Negation · A2" },
-  t3_2_heading: { fr: "3.2 Ne...que et réponses courtes · A2", en: "3.2 Ne...que and Short Answers · A2" },
-  t3_3_heading: { fr: "3.3 Pronoms toniques · A2", en: "3.3 Stressed Pronouns · A2" },
-  t3_4_heading: { fr: "3.4 Verbes réfléchis · A2", en: "3.4 Reflexive Verbs · A2" },
-  t3_5_heading: { fr: "3.5 Réfléchis : négation et ordres · A2", en: "3.5 Reflexives: Negation and Commands · A2" },
-  t3_6_heading: { fr: "3.6 Pronoms objets · A2", en: "3.6 Object Pronouns · A2" },
-  t3_7_heading: { fr: "3.7 Verbes irréguliers clés · A2", en: "3.7 Key Irregular Verbs · A2" },
-  t3_8_heading: { fr: "3.8 Pouvoir, vouloir, devoir · A2", en: "3.8 Can, Want, Must · A2" },
-  t3_9_heading: { fr: "3.9 Poser des questions · A2", en: "3.9 Asking Questions · A2" },
-  t3_10_heading: { fr: "3.10 Adverbes et mots indéfinis · A2", en: "3.10 Adverbs and Indefinite Words · A2" },
+  t3_1_heading: { fr: "3.1 Négations avancées", en: "3.1 Advanced Negation" },
+  t3_2_heading: { fr: "3.2 Ne...que et réponses courtes", en: "3.2 Ne...que and Short Answers" },
+  t3_3_heading: { fr: "3.3 Pronoms toniques", en: "3.3 Stressed Pronouns" },
+  t3_4_heading: { fr: "3.4 Verbes réfléchis", en: "3.4 Reflexive Verbs" },
+  t3_5_heading: { fr: "3.5 Réfléchis : négation et ordres", en: "3.5 Reflexives: Negation and Commands" },
+  t3_6_heading: { fr: "3.6 Pronoms objets", en: "3.6 Object Pronouns" },
+  t3_7_heading: { fr: "3.7 Verbes irréguliers clés", en: "3.7 Key Irregular Verbs" },
+  t3_8_heading: { fr: "3.8 Pouvoir, vouloir, devoir", en: "3.8 Can, Want, Must" },
+  t3_9_heading: { fr: "3.9 Poser des questions", en: "3.9 Asking Questions" },
+  t3_10_heading: { fr: "3.10 Adverbes et mots indéfinis", en: "3.10 Adverbs and Indefinite Words" },
   lbl_back: { fr: "← Retour aux ressources", en: "← Back to resources" },
 
   // ================= TRACK 1 =================
@@ -898,6 +916,11 @@ function splitIntoConceptCards(el, text) {
 function applyLanguage(lang) {
   document.documentElement.setAttribute("data-lang", lang);
   document.documentElement.setAttribute("lang", lang);
+
+  // Page-specific bilingual copy. It keeps lesson French and English support separate.
+  document.querySelectorAll("[data-fr][data-en]").forEach((el) => {
+    el.textContent = el.getAttribute(`data-${lang}`);
+  });
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
@@ -1584,3 +1607,29 @@ function initSiteLock() {
 }
 
 document.addEventListener("DOMContentLoaded", initSiteLock);
+
+// Story audio uses the French story text only. Translation panels are never included.
+function initStoryListenButtons() {
+  if (!("speechSynthesis" in window)) return;
+  document.querySelectorAll(".story-block, .dialogue-text").forEach((block) => {
+    if (block.querySelector(":scope > .story-listen-btn")) return;
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "listen-btn story-listen-btn";
+    button.textContent = "🔊 Écouter l’histoire";
+    button.addEventListener("click", () => {
+      window.speechSynthesis.cancel();
+      const key = block.getAttribute("data-i18n");
+      const frenchText = block.dataset.audioFr || (key && translations[key]?.fr) || block.textContent.trim();
+      block.dataset.audioFr = frenchText;
+      const utterance = new SpeechSynthesisUtterance(frenchText);
+      utterance.lang = "fr-FR";
+      utterance.rate = 0.9;
+      const voice = cachedVoices.find((item) => item.lang?.toLowerCase().startsWith("fr"));
+      if (voice) utterance.voice = voice;
+      window.speechSynthesis.speak(utterance);
+    });
+    block.prepend(button);
+  });
+}
+document.addEventListener("DOMContentLoaded", initStoryListenButtons);
