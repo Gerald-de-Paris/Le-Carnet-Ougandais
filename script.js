@@ -1296,6 +1296,262 @@ const cultureCategories = {
   }
 };
 
+
+// Additional Culture stories retain the same bilingual modal, image-slot, and audio-safe structure.
+const cultureStoryAdditions = {
+  "celebration": [
+    [
+      "Noël en Ouganda",
+      "Christmas in Uganda",
+      "Quelques jours avant Noël, les gares routières de Kampala se remplissent de sacs, de paquets et de conversations pressées. Beaucoup partent vers leur village ou leur ville d'origine pour retrouver la famille. Dans certaines maisons, on prépare longtemps le repas; ailleurs, on achète ce que le budget permet. Une chèvre peut être abattue là où la famille en a l'habitude, tandis que d'autres choisissent le poulet, les haricots ou un plat plus modeste.\n\nLes offices de Noël donnent leur cadence à la journée pour les familles chrétiennes, puis viennent les visites, les salutations et les assiettes partagées. Il n'existe pas un seul Noël ougandais: les pratiques dépendent des confessions, des régions et des moyens. Ce qui revient souvent, c'est le désir de faire de la place à ceux qui rentrent et de ne pas laisser un proche manger seul.",
+      "A few days before Christmas, Kampala's bus parks fill with bags, parcels, and hurried conversations. Many people travel to their home village or town to see family. Some households prepare a meal for days; others buy what their budget allows. A goat may be slaughtered where that is a family custom, while other tables hold chicken, beans, or something simpler.\n\nFor Christian families, Christmas services set the rhythm of the day, followed by visits, greetings, and shared plates. There is no single Ugandan Christmas: practices vary with faith, region, and means. What often returns is the wish to make room for people coming home and not let a relative eat alone."
+    ],
+    [
+      "La journée de la libération — 26 janvier",
+      "Liberation Day — 26 January",
+      "Le 26 janvier est un jour férié qui rappelle l'entrée à Kampala de la National Resistance Army en 1986, à l'issue de la guerre de la brousse. Ce changement a mis fin au second gouvernement de Milton Obote, déjà renversé par un coup d'État en juillet 1985, et a ouvert la période de gouvernement de Yoweri Museveni.\n\nLes cérémonies officielles parlent de la victoire de 1986; pour d'autres Ougandais, la date renvoie aussi aux années de guerre, aux déplacements et aux pertes qui l'ont précédée. La retenir avec sérieux, c'est tenir ensemble ces deux réalités: un tournant institutionnel et une mémoire nationale qui ne se résume pas à une célébration.",
+      "26 January is a public holiday marking the National Resistance Army's entry into Kampala in 1986, at the end of the bush war. The change ended Milton Obote's second government, which had already been overthrown in a July 1985 coup, and began Yoweri Museveni's period in office.\n\nOfficial ceremonies speak of the 1986 victory; for other Ugandans, the date also recalls the war years, displacement, and losses that came before it. Remembering it carefully means holding both realities: an institutional turning point and a national memory that cannot be reduced to celebration."
+    ],
+    [
+      "Diwali chez les Ougandais d'origine indienne",
+      "Diwali in Uganda's Indian-Ugandan Communities",
+      "Quand les lampes s'allument pour Diwali, elles éclairent aussi une histoire ougandaise. Dans des familles hindoues, jaïnes, sikhes ou d'autres traditions indiennes, la fête peut réunir prières, vêtements soignés, douceurs préparées à la maison et visites entre proches. Les formes de la célébration ne sont pas les mêmes pour tous.\n\nDiwali appartient à la vie de Kampala, de Jinja et d'autres villes où des communautés indiennes-ougaindaises ont construit des familles, des commerces et des institutions. Après les ruptures provoquées par l'expulsion de 1972 et les retours qui ont suivi, la lumière de la fête peut porter une résonance particulière: celle de liens maintenus, renouvelés et partagés avec des voisins de plusieurs horizons.",
+      "When lamps are lit for Diwali, they illuminate an Ugandan story too. In Hindu, Jain, Sikh, and other Indian families, the festival may bring together prayer, carefully chosen clothes, homemade sweets, and visits among relatives. Its forms are not the same for everyone.\n\nDiwali belongs to life in Kampala, Jinja, and other towns where Indian-Ugandan communities have built families, businesses, and institutions. After the disruption caused by the 1972 expulsion and the returns that followed, the festival's light can carry a particular resonance: ties kept, renewed, and shared with neighbours from many backgrounds."
+    ],
+    [
+      "Le Kampala City Festival",
+      "The Kampala City Festival",
+      "Pendant le Kampala City Festival, des rues habituellement prises par les taxis et les motos deviennent une scène. La musique arrive de plusieurs directions, des danseurs et des groupes occupent les carrefours, et les habitants se déplacent en famille ou entre amis dans une ville qu'ils connaissent autrement.\n\nLancé par l'autorité municipale au cours des années 2010, le festival a trouvé sa place dans la vie culturelle moderne de Kampala, avec des éditions dont la forme et la fréquence ont varié. Plus qu'une carte postale de la capitale, il rappelle le goût de ses habitants pour la rue, le son, la mode et la rencontre — avec toute l'énergie, et parfois toute la densité, d'une grande ville.",
+      "During the Kampala City Festival, streets usually claimed by taxis and motorbikes become a stage. Music arrives from several directions, dancers and groups take over intersections, and residents move through the city with family or friends in a different way.\n\nLaunched by the city authority in the 2010s, the festival found a place in Kampala's modern cultural life, although its format and frequency have varied by edition. More than a postcard of the capital, it reflects residents' appetite for streets, sound, style, and meeting one another—with all the energy, and sometimes the density, of a large city."
+    ]
+  ],
+  "biographie": [
+    [
+      "Yoweri Museveni, le président de la brousse",
+      "Yoweri Museveni, the Bush-War President",
+      "Yoweri Museveni s'est fait connaître dans la politique ougandaise au temps des bouleversements qui ont suivi l'indépendance. Après avoir été ministre sous Milton Obote, il a fondé le mouvement qui devint la National Resistance Army et a mené la guérilla de 1981 à 1986, surtout dans le centre du pays.\n\nLorsque ses forces sont entrées à Kampala en janvier 1986, Museveni est devenu président. Sa présidence, qui se poursuit depuis lors, est jugée de façons très différentes selon les expériences et les convictions. Les faits essentiels restent ceux d'un dirigeant arrivé au pouvoir par une guerre et placé depuis longtemps au centre de la vie politique nationale.",
+      "Yoweri Museveni became known in Ugandan politics during the upheavals after independence. After serving as a minister under Milton Obote, he founded the movement that became the National Resistance Army and led the 1981–86 guerrilla war, mainly in central Uganda.\n\nWhen his forces entered Kampala in January 1986, Museveni became president. His presidency, which has continued since then, is assessed very differently according to experience and conviction. The essential facts remain those of a leader who came to power through war and has long stood at the centre of national political life."
+    ],
+    [
+      "Milton Obote, le père déchu de l'indépendance",
+      "Milton Obote, the Fallen Father of Independence",
+      "Milton Obote a conduit le Uganda People's Congress dans les années qui ont mené à l'indépendance de 1962. Il fut le premier Premier ministre du pays, puis président après la crise constitutionnelle de 1966. Son premier gouvernement a pris fin quand Idi Amin l'a renversé en janvier 1971.\n\nObote est revenu au pouvoir après la chute d'Amin en 1979 et a gagné l'élection de 1980, un scrutin dont l'équité reste contestée dans l'histoire ougandaise. Son second gouvernement a été renversé en 1985. Il a vécu en exil jusqu'à sa mort en 2005; son héritage demeure lié à l'indépendance autant qu'aux crises politiques qui ont suivi.",
+      "Milton Obote led the Uganda People's Congress during the years leading to independence in 1962. He became the country's first prime minister, then president after the 1966 constitutional crisis. His first government ended when Idi Amin overthrew him in January 1971.\n\nObote returned to power after Amin's fall in 1979 and won the 1980 election, whose fairness remains contested in Ugandan history. His second government was overthrown in 1985. He lived in exile until his death in 2005; his legacy is tied both to independence and to the political crises that followed."
+    ],
+    [
+      "Winnie Byanyima, une voix ougandaise à l'ONU",
+      "Winnie Byanyima, a Ugandan Voice at the UN",
+      "Née à Mbarara, Winnie Byanyima a étudié l'ingénierie en Ouganda puis au Royaume-Uni. Elle a participé au mouvement de résistance des années 1980 avant de siéger au Parlement ougandais dans les années 1990, où elle s'est notamment engagée sur les droits des femmes et les questions de gouvernance.\n\nSon parcours s'est ensuite déplacé vers le travail international: responsabilités au sein d'organisations de développement, direction d'Oxfam International, puis nomination à la tête de l'ONUSIDA en 2019. Cette trajectoire ne résume pas à elle seule l'Ouganda, mais elle montre comment une expérience politique nationale peut devenir une parole entendue dans les débats mondiaux sur les inégalités, le développement et la santé.",
+      "Born in Mbarara, Winnie Byanyima studied engineering in Uganda and the United Kingdom. She took part in the resistance movement of the 1980s before serving in Uganda's Parliament in the 1990s, where she worked in particular on women's rights and governance.\n\nHer career then moved into international work: leadership roles in development organisations, the executive directorship of Oxfam International, and appointment as head of UNAIDS in 2019. Her path does not stand for Uganda as a whole, but it shows how national political experience can become a voice in global debates about inequality, development, and health."
+    ],
+    [
+      "Stephen Kiprotich, le marathonien qui a surpris le monde",
+      "Stephen Kiprotich, the Marathon Runner Who Surprised the World",
+      "Stephen Kiprotich vient de l'est de l'Ouganda, une région où la course de fond fait partie du paysage sportif. Il a progressé pas à pas vers le marathon, un sport où la patience compte autant que l'allure: des années d'entraînement, des courses imparfaites et l'habitude de tenir quand les autres accélèrent.\n\nAux Jeux olympiques de Londres en 2012, il a remporté le marathon et offert à l'Ouganda sa première médaille d'or olympique depuis 1972. L'arrivée a surpris beaucoup d'observateurs; pour les Ougandais, elle a surtout donné un visage et une histoire à une victoire attendue depuis longtemps. Le lendemain, la distance de 42,195 kilomètres semblait un peu moins abstraite.",
+      "Stephen Kiprotich comes from eastern Uganda, a region where distance running is part of the sporting landscape. He worked his way toward the marathon, a discipline in which patience matters as much as pace: years of training, imperfect races, and the habit of holding on when others accelerate.\n\nAt the London Olympics in 2012, he won the marathon and gave Uganda its first Olympic gold medal since 1972. The finish surprised many observers; for Ugandans, it above all gave a face and a story to a victory long awaited. The next day, 42.195 kilometres felt a little less abstract."
+    ]
+  ],
+  "coutumes": [
+    [
+      "L'art de refuser sans dire non",
+      "The Art of Saying No Without Saying No",
+      "Une réponse comme « je vais voir » ou « peut-être plus tard » ne ferme pas toujours une porte; elle peut aussi chercher à éviter une gêne. Dans certaines conversations ougandaises, surtout lorsqu'il y a un écart d'âge ou de statut, une hésitation ou une proposition différente peut être une façon polie de refuser sans embarrasser l'autre.\n\nCe n'est ni une règle universelle ni un code à déchiffrer seul. Les personnes, générations, langues et milieux communiquent différemment. Le plus sûr est d'écouter le ton, de laisser une sortie honorable et de demander gentiment si une réponse claire est nécessaire. La politesse peut parfois se trouver dans l'espace laissé entre les mots.",
+      "An answer such as “I will see” or “perhaps later” does not always leave a door open; it can also avoid embarrassment. In some Ugandan conversations, especially where age or status differs, hesitation or an alternative suggestion can be a polite way of declining without putting someone on the spot.\n\nThis is neither a universal rule nor a code to decode alone. People, generations, languages, and settings communicate differently. The safest approach is to listen to the tone, leave an honourable way out, and gently ask if a clear answer is needed. Courtesy can sometimes live in the space between words."
+    ],
+    [
+      "Le temps social, à l'africaine",
+      "Social Time in Uganda",
+      "Un rendez-vous à l'hôpital, un examen, un vol ou une réunion de travail n'admettent pas la même souplesse qu'une visite entre proches. À Kampala, il faut aussi compter avec les embouteillages, les pluies soudaines et un transport qui ne se laisse pas toujours prévoir. Dire que les Ougandais seraient « toujours en retard » efface cette réalité.\n\nDans un cadre social, une conversation inattendue ou une obligation familiale peut justement mériter qu'on lui donne du temps. Cela ne signifie pas que la ponctualité n'existe pas: elle compte souvent beaucoup au travail et dans les services. La bonne question n'est pas « quelle heure africaine? », mais « quel est le contexte, et qu'attend cette personne de moi? ».",
+      "A hospital appointment, an exam, a flight, or a work meeting does not allow the same flexibility as a visit among relatives. In Kampala, traffic, sudden rain, and unpredictable transport also have to be counted on. Saying Ugandans are “always late” erases that reality.\n\nIn a social setting, an unexpected conversation or family obligation may be worth giving time to. That does not mean punctuality does not exist: it often matters greatly at work and in services. The useful question is not “what is African time?” but “what is the setting, and what does this person expect of me?”"
+    ],
+    [
+      "La tenue vestimentaire et le respect",
+      "Dress and Respect",
+      "Une même tenue ne raconte pas la même chose partout. À l'église ou lors d'une cérémonie, beaucoup choisissent des vêtements plus couvrants ou plus formels pour marquer le respect du lieu et des aînés. Au bureau, les habitudes de l'organisation comptent; dans un village, une visite officielle peut appeler une tenue différente de celle portée chaque jour.\n\nKampala, elle, est aussi faite de jeans, de baskets, de créateurs et d'une jeunesse qui invente ses codes. Il n'y a pas de dress code ougandais unique. Observer les gens, demander avant une cérémonie et éviter de confondre sobriété avec jugement permettent de s'habiller avec attention sans prétendre connaître toutes les règles.",
+      "The same outfit does not say the same thing everywhere. At church or a ceremony, many people choose more covering or formal clothing to mark respect for the place and for elders. In an office, the organisation's habits matter; in a village, an official visit may call for different clothes from everyday wear.\n\nKampala is also made of jeans, trainers, designers, and young people creating their own codes. There is no single Ugandan dress code. Watching what people do, asking before a ceremony, and not confusing modesty with judgment make it possible to dress thoughtfully without claiming to know every rule."
+    ],
+    [
+      "Offrir et recevoir, l'étiquette du cadeau",
+      "Giving and Receiving: Gift Etiquette",
+      "Arriver chez quelqu'un avec du pain, des fruits, une boisson ou quelque chose pour les enfants peut être une attention bienvenue. Le cadeau n'a pas besoin d'être grand pour dire: « je suis heureux d'être reçu ». Dans d'autres familles, on vient surtout avec son temps et ses salutations; l'occasion guide le geste.\n\nOn peut tendre le présent avec les deux mains ou avec une parole simple, sans en faire trop. Il arrive que l'hôte le mette de côté avant de l'ouvrir, parce qu'il accueille d'abord la personne. Là encore, les habitudes varient. Ce qui compte le plus n'est généralement pas le prix, mais la générosité et le soin d'avoir pensé à la maison que l'on visite.",
+      "Arriving at someone's home with bread, fruit, a drink, or something for the children can be a welcome gesture. A gift need not be large to say, “I am glad to be received.” In other families, people mainly bring their time and greetings; the occasion guides the gesture.\n\nThe present can be offered with both hands or with a simple word, without making too much of it. A host may set it aside before opening it because welcoming the person comes first. Here too, habits vary. What usually matters most is not the price but generosity and the care of having thought about the home being visited."
+    ]
+  ],
+  "histoire": [
+    [
+      "La guerre de la brousse (1981–1986)",
+      "The Bush War (1981–1986)",
+      "La guerre de la brousse a commencé après l'élection de 1980, dont le résultat fut vivement contesté. La National Resistance Army de Yoweri Museveni a combattu le gouvernement de Milton Obote, principalement dans la région du Luwero; d'autres groupes armés et les forces de l'État faisaient aussi partie d'un conflit complexe.\n\nLes civils ont subi violences, insécurité et déplacements, et les responsabilités exactes de certains épisodes restent discutées par les historiens et les survivants. Après le coup d'État de 1985 contre Obote, la NRA a poursuivi son avance et est entrée à Kampala en janvier 1986. La fin des combats dans la capitale n'a pas effacé les blessures de ces années.",
+      "The bush war began after the 1980 election, whose result was fiercely disputed. Yoweri Museveni's National Resistance Army fought Milton Obote's government, mainly in the Luwero region; other armed groups and state forces were also part of a complex conflict.\n\nCivilians endured violence, insecurity, and displacement, and the precise responsibility for some episodes remains debated by historians and survivors. After the 1985 coup against Obote, the NRA continued its advance and entered Kampala in January 1986. The end of fighting in the capital did not erase the wounds of those years."
+    ],
+    [
+      "L'expulsion des Asiatiques en 1972",
+      "The 1972 Expulsion of Asians",
+      "En août 1972, Idi Amin a ordonné l'expulsion de la plupart des Asiatiques d'Ouganda, leur donnant un délai très court pour partir. Beaucoup de ces familles vivaient dans le pays depuis des générations et tenaient des commerces, des ateliers ou des entreprises; elles ont dû quitter des maisons, des réseaux et souvent une grande part de leurs biens.\n\nLes commerces et propriétés furent placés sous le contrôle de l'État ou redistribués, avec des conséquences économiques durables. Après la chute d'Amin, des gouvernements ougandais ont encouragé des retours et la restitution ou l'indemnisation de certains biens. L'événement reste une histoire de perte humaine, de rupture citoyenne et de reconstruction, pas seulement une décision administrative.",
+      "In August 1972, Idi Amin ordered the expulsion of most Asians from Uganda, giving them very little time to leave. Many of these families had lived in the country for generations and ran shops, workshops, or companies; they had to leave homes, networks, and often much of their property behind.\n\nBusinesses and properties were taken over by the state or redistributed, with lasting economic consequences. After Amin's fall, Ugandan governments encouraged returns and the restitution or compensation of some property. The event remains a story of human loss, broken citizenship, and rebuilding, not merely an administrative decision."
+    ],
+    [
+      "La guerre contre la LRA",
+      "The War Against the LRA",
+      "Pendant près de deux décennies, le nord de l'Ouganda a vécu sous la menace du Lord's Resistance Army, groupe armé dirigé par Joseph Kony. Le conflit ne peut pas se raconter par un seul nom: il a pris place dans l'après-guerre du nord, a impliqué les forces de l'État et a profondément bouleversé la vie des communautés acholi et de leurs voisins.\n\nDes civils ont été déplacés dans des camps, des enfants ont été enlevés, et des familles ont vécu longtemps avec l'incertitude. À partir du milieu des années 2000, la LRA a largement cessé d'opérer en Ouganda, même si ses conséquences sociales et mémorielles demeurent. Le retour dans les villages a demandé bien plus que la fin des combats.",
+      "For nearly two decades, northern Uganda lived under the threat of the Lord's Resistance Army, the armed group led by Joseph Kony. The conflict cannot be told through one name alone: it grew out of the north's post-war context, involved state forces, and deeply disrupted the lives of Acholi communities and their neighbours.\n\nCivilians were displaced into camps, children were abducted, and families lived with uncertainty for years. From the mid-2000s, the LRA largely stopped operating in Uganda, though its social and memorial consequences remain. Returning to villages required far more than the end of fighting."
+    ],
+    [
+      "Le retour des royaumes en 1993",
+      "The Return of the Kingdoms in 1993",
+      "En 1967, les royaumes traditionnels ougandais avaient été abolis dans le cadre d'une nouvelle Constitution. En 1993, ils ont été restaurés, notamment le Buganda, le Bunyoro, le Tooro et le Busoga. Pour beaucoup, le retour des cérémonies, des palais et des titres a remis en lumière des mémoires longtemps mises à l'écart.\n\nCes institutions ne remplacent pas le gouvernement élu de la République et n'exercent pas de pouvoir politique constitutionnel. Leur rôle est culturel et traditionnel, même si leur présence peut compter dans les débats publics. La restauration a ainsi créé un équilibre particulier: l'État moderne d'un côté, des autorités de mémoire et d'appartenance de l'autre.",
+      "In 1967, Uganda's traditional kingdoms were abolished under a new Constitution. In 1993 they were restored, including Buganda, Bunyoro, Tooro, and Busoga. For many people, the return of ceremonies, palaces, and titles brought memories long pushed aside back into view.\n\nThese institutions do not replace the Republic's elected government and hold no constitutional political power. Their role is cultural and traditional, though their presence can matter in public debate. The restoration created a particular balance: the modern state on one side, authorities of memory and belonging on the other."
+    ]
+  ],
+  "geographie": [
+    [
+      "Le lac Albert, pétrole et frontière",
+      "Lake Albert: Oil and Border",
+      "Le lac Albert s'étire entre l'Ouganda et la République démocratique du Congo. Sur ses rives, les pirogues partent tôt, les filets sèchent et les marchés dépendent du poisson comme des passages entre villages. La frontière est visible sur une carte, mais le lac est aussi un espace vécu par des communautés qui se connaissent et commercent.\n\nLes découvertes de pétrole dans le bassin Albertin ont donné à la région une importance nouvelle. Elles apportent promesses d'emplois et d'infrastructures, mais aussi questions foncières, environnementales et transfrontalières. Réduire le lac au pétrole ferait oublier l'essentiel: avant les puits et les pipelines, il nourrissait déjà des vies et organisait un territoire sensible.",
+      "Lake Albert stretches between Uganda and the Democratic Republic of Congo. Along its shores, canoes leave early, nets dry, and markets depend on fish as well as the movement between villages. The border is visible on a map, but the lake is also a lived space for communities that know and trade with one another.\n\nOil discoveries in the Albertine Graben gave the region new importance. They bring promises of jobs and infrastructure, but also questions of land, environment, and cross-border relations. Reducing the lake to oil would miss the point: before wells and pipelines, it already sustained lives and shaped a sensitive territory."
+    ],
+    [
+      "Les plaines arides de Karamoja",
+      "Karamoja's Dry Plains",
+      "Dans le nord-est de l'Ouganda, Karamoja ne garde jamais tout à fait le même visage. Après les pluies, l'herbe reprend, les pistes changent et les troupeaux trouvent d'autres parcours; pendant la saison sèche, l'eau et les pâturages demandent une attention constante. Cette terre semi-aride oblige à lire les saisons avec précision.\n\nLe bétail a une place importante dans de nombreuses familles karimojong, mais il ne résume ni les personnes ni la région. Les communautés vivent aussi de culture, de commerce, d'école et de liens urbains, tout en faisant face aux sécheresses et aux changements économiques. Regarder Karamoja sans stéréotype, c'est voir un paysage exigeant et des savoirs patients pour y vivre.",
+      "In north-eastern Uganda, Karamoja never keeps exactly the same face. After rain, grass returns, tracks change, and herds find different routes; in the dry season, water and grazing demand constant attention. This semi-arid land requires reading the seasons closely.\n\nLivestock has an important place in many Karimojong families, but it does not sum up either the people or the region. Communities also farm, trade, attend school, and keep urban ties, while facing droughts and economic change. Looking at Karamoja without stereotype means seeing a demanding landscape and the patient knowledge needed to live there."
+    ],
+    [
+      "La forêt de Mabira",
+      "Mabira Forest",
+      "Sur la route entre Kampala et Jinja, la forêt de Mabira arrive comme un changement de température et de couleur. Sa canopée de forêt tropicale abrite oiseaux, primates, insectes et plantes, tandis que les villages voisins vivent avec ses lisières et les ressources qu'elles offrent.\n\nSon importance ne tient pas à un slogan. Les arbres retiennent de l'humidité, protègent des sols et participent aux cycles de l'eau dans un corridor très fréquenté. La forêt a aussi été au cœur de débats sur la conservation et l'usage des terres. La traverser, c'est comprendre qu'un espace vert près d'une grande route est à la fois un écosystème et une responsabilité partagée.",
+      "On the road between Kampala and Jinja, Mabira Forest arrives like a change in temperature and colour. Its tropical canopy shelters birds, primates, insects, and plants, while nearby villages live with its edges and the resources they offer.\n\nIts importance is not a slogan. Trees hold moisture, protect soils, and contribute to water cycles in a heavily travelled corridor. The forest has also stood at the centre of debates about conservation and land use. Passing through it shows that green space beside a major road is both an ecosystem and a shared responsibility."
+    ],
+    [
+      "Les volcans de Mgahinga et les singes dorés",
+      "Mgahinga's Volcanoes and Golden Monkeys",
+      "À l'extrême sud-ouest, Mgahinga est un pays de pentes, de brume et de trois volcans des Virunga: Muhabura, Gahinga et Sabyinyo. Le sol volcanique, les bambous et les forêts de montagne changent avec l'altitude; le paysage paraît immobile, mais il est plein de mouvements discrets.\n\nLes singes dorés vivent dans les zones de bambous et font partie des espèces protégées du parc. Leur conservation concerne aussi les communautés autour de Mgahinga, pour lesquelles la terre, le travail et l'accès aux ressources sont des réalités quotidiennes. Protéger ces animaux ne consiste pas seulement à les regarder: c'est chercher une cohabitation durable dans un territoire habité.",
+      "In the far south-west, Mgahinga is a country of slopes, mist, and three Virunga volcanoes: Muhabura, Gahinga, and Sabyinyo. Volcanic soil, bamboo, and montane forest change with altitude; the landscape may appear still, but it is full of quiet movement.\n\nGolden monkeys live in the bamboo zones and are among the park's protected species. Their conservation also concerns communities around Mgahinga, for whom land, work, and access to resources are daily realities. Protecting these animals is not simply about watching them: it means seeking durable coexistence in an inhabited territory."
+    ]
+  ],
+  "gastronomie": [
+    [
+      "Le tonto et le malwa",
+      "Tonto and Malwa",
+      "Le tonto commence avec les bananes mûres, laissées à fermenter avant d'être filtrées; le malwa est une boisson de millet, souvent préparée et partagée autour d'une grande jarre. Les recettes, les noms et les gestes changent selon les régions et les familles, mais les deux boissons racontent une manière de transformer ce que donne la terre en moment collectif.\n\nElles peuvent apparaître lors d'une visite, d'une cérémonie ou d'une conversation qui prend son temps. Beaucoup d'Ougandais ne boivent pas d'alcool, et personne ne devrait être pressé de participer. Leur intérêt culturel tient moins au degré d'alcool qu'à ce qu'elles peuvent accompagner: l'accueil, la parole, la mémoire et le fait d'être ensemble.",
+      "Tonto begins with ripe bananas, left to ferment and then filtered; malwa is a millet brew, often prepared and shared around a large pot. Recipes, names, and gestures vary by region and family, but both drinks tell of turning what the land provides into a collective moment.\n\nThey may appear during a visit, a ceremony, or a conversation that takes its time. Many Ugandans do not drink alcohol, and nobody should be pressed to join in. Their cultural interest lies less in their alcohol content than in what they may accompany: welcome, conversation, memory, and being together."
+    ],
+    [
+      "Le poisson du lac Victoria",
+      "Fish from Lake Victoria",
+      "Au bord du lac Victoria, le poisson commence avant l'assiette: dans le départ des bateaux, le tri des prises, la fumée qui monte des séchoirs et les mains qui négocient au marché. Tilapia et perche du Nil circulent frais, frits, fumés ou séchés, selon la distance à parcourir et le repas à préparer.\n\nPour une famille, le poisson peut être un déjeuner simple avec du posho ou du matooke; pour une communauté de pêche, c'est aussi un revenu soumis aux saisons, aux prix et à l'état du lac. Goûter un poisson du Victoria, c'est donc goûter une économie et un quotidien, avec leurs savoir-faire autant qu'avec leurs fragilités.",
+      "On Lake Victoria's shore, fish begins before the plate: with boats leaving, catches being sorted, smoke rising from drying racks, and hands negotiating at market. Tilapia and Nile perch travel fresh, fried, smoked, or dried, depending on distance and the meal to be made.\n\nFor a family, fish may be a simple lunch with posho or matooke; for a fishing community, it is also an income subject to seasons, prices, and the condition of the lake. Tasting fish from Victoria means tasting an economy and a daily life, with their skills as well as their vulnerabilities."
+    ],
+    [
+      "Les nsenene, sauterelles grillées",
+      "Nsenene: Roasted Grasshoppers",
+      "Quand les nsenene arrivent avec les saisons de pluie, on les attend dans certaines régions avec une attention presque joyeuse. Des vendeurs les proposent dans les rues et les marchés; à la maison, on les nettoie, puis on les fait revenir jusqu'à ce qu'elles deviennent croustillantes, parfois avec un peu d'oignon ou de sel.\n\nCe ne sont pas une curiosité posée sur une assiette pour surprendre quelqu'un. Pour ceux qui les apprécient, les nsenene sont un aliment saisonnier recherché, lié à l'abondance brève d'un moment de l'année et aux souvenirs de marché. Comme tout goût, il se transmet, se discute et ne s'impose pas.",
+      "When nsenene arrive with the rainy seasons, they are awaited in some regions with almost cheerful attention. Vendors sell them in streets and markets; at home, they are cleaned and fried until crisp, sometimes with a little onion or salt.\n\nThey are not a curiosity placed on a plate to surprise someone. For people who enjoy them, nsenene are a prized seasonal food, tied to the brief abundance of a time of year and to market memories. Like every taste, it is passed on, discussed, and never imposed."
+    ],
+    [
+      "Le petit-déjeuner ougandais",
+      "Ugandan Breakfast",
+      "Le matin, Kampala sent parfois le chai avant même que la circulation soit bien lancée. Sur un stand, un chapati se gonfle sur la plaque; à la maison, une casserole de katogo attend peut-être la famille. Ailleurs, le petit-déjeuner se résume à un thé et du pain, ou il est repoussé par un trajet, une classe ou une journée de travail.\n\nIl n'y a pas un menu qui conviendrait à tous. Le budget, la région, le temps disponible et les habitudes de la maison comptent autant que les recettes. Mais un thé chaud, un chapati roulé ou une assiette de katogo peuvent donner au matin ce petit moment où l'on reprend des forces avant de repartir dans la ville.",
+      "In the morning, Kampala can smell of chai before traffic is fully under way. At a stall, a chapati puffs up on the griddle; at home, a pot of katogo may be waiting for the family. Elsewhere, breakfast is tea and bread, or is postponed by a journey, class, or workday.\n\nThere is no single menu for everyone. Budget, region, available time, and household habits matter as much as recipes. Yet hot tea, a rolled chapati, or a plate of katogo can give the morning that small moment to regain strength before heading back into the city."
+    ]
+  ]
+};
+const cultureStoriesAlreadyPresent = {
+  "celebration": [
+    [
+      "Eid, les retrouvailles après le jeûne",
+      "Eid: Gathering After the Fast",
+      "À la fin du Ramadan, les familles musulmanes se retrouvent pour l'Eid al-Fitr. Après la prière, les salutations se prolongent, les enfants reçoivent parfois de petits présents et les plats circulent entre maisons. Les façons de célébrer varient selon les familles et les communautés, mais l'hospitalité donne souvent le ton de la journée.\n\nDans les quartiers de Kampala comme dans d'autres villes, l'Eid rappelle que le calendrier ougandais est tissé de fêtes religieuses différentes. Pour les voisins invités à partager un repas, c'est souvent une occasion simple de faire connaissance autrement.",
+      "At the end of Ramadan, Muslim families gather for Eid al-Fitr. After prayer, greetings take their time, children may receive small gifts, and dishes travel between homes. Celebrations vary by family and community, but hospitality often sets the day's tone.\n\nIn Kampala neighbourhoods and elsewhere, Eid shows that Uganda's calendar is woven from different religious celebrations. For neighbours invited to share a meal, it is often a simple chance to know one another differently."
+    ],
+    [
+      "Le pèlerinage de Namugongo",
+      "The Namugongo Pilgrimage",
+      "À l'approche du 3 juin, les routes vers Namugongo accueillent des pèlerins venus d'Ouganda et d'au-delà. Certains marchent plusieurs jours; d'autres arrivent en groupe, portant leurs intentions, leurs prières et parfois les souvenirs d'un proche.\n\nLe sanctuaire commémore les martyrs chrétiens de la fin du XIXe siècle. La foule, les chants et les services donnent au lieu une intensité particulière, mais le pèlerinage reste avant tout un acte de foi pour ceux qui le font.",
+      "As 3 June approaches, roads to Namugongo receive pilgrims from Uganda and beyond. Some walk for several days; others arrive in groups, carrying intentions, prayers, and sometimes the memory of a loved one.\n\nThe shrine commemorates Christian martyrs of the late nineteenth century. The crowd, songs, and services give the place a particular intensity, but for those making the journey, pilgrimage remains above all an act of faith."
+    ]
+  ],
+  "biographie": [
+    [
+      "Bobi Wine, de la scène à la politique",
+      "Bobi Wine: From Stage to Politics",
+      "Robert Kyagulanyi Ssentamu s'est d'abord fait connaître sous le nom de Bobi Wine, avec une musique populaire qui parlait de la vie quotidienne et de la ville. Élu député de Kyadondo East en 2017, il est ensuite devenu l'une des figures les plus visibles de l'opposition ougandaise.\n\nSon passage de la scène à la politique a suscité un soutien important et de fortes controverses. Raconter son parcours exige de distinguer son œuvre artistique, son activité politique et les débats toujours vifs qui l'entourent.",
+      "Robert Kyagulanyi Ssentamu first became known as Bobi Wine, with popular music about everyday life and the city. Elected MP for Kyadondo East in 2017, he later became one of Uganda's most visible opposition figures.\n\nHis move from the stage to politics has drawn significant support and intense controversy. Telling his story requires distinguishing his artistic work, his political activity, and the continuing debates around him."
+    ],
+    [
+      "Kabaka Mutesa I, un roi dans un monde qui change",
+      "Kabaka Mutesa I: A King in a Changing World",
+      "Mutesa I régna sur le Buganda dans la seconde moitié du XIXe siècle, lorsque commerçants, missionnaires et représentants de puissances étrangères arrivaient dans la région des Grands Lacs. Il a cherché à préserver l'autorité de son royaume tout en composant avec ces nouvelles présences.\n\nSon règne est souvent raconté comme celui d'un souverain habile, mais les sources et les interprétations ne disent pas tout d'une seule voix. Il demeure une figure centrale pour comprendre le Buganda avant la domination coloniale.",
+      "Mutesa I ruled Buganda in the second half of the nineteenth century, when traders, missionaries, and representatives of foreign powers were arriving in the Great Lakes region. He sought to preserve his kingdom's authority while dealing with these new presences.\n\nHis reign is often described as that of a skilled ruler, but sources and interpretations do not speak with one voice. He remains central to understanding Buganda before colonial rule."
+    ]
+  ],
+  "coutumes": [
+    [
+      "À table, le respect se remarque",
+      "Respect at the Table",
+      "Un repas partagé commence souvent par une invitation insistante à se servir. Dans certaines familles, on attend les aînés ou les invités avant de commencer; dans d'autres, le service est plus décontracté. Observer le rythme de la maison est un meilleur guide qu'une règle apprise par cœur.\n\nRemercier, ne pas gaspiller et reconnaître le travail de la personne qui a préparé le repas comptent beaucoup. La table est aussi un lieu de conversation: on y nourrit le corps, mais l'on y entretient les liens.",
+      "A shared meal often begins with a warm insistence that you help yourself. In some families, elders or guests are waited for before eating; in others, service is more relaxed. Watching the household's rhythm is a better guide than a memorised rule.\n\nThanking people, not wasting food, and recognising the work of the person who cooked all matter. The table is also a place for conversation: it feeds the body and keeps relationships alive."
+    ],
+    [
+      "Les gestes parlent aussi",
+      "Gestures Speak Too",
+      "Un geste peut aider à montrer le respect: une poignée de main attentive, le fait de donner ou recevoir avec la main droite, ou parfois avec les deux mains. Mais les habitudes changent d'une famille, d'une région et d'une génération à l'autre.\n\nPlutôt que d'imiter mécaniquement, mieux vaut regarder, demander et accepter d'apprendre. Un sourire et une attention réelle évitent plus de maladresses qu'un manuel de gestes.",
+      "A gesture can help show respect: a thoughtful handshake, giving or receiving with the right hand, or sometimes with both hands. But habits change from family to family, region to region, and generation to generation.\n\nRather than copying mechanically, it is better to watch, ask, and be willing to learn. A smile and genuine attention prevent more awkwardness than a handbook of gestures."
+    ]
+  ],
+  "histoire": [
+    [
+      "Le chemin vers l'indépendance",
+      "The Road to Independence",
+      "L'indépendance du 9 octobre 1962 n'a pas été un matin isolé. Elle a été précédée de débats sur la représentation, les royaumes, les partis et la forme que prendrait le nouvel État après le protectorat britannique.\n\nLes négociations ont produit des compromis fragiles, mais elles ont aussi donné à l'Ouganda son premier gouvernement indépendant. Comprendre ce chemin aide à voir pourquoi les questions d'appartenance et de pouvoir ont continué à compter après 1962.",
+      "Independence on 9 October 1962 was not an isolated morning. It was preceded by debates over representation, kingdoms, parties, and the shape the new state would take after the British protectorate.\n\nNegotiations produced fragile compromises, but they also gave Uganda its first independent government. Understanding this path helps explain why questions of belonging and power continued to matter after 1962."
+    ],
+    [
+      "La crise de 1966",
+      "The 1966 Crisis",
+      "En 1966, un conflit entre le Premier ministre Milton Obote et le Kabaka de Buganda, Edward Mutesa II, alors président cérémoniel, a débouché sur une crise ouverte. L'armée a attaqué le palais de Mengo; Mutesa II s'est enfui en exil.\n\nLa Constitution fut ensuite suspendue et une nouvelle Constitution renforça la présidence, avant l'abolition des royaumes l'année suivante. Ces événements restent un point de rupture majeur entre l'État central et le Buganda.",
+      "In 1966, conflict between Prime Minister Milton Obote and Buganda's Kabaka, Edward Mutesa II, then ceremonial president, led to an open crisis. The army attacked the Mengo palace, and Mutesa II fled into exile.\n\nThe Constitution was then suspended and a new one strengthened the presidency, before the kingdoms were abolished the following year. These events remain a major rupture between the central state and Buganda."
+    ]
+  ],
+  "geographie": [
+    [
+      "Le parc national Queen Elizabeth",
+      "Queen Elizabeth National Park",
+      "Entre les lacs Edward et George, le parc Queen Elizabeth rassemble savanes, forêts et le canal de Kazinga. Les éléphants, les buffles, les oiseaux et les pêcheurs voisins partagent un paysage où la conservation n'est jamais séparée de la vie humaine.\n\nLe parc est souvent photographié pour ses lions et ses hippopotames. Mais ses rives, ses villages et ses saisons rappellent qu'un espace protégé reste lié aux personnes qui vivent tout autour.",
+      "Between Lakes Edward and George, Queen Elizabeth National Park brings together savannah, forest, and the Kazinga Channel. Elephants, buffalo, birds, and nearby fishers share a landscape where conservation is never separate from human life.\n\nThe park is often photographed for its lions and hippos. Yet its shores, villages, and seasons remind us that a protected space remains tied to the people living around it."
+    ],
+    [
+      "Le mont Elgon, une montagne qui s'étale",
+      "Mount Elgon: A Broad Mountain",
+      "Le mont Elgon ne se dresse pas comme une pointe isolée: son ancien volcan s'étale à la frontière du Kenya et de l'Ouganda. Ses pentes cultivées, ses cascades et ses forêts donnent à la montagne une présence quotidienne pour les communautés voisines.\n\nPlus haut, les sentiers atteignent des paysages ouverts et la vaste caldeira. Descendre de ces hauteurs, c'est retrouver les jardins et les maisons: le mont Elgon est à la fois relief, réserve d'eau et voisin familier.",
+      "Mount Elgon does not rise like an isolated peak: its ancient volcano spreads across the Kenya–Uganda border. Its cultivated slopes, waterfalls, and forests give the mountain a daily presence for nearby communities.\n\nHigher up, trails reach open landscapes and the vast caldera. Coming down from those heights means finding gardens and homes again: Mount Elgon is at once landform, water reserve, and familiar neighbour."
+    ]
+  ],
+  "gastronomie": [
+    [
+      "Le luwombo, un plat enveloppé de patience",
+      "Luwombo: A Dish Wrapped in Patience",
+      "Le luwombo se reconnaît d'abord à ses feuilles de bananier. Viande, poisson ou champignons peuvent y cuire lentement dans une sauce, enveloppés avec soin. Quand on ouvre le paquet, le parfum arrive avant les mots.\n\nParticulièrement associé au Buganda, le plat se prépare pour des repas importants autant que dans des cuisines familiales. Il rappelle qu'en cuisine, la patience peut être un ingrédient.",
+      "Luwombo is first recognised by its banana leaves. Meat, fish, or mushrooms may cook slowly in sauce, carefully wrapped. When the parcel is opened, the scent arrives before words.\n\nClosely associated with Buganda, it is made for important meals as well as family kitchens. It reminds us that in cooking, patience can be an ingredient."
+    ],
+    [
+      "Le café, du jardin à la tasse",
+      "Coffee: From Garden to Cup",
+      "Dans de nombreuses régions, les caféiers poussent près des maisons et des jardins. Les cerises sont cueillies, séchées ou lavées, puis leur parcours se poursuit vers les coopératives, les acheteurs et les torréfacteurs.\n\nLe café ougandais est souvent présenté comme une exportation. Avant cela, c'est le travail précis de familles agricoles, soumis aux saisons et aux prix. Une tasse raconte une longue chaîne de mains.",
+      "In many regions, coffee trees grow near homes and gardens. Cherries are picked, dried or washed, then travel on to cooperatives, buyers, and roasters.\n\nUgandan coffee is often presented as an export. Before that, it is the careful work of farming families, subject to seasons and prices. A cup tells a long chain of hands."
+    ]
+  ]
+};
+Object.entries(cultureStoriesAlreadyPresent).forEach(([category, stories]) => {
+  cultureCategories[category].stories.push(...stories.map(([frTitle, enTitle, fr, en]) => ({ title: { fr: frTitle, en: enTitle }, fr, en })));
+});
+
+Object.entries(cultureStoryAdditions).forEach(([category, stories]) => {
+  cultureCategories[category].stories.push(...stories.map(([frTitle, enTitle, fr, en]) => ({
+    title: { fr: frTitle, en: enTitle }, fr, en
+  })));
+});
+
 // ============================================
 // CULTURE MODAL — category cards open a modal with that
 // category's stories and an 8-slide photo carousel.
