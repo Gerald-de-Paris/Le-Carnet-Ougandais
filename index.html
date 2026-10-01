@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Le Carnet Ougandais — Français &amp; Culture</title>
 <meta name="description" content="Ressources pour apprendre le français et découvrir la culture ougandaise.">
+<meta property="og:title" content="Le Carnet Ougandais — Français &amp; Culture">
+<meta property="og:description" content="Ressources pour apprendre le français et découvrir la culture ougandaise, depuis Kampala.">
+<meta property="og:image" content="/images/culture-1.jpg">
+<meta property="og:url" content="/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Le Carnet Ougandais — Français &amp; Culture">
+<meta name="twitter:description" content="Ressources pour apprendre le français et découvrir la culture ougandaise, depuis Kampala.">
+<meta name="twitter:image" content="/images/culture-1.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -26,6 +36,7 @@
     </a>
     <nav class="site-nav" aria-label="Navigation principale">
       <a href="#ressources" data-i18n="nav_resources">Ressources</a>
+      <a href="#bulletin" data-i18n="nav_bulletin">Bulletin</a>
       <a href="#culture" data-i18n="nav_culture">Culture</a>
       <a href="#apropos" data-i18n="nav_about">À propos</a>
       <a href="#contact" data-i18n="nav_contact">Contact</a>
@@ -118,6 +129,26 @@
           <a href="track-6.html" class="track-link" data-i18n="track_link">Ouvrir le track →</a>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- LE BAGUETTE BULLETIN -->
+  <section id="bulletin" class="section section--bulletin" aria-labelledby="bulletin-title">
+    <div class="wrap">
+      <div class="bulletin-heading">
+        <div>
+          <p class="eyebrow bulletin-eyebrow">Le bulletin du café</p>
+          <h2 id="bulletin-title" class="section-title bulletin-title">Le Baguette Bulletin</h2>
+        </div>
+        <span class="bulletin-cafe-mark" aria-hidden="true">🥖 <span>☕</span></span>
+      </div>
+      <p class="section-lede bulletin-lede">Short French lessons, language hacks and observations you can actually use. Spicier than a café au lait — and a new issue every week.</p>
+      <p id="bulletinStatus" class="bulletin-status" aria-live="polite"></p>
+      <div id="featuredBulletin" class="featured-bulletin" aria-label="Latest bulletin"></div>
+      <button id="bulletinArchiveToggle" class="bulletin-archive-toggle" type="button" aria-expanded="false" aria-controls="bulletinArchive">Browse all bulletins →</button>
+      <div id="bulletinArchive" class="bulletin-archive" hidden>
+        <div id="bulletinGrid" class="bulletin-grid" aria-label="All Le Baguette Bulletin issues"></div>
       </div>
     </div>
   </section>

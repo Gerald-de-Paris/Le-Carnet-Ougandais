@@ -4,6 +4,7 @@
 // ============================================
 const translations = {
   nav_resources: { fr: "Ressources", en: "Resources" },
+  nav_bulletin: { fr: "Bulletin", en: "Bulletin" },
   nav_culture: { fr: "Culture", en: "Culture" },
   nav_about: { fr: "À propos", en: "About" },
   nav_contact: { fr: "Contact", en: "Contact" },
@@ -1390,6 +1391,168 @@ function initCultureModal() {
 }
 
 document.addEventListener("DOMContentLoaded", initCultureModal);
+
+// ============================================
+// LE BAGUETTE BULLETIN
+// Add future issues to this list only. The section sorts, counts and
+// displays them automatically, so no layout changes are needed for No. 11+.
+// ============================================
+const bulletins = [
+  {
+    bulletin_number: 1,
+    title: "Tu Vs Vous",
+    caption: "Be wise. Be polite. Be baguette smart.\n\nFrench 101: Pronouns carry emotional damage, mix them up and voilà, you have started a situation.",
+    body: "The choice between using \"tu\" versus \"vous\" doesn't only depend on whether the situation is formal or informal.\n\nIt also depends on relationship, age, context, region, gender and personal habits.\n\nFrench is personal like that. Choose wisely. 😬",
+    created_at: "2026-01-07"
+  },
+  {
+    bulletin_number: 2,
+    title: "Je dis ça, je dis rien",
+    caption: "When you want to gossip, correct someone, or throw a little shade but pretend you didn't? Voilà 😂",
+    body: "It's a modern French expression used when you are giving a piece of advice, but want to stress it's just a suggestion.\n\n\"Je n'aime pas beaucoup cette robe sur toi. Enfin, je dis ça, je dis rien !\"\n\n\"I don't love this dress on you. I mean, I'm just saying.\"",
+    created_at: "2026-01-14"
+  },
+  {
+    bulletin_number: 3,
+    title: "Speak Up, Speak Out Loud",
+    caption: "🚨 PSA: Your brain voice doesn't speak French, your mouth does.",
+    body: "Confidence starts with volume (and croissants). 😁 Speak up!\n\nWhen you're exercising in French, repeating sentences for example, make sure you speak out-loud and not just in your head.\n\nYou need to get accustomed to your French voice to speak French with confidence in the real world.",
+    created_at: "2026-01-21"
+  },
+  {
+    bulletin_number: 4,
+    title: "Madame vs Mademoiselle",
+    caption: "France loves tradition with a twist. Some things never disappear, they just… rebrand.",
+    body: "Since 2012, French official documents dropped \"Mademoiselle\" for \"Madame\" (Mme), no matter the marital status.\n\nBut in daily conversation, \"Mademoiselle\" is still alive and well, just never for a 12-year-old!\n\nTraditionally: married = Madame, unmarried = Mademoiselle",
+    created_at: "2026-01-28"
+  },
+  {
+    bulletin_number: 5,
+    title: "Kiffer",
+    caption: "To kiffer is more than to like, it's that spark, that extra sauce.",
+    body: "\"Un kiffe\", \"kiffer\" — this is modern slang which is very popular nowadays.\n\nAs a verb, \"kiffer\" means to enjoy or to like.\n\n\"Je kiffe cette fille\" — I like/love/am attracted to this girl.\n\nAs a noun, \"un kiffe\" means an awesome thing, a big pleasure.\n\n\"Quel kiffe ce bouquin\" — what an awesome book.",
+    created_at: "2026-02-04"
+  },
+  {
+    bulletin_number: 6,
+    title: "Ça le fait",
+    caption: "Ça le fait = answer to almost everything in life. Basically, your chill friend in phrase form. 😌",
+    body: "Modern French expression: \"ça le fait\" or \"ça ne le fait pas.\"\n\nIt is used a lot to say: 'it works, it's a good fit, it'll do.'\n\n\"Tu as besoin de plus de citrons ?\" — Do you need any more lemons?\n\n\"Non : deux, ça le fait.\" — No: two will do fine.",
+    created_at: "2026-02-11"
+  },
+  {
+    bulletin_number: 7,
+    title: "Aujourd'hui, Nous Sommes",
+    caption: "Aujourd'hui, nous sommes… because French likes to keep today a team sport.",
+    body: "When talking about today, it's common in French to say \"today we are\" instead of \"today is,\" although both are possible.\n\n\"Aujourd'hui, nous sommes le 04 Septembre\"\n\n\"Aujourd'hui, c'est le 04 Septembre\"",
+    created_at: "2026-02-18"
+  },
+  {
+    bulletin_number: 8,
+    title: "The Imparfait Sound",
+    caption: "Imparfait endings all sound the same… kinda like everyone asking \"Je voudrais…\"",
+    body: "In the imparfait, the endings \"ais\", \"ais\", \"ait\" and \"aient\" are all pronounced exactly the same way: \"è\". Lots of letters for only one sound!",
+    created_at: "2026-02-25"
+  },
+  {
+    bulletin_number: 9,
+    title: "Keep It Simple!",
+    caption: "Why say \"chirurgie\" when you can say \"opération\"? Say it simple, say it loud, communication wins!",
+    body: "When speaking French, your first goal isn't perfection—it's communication.\n\nGet your point across. That's already a win!\n\nFrench hack: Less stress, more success.",
+    created_at: "2026-03-04"
+  },
+  {
+    bulletin_number: 10,
+    title: "French Listening Hack",
+    caption: "They say practice makes perfect… but only with the right French audio.\n\nFrench listening isn't just about hearing sounds, it's about picking the right ones.",
+    body: "The key to improving your listening? Listen to spoken French!\n\nBut beware... not every audio helps. The real quest is finding material that matches your level.\n\nRight tool = steady progress. Wrong tool = just noise.",
+    created_at: "2026-03-11"
+  }
+];
+
+function makeBulletinParagraphs(text, className) {
+  const fragment = document.createDocumentFragment();
+  text.split(/\n\n+/).forEach((paragraph) => {
+    const element = document.createElement("p");
+    element.className = className;
+    element.textContent = paragraph;
+    fragment.appendChild(element);
+  });
+  return fragment;
+}
+
+function initBulletins() {
+  const grid = document.getElementById("bulletinGrid");
+  const featured = document.getElementById("featuredBulletin");
+  const status = document.getElementById("bulletinStatus");
+  const archive = document.getElementById("bulletinArchive");
+  const archiveToggle = document.getElementById("bulletinArchiveToggle");
+  if (!grid || !featured || !status || !archive || !archiveToggle || !bulletins.length) return;
+
+  const issues = [...bulletins].sort((a, b) => b.bulletin_number - a.bulletin_number);
+  const latest = issues[0].bulletin_number;
+  status.textContent = `Latest issue · No. ${latest} · ${issues.length} issues published`;
+
+  const dateFormat = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+  function createBulletinCard(issue, isFeatured = false) {
+    const card = document.createElement("article");
+    card.className = isFeatured ? "featured-bulletin-card" : "bulletin-card";
+
+    const meta = document.createElement("div");
+    meta.className = "bulletin-meta";
+    const number = document.createElement("span");
+    number.textContent = `No. ${issue.bulletin_number}`;
+    const date = document.createElement("time");
+    date.dateTime = issue.created_at;
+    date.textContent = dateFormat.format(new Date(`${issue.created_at}T12:00:00`));
+    meta.append(number, date);
+
+    const title = document.createElement("h3");
+    title.textContent = issue.title;
+    const caption = document.createElement("div");
+    caption.className = "bulletin-caption";
+    caption.appendChild(makeBulletinParagraphs(issue.caption, "bulletin-caption-text"));
+
+    const details = document.createElement("details");
+    details.className = "bulletin-details";
+    const summary = document.createElement("summary");
+    summary.textContent = isFeatured ? "Read the latest →" : "Read more →";
+    const body = document.createElement("div");
+    body.className = "bulletin-body";
+    body.appendChild(makeBulletinParagraphs(issue.body, "bulletin-body-text"));
+    details.append(summary, body);
+    card.append(meta, title, caption, details);
+    return card;
+  }
+
+  featured.appendChild(createBulletinCard(issues[0], true));
+  issues.forEach((issue) => {
+    grid.appendChild(createBulletinCard(issue));
+  });
+
+  let revealArchiveCards = () => grid.querySelectorAll(".bulletin-card").forEach((card) => card.classList.add("is-visible"));
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealArchiveCards = () => grid.querySelectorAll(".bulletin-card").forEach((card) => observer.observe(card));
+  }
+
+  archiveToggle.addEventListener("click", () => {
+    const willOpen = archive.hidden;
+    archive.hidden = !willOpen;
+    archiveToggle.setAttribute("aria-expanded", String(willOpen));
+    archiveToggle.textContent = willOpen ? "Hide bulletin archive ↑" : "Browse all bulletins →";
+    if (willOpen) revealArchiveCards();
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initBulletins);
 
 
 // ============================================
