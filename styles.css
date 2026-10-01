@@ -189,6 +189,22 @@ a{ color: inherit; }
   border-bottom: 1px solid rgba(151,56,30,0.12);
 }
 .bulletin-eyebrow{ color: #8c332b; }
+.bulletin-heading{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+.bulletin-cafe-mark{
+  flex: none;
+  margin: 4px 4px 0 0;
+  color: #8c332b;
+  font-size: 1.6rem;
+  line-height: 1;
+  transform: rotate(-7deg);
+  filter: saturate(0.78);
+}
+.bulletin-cafe-mark span{ display: inline-block; margin-left: -4px; transform: rotate(7deg) translateY(3px); }
 .bulletin-title{
   color: #742d2a;
   font-family: Georgia, "Iowan Old Style", serif;
@@ -212,6 +228,37 @@ a{ color: inherit; }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
 }
+.featured-bulletin{
+  max-width: 710px;
+  margin-bottom: 22px;
+}
+.featured-bulletin-card{
+  padding: 30px 32px;
+  background: #fffaf0;
+  border: 1px solid rgba(116,45,42,0.24);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(84,40,30,0.08), 0 1px 2px rgba(84,40,30,0.08);
+}
+.featured-bulletin-card h3{
+  margin: 17px 0 12px;
+  color: #742d2a;
+  font-family: Georgia, "Iowan Old Style", serif;
+  font-size: clamp(1.65rem, 3vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.12;
+}
+.bulletin-archive-toggle{
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #8c332b;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+.bulletin-archive-toggle:hover{ color: var(--laterite-deep); text-decoration: underline; text-underline-offset: 4px; }
+.bulletin-archive{ margin-top: 28px; }
 .bulletin-card{
   display: flex;
   flex-direction: column;
@@ -250,7 +297,6 @@ a{ color: inherit; }
 }
 .bulletin-caption-text{ margin: 0 0 9px; font-weight: 500; line-height: 1.5; }
 .bulletin-caption-text:last-child{ margin-bottom: 0; }
-.bulletin-preview{ margin: 16px 0 0; color: var(--ink-soft); font-size: 0.94rem; line-height: 1.6; }
 .bulletin-details{ margin-top: 15px; }
 .bulletin-details summary{
   width: fit-content;
@@ -1045,6 +1091,8 @@ a{ color: inherit; }
   .card-grid{ gap: 16px; }
   .bulletin-grid{ grid-template-columns: 1fr; gap: 16px; }
   .bulletin-card{ padding: 22px 20px; }
+  .featured-bulletin-card{ padding: 25px 22px; }
+  .bulletin-cafe-mark{ font-size: 1.35rem; }
   .bulletin-status{ margin-bottom: 28px; font-size: 0.72rem; }
   .site-nav{ display:none; }
   .header-inner{ justify-content: space-between; }

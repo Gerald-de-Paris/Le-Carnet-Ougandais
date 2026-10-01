@@ -1483,17 +1483,20 @@ function makeBulletinParagraphs(text, className) {
 
 function initBulletins() {
   const grid = document.getElementById("bulletinGrid");
+  const featured = document.getElementById("featuredBulletin");
   const status = document.getElementById("bulletinStatus");
-  if (!grid || !status || !bulletins.length) return;
+  const archive = document.getElementById("bulletinArchive");
+  const archiveToggle = document.getElementById("bulletinArchiveToggle");
+  if (!grid || !featured || !status || !archive || !archiveToggle || !bulletins.length) return;
 
   const issues = [...bulletins].sort((a, b) => b.bulletin_number - a.bulletin_number);
   const latest = issues[0].bulletin_number;
   status.textContent = `Latest issue · No. ${latest} · ${issues.length} issues published`;
 
   const dateFormat = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" });
-  issues.forEach((issue) => {
+  function createBulletinCard(issue, isFeatured = false) {
     const card = document.createElement("article");
-    card.className = "bulletin-card";
+    card.className = isFeatured ? "featured-bulletin-card" : "bulletin-card";
 
     const meta = document.createElement("div");
     meta.className = "bulletin-meta";
@@ -1510,36 +1513,43 @@ function initBulletins() {
     caption.className = "bulletin-caption";
     caption.appendChild(makeBulletinParagraphs(issue.caption, "bulletin-caption-text"));
 
-    const preview = document.createElement("p");
-    preview.className = "bulletin-preview";
-    preview.textContent = `${issue.body.replace(/\s+/g, " ").trim().slice(0, 155)}…`;
-
     const details = document.createElement("details");
     details.className = "bulletin-details";
     const summary = document.createElement("summary");
-    summary.textContent = "Read more →";
+    summary.textContent = isFeatured ? "Read the latest →" : "Read more →";
     const body = document.createElement("div");
     body.className = "bulletin-body";
     body.appendChild(makeBulletinParagraphs(issue.body, "bulletin-body-text"));
     details.append(summary, body);
-    card.append(meta, title, caption, preview, details);
-    grid.appendChild(card);
-  });
-
-  if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    grid.querySelectorAll(".bulletin-card").forEach((card) => card.classList.add("is-visible"));
-    return;
+    card.append(meta, title, caption, details);
+    return card;
   }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  grid.querySelectorAll(".bulletin-card").forEach((card) => observer.observe(card));
+  featured.appendChild(createBulletinCard(issues[0], true));
+  issues.forEach((issue) => {
+    grid.appendChild(createBulletinCard(issue));
+  });
+
+  let revealArchiveCards = () => grid.querySelectorAll(".bulletin-card").forEach((card) => card.classList.add("is-visible"));
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealArchiveCards = () => grid.querySelectorAll(".bulletin-card").forEach((card) => observer.observe(card));
+  }
+
+  archiveToggle.addEventListener("click", () => {
+    const willOpen = archive.hidden;
+    archive.hidden = !willOpen;
+    archiveToggle.setAttribute("aria-expanded", String(willOpen));
+    archiveToggle.textContent = willOpen ? "Hide bulletin archive ↑" : "Browse all bulletins →";
+    if (willOpen) revealArchiveCards();
+  });
 }
 
 document.addEventListener("DOMContentLoaded", initBulletins);
