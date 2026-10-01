@@ -1101,3 +1101,6 @@ a{ color: inherit; }
   .tapif-inner{ flex-direction: column; text-align:center; }
   .track-capstone{ padding: 24px 22px; }
 }
+
+/* Story text is switched in place by the existing language toggle; do not show a second translation beneath it. */
+.translation-reveal { display: none; }
