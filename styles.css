@@ -181,6 +181,97 @@ a{ color: inherit; }
 }
 
 /* ============================================
+   LE BAGUETTE BULLETIN
+   ============================================ */
+.section--bulletin{
+  background: #f8efdf;
+  border-top: 1px solid rgba(151,56,30,0.12);
+  border-bottom: 1px solid rgba(151,56,30,0.12);
+}
+.bulletin-eyebrow{ color: #8c332b; }
+.bulletin-title{
+  color: #742d2a;
+  font-family: Georgia, "Iowan Old Style", serif;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+.bulletin-lede{ max-width: 66ch; margin-bottom: 18px; }
+.bulletin-status{
+  display: inline-flex;
+  margin: 0 0 36px;
+  padding: 7px 12px;
+  border: 1px solid rgba(116,45,42,0.25);
+  border-radius: 999px;
+  color: #742d2a;
+  background: rgba(255,250,240,0.72);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
+.bulletin-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.bulletin-card{
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 26px;
+  background: #fffaf0;
+  border: 1px solid rgba(116,45,42,0.18);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(84,40,30,0.08), 0 1px 2px rgba(84,40,30,0.08);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 420ms ease, transform 420ms ease, box-shadow 220ms ease;
+}
+.bulletin-card.is-visible{ opacity: 1; transform: translateY(0); }
+.bulletin-card:hover{ box-shadow: 0 14px 30px rgba(84,40,30,0.12), 0 2px 5px rgba(84,40,30,0.08); }
+.bulletin-meta{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #8c332b;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.bulletin-meta span{ font-weight: 600; }
+.bulletin-meta time{ color: var(--ink-soft); text-transform: none; letter-spacing: 0; }
+.bulletin-card h3{
+  margin: 17px 0 12px;
+  color: #742d2a;
+  font-family: Georgia, "Iowan Old Style", serif;
+  font-size: clamp(1.45rem, 2.3vw, 1.9rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+.bulletin-caption-text{ margin: 0 0 9px; font-weight: 500; line-height: 1.5; }
+.bulletin-caption-text:last-child{ margin-bottom: 0; }
+.bulletin-preview{ margin: 16px 0 0; color: var(--ink-soft); font-size: 0.94rem; line-height: 1.6; }
+.bulletin-details{ margin-top: 15px; }
+.bulletin-details summary{
+  width: fit-content;
+  cursor: pointer;
+  color: #8c332b;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  list-style: none;
+}
+.bulletin-details summary::-webkit-details-marker{ display: none; }
+.bulletin-details summary:hover{ color: var(--laterite-deep); }
+.bulletin-body{
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(116,45,42,0.15);
+}
+.bulletin-body-text{ margin: 0 0 13px; color: var(--ink-soft); font-size: 0.96rem; line-height: 1.65; }
+.bulletin-body-text:last-child{ margin-bottom: 0; }
+
+/* ============================================
    LESSON CARDS
    ============================================ */
 .card-grid{
@@ -952,6 +1043,9 @@ a{ color: inherit; }
   .hero-actions{ gap: 12px; }
   .btn{ padding: 12px 18px; }
   .card-grid{ gap: 16px; }
+  .bulletin-grid{ grid-template-columns: 1fr; gap: 16px; }
+  .bulletin-card{ padding: 22px 20px; }
+  .bulletin-status{ margin-bottom: 28px; font-size: 0.72rem; }
   .site-nav{ display:none; }
   .header-inner{ justify-content: space-between; }
   .about-inner{ grid-template-columns: 1fr; text-align:center; }
