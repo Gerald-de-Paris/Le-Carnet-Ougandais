@@ -27,32 +27,40 @@ const translations = {
     en: "A place to learn and share French, simply and without taking ourselves too seriously."
   },
 
-  track1_title: { fr: "Sound & Survival", en: "Sound & Survival" },
-  track1_desc: { fr: "Prononciation, salutations, impératif, négation, questions.", en: "Pronunciation, greetings, the imperative, negation, questions." },
+  track1_title: { fr: "Fondations A1", en: "A1 Foundation" },
+  track1_desc: { fr: "Sons, salutations, présentations, questions simples et stratégies pour communiquer.", en: "Sounds, greetings, introductions, simple questions, and communication repair." },
   track1_progress: { fr: "5 / 5 leçons disponibles", en: "5 / 5 lessons available" },
 
-  track2_title: { fr: "Core Grammar", en: "Core Grammar" },
+  track2_title: { fr: "Passage A1 → A2", en: "A1 → A2 Transition" },
   track2_desc: { fr: "Articles, être/avoir, présent, nombres, heure, futur proche, comparatifs.", en: "Articles, être/avoir, present tense, numbers, time, near future, comparatives." },
   track2_progress: { fr: "8 / 8 leçons disponibles", en: "8 / 8 lessons available" },
 
-  track3_title: { fr: "Real Communication", en: "Real Communication" },
-  track3_desc: { fr: "Communication A2 : négations, pronoms, questions, routines, verbes clés et réponses naturelles.", en: "A2 communication: negatives, pronouns, questions, routines, key verbs, and natural short responses." },
+  track3_title: { fr: "Communication A2", en: "A2 Communication" },
+  track3_desc: { fr: "Négations, pronoms, routines, questions développées, comparaisons et réponses naturelles.", en: "Negatives, pronouns, routines, developed questions, comparisons, and natural responses." },
   track3_progress: { fr: "10 leçons disponibles", en: "10 lessons available" },
 
-  track4_title: { fr: "Past, Future & Fluency", en: "Past, Future & Fluency" },
+  track4_title: { fr: "Passage A2 → B1", en: "A2 → B1 Bridge" },
   track4_desc: { fr: "Le passé composé (avoir & être) — imparfait, futur, conditionnel à venir.", en: "The passé composé (avoir & être) — imperfect, future, conditional coming next." },
   track4_progress: { fr: "11 leçons disponibles", en: "11 lessons available" },
 
-  track5_title: { fr: "Real-Life Situations", en: "Real-Life Situations" },
+  track5_title: { fr: "Communiquer et argumenter", en: "Communicate and argue" },
   track5_desc: { fr: "Aéroport, hôtel, restaurant, achats, santé, petites conversations.", en: "Airport, hotel, restaurant, shopping, health, small talk." },
 
-  track5_title: { fr: "Real-Life Situations", en: "Real-Life Situations" },
-  track5_desc: { fr: "Le voyage de Kato vers la France : aéroport, taxi, restaurant, médecin.", en: "Kato's journey to France: airport, taxi, restaurant, doctor." },
+  track5_title: { fr: "Communiquer et argumenter", en: "Communicate and argue" },
+  track5_desc: { fr: "Opinions, récits, comparaisons, solutions et discussions du quotidien.", en: "Opinions, stories, comparisons, solutions, and everyday discussions." },
   track5_progress: { fr: "6 leçons disponibles", en: "6 lessons available" },
 
-  track6_title: { fr: "Reading for Confidence", en: "Reading for Confidence" },
-  track6_desc: { fr: "Six histoires originales, en Ouganda, pour lire avec plaisir.", en: "Six original stories, set in Uganda, to enjoy reading." },
+  track6_title: { fr: "Français autonome", en: "Independent French" },
+  track6_desc: { fr: "Argumenter, reformuler, nuancer et analyser des idées complexes.", en: "Argue, reformulate, qualify, and analyse complex ideas." },
   track6_progress: { fr: "6 histoires disponibles", en: "6 stories available" },
+
+
+  track7_title: { fr: "Histoires vivantes", en: "Living Stories" },
+  track7_desc: { fr: "Des récits pour imaginer, ressentir et répondre en français.", en: "Stories for imagining, experiencing, and responding in French." },
+  track7_progress: { fr: "6 histoires disponibles", en: "6 stories available" },
+  track8_title: { fr: "Lire, comprendre, raconter", en: "Read, understand, retell" },
+  track8_desc: { fr: "Lire des récits et en discuter avec précision.", en: "Read stories and discuss them precisely." },
+  track8_progress: { fr: "6 récits disponibles", en: "6 stories available" },
 
   track_link: { fr: "Ouvrir le track →", en: "Open track →" },
   track_soon: { fr: "Bientôt disponible", en: "Coming soon" },
@@ -335,7 +343,7 @@ const translations = {
   t6_6_tryit: { fr: "Quelle est votre fleur ou couleur préférée ? Écrivez une phrase pour l'expliquer.", en: "What's your favorite flower or color? Write a sentence explaining why." },
 
   // ================= TRACK 3 =================
-  t3_hero_eyebrow: { fr: "Track 3 · A2 · 10 leçons", en: "Track 3 · A2 · 10 lessons" },
+  t3_hero_eyebrow: { fr: "Track 3 · 10 leçons", en: "Track 3 · 10 lessons" },
   t3_hero_title: { fr: "Real Communication", en: "Real Communication" },
   t3_hero_desc: {
     fr: "Communication A2 : négations, pronoms, questions, routines, verbes clés et réponses naturelles.",
@@ -898,6 +906,11 @@ function splitIntoConceptCards(el, text) {
 function applyLanguage(lang) {
   document.documentElement.setAttribute("data-lang", lang);
   document.documentElement.setAttribute("lang", lang);
+
+  // Page-specific bilingual copy. It keeps lesson French and English support separate.
+  document.querySelectorAll("[data-fr][data-en]").forEach((el) => {
+    el.textContent = el.getAttribute(`data-${lang}`);
+  });
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
@@ -1584,3 +1597,29 @@ function initSiteLock() {
 }
 
 document.addEventListener("DOMContentLoaded", initSiteLock);
+
+// Story audio uses the French story text only. Translation panels are never included.
+function initStoryListenButtons() {
+  if (!("speechSynthesis" in window)) return;
+  document.querySelectorAll(".story-block, .dialogue-text").forEach((block) => {
+    if (block.querySelector(":scope > .story-listen-btn")) return;
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "listen-btn story-listen-btn";
+    button.textContent = "🔊 Écouter l’histoire";
+    button.addEventListener("click", () => {
+      window.speechSynthesis.cancel();
+      const key = block.getAttribute("data-i18n");
+      const frenchText = block.dataset.audioFr || (key && translations[key]?.fr) || block.textContent.trim();
+      block.dataset.audioFr = frenchText;
+      const utterance = new SpeechSynthesisUtterance(frenchText);
+      utterance.lang = "fr-FR";
+      utterance.rate = 0.9;
+      const voice = cachedVoices.find((item) => item.lang?.toLowerCase().startsWith("fr"));
+      if (voice) utterance.voice = voice;
+      window.speechSynthesis.speak(utterance);
+    });
+    block.prepend(button);
+  });
+}
+document.addEventListener("DOMContentLoaded", initStoryListenButtons);
