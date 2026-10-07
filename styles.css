@@ -1102,5 +1102,56 @@ a{ color: inherit; }
   .track-capstone{ padding: 24px 22px; }
 }
 
-/* Story text is switched in place by the existing language toggle; do not show a second translation beneath it. */
-.translation-reveal { display: none; }
+
+/* Focused story/audio presentation for Tracks 7–8 */
+.story-audio, .track-audio-wrap{
+  display:flex;
+  justify-content:flex-start;
+  margin: 0 0 18px;
+}
+.story-listen-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  min-height:44px;
+  padding:10px 16px;
+  border:1px solid rgba(43,35,32,0.18);
+  border-radius:999px;
+  background:var(--parchment-deep);
+  color:var(--ink);
+  font-family:var(--mono);
+  font-size:.82rem;
+  cursor:pointer;
+  box-shadow:var(--shadow-soft);
+  transition:background .15s ease, transform .15s ease;
+}
+.story-listen-btn:hover{background:var(--gold);transform:translateY(-1px)}
+.story-listen-btn.is-playing{background:var(--leaf);color:var(--cream)}
+.translation-reveal{display:block}
+.translation-reveal summary{
+  cursor:pointer;
+  min-height:44px;
+  display:flex;
+  align-items:center;
+}
+.story-nav{
+  max-width:760px;
+  margin:-8px auto 28px;
+  padding:0 28px;
+  display:flex;
+  justify-content:flex-end;
+}
+.story-nav a,.story-nav-end{
+  font-family:var(--mono);
+  font-size:.82rem;
+  color:var(--laterite);
+  text-decoration:none;
+}
+.story-nav a:hover{text-decoration:underline}
+@media(max-width:760px){
+  .story-audio,.track-audio-wrap{margin-bottom:16px}
+  .story-listen-btn{width:100%;min-height:46px}
+  .story-nav{padding:0 20px}
+  .story-nav a,.story-nav-end{font-size:.78rem}
+}
