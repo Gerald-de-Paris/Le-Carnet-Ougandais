@@ -945,6 +945,7 @@ function applyLanguage(lang) {
   localStorage.setItem("site-lang", lang);
 
   if (typeof initListenButtons === "function") initListenButtons();
+  if (typeof initStoryAudio === "function") initStoryAudio();
 }
 
 function wireTrack3Translations() {
@@ -1077,6 +1078,65 @@ if ("speechSynthesis" in window) {
 }
 
 document.addEventListener("DOMContentLoaded", initListenButtons);
+function initStoryAudio() {
+  if (!("speechSynthesis" in window)) return;
+
+  document.querySelectorAll("[data-story-audio]").forEach((wrap) => {
+    const story = wrap.previousElementSibling;
+    if (!story || !story.classList.contains("story-block")) return;
+    const button = wrap.querySelector("button");
+    if (!button || button.dataset.bound === "true") return;
+    button.dataset.bound = "true";
+
+    button.addEventListener("click", () => {
+      const frenchText = Array.from(story.querySelectorAll("p"))
+        .map((p) => p.textContent.trim())
+        .filter(Boolean)
+        .join(" ");
+
+      if (!frenchText) return;
+      if (window.speechSynthesis.speaking) window.speechSynthesis.cancel();
+
+      const utterance = new SpeechSynthesisUtterance(frenchText);
+      utterance.lang = "fr-FR";
+      utterance.rate = 0.9;
+      const frenchVoice = cachedVoices.find((v) => v.lang && v.lang.toLowerCase().startsWith("fr"));
+      if (frenchVoice) utterance.voice = frenchVoice;
+
+      button.classList.add("is-playing");
+      utterance.onend = () => button.classList.remove("is-playing");
+      utterance.onerror = () => button.classList.remove("is-playing");
+      window.speechSynthesis.speak(utterance);
+    });
+  });
+
+  document.querySelectorAll("[data-track-story-audio]").forEach((button) => {
+    if (button.dataset.bound === "true") return;
+    button.dataset.bound = "true";
+    button.addEventListener("click", () => {
+      const lesson = button.closest(".lesson-detail");
+      if (!lesson) return;
+      const frenchText = Array.from(lesson.querySelectorAll(".dialogue-text p"))
+        .map((p) => p.textContent.trim())
+        .filter(Boolean)
+        .join(" ");
+      if (!frenchText) return;
+      if (window.speechSynthesis.speaking) window.speechSynthesis.cancel();
+
+      const utterance = new SpeechSynthesisUtterance(frenchText);
+      utterance.lang = "fr-FR";
+      utterance.rate = 0.9;
+      const frenchVoice = cachedVoices.find((v) => v.lang && v.lang.toLowerCase().startsWith("fr"));
+      if (frenchVoice) utterance.voice = frenchVoice;
+
+      button.classList.add("is-playing");
+      utterance.onend = () => button.classList.remove("is-playing");
+      utterance.onerror = () => button.classList.remove("is-playing");
+      window.speechSynthesis.speak(utterance);
+    });
+  });
+}
+
 
 // ============================================
 // CULTURE CATEGORIES — five doors into Uganda, each with
