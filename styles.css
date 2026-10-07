@@ -1141,6 +1141,9 @@ a{ color: inherit; }
   padding:0 28px;
   display:flex;
   justify-content:flex-end;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
 }
 .story-nav a,.story-nav-end{
   font-family:var(--mono);
