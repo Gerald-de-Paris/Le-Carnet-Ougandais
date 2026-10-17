@@ -946,6 +946,9 @@ function applyLanguage(lang) {
 
   if (typeof initListenButtons === "function") initListenButtons();
   if (typeof initStoryAudio === "function") initStoryAudio();
+
+  // Let open, stateful components refresh their language-dependent content immediately.
+  document.dispatchEvent(new CustomEvent("site-language-change", { detail: { lang } }));
 }
 
 function wireTrack3Translations() {
@@ -1616,12 +1619,14 @@ Object.entries(cultureStoryAdditions).forEach(([category, stories]) => {
 // CULTURE MODAL — category cards open a modal with that
 // category's stories and an 8-slide photo carousel.
 // ============================================
-function buildCarousel(container, catKey) {
+function buildCarousel(container, catKey, lang = (document.documentElement.getAttribute("data-lang") || "fr")) {
+  const startingIndex = Number(container.dataset.carouselIndex || 0);
   container.innerHTML = "";
   const existingCaption = container.nextElementSibling;
   if (existingCaption && existingCaption.classList.contains("carousel-caption")) {
     existingCaption.remove();
   }
+
   const track = document.createElement("div");
   track.className = "carousel-track";
   for (let i = 1; i <= 8; i++) {
@@ -1633,38 +1638,41 @@ function buildCarousel(container, catKey) {
     img.style.width = "100%";
     img.style.height = "100%";
     img.style.objectFit = "cover";
-    img.src = `images/${catKey}-${i}.jpg`;
+    img.src = "images/" + catKey + "-" + i + ".jpg";
     img.onerror = function () {
-      // No photo uploaded yet for this slot — fall back to the placeholder.
+      // No photo uploaded yet for this slot — fall back to the existing placeholder.
       slide.innerHTML = "";
-      slide.textContent = `Photo ${i} / 8`;
+      slide.textContent = (lang === "fr" ? "Photo " : "Photo ") + i + " / 8";
     };
     slide.appendChild(img);
     track.appendChild(slide);
   }
+
   const prevBtn = document.createElement("button");
   prevBtn.className = "carousel-nav carousel-prev";
-  prevBtn.setAttribute("aria-label", "Photo précédente");
+  prevBtn.setAttribute("aria-label", lang === "fr" ? "Photo précédente" : "Previous photo");
   prevBtn.innerHTML = "‹";
   const nextBtn = document.createElement("button");
   nextBtn.className = "carousel-nav carousel-next";
-  nextBtn.setAttribute("aria-label", "Photo suivante");
+  nextBtn.setAttribute("aria-label", lang === "fr" ? "Photo suivante" : "Next photo");
   nextBtn.innerHTML = "›";
+
   const dots = document.createElement("div");
   dots.className = "carousel-dots";
   const dotEls = [];
   for (let i = 0; i < 8; i++) {
     const dot = document.createElement("button");
-    dot.className = "carousel-dot" + (i === 0 ? " is-active" : "");
-    dot.setAttribute("aria-label", `Aller à la photo ${i + 1}`);
+    dot.className = "carousel-dot" + (i === startingIndex ? " is-active" : "");
+    dot.setAttribute("aria-label", (lang === "fr" ? "Aller à la photo " : "Go to photo ") + (i + 1));
     dots.appendChild(dot);
     dotEls.push(dot);
   }
 
-  let index = 0;
+  let index = (startingIndex + 8) % 8;
   function goTo(i) {
     index = (i + 8) % 8;
-    track.style.transform = `translateX(-${index * 100}%)`;
+    container.dataset.carouselIndex = String(index);
+    track.style.transform = "translateX(-" + index * 100 + "%)";
     dotEls.forEach((d, di) => d.classList.toggle("is-active", di === index));
   }
   prevBtn.addEventListener("click", () => goTo(index - 1));
@@ -1675,54 +1683,93 @@ function buildCarousel(container, catKey) {
   container.appendChild(prevBtn);
   container.appendChild(nextBtn);
   container.appendChild(dots);
+  goTo(index);
 
   const caption = document.createElement("p");
   caption.className = "carousel-caption";
-  caption.textContent = "Ajoutez une légende ici";
+  caption.textContent = lang === "fr" ? "Ajoutez une légende ici" : "Add a caption here";
   container.insertAdjacentElement("afterend", caption);
 }
 
 function initCultureModal() {
   const modal = document.getElementById("cultureModal");
-  if (!modal) return;
+  if (!modal || modal.dataset.cultureModalInitialized === "true") return;
+  modal.dataset.cultureModalInitialized = "true";
 
   const closeBtn = document.getElementById("cultureModalClose");
   const titleEl = document.getElementById("cultureModalTitle");
   const storiesEl = document.getElementById("cultureModalStories");
   const carouselEl = document.getElementById("cultureModalCarousel");
+  let activeCategoryKey = null;
 
-  function openModal(catKey) {
-    const lang = document.documentElement.getAttribute("data-lang") || "fr";
+  function escapeCultureText(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function stopCultureAudio() {
+    if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+    storiesEl.querySelectorAll(".culture-story-listen").forEach((button) => {
+      button.classList.remove("is-playing");
+    });
+  }
+
+  function renderCultureStories(catKey, preserveOpenTranslations) {
     const cat = cultureCategories[catKey];
     if (!cat) return;
 
-    titleEl.textContent = cat.name[lang];
+    const lang = document.documentElement.getAttribute("data-lang") === "en" ? "en" : "fr";
+    const otherLang = lang === "fr" ? "en" : "fr";
+    const openTranslationIndices = preserveOpenTranslations
+      ? new Set(Array.from(storiesEl.querySelectorAll("details.translation-reveal[open]"))
+          .map((details) => details.getAttribute("data-story-index")))
+      : new Set();
+
+    // Avoid a detached speaker button appearing to play after a live language switch.
+    stopCultureAudio();
+    titleEl.textContent = cat.name[lang] || cat.name.fr;
+
+    const photoFallback = lang === "fr" ? "Ajoutez une photo ici" : "Add a photo here";
+    const listenLabel = lang === "fr" ? "Écouter l'histoire en français" : "Listen to the story in French";
+    const translationLabel = lang === "fr" ? "Lire en anglais ▼" : "Read in French ▼";
+
     storiesEl.innerHTML = cat.stories.map((story, storyIndex) => {
-      // Keep French as the primary reading text regardless of the global UI language.
-      const frenchParagraphs = story.fr.split("\n\n");
-      const englishParagraphs = story.en.split("\n\n");
-      let bodyHtml = `<p>${frenchParagraphs[0]}</p>`;
-      if (frenchParagraphs.length > 1) {
-        const imgSrc = `images/${catKey}-story${storyIndex + 1}.jpg`;
-        bodyHtml += `<div class="culture-story-photo" data-fallback="Ajoutez une photo ici"><img src="${imgSrc}" alt="" style="width:100%;height:100%;object-fit:cover;object-position:top;" onerror="this.parentElement.textContent=this.parentElement.dataset.fallback;"></div>`;
-        bodyHtml += frenchParagraphs.slice(1).map((p) => `<p>${p}</p>`).join("");
+      const mainParagraphs = String(story[lang] || story.fr || "").split(/\n\n+/).map((p) => p.trim()).filter(Boolean);
+      const otherParagraphs = String(story[otherLang] || story.fr || "").split(/\n\n+/).map((p) => p.trim()).filter(Boolean);
+      const title = (story.title && (story.title[lang] || story.title.fr)) || "";
+      let bodyHtml = "";
+
+      if (mainParagraphs.length) {
+        bodyHtml += "<p>" + escapeCultureText(mainParagraphs[0]) + "</p>";
       }
+      if (mainParagraphs.length > 1) {
+        const imgSrc = "images/" + catKey + "-story" + (storyIndex + 1) + ".jpg";
+        bodyHtml += '<div class="culture-story-photo" data-fallback="' + escapeCultureText(photoFallback) + '"><img src="' + imgSrc + '" alt="" style="width:100%;height:100%;object-fit:cover;object-position:top;" onerror="this.parentElement.textContent=this.parentElement.dataset.fallback;"></div>';
+        bodyHtml += mainParagraphs.slice(1).map((p) => "<p>" + escapeCultureText(p) + "</p>").join("");
+      }
+
       const listenButton = ("speechSynthesis" in window && "SpeechSynthesisUtterance" in window)
-        ? ` <button type="button" class="listen-btn culture-story-listen" aria-label="Écouter l'histoire en français" title="Écouter l'histoire en français">🔊</button>`
+        ? ' <button type="button" class="listen-btn culture-story-listen" data-story-index="' + storyIndex + '" aria-label="' + escapeCultureText(listenLabel) + '" title="' + escapeCultureText(listenLabel) + '">🔊</button>'
         : "";
-      const englishHtml = `<details class="story-answers translation-reveal"><summary>English version ▼</summary><div class="translation-text">${englishParagraphs.map((p) => `<p>${p}</p>`).join("")}</div></details>`;
-      return `<div class="culture-story"><h4>${story.title.fr}${listenButton}</h4>${bodyHtml}${englishHtml}</div>`;
+      const detailsOpen = openTranslationIndices.has(String(storyIndex)) ? " open" : "";
+      const translationHtml = '<details class="story-answers translation-reveal" data-story-index="' + storyIndex + '"' + detailsOpen + '><summary>' + translationLabel + '</summary><div class="translation-text" lang="' + otherLang + '">' +
+        otherParagraphs.map((p) => "<p>" + escapeCultureText(p) + "</p>").join("") +
+        "</div></details>";
+
+      return '<div class="culture-story" lang="' + lang + '"><h4>' + escapeCultureText(title) + listenButton + '</h4>' + bodyHtml + translationHtml + '</div>';
     }).join("");
 
-    // Audio always reads the complete French source text, never the translation or UI labels.
-    storiesEl.querySelectorAll(".culture-story-listen").forEach((button, storyIndex) => {
+    storiesEl.querySelectorAll(".culture-story-listen").forEach((button) => {
       button.addEventListener("click", () => {
-        const frenchText = (cat.stories[storyIndex]?.fr || "").replace(/\s+/g, " ").trim();
+        const storyIndex = Number(button.getAttribute("data-story-index"));
+        const frenchText = String(cat.stories[storyIndex] && cat.stories[storyIndex].fr || "").replace(/\s+/g, " ").trim();
         if (!frenchText || !("speechSynthesis" in window) || typeof SpeechSynthesisUtterance === "undefined") return;
 
-        window.speechSynthesis.cancel();
-        storiesEl.querySelectorAll(".culture-story-listen").forEach((otherButton) => otherButton.classList.remove("is-playing"));
-
+        stopCultureAudio();
         const utterance = new SpeechSynthesisUtterance(frenchText);
         utterance.lang = "fr-FR";
         utterance.rate = 0.9;
@@ -1736,18 +1783,36 @@ function initCultureModal() {
       });
     });
 
-    buildCarousel(carouselEl, catKey);
+    buildCarousel(carouselEl, catKey, lang);
+  }
+
+  function openModal(catKey) {
+    const cat = cultureCategories[catKey];
+    if (!cat) return;
+    activeCategoryKey = catKey;
+    // Match the original carousel behaviour on a newly opened category;
+    // language changes within that open category keep the current slide.
+    carouselEl.dataset.carouselIndex = "0";
+    renderCultureStories(catKey, false);
     modal.hidden = false;
   }
 
   function closeModal() {
-    if ("speechSynthesis" in window) window.speechSynthesis.cancel();
-    storiesEl.querySelectorAll(".culture-story-listen").forEach((button) => button.classList.remove("is-playing"));
+    stopCultureAudio();
     modal.hidden = true;
+    activeCategoryKey = null;
   }
 
   document.querySelectorAll(".category-card").forEach((card) => {
     card.addEventListener("click", () => openModal(card.getAttribute("data-category")));
+  });
+
+  // The global toggle dispatches this event after updating data-lang.
+  // Refresh only the open Culture modal, preserving which translations were expanded.
+  document.addEventListener("site-language-change", () => {
+    if (!modal.hidden && activeCategoryKey) {
+      renderCultureStories(activeCategoryKey, true);
+    }
   });
 
   closeBtn.addEventListener("click", closeModal);
@@ -1760,6 +1825,7 @@ function initCultureModal() {
 }
 
 document.addEventListener("DOMContentLoaded", initCultureModal);
+
 
 // ============================================
 // LE BAGUETTE BULLETIN
