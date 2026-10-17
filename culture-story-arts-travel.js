@@ -1,8 +1,18 @@
 // Focused bilingual additions and enrichment for the Arts and Travel Culture categories.
 // Existing image slots stay tied to each story's original array position.
 // New story photos, when manually uploaded, use images/<category>-story<N>.jpg.
-// Research references used for factual framing: UNESCO Intangible Cultural Heritage (Ugandan barkcloth; Busoga Bigwala),
-// Makerere University / MTSIFA, Ndere Troupe, Uganda Wildlife Authority, and Uganda Tourism Board.
+// Research references used for factual framing:
+// - UNESCO: Barkcloth making in Uganda and Bigwala (Busoga gourd trumpets)
+//   https://ich.unesco.org/en/RL/barkcloth-making-in-uganda-00139
+//   https://ich.unesco.org/en/USL/bigwala-gourd-trumpet-music-and-dance-of-the-busoga-kingdom-in-uganda-00749
+// - Makerere University: MTSIFA history and opening in 1937
+//   https://cedat.mak.ac.ug/mtsifa/ | https://timeline.mak.ac.ug/events/event-10
+// - Ndere Troupe: organisational history
+//   https://ndere.com/about-us/
+// - Uganda Wildlife Authority: Bwindi, Murchison Falls, Kidepo Valley and Kibale
+//   https://ugandawildlife.org/national-parks/
+// - Tourism Uganda: Jinja and Ssese Islands
+//   https://www.tourismuganda.org/cities/jinja/ | https://www.tourismuganda.org/places/ssese-islands/
 const cultureArtsTravelUpdates = [
 {
   "action": "replace",
