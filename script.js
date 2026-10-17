@@ -1790,6 +1790,9 @@ function initCultureModal() {
     const cat = cultureCategories[catKey];
     if (!cat) return;
     activeCategoryKey = catKey;
+    // Match the original carousel behaviour on a newly opened category;
+    // language changes within that open category keep the current slide.
+    carouselEl.dataset.carouselIndex = "0";
     renderCultureStories(catKey, false);
     modal.hidden = false;
   }
