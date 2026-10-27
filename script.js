@@ -990,10 +990,9 @@ function wireTrack3Translations() {
       if (key) heading.setAttribute("data-i18n", key);
     });
 
-    const referenceItems = lesson.querySelector(".lesson-body .lesson-examples")?.querySelectorAll(":scope > li") || [];
-    referenceItems.forEach((item, index) => {
-      if (index < 5) item.setAttribute("data-i18n", `${keyPrefix}_ex${index + 1}`);
-    });
+    // Keep the French examples in track-3.html paired with their own data-audio text.
+    // The older t3_*_ex* translations describe different examples and caused buttons to
+    // speak a different sentence from the one displayed. Do not translate these list items.
 
     const exercise = lesson.querySelector(".lesson-exercise");
     if (exercise) exercise.setAttribute("data-i18n", `${keyPrefix}_exercise`);
