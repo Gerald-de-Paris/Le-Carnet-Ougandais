@@ -1035,15 +1035,15 @@ document.addEventListener("copy", function (e) {
 // hear it read aloud. Uses the Web Speech API — no audio files needed.
 // Voice quality depends on the visitor's device/browser.
 // ============================================
+let activeLessonListenUtterance = null;
+
 function initListenButtons() {
   if (!("speechSynthesis" in window)) return;
 
   document.querySelectorAll(".lesson-examples li").forEach((li) => {
     if (li.querySelector(".listen-btn")) return;
 
-    // Prefer explicit French-only audio text. This keeps translations,
-    // notes, labels, and pronunciation guides out of the speech engine,
-    // even when the interface is switched to English.
+    // Always use the dedicated French utterance, never the translated interface text.
     const frenchPart = (li.dataset.audio || "").trim();
     if (!frenchPart) return;
 
@@ -1052,94 +1052,43 @@ function initListenButtons() {
     btn.setAttribute("aria-label", "Écouter la prononciation");
     btn.innerHTML = "🔊";
     btn.addEventListener("click", () => {
-      // Only cancel if something is actually mid-speech — cancelling
-      // unnecessarily before every click adds extra startup delay.
-      if (window.speechSynthesis.speaking) {
+      // Clear the previous state and cancel both active and queued speech before starting another item.
+      if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
         window.speechSynthesis.cancel();
       }
+      document.querySelectorAll(".lesson-examples .listen-btn.is-playing").forEach((activeBtn) => {
+        activeBtn.classList.remove("is-playing");
+      });
+
       const utterance = new SpeechSynthesisUtterance(frenchPart);
       utterance.lang = "fr-FR";
       utterance.rate = 0.9;
       const frenchVoice = cachedVoices.find((v) => v.lang && v.lang.toLowerCase().startsWith("fr"));
       if (frenchVoice) utterance.voice = frenchVoice;
+
+      activeLessonListenUtterance = utterance;
+      const clearPlayingState = () => {
+        // Ignore late end/error events from a cancelled utterance after another item has started.
+        if (activeLessonListenUtterance !== utterance) return;
+        activeLessonListenUtterance = null;
+        btn.classList.remove("is-playing");
+      };
+      utterance.onend = clearPlayingState;
+      utterance.onerror = clearPlayingState;
       btn.classList.add("is-playing");
-      utterance.onend = () => btn.classList.remove("is-playing");
       window.speechSynthesis.speak(utterance);
     });
     li.appendChild(btn);
   });
 }
 
-// Pre-load the voice list as soon as possible, instead of waiting for the
-// first click — this is what causes the noticeable delay on first play.
-let cachedVoices = [];
-if ("speechSynthesis" in window) {
-  cachedVoices = window.speechSynthesis.getVoices();
-  window.speechSynthesis.onvoiceschanged = () => {
-    cachedVoices = window.speechSynthesis.getVoices();
-  };
-}
-
-document.addEventListener("DOMContentLoaded", initListenButtons);
-function initStoryAudio() {
-  if (!("speechSynthesis" in window)) return;
-
-  document.querySelectorAll("[data-story-audio]").forEach((wrap) => {
-    const story = wrap.previousElementSibling;
-    if (!story || !story.classList.contains("story-block")) return;
-    const button = wrap.querySelector("button");
-    if (!button || button.dataset.bound === "true") return;
-    button.dataset.bound = "true";
-
-    button.addEventListener("click", () => {
-      const frenchText = Array.from(story.querySelectorAll("p"))
-        .map((p) => p.textContent.trim())
-        .filter(Boolean)
-        .join(" ");
-
-      if (!frenchText) return;
-      if (window.speechSynthesis.speaking) window.speechSynthesis.cancel();
-
-      const utterance = new SpeechSynthesisUtterance(frenchText);
-      utterance.lang = "fr-FR";
-      utterance.rate = 0.9;
-      const frenchVoice = cachedVoices.find((v) => v.lang && v.lang.toLowerCase().startsWith("fr"));
-      if (frenchVoice) utterance.voice = frenchVoice;
-
-      button.classList.add("is-playing");
-      utterance.onend = () => button.classList.remove("is-playing");
-      utterance.onerror = () => button.classList.remove("is-playing");
-      window.speechSynthesis.speak(utterance);
-    });
+window.addEventListener("pagehide", () => {
+  if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+  document.querySelectorAll(".lesson-examples .listen-btn.is-playing").forEach((btn) => {
+    btn.classList.remove("is-playing");
   });
-
-  document.querySelectorAll("[data-track-story-audio]").forEach((button) => {
-    if (button.dataset.bound === "true") return;
-    button.dataset.bound = "true";
-    button.addEventListener("click", () => {
-      const lesson = button.closest(".lesson-detail");
-      if (!lesson) return;
-      const frenchText = Array.from(lesson.querySelectorAll(".dialogue-text p"))
-        .map((p) => p.textContent.trim())
-        .filter(Boolean)
-        .join(" ");
-      if (!frenchText) return;
-      if (window.speechSynthesis.speaking) window.speechSynthesis.cancel();
-
-      const utterance = new SpeechSynthesisUtterance(frenchText);
-      utterance.lang = "fr-FR";
-      utterance.rate = 0.9;
-      const frenchVoice = cachedVoices.find((v) => v.lang && v.lang.toLowerCase().startsWith("fr"));
-      if (frenchVoice) utterance.voice = frenchVoice;
-
-      button.classList.add("is-playing");
-      utterance.onend = () => button.classList.remove("is-playing");
-      utterance.onerror = () => button.classList.remove("is-playing");
-      window.speechSynthesis.speak(utterance);
-    });
-  });
-}
-
+  activeLessonListenUtterance = null;
+});
 
 // ============================================
 // CULTURE CATEGORIES — five doors into Uganda, each with
