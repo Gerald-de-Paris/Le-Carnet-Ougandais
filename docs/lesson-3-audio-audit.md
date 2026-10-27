@@ -12,16 +12,17 @@
 
 - **Items inventoried:** 76.
 - **Sections covered:** 3.1–3.10 (all ten).
-- **Definite wrong-text mappings found by static source review:** 0.
-- **Playback issue found and corrected in follow-up:** the previous edit had accidentally removed the voice-list setup, the startup registration for example buttons, and the story-audio initializer. Those have now been restored, alongside pending-speech cancellation, error cleanup, and page-exit cancellation.
+- **Audio/display mismatch found:** the Track 3 language-toggle helper replaced the first five Quick Reference items in each section with older translation strings while leaving each item's `data-audio` unchanged. This made visible examples and spoken text disagree. The stale replacement is now removed so the authored French example and its own audio mapping remain together.
+- **Playback startup issue corrected:** restored the voice-list setup, the startup registration for example buttons, and the story-audio initializer. Pending-speech cancellation, error cleanup, and page-exit cancellation are also in place.
 - **Pronunciation/listening status:** not verified by listening. A source mapping and a JavaScript syntax check cannot establish that the installed browser voice sounds natural or that audio completed successfully on a device. Manual listening remains required for every item.
 
 ## Corrections made in `script.js`
 
 1. Restore the voice-list setup and register the example-button initializer on `DOMContentLoaded`, so speaker buttons are attached during page startup.
-2. Cancel both speaking and pending utterances before starting another example and clear any stale `is-playing` state.
-3. Clear the playing state on `end` and `error`, and log playback errors for diagnosis.
-4. Cancel speech and clear the visible playing state on `pagehide`; restore the French story-audio initializer used elsewhere on the site.
+2. Stop assigning older `t3_*_ex*` translations to the first five Quick Reference items. Those strings did not match the newer French examples or their `data-audio` values, causing the wrong sentence to play relative to what the learner saw.
+3. Cancel both speaking and pending utterances before starting another example and clear any stale `is-playing` state.
+4. Clear the playing state on `end` and `error`, and log playback errors for diagnosis.
+5. Cancel speech and clear the visible playing state on `pagehide`; restore the French story-audio initializer used elsewhere on the site.
 5. Preserve the dedicated French `data-audio` text and `fr-FR` locale; no French learning text or translations were rewritten.
 
 ## Section counts
@@ -131,6 +132,7 @@ Each row below records a source-level mapping check. The last column intentional
 - Lesson 3 inventory: 76 non-empty audio mappings across all ten sections.
 - Shared-helper regression inventory: Track 1 has 29 `data-audio` items and Track 2 has 55; all were non-empty. These pages share `initListenButtons()`; no content changes were made to either.
 - Source-level language check: Lesson 3's audio listener uses the explicit French mapping and sets `fr-FR`, independent of the interface toggle.
+- Translation integrity check: the language-toggle helper no longer overwrites those French example rows with stale text, so displayed French examples remain paired with their matching audio mappings.
 - Not performed: real-browser click-through, audible pronunciation verification, desktop/mobile interaction testing, console inspection, and verification of a deployed Vercel preview. The connected GitHub API does not provide a browser/audio listening environment.
 
 ## Remaining manual validation
