@@ -13,15 +13,15 @@
 - **Items inventoried:** 76.
 - **Sections covered:** 3.1–3.10 (all ten).
 - **Definite wrong-text mappings found by static source review:** 0.
-- **Shared playback-control issue found and corrected:** 1. The example-audio handler only cancelled active speech (`speaking`), not queued/pending speech; it also lacked an error handler to clear the active button state, and it did not explicitly cancel speech on page exit.
+- **Playback issue found and corrected in follow-up:** the previous edit had accidentally removed the voice-list setup, the startup registration for example buttons, and the story-audio initializer. Those have now been restored, alongside pending-speech cancellation, error cleanup, and page-exit cancellation.
 - **Pronunciation/listening status:** not verified by listening. A source mapping and a JavaScript syntax check cannot establish that the installed browser voice sounds natural or that audio completed successfully on a device. Manual listening remains required for every item.
 
 ## Corrections made in `script.js`
 
-1. Cancel both speaking and pending utterances before starting a new example, reducing the risk of queued or overlapping speech.
-2. Clear any previous `is-playing` UI state and use a current-utterance guard so late end/error events from a cancelled utterance do not clear the state for a newer item.
-3. Clear the playing state on both `end` and `error`.
-4. Cancel speech and clear the visible playing state on `pagehide`.
+1. Restore the voice-list setup and register the example-button initializer on `DOMContentLoaded`, so speaker buttons are attached during page startup.
+2. Cancel both speaking and pending utterances before starting another example and clear any stale `is-playing` state.
+3. Clear the playing state on `end` and `error`, and log playback errors for diagnosis.
+4. Cancel speech and clear the visible playing state on `pagehide`; restore the French story-audio initializer used elsewhere on the site.
 5. Preserve the dedicated French `data-audio` text and `fr-FR` locale; no French learning text or translations were rewritten.
 
 ## Section counts
@@ -126,7 +126,8 @@ Each row below records a source-level mapping check. The last column intentional
 ## Checks performed
 
 - JavaScript source compilation check on `script.js`: passed before changes.
-- JavaScript source compilation check on the revised `script.js`: passed in the editing environment before commit.
+- JavaScript source compilation check on the corrected `script.js`: passed in the editing environment before commit.
+- Confirmed the updated script contains `cachedVoices`, registers `initListenButtons` on `DOMContentLoaded`, and restores `initStoryAudio`.
 - Lesson 3 inventory: 76 non-empty audio mappings across all ten sections.
 - Shared-helper regression inventory: Track 1 has 29 `data-audio` items and Track 2 has 55; all were non-empty. These pages share `initListenButtons()`; no content changes were made to either.
 - Source-level language check: Lesson 3's audio listener uses the explicit French mapping and sets `fr-FR`, independent of the interface toggle.
