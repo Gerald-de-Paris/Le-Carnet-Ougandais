@@ -1035,24 +1035,32 @@ document.addEventListener("copy", function (e) {
 // hear it read aloud. Uses the Web Speech API — no audio files needed.
 // Voice quality depends on the visitor's device/browser.
 // ============================================
+// Keep the available voices up to date. Some browsers load voices asynchronously.
+let cachedVoices = [];
+if ("speechSynthesis" in window) {
+  cachedVoices = window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = () => {
+    cachedVoices = window.speechSynthesis.getVoices();
+  };
+}
+
 let activeLessonListenUtterance = null;
 
 function initListenButtons() {
-  if (!("speechSynthesis" in window)) return;
+  if (!("speechSynthesis" in window) || typeof SpeechSynthesisUtterance === "undefined") return;
 
   document.querySelectorAll(".lesson-examples li").forEach((li) => {
     if (li.querySelector(".listen-btn")) return;
-
-    // Always use the dedicated French utterance, never the translated interface text.
     const frenchPart = (li.dataset.audio || "").trim();
     if (!frenchPart) return;
 
     const btn = document.createElement("button");
+    btn.type = "button";
     btn.className = "listen-btn";
     btn.setAttribute("aria-label", "Écouter la prononciation");
+    btn.title = "Écouter en français";
     btn.innerHTML = "🔊";
     btn.addEventListener("click", () => {
-      // Clear the previous state and cancel both active and queued speech before starting another item.
       if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
         window.speechSynthesis.cancel();
       }
@@ -1068,15 +1076,23 @@ function initListenButtons() {
 
       activeLessonListenUtterance = utterance;
       const clearPlayingState = () => {
-        // Ignore late end/error events from a cancelled utterance after another item has started.
         if (activeLessonListenUtterance !== utterance) return;
         activeLessonListenUtterance = null;
         btn.classList.remove("is-playing");
       };
       utterance.onend = clearPlayingState;
-      utterance.onerror = clearPlayingState;
+      utterance.onerror = (event) => {
+        clearPlayingState();
+        console.warn("French audio playback failed:", event.error || "unknown speech error");
+      };
+
       btn.classList.add("is-playing");
-      window.speechSynthesis.speak(utterance);
+      try {
+        window.speechSynthesis.speak(utterance);
+      } catch (error) {
+        clearPlayingState();
+        console.error("Could not start French audio playback:", error);
+      }
     });
     li.appendChild(btn);
   });
@@ -1089,6 +1105,57 @@ window.addEventListener("pagehide", () => {
   });
   activeLessonListenUtterance = null;
 });
+
+document.addEventListener("DOMContentLoaded", initListenButtons);
+
+function initStoryAudio() {
+  if (!("speechSynthesis" in window) || typeof SpeechSynthesisUtterance === "undefined") return;
+
+  document.querySelectorAll("[data-story-audio]").forEach((wrap) => {
+    const story = wrap.previousElementSibling;
+    if (!story || !story.classList.contains("story-block")) return;
+    const button = wrap.querySelector("button");
+    if (!button || button.dataset.bound === "true") return;
+    button.dataset.bound = "true";
+    button.addEventListener("click", () => {
+      const frenchText = Array.from(story.querySelectorAll("p"))
+        .map((p) => p.textContent.trim()).filter(Boolean).join(" ");
+      if (!frenchText) return;
+      if (window.speechSynthesis.speaking || window.speechSynthesis.pending) window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(frenchText);
+      utterance.lang = "fr-FR";
+      utterance.rate = 0.9;
+      const frenchVoice = cachedVoices.find((v) => v.lang && v.lang.toLowerCase().startsWith("fr"));
+      if (frenchVoice) utterance.voice = frenchVoice;
+      button.classList.add("is-playing");
+      utterance.onend = () => button.classList.remove("is-playing");
+      utterance.onerror = () => button.classList.remove("is-playing");
+      window.speechSynthesis.speak(utterance);
+    });
+  });
+
+  document.querySelectorAll("[data-track-story-audio]").forEach((button) => {
+    if (button.dataset.bound === "true") return;
+    button.dataset.bound = "true";
+    button.addEventListener("click", () => {
+      const lesson = button.closest(".lesson-detail");
+      if (!lesson) return;
+      const frenchText = Array.from(lesson.querySelectorAll(".dialogue-text p"))
+        .map((p) => p.textContent.trim()).filter(Boolean).join(" ");
+      if (!frenchText) return;
+      if (window.speechSynthesis.speaking || window.speechSynthesis.pending) window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(frenchText);
+      utterance.lang = "fr-FR";
+      utterance.rate = 0.9;
+      const frenchVoice = cachedVoices.find((v) => v.lang && v.lang.toLowerCase().startsWith("fr"));
+      if (frenchVoice) utterance.voice = frenchVoice;
+      button.classList.add("is-playing");
+      utterance.onend = () => button.classList.remove("is-playing");
+      utterance.onerror = () => button.classList.remove("is-playing");
+      window.speechSynthesis.speak(utterance);
+    });
+  });
+}
 
 // ============================================
 // CULTURE CATEGORIES — five doors into Uganda, each with
