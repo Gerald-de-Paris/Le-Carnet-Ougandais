@@ -132,7 +132,7 @@ Each row below records a source-level mapping check. The last column intentional
 - Lesson 3 inventory: 76 non-empty audio mappings across all ten sections.
 - Shared-helper regression inventory: Track 1 has 29 `data-audio` items and Track 2 has 55; all were non-empty. These pages share `initListenButtons()`; no content changes were made to either.
 - Source-level language check: Lesson 3's audio listener uses the explicit French mapping and sets `fr-FR`, independent of the interface toggle.
-- Translation integrity check: the language-toggle helper no longer overwrites those French example rows with stale text, so displayed French examples remain paired with their matching audio mappings.
+- Translation integrity check: the language-toggle helper no longer overwrites French example rows with stale text. One remaining row had explanatory words interrupting the phrase being spoken; its displayed example has now been simplified so the visible French and spoken sentence match.
 - Not performed: real-browser click-through, audible pronunciation verification, desktop/mobile interaction testing, console inspection, and verification of a deployed Vercel preview. The connected GitHub API does not provide a browser/audio listening environment.
 
 ## Remaining manual validation
