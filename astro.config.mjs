@@ -1,2 +1,2 @@
 import { defineConfig } from "astro/config";
-export default defineConfig({ output:"static", build:{format:"file"}, trailingSlash:"never" });
+export default defineConfig({ output:"static", trailingSlash:"never" });
