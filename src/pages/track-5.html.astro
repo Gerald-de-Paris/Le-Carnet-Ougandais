@@ -1,0 +1,14 @@
+---
+import { readFileSync } from "node:fs";
+const source = readFileSync(new URL("../../legacy/track-5.html", import.meta.url), "utf8");
+const head = (source.match(/<head[^>]*>([\\s\\S]*?)<\\/head>/i)?.[1] ?? "").replace(/href=["']styles\\.css["']/g, 'href="/styles.css"');
+const body = (source.match(/<body[^>]*>([\\s\\S]*?)<\\/body>/i)?.[1] ?? "").replace(/<script\\b[^>]*>[\\s\\S]*?<\\/script>/gi, "");
+---
+<html lang="fr" data-lang="fr">
+<head><Fragment set:html={head} /></head>
+<body>
+<Fragment set:html={body} />
+<script is:inline src="/lock.js"></script>
+<script is:inline src="/script.js"></script>
+</body>
+</html>
