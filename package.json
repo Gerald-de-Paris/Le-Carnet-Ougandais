@@ -1,0 +1,15 @@
+{
+  "name": "le-carnet-ougandais",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "dev:learn": "npm --prefix apps/learn run dev",
+    "build:learn": "npm --prefix apps/learn run build"
+  },
+  "dependencies": {
+    "astro": "latest"
+  }
+}

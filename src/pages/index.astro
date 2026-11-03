@@ -1,0 +1,10 @@
+---
+import legacyHtml from "../../legacy/index.html?raw";
+const source = legacyHtml;
+const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
+const body = source.split("<body>")[1]?.split("</body>")[0] ?? "";
+---
+<html lang="fr" data-lang="fr">
+<head><Fragment set:html={head.replaceAll('href="styles.css"', 'href="/styles.css"')} /></head>
+<body><Fragment set:html={body} /></body>
+</html>
