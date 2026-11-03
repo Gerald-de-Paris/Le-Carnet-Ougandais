@@ -1247,3 +1247,23 @@ body{background:var(--parchment);color:var(--ink);font-size:16px;letter-spacing:
  .lesson-toc{gap:7px}.lesson-toc a{font-size:.68rem;padding:7px 9px}
  .lesson-hook{padding:15px 17px}.section-title{font-size:2.65rem}
 }
+
+
+/* Le Piège du Carnet — independent editorial feature */
+.section--piege{position:relative;overflow:hidden;background:#f1ece2;color:#17251f}
+.piege-inner{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(220px,.65fr);gap:clamp(28px,6vw,90px);align-items:center}
+.piege-copy{max-width:720px}
+.piege-copy .section-title{margin-bottom:18px}
+.piege-copy .section-title em{color:var(--laterite);font-weight:500}
+.piege-kicker{font-family:var(--display);font-size:clamp(1.45rem,3vw,2.15rem);font-style:italic;color:var(--leaf);margin:0 0 12px}
+.piege-description{max-width:62ch;line-height:1.8;color:var(--ink-soft);margin:16px 0 24px}
+.piege-coming{display:inline-flex;align-items:center;gap:10px;padding:11px 15px;border:1px solid rgba(35,75,58,.25);color:var(--leaf);font-family:var(--mono);font-size:.7rem;letter-spacing:.09em;text-transform:uppercase}
+.piege-aside{min-height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;background:#203d31;color:#f9f6ef;border-radius:4px;overflow:hidden}
+.piege-aside:before,.piege-aside:after{content:"";position:absolute;width:250px;height:250px;border:1px solid rgba(223,189,119,.35);border-radius:50%}
+.piege-aside:after{width:190px;height:190px}
+.piege-index,.piege-aside-note{z-index:1;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:#dfbd77}
+.piege-mark{z-index:1;font-family:var(--display);font-size:clamp(7rem,15vw,11rem);line-height:1;color:#f9f6ef;font-style:italic}
+.piege-aside-note{font-size:.58rem}
+.btn-piege{border:1px solid rgba(35,75,58,.35);color:var(--leaf);background:transparent}
+.btn-piege:hover{background:var(--leaf);color:var(--cream)}
+@media(max-width:760px){.piege-inner{grid-template-columns:1fr}.piege-aside{min-height:190px}.piege-mark{font-size:7rem}.btn-piege{margin-top:8px}}
