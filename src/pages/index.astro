@@ -1,6 +1,6 @@
 ---
-import { readFileSync } from "node:fs";
-const source = readFileSync(new URL("../../legacy/index.html", import.meta.url), "utf8");
+import legacyHtml from "../../legacy/index.html?raw";
+const source = legacyHtml;
 const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
 const body = source.split("<body>")[1]?.split("</body>")[0] ?? "";
 ---
