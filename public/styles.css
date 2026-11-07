@@ -1267,3 +1267,82 @@ body{background:var(--parchment);color:var(--ink);font-size:16px;letter-spacing:
 .btn-piege{border:1px solid rgba(35,75,58,.35);color:var(--leaf);background:transparent}
 .btn-piege:hover{background:var(--leaf);color:var(--cream)}
 @media(max-width:760px){.piege-inner{grid-template-columns:1fr}.piege-aside{min-height:190px}.piege-mark{font-size:7rem}.btn-piege{margin-top:8px}}
+
+/* French Nuggets — a new editorial collection within Le Baguette Bulletin */
+.nuggets-intro{
+  position:relative;
+  max-width:860px;
+  margin:0 0 34px;
+  padding:30px clamp(22px,4vw,42px);
+  overflow:hidden;
+  color:#fffaf0;
+  background:#742d2a;
+  border:1px solid rgba(116,45,42,.2);
+  border-radius:18px;
+  box-shadow:0 8px 24px rgba(84,40,30,.09);
+}
+.nuggets-intro:after{
+  content:"🥖";
+  position:absolute;
+  right:24px;
+  top:22px;
+  font-size:clamp(2.3rem,5vw,4rem);
+  opacity:.16;
+  transform:rotate(-16deg);
+}
+.nuggets-kicker{
+  margin:0 0 12px;
+  color:#efc879;
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.nuggets-intro h3{
+  max-width:650px;
+  margin:0;
+  color:#fffaf0;
+  font-family:Georgia,"Iowan Old Style",serif;
+  font-size:clamp(1.7rem,4vw,2.65rem);
+  font-weight:600;
+  line-height:1.08;
+  letter-spacing:-.025em;
+}
+.nuggets-intro h3 em{color:#efc879;font-style:italic}
+.nuggets-name{
+  margin:12px 0 18px;
+  color:#efc879;
+  font-family:Georgia,"Iowan Old Style",serif;
+  font-size:1.25rem;
+  font-style:italic;
+}
+.nuggets-intro p:not(.nuggets-kicker):not(.nuggets-name):not(.nuggets-welcome){
+  max-width:66ch;
+  margin:0 0 10px;
+  color:rgba(255,250,240,.9);
+  line-height:1.72;
+}
+.nuggets-welcome{
+  margin:18px 0 0;
+  color:#fffaf0;
+  font-family:Georgia,"Iowan Old Style",serif;
+  font-size:1.05rem;
+  font-style:italic;
+}
+.bulletin-collection-tag{
+  display:inline-flex;
+  margin:0 0 12px;
+  padding:5px 9px;
+  border:1px solid rgba(116,45,42,.22);
+  border-radius:999px;
+  color:#742d2a;
+  background:#f8efdf;
+  font-family:var(--mono);
+  font-size:.67rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+@media(max-width:600px){
+  .nuggets-intro{padding:24px 20px}
+  .nuggets-intro:after{right:14px;top:13px;font-size:2rem}
+}
