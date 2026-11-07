@@ -38,7 +38,7 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
       const makeParagraphs = (value, className) => {
         const wrapper = document.createElement("div");
         wrapper.className = className;
-        value.split(/\\n\\s*\\n/).forEach((part) => {
+        value.split(/\n\s*\n/).forEach((part) => {
           const p = document.createElement("p");
           p.textContent = part;
           wrapper.appendChild(p);
