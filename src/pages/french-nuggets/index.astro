@@ -8,7 +8,7 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
 <head>
   <Fragment set:html={head.replaceAll('href="styles.css"', 'href="/styles.css"')} />
   <title>French Nuggets · Le Carnet Ougandais</title>
-  <meta name="description" content="The first collection of French Nuggets from Le Baguette Bulletin: ten short, clever lessons in everyday French." />
+  <meta name="description" content="Short, clever lessons in everyday French from Le Baguette Bulletin." />
 </head>
 <body>
   <div class="grain"></div>
@@ -24,9 +24,9 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
     <div class="wrap">
       <p class="eyebrow">Same baguette. New crumbs.</p>
       <h1 class="section-title">French Nuggets</h1>
-      <p class="section-lede">The first collection · Nos. 11–20</p>
+      <p class="section-lede">Short, clever lessons in everyday French. A growing collection.</p>
       <a class="french-nuggets-link" href="/#bulletin">← Back to Le Baguette Bulletin</a>
-      <div id="frenchNuggetsPageGrid" class="bulletin-grid french-nuggets-page-grid"></div>
+      <div id="frenchNuggetsPageGrid" class="french-nuggets-list" aria-live="polite"></div>
     </div>
   </main>
   <script is:inline src="/script.js"></script>
@@ -45,32 +45,44 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
         });
         return wrapper;
       };
-      [...bulletins]
+      const entries = [...(window.BULLETINS || [])]
         .filter((issue) => issue.collection === "French Nuggets")
-        .sort((a, b) => a.bulletin_number - b.bulletin_number)
-        .forEach((issue) => {
-          const card = document.createElement("article");
-          card.className = "bulletin-card is-visible";
-          const meta = document.createElement("div");
-          meta.className = "bulletin-meta";
-          const number = document.createElement("span");
-          number.textContent = "No. " + issue.bulletin_number;
-          const date = document.createElement("time");
-          date.dateTime = issue.created_at;
-          date.textContent = dateFormat.format(new Date(issue.created_at + "T12:00:00"));
-          meta.append(number, date);
-          const title = document.createElement("h2");
-          title.textContent = issue.title;
-          const caption = makeParagraphs(issue.caption, "bulletin-caption");
-          const details = document.createElement("details");
-          details.className = "bulletin-details";
-          const summary = document.createElement("summary");
-          summary.textContent = "Read full entry →";
-          const body = makeParagraphs(issue.body, "bulletin-body");
-          details.append(summary, body);
-          card.append(meta, title, caption, details);
-          grid.appendChild(card);
-        });
+        .sort((a, b) => a.bulletin_number - b.bulletin_number);
+      entries.forEach((issue) => {
+        const card = document.createElement("article");
+        card.className = "french-nugget-entry";
+
+        const imagePlaceholder = document.createElement("div");
+        imagePlaceholder.className = "french-nugget-image-placeholder";
+        imagePlaceholder.setAttribute("aria-label", "Reserved space for your own photograph");
+
+        const copy = document.createElement("div");
+        copy.className = "french-nugget-copy";
+
+        const meta = document.createElement("div");
+        meta.className = "bulletin-meta";
+        const number = document.createElement("span");
+        number.textContent = "No. " + issue.bulletin_number;
+        const date = document.createElement("time");
+        date.dateTime = issue.created_at;
+        date.textContent = dateFormat.format(new Date(issue.created_at + "T12:00:00"));
+        meta.append(number, date);
+
+        const title = document.createElement("h2");
+        title.textContent = issue.title;
+
+        const caption = makeParagraphs(issue.caption || "", "bulletin-caption-text");
+        const body = makeParagraphs(issue.body || "", "bulletin-body-text");
+
+        copy.append(meta, title, caption, body);
+        card.append(imagePlaceholder, copy);
+        grid.appendChild(card);
+      });
+    if (!grid.children.length) {
+        const empty = document.createElement("p");
+        empty.textContent = "The French Nuggets are being prepared. Please refresh shortly.";
+        grid.appendChild(empty);
+      }
     });
   </script>
 </body>
