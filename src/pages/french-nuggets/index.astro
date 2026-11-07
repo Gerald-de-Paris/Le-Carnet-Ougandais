@@ -8,7 +8,7 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
 <head>
   <Fragment set:html={head.replaceAll('href="styles.css"', 'href="/styles.css"')} />
   <title>French Nuggets · Le Carnet Ougandais</title>
-  <meta name="description" content="The first collection of French Nuggets from Le Baguette Bulletin: ten short, clever lessons in everyday French." />
+  <meta name="description" content="Short, clever lessons in everyday French from Le Baguette Bulletin." />
 </head>
 <body>
   <div class="grain"></div>
@@ -24,9 +24,9 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
     <div class="wrap">
       <p class="eyebrow">Same baguette. New crumbs.</p>
       <h1 class="section-title">French Nuggets</h1>
-      <p class="section-lede">The first collection · Nos. 11–20</p>
+      <p class="section-lede">The first collection of short lessons in everyday French</p>
       <a class="french-nuggets-link" href="/#bulletin">← Back to Le Baguette Bulletin</a>
-      <div id="frenchNuggetsPageGrid" class="bulletin-grid french-nuggets-page-grid"></div>
+      <div id="frenchNuggetsPageGrid" class="french-nuggets-list" aria-live="polite"></div>
     </div>
   </main>
   <script is:inline src="/script.js"></script>
@@ -45,12 +45,12 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
         });
         return wrapper;
       };
-      [...bulletins]
+      [...(window.BULLETINS || [])]
         .filter((issue) => issue.collection === "French Nuggets")
         .sort((a, b) => a.bulletin_number - b.bulletin_number)
         .forEach((issue) => {
           const card = document.createElement("article");
-          card.className = "bulletin-card is-visible";
+          card.className = "french-nugget-entry";
           const meta = document.createElement("div");
           meta.className = "bulletin-meta";
           const number = document.createElement("span");
@@ -61,6 +61,14 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
           meta.append(number, date);
           const title = document.createElement("h2");
           title.textContent = issue.title;
+          const imageNames = ["culture-story1.jpg", "culture-story2.jpg", "culture-story3.jpg", "tradition-story1.jpg", "voyages-story1.jpg", "culture-2.jpg", "culture-3.jpg", "culture-4.jpg", "tradition-1.jpg", "voyages-2.jpg"];
+          const image = document.createElement("img");
+          image.className = "french-nugget-image";
+          image.src = "/images/" + imageNames[issue.bulletin_number - 11];
+          image.alt = "Everyday French in context";
+          image.loading = "lazy";
+          const copy = document.createElement("div");
+          copy.className = "french-nugget-copy";
           const caption = makeParagraphs(issue.caption, "bulletin-caption");
           const details = document.createElement("details");
           details.className = "bulletin-details";
@@ -68,9 +76,15 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
           summary.textContent = "Read full entry →";
           const body = makeParagraphs(issue.body, "bulletin-body");
           details.append(summary, body);
-          card.append(meta, title, caption, details);
+          copy.append(meta, title, caption, details);
+          card.append(image, copy);
           grid.appendChild(card);
         });
+    if (!grid.children.length) {
+        const empty = document.createElement("p");
+        empty.textContent = "The French Nuggets are being prepared. Please refresh shortly.";
+        grid.appendChild(empty);
+      }
     });
   </script>
 </body>
