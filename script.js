@@ -2001,6 +2001,8 @@ const bulletins = [
   }
 ];
 
+window.BULLETINS = bulletins;
+
 function makeBulletinParagraphs(text, className) {
   const fragment = document.createDocumentFragment();
   text.split(/\n\n+/).forEach((paragraph) => {
