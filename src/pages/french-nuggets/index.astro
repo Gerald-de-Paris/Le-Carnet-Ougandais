@@ -29,7 +29,7 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
       <div id="frenchNuggetsPageGrid" class="bulletin-grid french-nuggets-page-grid"></div>
     </div>
   </main>
-  <script src="/script.js"></script>
+  <script is:inline src="/script.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const grid = document.getElementById("frenchNuggetsPageGrid");
