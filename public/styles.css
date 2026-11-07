@@ -1313,3 +1313,50 @@ body{background:var(--parchment);color:var(--ink);font-size:16px;letter-spacing:
   color: #fff8ec;
   font: italic 1.35rem/1.4 var(--font-display, Georgia, serif);
 }
+
+/* French Nuggets collection navigation and issue shelf */
+
+.french-nuggets-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: 1.5rem;
+  padding: .85rem 1.15rem;
+  border: 1px solid rgba(232, 199, 126, .75);
+  border-radius: 999px;
+  color: #fff8ec;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+.french-nuggets-link:hover,
+.french-nuggets-link:focus-visible {
+  color: #702624;
+  background: #e8c77e;
+  transform: translateY(-2px);
+}
+.french-nuggets-issues {
+  margin: 3rem 0 2rem;
+  scroll-margin-top: 7rem;
+}
+.french-nuggets-issues-heading {
+  margin: 0 0 1.5rem;
+}
+.french-nuggets-issues-heading h3 {
+  margin: .35rem 0;
+  color: var(--cream, #f8f0df);
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+}
+.french-nuggets-issues-heading > p:last-child {
+  color: rgba(248, 240, 223, .78);
+}
+.french-nuggets-issues .bulletin-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 760px) {
+  .french-nuggets-issues .bulletin-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
