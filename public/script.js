@@ -2020,12 +2020,9 @@ function initBulletins() {
   const archive = document.getElementById("bulletinArchive");
   const archiveToggle = document.getElementById("bulletinArchiveToggle");
   const archiveGrid = document.getElementById("bulletinGrid");
-  const nuggetsGrid = document.getElementById("frenchNuggetsGrid");
-  if (!featured || !status || !archive || !archiveToggle || !archiveGrid || !nuggetsGrid || !bulletins.length) return;
+  if (!featured || !status || !archive || !archiveToggle || !archiveGrid || !bulletins.length) return;
 
-  const issues = [...bulletins].sort((a, b) => b.bulletin_number - a.bulletin_number);
-  const nuggets = issues.filter((issue) => issue.collection === "French Nuggets");
-  const classicIssues = issues.filter((issue) => issue.collection !== "French Nuggets");
+  const issues = [...bulletins].filter((issue) => issue.collection !== "French Nuggets").sort((a, b) => b.bulletin_number - a.bulletin_number);
   const latest = issues[0];
   status.textContent = `Latest issue · No. ${latest.bulletin_number} · ${issues.length} issues published`;
 
@@ -2062,8 +2059,7 @@ function initBulletins() {
   }
 
   featured.appendChild(createBulletinCard(latest, true));
-  nuggets.forEach((issue) => nuggetsGrid.appendChild(createBulletinCard(issue)));
-  classicIssues.forEach((issue) => archiveGrid.appendChild(createBulletinCard(issue)));
+  issues.filter((issue) => issue.bulletin_number !== latest.bulletin_number).forEach((issue) => archiveGrid.appendChild(createBulletinCard(issue)));
 
   const revealCards = (grid) => {
     const cards = grid.querySelectorAll(".bulletin-card");
@@ -2089,7 +2085,7 @@ function initBulletins() {
     archiveToggle.textContent = willOpen ? "Hide bulletin archive ↑" : "Browse all bulletins →";
     if (willOpen) revealCards(archiveGrid);
   });
-  revealCards(nuggetsGrid);
+
 }
 document.addEventListener("DOMContentLoaded", initBulletins);
 
