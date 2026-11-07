@@ -24,7 +24,7 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
     <div class="wrap">
       <p class="eyebrow">Same baguette. New crumbs.</p>
       <h1 class="section-title">French Nuggets</h1>
-      <p class="section-lede">The first collection of short lessons in everyday French</p>
+      <p class="section-lede">Short, clever lessons in everyday French. A growing collection.</p>
       <a class="french-nuggets-link" href="/#bulletin">← Back to Le Baguette Bulletin</a>
       <div id="frenchNuggetsPageGrid" class="french-nuggets-list" aria-live="polite"></div>
     </div>
@@ -45,29 +45,39 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
         });
         return wrapper;
       };
-      [...(window.BULLETINS || [])]
+      const entries = [...(window.BULLETINS || [])]
         .filter((issue) => issue.collection === "French Nuggets")
-        .sort((a, b) => a.bulletin_number - b.bulletin_number)
-        .forEach((issue) => {
-          const card = document.createElement("article");
-          card.className = "french-nugget-entry";
-          const meta = document.createElement("div");
-          meta.className = "bulletin-meta";
-          const number = document.createElement("span");
-          number.textContent = "No. " + issue.bulletin_number;
-          const date = document.createElement("time");
-          date.dateTime = issue.created_at;
-          date.textContent = dateFormat.format(new Date(issue.created_at + "T12:00:00"));
-          meta.append(number, date);
-          const title = document.createElement("h2");
-          title.textContent = issue.title;
-          const imagePlaceholder = document.createElement("div");
-          imagePlaceholder.className = "french-nugget-image-placeholder";
-          imagePlaceholder.setAttribute("role", "img");
-          imagePlaceholder.setAttribute("aria-label", "Image space reserved for an image to be added by the editor");
-          card.append(imagePlaceholder, copy);
-          grid.appendChild(card);
-        });
+        .sort((a, b) => a.bulletin_number - b.bulletin_number);
+      entries.forEach((issue) => {
+        const card = document.createElement("article");
+        card.className = "french-nugget-entry";
+
+        const imagePlaceholder = document.createElement("div");
+        imagePlaceholder.className = "french-nugget-image-placeholder";
+        imagePlaceholder.setAttribute("aria-label", "Reserved space for your own photograph");
+
+        const copy = document.createElement("div");
+        copy.className = "french-nugget-copy";
+
+        const meta = document.createElement("div");
+        meta.className = "bulletin-meta";
+        const number = document.createElement("span");
+        number.textContent = "No. " + issue.bulletin_number;
+        const date = document.createElement("time");
+        date.dateTime = issue.created_at;
+        date.textContent = dateFormat.format(new Date(issue.created_at + "T12:00:00"));
+        meta.append(number, date);
+
+        const title = document.createElement("h2");
+        title.textContent = issue.title;
+
+        const caption = makeParagraphs(issue.caption || "", "bulletin-caption-text");
+        const body = makeParagraphs(issue.body || "", "bulletin-body-text");
+
+        copy.append(meta, title, caption, body);
+        card.append(imagePlaceholder, copy);
+        grid.appendChild(card);
+      });
     if (!grid.children.length) {
         const empty = document.createElement("p");
         empty.textContent = "The French Nuggets are being prepared. Please refresh shortly.";
