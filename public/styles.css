@@ -1267,3 +1267,49 @@ body{background:var(--parchment);color:var(--ink);font-size:16px;letter-spacing:
 .btn-piege{border:1px solid rgba(35,75,58,.35);color:var(--leaf);background:transparent}
 .btn-piege:hover{background:var(--leaf);color:var(--cream)}
 @media(max-width:760px){.piege-inner{grid-template-columns:1fr}.piege-aside{min-height:190px}.piege-mark{font-size:7rem}.btn-piege{margin-top:8px}}
+
+
+/* French Nuggets — a new editorial collection within Le Baguette Bulletin */
+.french-nuggets-intro {
+  margin: 2.5rem 0 2rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border-radius: 2rem;
+  color: #f8f0df;
+  background: linear-gradient(145deg, #8b302d, #702624);
+  box-shadow: 0 18px 42px rgba(20, 30, 24, .14);
+}
+.french-nuggets-kicker {
+  margin: 0 0 1.4rem;
+  color: #e8c77e;
+  font: 700 .78rem/1.6 var(--font-mono, monospace);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.french-nuggets-intro h3 {
+  max-width: 15ch;
+  margin: 0;
+  color: #fff8ec;
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(2.1rem, 7vw, 3.4rem);
+  line-height: .98;
+  letter-spacing: -.035em;
+}
+.french-nuggets-intro h3 em,
+.french-nuggets-series {
+  color: #e8c77e;
+}
+.french-nuggets-series {
+  margin: 1.5rem 0 2rem;
+  font: italic 2rem/1.2 var(--font-display, Georgia, serif);
+}
+.french-nuggets-intro > p:not(.french-nuggets-kicker):not(.french-nuggets-series):not(.french-nuggets-welcome) {
+  max-width: 60ch;
+  color: rgba(255, 248, 236, .92);
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  line-height: 1.8;
+}
+.french-nuggets-welcome {
+  margin: 2rem 0 0;
+  color: #fff8ec;
+  font: italic 1.35rem/1.4 var(--font-display, Georgia, serif);
+}
