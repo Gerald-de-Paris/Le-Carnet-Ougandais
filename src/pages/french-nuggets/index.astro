@@ -1,0 +1,77 @@
+---
+import legacyHtml from "../../../legacy/index.html?raw";
+const source = legacyHtml;
+const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <Fragment set:html={head.replaceAll('href="styles.css"', 'href="/styles.css"')} />
+  <title>French Nuggets · Le Carnet Ougandais</title>
+  <meta name="description" content="The first collection of French Nuggets from Le Baguette Bulletin: ten short, clever lessons in everyday French." />
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="/" class="brand">
+        <span class="brand-name">Le Carnet Ougandais</span>
+      </a>
+      <a class="lang-toggle" href="/">Back to the Bulletin</a>
+    </div>
+  </header>
+  <main class="section section--bulletin">
+    <div class="wrap">
+      <p class="eyebrow">Same baguette. New crumbs.</p>
+      <h1 class="section-title">French Nuggets</h1>
+      <p class="section-lede">The first collection · Nos. 11–20</p>
+      <a class="french-nuggets-link" href="/#bulletin">← Back to Le Baguette Bulletin</a>
+      <div id="frenchNuggetsPageGrid" class="bulletin-grid french-nuggets-page-grid"></div>
+    </div>
+  </main>
+  <script src="/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const grid = document.getElementById("frenchNuggetsPageGrid");
+      if (!grid) return;
+      const dateFormat = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+      const makeParagraphs = (value, className) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = className;
+        value.split(/\\n\\s*\\n/).forEach((part) => {
+          const p = document.createElement("p");
+          p.textContent = part;
+          wrapper.appendChild(p);
+        });
+        return wrapper;
+      };
+      [...bulletins]
+        .filter((issue) => issue.collection === "French Nuggets")
+        .sort((a, b) => a.bulletin_number - b.bulletin_number)
+        .forEach((issue) => {
+          const card = document.createElement("article");
+          card.className = "bulletin-card is-visible";
+          const meta = document.createElement("div");
+          meta.className = "bulletin-meta";
+          const number = document.createElement("span");
+          number.textContent = "No. " + issue.bulletin_number;
+          const date = document.createElement("time");
+          date.dateTime = issue.created_at;
+          date.textContent = dateFormat.format(new Date(issue.created_at + "T12:00:00"));
+          meta.append(number, date);
+          const title = document.createElement("h2");
+          title.textContent = issue.title;
+          const caption = makeParagraphs(issue.caption, "bulletin-caption");
+          const details = document.createElement("details");
+          details.className = "bulletin-details";
+          const summary = document.createElement("summary");
+          summary.textContent = "Read full entry →";
+          const body = makeParagraphs(issue.body, "bulletin-body");
+          details.append(summary, body);
+          card.append(meta, title, caption, details);
+          grid.appendChild(card);
+        });
+    });
+  </script>
+</body>
+</html>
