@@ -81,9 +81,14 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
         title.textContent = issue.title;
 
         const caption = makeParagraphs(issue.caption || "", "bulletin-caption-text");
+        const details = document.createElement("details");
+        details.className = "bulletin-details";
+        const summary = document.createElement("summary");
+        summary.textContent = "Read more →";
         const body = makeParagraphs(issue.body || "", "bulletin-body-text");
+        details.append(summary, body);
 
-        copy.append(meta, title, caption, body);
+        copy.append(meta, title, caption, details);
         card.append(imageSlot, copy);
         grid.appendChild(card);
       });

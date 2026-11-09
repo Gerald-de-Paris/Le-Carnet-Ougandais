@@ -1247,3 +1247,19 @@ body{background:var(--parchment);color:var(--ink);font-size:16px;letter-spacing:
  .lesson-toc{gap:7px}.lesson-toc a{font-size:.68rem;padding:7px 9px}
  .lesson-hook{padding:15px 17px}.section-title{font-size:2.65rem}
 }
+
+
+/* PR #27: restore compact editorial captions and calm French Nuggets typography */
+.bulletin-card{opacity:1;transform:none}
+.bulletin-card h3,.featured-bulletin-card h3{text-transform:none;letter-spacing:normal}
+.bulletin-caption{display:block!important;visibility:visible!important;color:var(--ink-soft);margin:0 0 10px;font-size:.96rem;line-height:1.55}
+.bulletin-caption-text{display:block!important;visibility:visible!important}
+.french-nuggets-list{gap:1.15rem;margin:1rem 0 1rem}
+.french-nugget-entry{gap:1.25rem;padding:1rem}
+.french-nugget-copy h2{font-size:clamp(1.25rem,2.2vw,1.65rem);line-height:1.2;font-weight:600;text-transform:none;letter-spacing:normal;margin:0 0 .55rem}
+.french-nugget-copy .bulletin-meta{margin:0 0 .5rem}
+.french-nugget-copy .bulletin-caption-text{margin:.25rem 0 .55rem;font-size:.94rem}
+.french-nugget-copy .bulletin-details{margin-top:.65rem;padding-top:.55rem}
+.french-nugget-copy .bulletin-body{margin-top:.6rem;padding-top:.6rem}
+.french-nugget-image{min-height:190px;max-height:250px}
+@media(max-width:680px){.french-nugget-image{height:190px;min-height:190px;max-height:220px}.french-nugget-entry{gap:.8rem;padding:.85rem}}
