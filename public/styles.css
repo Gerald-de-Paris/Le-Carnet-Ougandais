@@ -1391,3 +1391,46 @@ body{background:var(--parchment);color:var(--ink);font-size:16px;letter-spacing:
   .featured-bulletin-card{padding:25px 22px}
   .featured-bulletin-card h3{font-size:1.68rem;line-height:1.12}
 }
+
+
+/* Final compact Bulletin typography and caption rhythm */
+.section--bulletin .bulletin-card,
+.section--bulletin .featured-bulletin-card{
+  height:auto !important;
+  min-height:0 !important;
+  justify-content:flex-start !important;
+  align-content:start;
+}
+.section--bulletin .bulletin-card h3,
+.section--bulletin .featured-bulletin-card h3{
+  height:auto !important;
+  min-height:0 !important;
+  margin:8px 0 5px !important;
+  padding:0 !important;
+  font-size:clamp(1.25rem, 1.8vw, 1.55rem) !important;
+  line-height:1.13 !important;
+}
+.section--bulletin .featured-bulletin-card h3{
+  font-size:clamp(1.45rem, 2.2vw, 1.8rem) !important;
+}
+.section--bulletin .bulletin-caption,
+.section--bulletin .bulletin-caption-text{
+  height:auto !important;
+  min-height:0 !important;
+  margin-top:0 !important;
+}
+.section--bulletin .bulletin-caption-text{
+  margin-bottom:7px !important;
+  font-size:.92rem;
+  line-height:1.5 !important;
+}
+.section--bulletin .bulletin-details{
+  margin-top:9px !important;
+}
+.section--bulletin .bulletin-meta{
+  margin-bottom:0 !important;
+}
+@media(max-width:600px){
+  .section--bulletin .bulletin-card h3{font-size:1.34rem !important}
+  .section--bulletin .featured-bulletin-card h3{font-size:1.52rem !important}
+}
