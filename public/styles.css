@@ -1405,3 +1405,7 @@ body{background:var(--parchment);color:var(--ink);font-size:16px;letter-spacing:
 .french-nugget-copy .bulletin-body{margin-top:.6rem;padding-top:.6rem}
 .french-nugget-image{min-height:190px;max-height:250px}
 @media(max-width:680px){.french-nugget-image{height:190px;min-height:190px;max-height:220px}.french-nugget-entry{gap:.8rem;padding:.85rem}}
+
+
+/* Keep French Nugget teasers clear and readable on the cream cards. */
+.french-nugget-copy .bulletin-caption-text{color:#39433c!important;}
