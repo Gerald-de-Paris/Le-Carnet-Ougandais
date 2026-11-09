@@ -84,7 +84,7 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
         const details = document.createElement("details");
         details.className = "bulletin-details";
         const summary = document.createElement("summary");
-        summary.textContent = "Read more →";
+        summary.textContent = "Read on →";
         const body = makeParagraphs(issue.body || "", "bulletin-body-text");
         details.append(summary, body);
 
