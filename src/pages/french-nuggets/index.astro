@@ -8,25 +8,22 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
 <head>
   <Fragment set:html={head.replaceAll('href="styles.css"', 'href="/styles.css"')} />
   <title>French Nuggets · Le Carnet Ougandais</title>
-  <meta name="description" content="Short, clever lessons in everyday French from Le Baguette Bulletin." />
+  <meta name="description" content="A growing collection of short, clever lessons in everyday French from Le Baguette Bulletin." />
 </head>
 <body>
   <div class="grain"></div>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a href="/" class="brand">
-        <span class="brand-name">Le Carnet Ougandais</span>
-      </a>
-      <a class="lang-toggle" href="/">Back to the Bulletin</a>
+      <a href="/" class="brand"><span class="brand-name">Le Carnet Ougandais</span></a>
+      <a class="lang-toggle" href="/#bulletin">Back to the Bulletin</a>
     </div>
   </header>
-  <main class="section section--bulletin">
+  <main class="section section--bulletin french-nuggets-page">
     <div class="wrap">
       <p class="eyebrow">Same baguette. New crumbs.</p>
       <h1 class="section-title">French Nuggets</h1>
-      <p class="section-lede">Short, clever lessons in everyday French. A growing collection.</p>
-      <a class="french-nuggets-link" href="/#bulletin">← Back to Le Baguette Bulletin</a>
-      <div id="frenchNuggetsPageGrid" class="french-nuggets-list" aria-live="polite"></div>
+      <p class="section-lede">Short, clever lessons in everyday French — vocabulary, grammar, expressions and the little surprises that make the language human. The collection keeps growing.</p>
+      <div class="french-nuggets-page-grid" id="frenchNuggetsPageGrid" aria-live="polite"></div>
     </div>
   </main>
   <script is:inline src="/script.js"></script>
@@ -35,30 +32,25 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
       const grid = document.getElementById("frenchNuggetsPageGrid");
       if (!grid) return;
       const dateFormat = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" });
-      const makeParagraphs = (value, className) => {
-        const wrapper = document.createElement("div");
-        wrapper.className = className;
-        value.split(/\n\s*\n/).forEach((part) => {
-          const p = document.createElement("p");
-          p.textContent = part;
-          wrapper.appendChild(p);
-        });
-        return wrapper;
+      const addText = (parent, text, className) => {
+        const p = document.createElement("p");
+        p.className = className;
+        p.textContent = text;
+        parent.appendChild(p);
       };
       const entries = [...(window.BULLETINS || [])]
-        .filter((issue) => issue.collection === "French Nuggets")
         .sort((a, b) => a.bulletin_number - b.bulletin_number);
       entries.forEach((issue) => {
         const card = document.createElement("article");
         card.className = "french-nugget-entry";
 
-        const imagePlaceholder = document.createElement("div");
-        imagePlaceholder.className = "french-nugget-image-placeholder";
-        imagePlaceholder.setAttribute("aria-label", "Reserved space for your own photograph");
+        const imageSlot = document.createElement("div");
+        imageSlot.className = "french-nugget-image-placeholder";
+        imageSlot.setAttribute("role", "img");
+        imageSlot.setAttribute("aria-label", "Photo space — upload your own image as /images/nugget-" + issue.bulletin_number + ".jpg");
 
         const copy = document.createElement("div");
         copy.className = "french-nugget-copy";
-
         const meta = document.createElement("div");
         meta.className = "bulletin-meta";
         const number = document.createElement("span");
@@ -70,15 +62,18 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
 
         const title = document.createElement("h2");
         title.textContent = issue.title;
-
-        const caption = makeParagraphs(issue.caption || "", "bulletin-caption-text");
-        const body = makeParagraphs(issue.body || "", "bulletin-body-text");
+        const caption = document.createElement("div");
+        caption.className = "bulletin-caption";
+        (issue.caption || "").split(/\n\s*\n/).filter(Boolean).forEach((part) => addText(caption, part, "bulletin-caption-text"));
+        const body = document.createElement("div");
+        body.className = "bulletin-body";
+        (issue.body || "").split(/\n\s*\n/).filter(Boolean).forEach((part) => addText(body, part, "bulletin-body-text"));
 
         copy.append(meta, title, caption, body);
-        card.append(imagePlaceholder, copy);
+        card.append(imageSlot, copy);
         grid.appendChild(card);
       });
-    if (!grid.children.length) {
+      if (!entries.length) {
         const empty = document.createElement("p");
         empty.textContent = "The French Nuggets are being prepared. Please refresh shortly.";
         grid.appendChild(empty);
