@@ -52,9 +52,18 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
         const card = document.createElement("article");
         card.className = "french-nugget-entry";
 
-        const imagePlaceholder = document.createElement("div");
-        imagePlaceholder.className = "french-nugget-image-placeholder";
-        imagePlaceholder.setAttribute("aria-label", "Reserved space for your own photograph");
+        let imageSlot;
+        if (issue.image) {
+          imageSlot = document.createElement("img");
+          imageSlot.className = "french-nugget-image";
+          imageSlot.src = issue.image;
+          imageSlot.alt = "Photograph for French Nugget No. " + issue.bulletin_number;
+          imageSlot.loading = "lazy";
+        } else {
+          imageSlot = document.createElement("div");
+          imageSlot.className = "french-nugget-image-placeholder";
+          imageSlot.setAttribute("aria-label", "Reserved space for your own photograph");
+        }
 
         const copy = document.createElement("div");
         copy.className = "french-nugget-copy";
@@ -75,7 +84,7 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
         const body = makeParagraphs(issue.body || "", "bulletin-body-text");
 
         copy.append(meta, title, caption, body);
-        card.append(imagePlaceholder, copy);
+        card.append(imageSlot, copy);
         grid.appendChild(card);
       });
     if (!grid.children.length) {
