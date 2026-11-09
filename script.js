@@ -1923,6 +1923,7 @@ const bulletins = [
     bulletin_number: 11,
     collection: "French Nuggets",
     title: "FRENCH WORDS LOVE A PLOT TWIST!",
+    image: "/images/nugget-11.jpg",
     caption: "You see a familiar-looking French word and think, I've got this. Then French changes the meaning on you.\n\nWelcome to the world of faux amis — false friends. These are words that look or sound familiar in another language but mean something different.",
     body: "A few examples worth remembering:\n\nUne injure = an insult. It is not an injury. An injury is une blessure.\n\nLe théâtre = the theatre or a playhouse. For a cinema, say le cinéma.\n\nL'argent = money in general. La monnaie can mean change or currency.\n\nTry these:\n\nIl m'a fait une injure. — He insulted me.\n\nElle a une blessure au bras. — She has an injury on her arm.\n\nJe vais au cinéma. — I'm going to the cinema.\n\nThe trick? Don't trust a word just because it looks familiar. French has a few identity thieves.\n\nA good vocabulary is useful. A suspicious mind is even better.",
     created_at: "2026-11-11"
