@@ -1346,3 +1346,48 @@ body{background:var(--parchment);color:var(--ink);font-size:16px;letter-spacing:
   .nuggets-intro{padding:24px 20px}
   .nuggets-intro:after{right:14px;top:13px;font-size:2rem}
 }
+
+
+/* Bulletin cards: keep the original issue summaries visible and the layout compact. */
+.bulletin-grid{
+  align-items:start;
+  grid-auto-rows:auto;
+}
+.bulletin-card{
+  align-self:start;
+  height:auto;
+  min-height:0;
+  justify-content:flex-start;
+}
+.bulletin-card h3{
+  margin:12px 0 8px;
+  font-size:clamp(1.28rem, 1.9vw, 1.58rem);
+  line-height:1.12;
+  letter-spacing:-.015em;
+}
+.featured-bulletin-card h3{
+  margin:12px 0 8px;
+  font-size:clamp(1.5rem, 2.5vw, 1.95rem);
+  line-height:1.12;
+  letter-spacing:-.018em;
+}
+.bulletin-caption{
+  display:block;
+  margin:0;
+  color:var(--ink-soft);
+}
+.bulletin-caption-text{
+  margin:0 0 8px;
+  color:var(--ink-soft);
+  font-size:.94rem;
+  line-height:1.55;
+}
+.bulletin-details{
+  margin-top:12px;
+}
+@media(max-width:600px){
+  .bulletin-card{padding:22px 20px}
+  .bulletin-card h3{font-size:1.42rem;line-height:1.12}
+  .featured-bulletin-card{padding:25px 22px}
+  .featured-bulletin-card h3{font-size:1.68rem;line-height:1.12}
+}
