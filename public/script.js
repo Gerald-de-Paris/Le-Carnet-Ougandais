@@ -2022,9 +2022,10 @@ function initBulletins() {
   const archiveGrid = document.getElementById("bulletinGrid");
   if (!featured || !status || !archive || !archiveToggle || !archiveGrid || !bulletins.length) return;
 
-  const issues = [...bulletins].filter((issue) => issue.collection !== "French Nuggets").sort((a, b) => b.bulletin_number - a.bulletin_number);
-  const latest = issues[0];
-  status.textContent = `Latest issue · No. ${latest.bulletin_number} · ${issues.length} issues published`;
+  const allIssues = [...bulletins].sort((a, b) => b.bulletin_number - a.bulletin_number);
+  const classicIssues = allIssues.filter((issue) => issue.bulletin_number <= 10);
+  const latest = allIssues[0];
+  status.textContent = `Latest issue · No. ${latest.bulletin_number} · ${allIssues.length} issues published`;
 
   const dateFormat = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" });
   function createBulletinCard(issue, isFeatured = false) {
@@ -2059,7 +2060,7 @@ function initBulletins() {
   }
 
   featured.appendChild(createBulletinCard(latest, true));
-  issues.filter((issue) => issue.bulletin_number !== latest.bulletin_number).forEach((issue) => archiveGrid.appendChild(createBulletinCard(issue)));
+  classicIssues.forEach((issue) => archiveGrid.appendChild(createBulletinCard(issue)));
 
   const revealCards = (grid) => {
     const cards = grid.querySelectorAll(".bulletin-card");
