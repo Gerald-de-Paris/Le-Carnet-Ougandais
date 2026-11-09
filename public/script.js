@@ -1924,7 +1924,7 @@ const bulletins = [
     collection: "French Nuggets",
     title: "French words love a plot twist!",
     image: "/images/nugget-11.jpg",
-    caption: "You see a familiar-looking French word and think, I've got this. Then French changes the meaning on you.\n\nWelcome to the world of faux amis — false friends. These are words that look or sound familiar in another language but mean something different.",
+    caption: "That French word looks familiar. Don't trust it yet — it might mean something completely different.",
     body: "A few examples worth remembering:\n\nUne injure = an insult. It is not an injury. An injury is une blessure.\n\nLe théâtre = the theatre or a playhouse. For a cinema, say le cinéma.\n\nL'argent = money in general. La monnaie can mean change or currency.\n\nTry these:\n\nIl m'a fait une injure. — He insulted me.\n\nElle a une blessure au bras. — She has an injury on her arm.\n\nJe vais au cinéma. — I'm going to the cinema.\n\nThe trick? Don't trust a word just because it looks familiar. French has a few identity thieves.\n\nA good vocabulary is useful. A suspicious mind is even better.",
     created_at: "2026-11-11"
   },
@@ -1933,7 +1933,7 @@ const bulletins = [
     collection: "French Nuggets",
     image: "/images/nugget-12.jpg",
     title: "Chialer: not your ordinary crying!",
-    caption: "Not every French word for crying carries the same attitude. You probably know pleurer — to cry. But have you met chialer?",
+    caption: "Pleurer is simply crying. Chialer? That's when the crying comes with attitude.",
     body: "Pleurer is the ordinary, neutral verb for crying. Chialer is informal and often expresses annoyance, frustration or contempt. Depending on the context, it can sound dismissive: something like “to whine” or “to bawl”.\n\nLe bébé pleure. — The baby is crying.\n\nArrête de chialer ! — Stop whining!\n\nYou will hear chialer in informal conversations, films and everyday speech. But be careful: it is not the word to use in every situation. If someone is genuinely upset, pleurer is usually the safer choice.\n\nFrench has different ways of crying. Choose your vocabulary before you choose your drama.",
     created_at: "2026-11-18"
   },
@@ -1942,7 +1942,7 @@ const bulletins = [
     collection: "French Nuggets",
     image: "/images/nugget-13.jpg",
     title: "Your French doesn't sound like it's written!",
-    caption: "Here's a little secret: the French you read in a textbook and the French you hear in a café are not always identical.",
+    caption: "You may read « Je ne sais pas », but hear « J'sais pas ». Here's what happens in everyday speech.",
     body: "In everyday spoken French, people often drop ne from negative sentences.\n\nWritten or careful French: Je ne me coiffe pas.\n\nEveryday spoken French: Je me coiffe pas.\n\nAnother example: Je ne sais pas. Often heard as: Je sais pas.\n\nIn very informal speech, you may hear reductions such as Je suis → J'suis or Chuis.\n\nThese forms are common in casual conversation, but they are not all appropriate in formal writing or every situation. Learn the complete form first, then learn to recognise how people actually speak.\n\nBecause understanding French is not just about reading the sentence. It's about recognising it when someone says it at full speed.",
     created_at: "2026-11-25"
   },
@@ -1951,7 +1951,7 @@ const bulletins = [
     collection: "French Nuggets",
     image: "/images/nugget-14.jpg",
     title: "Je gère. I've got this!",
-    caption: "Someone asks if you can handle a task. You want to say, “Don't worry, I've got it.” In everyday French, try: Je gère.",
+    caption: "Need to say “I've got this” in French? There's a short, confident way to take charge.",
     body: "Gérer means to manage or handle something. In informal conversation, Je gère can mean I've got this, I'll handle it, or I'm managing.\n\nNe t'inquiète pas, je gère. — Don't worry, I've got this.\n\nTu peux t'occuper du projet ? — Can you take care of the project?\n\nOui, je gère. — Yes, I'll handle it.\n\nYou can also say Je m'en occupe. — I'll take care of it. Je gère has a confident, casual feel. Je m'en occupe is a little more direct about taking responsibility for the task.\n\nNext time someone gives you a problem, you don't need a speech. Just say: Je gère. Then, of course, make sure you actually do.",
     created_at: "2026-12-02"
   },
@@ -1960,7 +1960,7 @@ const bulletins = [
     collection: "French Nuggets",
     image: "/images/nugget-15.jpg",
     title: "We're not here to play marbles!",
-    caption: "On n'est pas là pour jouer aux billes. Literally: “We're not here to play marbles.”",
+    caption: "A French warning about playing marbles that has nothing to do with games. Guess what it really means.",
     body: "The expression is not really about marbles. It is used to remind people that something is serious and that they are expected to focus or get things done.\n\nImagine a team meeting where everyone is joking around while a deadline approaches. Someone might say: Bon, on se concentre. On n'est pas là pour jouer aux billes. — Right, let's focus. We're not here to mess around.\n\nThe expression can sound firm, playful or slightly impatient depending on the tone and situation. It is a colourful way of saying that the task at hand matters.\n\nThe marbles can wait. The deadline cannot.",
     created_at: "2026-12-09"
   },
@@ -1969,7 +1969,7 @@ const bulletins = [
     collection: "French Nuggets",
     image: "/images/nugget-16.jpg",
     title: "Chercher doesn't need a plus-one!",
-    caption: "One small French mistake that keeps appearing: adding pour after chercher. In English, we say “look for”. So it feels natural to translate that directly.",
+    caption: "Looking for your keys? In French, chercher goes straight to the object. No pour invited.",
     body: "In French, chercher takes a direct object when it means “to look for”. You do not need pour.\n\nJe cherche mes clés. — I'm looking for my keys.\n\nElle cherche un emploi. — She's looking for a job.\n\nNous cherchons un restaurant. — We're looking for a restaurant.\n\nNot: Je cherche pour mes clés.\n\nDo not confuse chercher with chercher à, which has a different construction: Il cherche à comprendre. — He's trying to understand.\n\nWhen you mean “look for something”, go straight to the object. Chercher can manage without pour. It doesn't need a plus-one.",
     created_at: "2026-12-16"
   },
@@ -1978,7 +1978,7 @@ const bulletins = [
     collection: "French Nuggets",
     image: "/images/nugget-17.jpg",
     title: "I'm hot or I have hot?",
-    caption: "English says “I'm hot.” French takes another route. For temperature, French uses avoir — to have.",
+    caption: "In English you're hot. In French, you have heat. One small verb changes the whole sentence.",
     body: "J'ai chaud. — I'm hot.\n\nJ'ai froid. — I'm cold.\n\nJ'ai faim. — I'm hungry.\n\nJ'ai soif. — I'm thirsty.\n\nJ'ai chaud, ouvre la fenêtre ! — I'm hot, open the window!\n\nTu as froid ? — Are you cold?\n\nNous avons faim. — We're hungry.\n\nIls ont soif. — They're thirsty.\n\nJe suis chaud does exist, but it can mean that you're enthusiastic or ready for something. Depending on the context, it can also have a suggestive meaning. If you're simply feeling the heat, say J'ai chaud.",
     created_at: "2026-12-23"
   },
@@ -1987,7 +1987,7 @@ const bulletins = [
     collection: "French Nuggets",
     image: "/images/nugget-18.jpg",
     title: "Si, not oui! The French disagreement trap.",
-    caption: "Tu n'aimes pas le café ? You do like coffee. How do you answer? In French, this is where si comes in.",
+    caption: "Someone says you don't speak French? Don't answer with oui. There's a better one-word comeback.",
     body: "When someone makes a negative statement or asks a negative question, si can be used to contradict it.\n\nTu ne parles pas français ? — You don't speak French?\n\nSi, je parle français ! — Yes, I do speak French!\n\nTu n'as pas faim ? — Aren't you hungry?\n\nSi, j'ai faim. — Yes, I am hungry.\n\nOui generally confirms an affirmative statement or answers an ordinary affirmative question. Si contradicts a negative statement or question. It is a small word, but it can save you from giving the wrong impression.",
     created_at: "2026-12-30"
   },
@@ -1996,7 +1996,7 @@ const bulletins = [
     collection: "French Nuggets",
     image: "/images/nugget-19.jpg",
     title: "Where did that extra T come from?",
-    caption: "You are reading a French question and suddenly there is a letter t between the verb and the pronoun. Où va-t-il ? Who invited that T?",
+    caption: "That extra T in Où va-t-il? isn't a typo. It helps the question roll off the tongue.",
     body: "It is called the t euphonique. It is added in certain inversion questions when the verb ends in a vowel sound and the pronoun il, elle or on follows. It makes the sentence easier to pronounce.\n\nOù va-t-il ? — Where is he going?\n\nComment parle-t-elle ? — How does she speak?\n\nQuand arrive-t-on ? — When are we arriving?\n\nNotice the hyphens. They are part of the written construction. The extra T is not a new verb ending. It is there to help the sounds flow.",
     created_at: "2027-01-06"
   },
@@ -2005,7 +2005,7 @@ const bulletins = [
     collection: "French Nuggets",
     image: "/images/nugget-20.jpg",
     title: "April fools? Non. April clothing advice!",
-    caption: "En avril, ne te découvre pas d'un fil. En mai, fais ce qu'il te plaît. A classic French saying about the unpredictable spring weather.",
+    caption: "A French saying gives April and May their own dress code. The advice rhymes — and may save you from the cold.",
     body: "The first part advises you not to dress too lightly in April, even if the weather starts feeling warm. The second part says that by May, you can dress more freely and do as you please.\n\n“In April, don't shed even a thread. In May, do as you please.”\n\nIt is traditional advice, not a scientific weather forecast.\n\nSe découvrir — to uncover oneself or remove a layer of clothing.\n\nUn fil — a thread.\n\nCe qu'il te plaît — what you please / what you like.\n\nApril sunshine is not a contract. Keep your jacket nearby.",
     created_at: "2027-01-13"
   }
