@@ -46,7 +46,12 @@ const head = source.split("<head>")[1]?.split("</head>")[0] ?? "";
 
         const imageSlot = document.createElement("div");
         imageSlot.className = "french-nugget-image-placeholder";
-        imageSlot.setAttribute("role", "img");
+        const photo = document.createElement("img");
+        photo.className = "french-nugget-photo";
+        photo.src = "/images/nugget-" + issue.bulletin_number + ".jpg";
+        photo.alt = "French Nuggets No. " + issue.bulletin_number;
+        photo.onerror = () => photo.remove();
+        imageSlot.appendChild(photo);
         imageSlot.setAttribute("aria-label", "Photo space — upload your own image as /images/nugget-" + issue.bulletin_number + ".jpg");
 
         const copy = document.createElement("div");
