@@ -1434,3 +1434,80 @@ body{background:var(--parchment);color:var(--ink);font-size:16px;letter-spacing:
   .section--bulletin .bulletin-card h3{font-size:1.34rem !important}
   .section--bulletin .featured-bulletin-card h3{font-size:1.52rem !important}
 }
+
+
+/* Bulletin refinement: restore visible summaries and remove oversized gaps. */
+.section--bulletin .bulletin-card,
+.section--bulletin .featured-bulletin-card {
+  display:flex;
+  flex-direction:column;
+  height:auto !important;
+  min-height:0 !important;
+  align-items:stretch;
+  justify-content:flex-start !important;
+  gap:0 !important;
+}
+.section--bulletin .bulletin-caption {
+  display:block !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+.section--bulletin .bulletin-caption-text {
+  display:block !important;
+  height:auto !important;
+  min-height:0 !important;
+  margin:0 0 7px !important;
+  padding:0 !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  font-size:.9rem !important;
+  line-height:1.48 !important;
+}
+.section--bulletin .bulletin-card h3,
+.section--bulletin .featured-bulletin-card h3 {
+  margin:7px 0 6px !important;
+  font-size:clamp(1.2rem, 1.65vw, 1.48rem) !important;
+  line-height:1.15 !important;
+  letter-spacing:-.01em !important;
+  text-transform:none !important;
+}
+.section--bulletin .featured-bulletin-card h3 {
+  font-size:clamp(1.35rem, 2vw, 1.7rem) !important;
+}
+.section--bulletin .bulletin-details {
+  margin-top:8px !important;
+}
+.section--bulletin .bulletin-meta {
+  margin:0 !important;
+}
+.nuggets-intro {
+  margin-bottom:22px !important;
+  padding:24px clamp(20px,3vw,32px) !important;
+}
+.nuggets-intro h3 {
+  max-width:600px;
+  margin:0 0 5px !important;
+  font-size:clamp(1.35rem,2.5vw,1.85rem) !important;
+  line-height:1.16 !important;
+  letter-spacing:-.015em !important;
+  text-transform:none !important;
+  font-weight:600;
+}
+.nuggets-name {
+  margin:5px 0 12px !important;
+}
+.nuggets-intro p:not(.nuggets-kicker):not(.nuggets-name):not(.nuggets-welcome) {
+  margin:0 0 8px !important;
+  line-height:1.58 !important;
+}
+@media(max-width:600px) {
+  .section--bulletin .bulletin-card h3 {font-size:1.25rem !important}
+  .section--bulletin .featured-bulletin-card h3 {font-size:1.45rem !important}
+  .nuggets-intro {padding:21px 18px !important}
+  .nuggets-intro h3 {font-size:1.4rem !important}
+}
