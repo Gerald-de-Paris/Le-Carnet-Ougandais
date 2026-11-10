@@ -1,34 +1,33 @@
 # Culture image uploads
 
-## Authoritative location
+## One upload location for every Culture category
 
-For the Astro public website, upload new Culture images to `public/images/`. Astro serves these files at root-relative URLs such as `/images/culture-1.jpg`.
+For the Astro public website, upload **all** Culture photographs to `public/images/`. This is the single authoritative folder for every category: Culture, Voyages, Tradition, Célébration, Biographie, Coutumes, Arts, Histoire, Géographie and Gastronomie.
 
-The legacy root-level `images/` folder is retained for compatibility and historical assets. Do not upload new public-site images there unless a maintainer explicitly asks you to.
+The website requests files using root-relative URLs such as `/images/voyages-5.jpg`. Do not upload new website images to the legacy root-level `images/` folder; that folder is retained only for historical/compatibility purposes and is not the public asset source.
 
 ## Filename patterns
 
-- Carousel image: `<category>-<number>.jpg`, for example `arts-1.jpg` or `voyages-4.jpg`.
-- Individual story image: `<category>-story<number>.jpg`, for example `arts-story1.jpg` or `voyages-story5.jpg`.
+- Carousel photograph: `<category>-<number>.jpg` (1 to 8), for example `voyages-5.jpg`, `tradition-1.jpg`, `arts-2.jpg`.
+- Individual story photograph: `<category>-story<number>.jpg`, for example `voyages-story5.jpg`, `arts-story1.jpg`.
 
-Use the exact category key used by the Culture data (for example `culture`, `arts`, `voyages`, `tradition`). Filenames are case-sensitive.
+Use the exact category key used by the Culture data. Filenames are case-sensitive and must match exactly.
 
 ## Choosing a story number
 
-Story-image numbers are tied to the story's stable image slot, not the carousel slide number. Before adding a story photograph, inspect the story's existing image-slot mapping in the Culture data. Do not renumber existing photographs when stories are reordered or new stories are appended. If the data does not provide a stable slot, add an explicit image filename to that story's data rather than relying on its current array position.
+The current story-photo renderer uses each story's position in that category (first story = `story1`, second story = `story2`, etc.). Check the current story order before uploading. If stories are reordered or inserted, the image mapping must be reviewed so photographs remain attached to the intended stories. Never rename or move existing images without checking their associations.
 
 ## Upload steps
 
-1. Open the repository's `public/images/` folder on GitHub.
+1. Open `public/images/` on GitHub.
 2. Choose **Add file → Upload files**.
-3. Upload the image using the correct filename pattern above.
-4. Commit the upload to a branch and open a pull request (or commit according to the project's normal workflow).
-5. After deployment, open the corresponding `https://<site>/images/<filename>` URL and confirm it loads.
+3. Upload your photo with the correct filename above.
+4. Commit the upload to a branch and open a pull request, or use the project's normal GitHub workflow.
+5. After Vercel deploys, verify the direct URL: `https://<your-site>/images/<filename>`.
+6. Open the relevant Culture category and check both the carousel slot and the story photo.
 
-Do not overwrite an existing filename unless you intentionally mean to replace that photograph and have checked its current contents first.
+## Image quality
 
-## Troubleshooting
+Upload the original, highest-resolution photograph available. Prefer JPEG or WebP, avoid sending screenshots or repeatedly compressed copies, and do not reduce image dimensions before upload. The site does not apply blur or image filters. Carousel and story frames use contain-fit so the full photograph remains visible instead of being cropped. Upscaling a low-resolution original cannot recreate missing detail.
 
-- A 404 usually means the file is in the wrong directory or the filename does not match exactly.
-- Check spelling, hyphens, extension, capitalisation and story-slot mapping.
-- Keep all existing manually uploaded images. Do not delete or move legacy files as part of an ordinary upload.
+Do not overwrite an existing filename unless you deliberately intend to replace that exact photograph and have checked it first.
