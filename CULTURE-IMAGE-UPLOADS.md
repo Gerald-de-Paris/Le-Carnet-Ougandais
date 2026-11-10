@@ -41,6 +41,16 @@ The French category label is “Biographie”, but the filename key is **`biogra
 
 For each of these categories, carousel images use the separate pattern `tradition-1.jpg`…`tradition-8.jpg` or `biographie-1.jpg`…`biographie-8.jpg`. A story photograph and a carousel photograph are not interchangeable.
 
+## Celebration / Célébration — current image inventory
+
+The filename key is `celebration` (without the accent).
+
+- Carousel slots uploaded: `celebration-1.jpg` to `celebration-3.jpg`.
+- Story photos uploaded: `celebration-story1.jpg` to `celebration-story4.jpg`, plus `celebration-story6.jpg` to `celebration-story8.jpg`.
+- Still not uploaded in the repository at the time of this check: `celebration-4.jpg` to `celebration-8.jpg` and `celebration-story5.jpg`.
+
+Missing slots should continue to show the existing placeholder until the corresponding photo is uploaded. Do not create empty placeholder files.
+
 ## Choosing a story number
 
 The current story-photo renderer uses each story's position in that category (first story = `story1`, second story = `story2`, etc.). Check the current story order before uploading. If stories are reordered or inserted, the image mapping must be reviewed so photographs remain attached to the intended stories. Never rename or move existing images without checking their associations.
