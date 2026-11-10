@@ -1019,14 +1019,52 @@ function initLangToggle() {
 document.addEventListener("DOMContentLoaded", initLangToggle);
 
 // ============================================
-// BASIC COPY DETERRENT (not foolproof — see note)
+// SITE-WIDE COPY / CUT / PASTE DETERRENT
+// This discourages casual copying only. Public content can still be
+// captured through screenshots, developer tools, source inspection, etc.
+// Editable fields remain available for normal learning activities.
 // ============================================
-document.addEventListener("contextmenu", function (e) {
-  e.preventDefault();
-});
-document.addEventListener("copy", function (e) {
-  e.preventDefault();
-});
+(function installSiteWideCopyProtection() {
+  const editableSelector = [
+    "input",
+    "textarea",
+    "select",
+    "option",
+    '[contenteditable="true"]',
+    '[contenteditable=""]',
+    '[role="textbox"]',
+    ".allow-copy",
+    ".allow-select"
+  ].join(",");
+
+  function isEditableTarget(target) {
+    return target instanceof Element && Boolean(target.closest(editableSelector));
+  }
+
+  // Disable the context menu for protected page content, but keep it in fields.
+  document.addEventListener("contextmenu", function (event) {
+    if (!isEditableTarget(event.target)) event.preventDefault();
+  }, true);
+
+  // Block copy, cut, paste and drag-out on protected page content.
+  ["copy", "cut", "paste", "dragstart"].forEach(function (eventName) {
+    document.addEventListener(eventName, function (event) {
+      if (!isEditableTarget(event.target)) event.preventDefault();
+    }, true);
+  });
+
+  // Block common keyboard shortcuts on protected page content.
+  document.addEventListener("keydown", function (event) {
+    if (isEditableTarget(event.target)) return;
+
+    const key = String(event.key || "").toLowerCase();
+    const modifier = event.ctrlKey || event.metaKey;
+    if (modifier && ["c", "x", "v", "a"].includes(key)) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }, true);
+})();
 
 // ============================================
 // TAP-TO-LISTEN (French pronunciation via the browser's built-in voice)
