@@ -1662,7 +1662,7 @@ function buildCarousel(container, catKey, lang = (document.documentElement.getAt
     img.alt = "";
     img.style.width = "100%";
     img.style.height = "100%";
-    img.style.objectFit = "cover";
+    img.style.objectFit = "contain";
     img.src = "/images/" + catKey + "-" + i + ".jpg";
     img.onerror = function () {
       // No photo uploaded yet for this slot — fall back to the existing placeholder.
@@ -1773,7 +1773,7 @@ function initCultureModal() {
       }
       if (mainParagraphs.length > 1) {
         const imgSrc = "/images/" + catKey + "-story" + (storyIndex + 1) + ".jpg";
-        bodyHtml += '<div class="culture-story-photo" data-fallback="' + escapeCultureText(photoFallback) + '"><img src="' + imgSrc + '" alt="" style="width:100%;height:100%;object-fit:cover;object-position:top;" onerror="this.parentElement.textContent=this.parentElement.dataset.fallback;"></div>';
+        bodyHtml += '<div class="culture-story-photo" data-fallback="' + escapeCultureText(photoFallback) + '"><img src="' + imgSrc + '" alt="" style="width:100%;height:100%;object-fit:contain;object-position:center;" onerror="this.parentElement.textContent=this.parentElement.dataset.fallback;"></div>';
         bodyHtml += mainParagraphs.slice(1).map((p) => "<p>" + escapeCultureText(p) + "</p>").join("");
       }
 
