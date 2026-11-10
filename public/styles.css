@@ -1409,3 +1409,35 @@ body{background:var(--parchment);color:var(--ink);font-size:16px;letter-spacing:
 
 /* Keep French Nugget teasers clear and readable on the cream cards. */
 .french-nugget-copy .bulletin-caption-text{color:#39433c!important;}
+
+
+/* ============================================
+   SITE-WIDE COPY PROTECTION
+   Editable fields remain selectable for learning activities.
+   ============================================ */
+html, body, body * {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none;
+}
+
+input,
+textarea,
+select,
+option,
+[contenteditable="true"],
+[contenteditable=""],
+[role="textbox"],
+.allow-copy,
+.allow-select,
+input *,
+textarea *,
+[contenteditable="true"] * {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+  -webkit-touch-callout: default;
+}
