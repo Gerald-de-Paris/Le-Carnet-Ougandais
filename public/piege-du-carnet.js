@@ -1,6 +1,9 @@
 (function () {
   "use strict";
 
+  // Keep these five thematic series as permanent categories.
+  // When new questions arrive, add each question object to the matching series.questions array.
+  // The displayed counts, progress and final score are calculated from each array automatically.
   const series = [
     {
       title: { fr: "Les petits mots qui changent tout", en: "Small words, big differences" },
@@ -388,7 +391,10 @@
       desc.textContent = item.description[state.lang];
       const count = document.createElement("span");
       count.className = "piege-series-count";
-      count.textContent = text("5 défis", "5 challenges");
+      const challengeCount = item.questions.length;
+      count.textContent = state.lang === "en"
+        ? challengeCount + (challengeCount === 1 ? " challenge" : " challenges")
+        : challengeCount + (challengeCount === 1 ? " défi" : " défis");
       const button = document.createElement("button");
       button.type = "button";
       button.className = "piege-series-start";
@@ -414,9 +420,10 @@
     const pack = currentSeries();
     const item = currentQuestion();
     $("piegeSeriesLabel").textContent = pack.title[state.lang];
-    $("piegeProgressText").textContent = text("Défi " + (state.questionIndex + 1) + " sur 5", "Challenge " + (state.questionIndex + 1) + " of 5");
-    $("piegeScoreText").textContent = text("Score : " + state.score + " / 5", "Score: " + state.score + " / 5");
-    $("piegeProgressBar").style.width = (((state.questionIndex + (state.answered ? 1 : 0)) / 5) * 100) + "%";
+    const totalQuestions = pack.questions.length;
+    $("piegeProgressText").textContent = text("Défi " + (state.questionIndex + 1) + " sur " + totalQuestions, "Challenge " + (state.questionIndex + 1) + " of " + totalQuestions);
+    $("piegeScoreText").textContent = text("Score : " + state.score + " / " + totalQuestions, "Score: " + state.score + " / " + totalQuestions);
+    $("piegeProgressBar").style.width = (((state.questionIndex + (state.answered ? 1 : 0)) / totalQuestions) * 100) + "%";
     $("piegeQuestionNumber").textContent = "DÉFI " + String(state.questionIndex + 1).padStart(2, "0");
     $("piegeQuestionTitle").textContent = item.title[state.lang];
     $("piegeQuestionText").textContent = item.text;
@@ -470,13 +477,13 @@
     $("piegeExampleLabel").textContent = text("Un autre exemple", "Another example");
     $("piegeExampleFr").textContent = item.exampleFr;
     $("piegeExampleEn").textContent = item.exampleEn;
-    $("piegeNext").textContent = state.questionIndex === 4
+    $("piegeNext").textContent = state.questionIndex === currentSeries().questions.length - 1
       ? text("Voir mon résultat →", "See my result →")
       : text("Défi suivant →", "Next challenge →");
   }
 
   function nextQuestion() {
-    if (state.questionIndex < 4) {
+    if (state.questionIndex < currentSeries().questions.length - 1) {
       state.questionIndex += 1;
       state.selected = null;
       state.answered = false;
@@ -492,17 +499,18 @@
   function renderResult() {
     const item = currentSeries();
     $("piegeResultTitle").textContent = item.title[state.lang];
-    $("piegeResultScore").textContent = state.score + " / 5";
+    const totalQuestions = item.questions.length;
+    $("piegeResultScore").textContent = state.score + " / " + totalQuestions;
     let message;
-    if (state.score === 5) {
-      message = text("Impeccable ! Tu as déjoué les cinq pièges. Garde cette précision dans tes conversations.", "Perfect! You avoided all five traps. Keep that precision in your conversations.");
+    if (state.score === totalQuestions) {
+      message = text("Impeccable ! Tu as déjoué tous les pièges de cette série. Garde cette précision dans tes conversations.", "Perfect! You avoided every trap in this series. Keep that precision in your conversations.");
     } else if (state.score >= 3) {
       message = text("Très bon travail ! Tu as de bonnes bases. Relis les explications des pièges qui t’ont surpris.", "Great work! You have a good foundation. Revisit the explanations for the traps that surprised you.");
     } else {
       message = text("Le français aime les détails… et tu viens d’en découvrir quelques-uns. Rejoue la série : la deuxième tentative sera plus facile.", "French loves its details… and you have just discovered a few. Replay the series: the second attempt will feel easier.");
     }
     $("piegeResultMessage").textContent = message;
-    $("piegeResultScore").setAttribute("aria-label", text("Ton score", "Your score") + ": " + state.score + " sur 5");
+    $("piegeResultScore").setAttribute("aria-label", text("Ton score", "Your score") + ": " + state.score + " sur " + totalQuestions);
   }
 
   function chooseAnother() {
