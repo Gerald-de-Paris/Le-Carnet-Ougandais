@@ -176,8 +176,8 @@
         },
         {
           title: { fr: "Où placer « déjà » ?", en: "Where does « déjà » go?" },
-          text: "Nous ______ envie de retourner en France.",
-          options: ["avons déjà", "déjà avons", "avons envie déjà"],
+          text: "Nous ______ retourner en France.",
+          options: ["avons déjà envie de", "déjà avons envie de", "avons envie déjà de"],
           answer: 0,
           explanation: {
             fr: "Avec un temps composé comme « avons envie » dans cette phrase, l’adverbe court « déjà » se place naturellement après le verbe conjugué : « Nous avons déjà envie… ». On ne le place pas entre le sujet et l’auxiliaire.",
