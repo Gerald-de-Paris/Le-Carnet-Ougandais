@@ -1,0 +1,205 @@
+---
+const episodes = [
+  {
+    volume: "I",
+    title: "L'heure et le temps",
+    subtitle: "Time and everyday conversations",
+    hook: "Time is something we all talk about. Why not learn to talk about it in French?",
+    caption: "From asking the time to making plans, everyday conversations begin with simple expressions. Start with the basics. Build your confidence.",
+    prompt: "🎧 Watch. Listen. Repeat.",
+    expressions: [],
+    note: "The original Vol. I video and expressions will be added by the editor."
+  },
+  {
+    volume: "II",
+    title: "Au restaurant",
+    subtitle: "At the restaurant",
+    hook: "The next time you walk into a French restaurant, let the menu be the only unfamiliar thing.",
+    caption: "How do you ask for a table? Order your favourite meal? Ask how to pay? Learn the expressions that turn a restaurant visit into a French conversation.",
+    prompt: "🎧 Listen. Repeat. Practise.",
+    expressions: [
+      ["Est-ce que vous avez une table libre pour deux personnes ?", "Do you have a table available for two people?"],
+      ["Est-ce que je peux voir le menu, s’il vous plaît ?", "May I see the menu, please?"],
+      ["Je prends le poulet avec du riz, s’il vous plaît.", "I'll have the chicken with rice, please."],
+      ["Excusez-moi, est-ce que je peux payer par carte ou en espèces ?", "Excuse me, can I pay by card or in cash?"],
+      ["C’était très bon, merci beaucoup !", "That was very good, thank you very much!"]
+    ]
+  },
+  {
+    volume: "III",
+    title: "Faire du shopping",
+    subtitle: "Shopping for clothes",
+    hook: "Good style is one thing. Knowing how to talk about it in French is another.",
+    caption: "Looking for a shirt? Asking for your size? Negotiating a better price? Your next shopping conversation could happen entirely in French.",
+    prompt: "🎧 Learn the expressions. Then take them shopping!",
+    expressions: [
+      ["Je cherche une chemise élégante.", "I'm looking for an elegant shirt."],
+      ["Vous l’avez à ma taille ?", "Do you have it in my size?"],
+      ["Je peux l’essayer ?", "Can I try it on?"],
+      ["Ça me va bien !", "It suits me well!"],
+      ["C’est combien ?", "How much is it?"],
+      ["Vous pouvez me faire un bon prix ?", "Can you give me a good price?"]
+    ]
+  },
+  {
+    volume: "IV",
+    title: "Les vêtements",
+    subtitle: "Describing clothes and outfits",
+    hook: "Sometimes, the right words complete the outfit.",
+    caption: "That dress looks perfect. The colour suits you. The jacket goes beautifully with your shoes. Learn how to describe clothes, express opinions and talk about personal style in French.",
+    prompt: "🎧 Watch. Repeat. Make it yours.",
+    expressions: [
+      ["Cette robe est parfaite pour la soirée.", "This dress is perfect for the party."],
+      ["Cette jupe est trop courte.", "This skirt is too short."],
+      ["Cette couleur me va très bien.", "This colour suits me very well."],
+      ["Cette veste va bien avec mes chaussures.", "This jacket goes well with my shoes."]
+    ]
+  },
+  {
+    volume: "V",
+    title: "L’argent et le paiement",
+    subtitle: "Money and payments",
+    hook: "Money talks. Make sure you can join the conversation.",
+    caption: "How much does it cost? Can you pay in cash? Do you have change? From making payments to withdrawing money, learn the French expressions that make everyday transactions easier.",
+    prompt: "🎧 Your next transaction could be in French.",
+    expressions: [
+      ["Combien ça coûte ?", "How much does it cost?"],
+      ["Ça fait trente euros.", "That comes to thirty euros."],
+      ["Je paie en espèces.", "I'm paying in cash."],
+      ["Vous avez la monnaie ?", "Do you have change?"],
+      ["Gardez la monnaie.", "Keep the change."],
+      ["Je vais retirer de l’argent.", "I'm going to withdraw some money."]
+    ]
+  },
+  {
+    volume: "VI",
+    title: "Les compliments",
+    subtitle: "Complimenting someone",
+    hook: "A genuine compliment can change someone’s day. In French, it can sound even better.",
+    caption: "That shirt looks good on you. You have charisma. You're turning heads tonight! Learn how to compliment someone, appreciate their style and make someone's day — en français.",
+    prompt: "🎧 Because some things are better said in French.",
+    expressions: [
+      ["Cette chemise te va bien.", "That shirt looks good on you."],
+      ["Beau costume !", "Nice suit!"],
+      ["Tu as du charisme.", "You have charisma."],
+      ["Tu fais tourner les têtes ce soir.", "You're turning heads tonight."],
+      ["Vous êtes sublimes.", "You look stunning."],
+      ["Tu brilles ce soir.", "You're shining tonight."]
+    ]
+  }
+];
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Prendre la Parole is a MUBS French Club video series for building confidence in everyday French, one expression at a time." />
+  <title>Prendre la Parole · MUBS French Club</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    :root { --pl-ink:#17232d; --pl-muted:#63717b; --pl-line:#e4e8eb; --pl-paper:#fbfaf7; --pl-blue:#244c69; --pl-red:#b34848; }
+    body { background:var(--pl-paper); color:var(--pl-ink); }
+    .pl-wrap { width:min(1120px, calc(100% - 40px)); margin-inline:auto; }
+    .pl-header { padding:22px 0; border-bottom:1px solid var(--pl-line); }
+    .pl-header-inner { display:flex; justify-content:space-between; align-items:center; gap:18px; }
+    .pl-brand { color:inherit; text-decoration:none; font-weight:750; letter-spacing:-.03em; }
+    .pl-back { color:var(--pl-blue); text-decoration:none; font-size:.92rem; }
+    .pl-hero { padding:76px 0 54px; }
+    .pl-kicker { text-transform:uppercase; letter-spacing:.16em; color:var(--pl-red); font-weight:750; font-size:.75rem; }
+    .pl-hero h1 { font-size:clamp(2.7rem,7vw,5.7rem); line-height:.98; letter-spacing:-.065em; margin:16px 0; }
+    .pl-tagline { font-size:clamp(1.05rem,2.4vw,1.45rem); color:var(--pl-blue); font-weight:650; }
+    .pl-intro { max-width:720px; color:var(--pl-muted); font-size:1.08rem; line-height:1.75; }
+    .pl-credit { margin-top:24px; padding-top:18px; border-top:1px solid var(--pl-line); display:flex; flex-wrap:wrap; gap:8px 24px; color:var(--pl-muted); font-size:.9rem; }
+    .pl-credit strong { color:var(--pl-ink); }
+    .pl-section-head { display:flex; justify-content:space-between; align-items:end; gap:16px; margin:25px 0 22px; }
+    .pl-section-head h2 { margin:0; font-size:clamp(1.6rem,3vw,2.2rem); letter-spacing:-.04em; }
+    .pl-count { color:var(--pl-muted); font-size:.9rem; }
+    .pl-list { display:grid; gap:18px; padding-bottom:72px; }
+    .pl-card { display:grid; grid-template-columns:minmax(260px,.92fr) minmax(0,1.08fr); background:#fff; border:1px solid var(--pl-line); border-radius:18px; overflow:hidden; box-shadow:0 8px 28px rgba(24,39,51,.045); }
+    .pl-media { min-height:250px; background:linear-gradient(145deg,#e9eef0,#dce5e9); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:24px; color:var(--pl-blue); }
+    .pl-media-mark { font-size:2.5rem; margin-bottom:10px; }
+    .pl-media strong { font-size:1.05rem; }
+    .pl-media span { max-width:250px; color:#5e707b; font-size:.85rem; margin-top:6px; line-height:1.5; }
+    .pl-video { width:100%; height:100%; min-height:250px; display:block; object-fit:cover; background:#111; }
+    .pl-content { padding:clamp(22px,4vw,34px); }
+    .pl-volume { color:var(--pl-red); font-size:.74rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+    .pl-content h3 { font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.1; letter-spacing:-.04em; margin:9px 0 4px; }
+    .pl-subtitle { color:var(--pl-muted); font-size:.88rem; margin:0 0 18px; }
+    .pl-hook { font-size:1.06rem; font-weight:700; line-height:1.45; margin:0 0 10px; }
+    .pl-caption { color:var(--pl-muted); line-height:1.65; margin:0 0 12px; }
+    .pl-prompt { color:var(--pl-blue); font-weight:700; font-size:.9rem; margin:0 0 19px; }
+    .pl-expressions { border-top:1px solid var(--pl-line); padding-top:15px; }
+    .pl-expressions summary { cursor:pointer; font-weight:750; color:var(--pl-ink); }
+    .pl-expressions ol { padding-left:22px; margin:14px 0 0; }
+    .pl-expressions li { padding:0 0 12px 4px; line-height:1.45; }
+    .pl-expression-fr { font-weight:650; }
+    .pl-expression-en { display:block; color:var(--pl-muted); font-size:.88rem; margin-top:3px; }
+    .pl-note { border-left:3px solid var(--pl-red); padding:10px 14px; margin-top:15px; background:#fbf4f1; color:#69514b; font-size:.88rem; line-height:1.5; }
+    .pl-footer { border-top:1px solid var(--pl-line); padding:26px 0 38px; color:var(--pl-muted); font-size:.88rem; }
+    .pl-footer strong { color:var(--pl-ink); }
+    @media (max-width:760px) { .pl-hero{padding:55px 0 36px}.pl-card{grid-template-columns:1fr}.pl-media{min-height:180px}.pl-video{min-height:210px}.pl-section-head{align-items:start;flex-direction:column} }
+  </style>
+</head>
+<body>
+  <header class="pl-header">
+    <div class="pl-wrap pl-header-inner">
+      <a class="pl-brand" href="/">Le Carnet Ougandais</a>
+      <a class="pl-back" href="/">← Back to the main site</a>
+    </div>
+  </header>
+  <main class="pl-wrap">
+    <section class="pl-hero">
+      <p class="pl-kicker">A MUBS French Club speaking series</p>
+      <h1>Prendre<br />la Parole <span aria-hidden="true">🇫🇷</span></h1>
+      <p class="pl-tagline">French isn't just learned. It's spoken.</p>
+      <p class="pl-intro">You don't become confident in a language by memorising a dictionary. You build confidence by finding the words when you need them. Prendre la Parole brings French into everyday life through short videos, useful expressions and real-world situations. Listen, repeat, practise — then make the words your own.</p>
+      <div class="pl-credit">
+        <span><strong>By:</strong> MUBS French Club</span>
+        <span><strong>Original concept:</strong> Robert Tumusiime</span>
+        <span><strong>Format:</strong> Six practical volumes</span>
+      </div>
+    </section>
+    <section aria-labelledby="episodes-title">
+      <div class="pl-section-head">
+        <h2 id="episodes-title">Six volumes. Everyday French.</h2>
+        <span class="pl-count">01 — 06 · Watch and practise</span>
+      </div>
+      <div class="pl-list">
+        {episodes.map((episode) => (
+          <article class="pl-card" id={`volume-${episode.volume}`}>
+            <div class="pl-media" data-video-slot={episode.volume}>
+              <div class="pl-media-mark" aria-hidden="true">▶</div>
+              <strong>Vol. {episode.volume} · Video coming soon</strong>
+              <span>Video slot reserved. The club editor can add the original episode here.</span>
+            </div>
+            <div class="pl-content">
+              <span class="pl-volume">Prendre la Parole · Vol. {episode.volume}</span>
+              <h3>{episode.title}</h3>
+              <p class="pl-subtitle">{episode.subtitle}</p>
+              <p class="pl-hook">{episode.hook}</p>
+              <p class="pl-caption">{episode.caption}</p>
+              <p class="pl-prompt">{episode.prompt}</p>
+              {episode.expressions.length > 0 && (
+                <details class="pl-expressions">
+                  <summary>Explore the expressions · {episode.expressions.length} phrases</summary>
+                  <ol>
+                    {episode.expressions.map(([fr, en]) => <li><span class="pl-expression-fr">{fr}</span><span class="pl-expression-en">{en}</span></li>)}
+                  </ol>
+                </details>
+              )}
+              {episode.note && <p class="pl-note">{episode.note}</p>}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+  <footer class="pl-footer">
+    <div class="pl-wrap">
+      <strong>Prendre la Parole</strong> · A MUBS French Club initiative.<br />
+      Original concept by Robert Tumusiime. <em>Le français, notre fierté.</em> 🇫🇷
+    </div>
+  </footer>
+</body>
+</html>
